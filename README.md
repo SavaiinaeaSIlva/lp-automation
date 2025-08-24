@@ -1,7 +1,5 @@
-Silva Automation - Landing Page
+## Silva Automation - Landing Page ##
 This repository contains the source code for the official landing page for Silva Automation, a consultancy service offering "done-for-you" business automation solutions for service-based businesses.
-
-Live Site: https://savaiinaeasillva.github.io/lp-automation/
 
 About The Project
 Silva Automation helps service business owners save time and increase revenue by building custom automation workflows. This landing page serves as the primary marketing and lead-generation tool for the business. It is designed to clearly communicate the value proposition, build trust through a compelling personal story, and convert visitors into leads through a simple consultation booking process.
