@@ -40,18 +40,26 @@
              box-shadow: 0 0 30px 0 rgba(59, 130, 246, 0.3);
              border: 1px solid #3b82f6;
         }
+        
+        /* Styles for the scrolled header */
+        .header-scrolled {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-bottom: 1px solid rgb(38, 38, 38); /* neutral-800 */
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+        }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="bg-black/80 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-neutral-800">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-xl font-bold font-display text-white">Silva Automation</a>
             <div class="hidden md:flex items-center space-x-8">
                 <nav class="space-x-8">
                     <a href="#services" class="nav-link text-gray-300">Automation Services</a>
                     <a href="#pricing" class="nav-link text-gray-300">Pricing</a>
-                    <a href="#contact" class="nav-link text-gray-300">Book a Call</a>
+                    <a href="#about" class="nav-link text-gray-300">About</a>
                 </nav>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-gray-300">
@@ -65,8 +73,8 @@
     <main>
         <section class="relative h-screen bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2070&auto=format&fit=crop');">
             <div class="absolute inset-0 bg-black/60"></div>
-            <div class="relative h-full flex items-start justify-center text-white" data-aos="fade-up">
-                <div class="text-center p-6 pt-40 md:pt-48">
+            <div class="relative h-full flex items-center justify-center text-white" data-aos="fade-up">
+                <div class="text-center p-6">
                     <h1 class="text-5xl md:text-7xl font-bold font-display leading-tight mb-4 text-glow">Stop Losing Money on Manual Processes.</h1>
                     <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-neutral-300">As your automation consultant, I'll build powerful workflows that eliminate no-shows, automate reviews, and streamline your entire customer journey - so you can focus on growing your business.</p>
                     <a href="#contact" class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block mt-8">Automate My Business</a>
@@ -244,10 +252,27 @@
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init({ duration: 800, once: true, offset: 50 });
 
+            const header = document.getElementById('main-header');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
+            
+            // Handle header style on scroll
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('header-scrolled');
+                } else {
+                    header.classList.remove('header-scrolled');
+                }
+            });
+
             // Basic mobile menu toggle
-            mobileMenuButton.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                // Add scrolled background to mobile menu if not already present
+                if (!header.classList.contains('header-scrolled')) {
+                    header.classList.add('header-scrolled');
+                }
+            });
             
             // Populate mobile menu from desktop nav
             const desktopNav = document.querySelector('.hidden.md\\:flex nav');
