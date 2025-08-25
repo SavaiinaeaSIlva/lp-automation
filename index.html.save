@@ -169,14 +169,10 @@
                     <h2 class="text-4xl md:text-5xl font-display mb-4 text-glow">Ready to Automate?</h2>
                     <p class="text-neutral-400 mb-8">Book a free, 15-minute call to discover your business's biggest automation opportunities. No pressure, no obligation.</p>
                     
-                    <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4" id="contact-form">
-                        <input type="hidden" name="_subject" value="New Contact Form Submission from Silva Automation">
-                        <input type="hidden" name="_format" value="plain">
-                        <input type="text" name="_gotcha" style="display:none">
-                        
+                    <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="name" placeholder="First Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
-                            <input type="text" name="lastname" placeholder="Last Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
+                            <input type="text" name="first-name" placeholder="First Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
+                            <input type="text" name="last-name" placeholder="Last Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
                         </div>
                         <div>
                             <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
@@ -217,7 +213,6 @@
             const header = document.getElementById('main-header');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
             window.addEventListener('scroll', () => {
                 if (window.scrollY > 50) {
                     header.classList.add('header-scrolled');
@@ -225,54 +220,27 @@
                     header.classList.remove('header-scrolled');
                 }
             });
-            
             mobileMenuButton.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
                 if (!header.classList.contains('header-scrolled')) {
                     header.classList.add('header-scrolled');
                 }
             });
-            
             const desktopNav = document.querySelector('nav.hidden.md\\:flex');
             const mobileNavContainer = document.getElementById('mobile-menu');
-            
             while (mobileNavContainer.firstChild) {
                 mobileNavContainer.removeChild(mobileNavContainer.firstChild);
             }
-            
             const mobileNav = document.createElement('nav');
             mobileNav.innerHTML = desktopNav.innerHTML;
             mobileNav.classList.add('flex', 'flex-col', 'items-center', 'space-y-4');
             mobileNavContainer.appendChild(mobileNav);
-            
             mobileNav.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
                 });
             });
-            
             document.getElementById('current-year').textContent = new Date().getFullYear();
-            
-            // Form handling - Let Formspree handle the submission
-            const form = document.getElementById('contact-form');
-            const messageEl = document.getElementById('form-message');
-            
-            // Bind to the form's submit event
-            form.addEventListener('submit', function(e) {
-                // Show a loading message
-                messageEl.textContent = 'Sending your message...';
-                messageEl.className = 'mt-4 text-sm text-blue-400';
-                
-                // Formspree will handle the actual submission
-                // We'll check for success after a brief delay
-                setTimeout(function() {
-                    // This is a simple approach - in a real scenario you might want to
-                    // use Formspree's webhooks or redirect to a thank you page
-                    messageEl.textContent = 'Message sent successfully! We\'ll be in touch soon.';
-                    messageEl.className = 'mt-4 text-sm text-green-400';
-                    form.reset();
-                }, 1000);
-            });
         });
     </script>
 
