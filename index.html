@@ -169,10 +169,10 @@
                     <h2 class="text-4xl md:text-5xl font-display mb-4 text-glow">Ready to Automate?</h2>
                     <p class="text-neutral-400 mb-8">Book a free, 15-minute call to discover your business's biggest automation opportunities. No pressure, no obligation.</p>
                     
-                    <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4">
+                    <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4" id="contact-form">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="first-name" placeholder="First Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
-                            <input type="text" name="last-name" placeholder="Last Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
+                            <input type="text" name="name" placeholder="First Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
+                            <input type="text" name="lastname" placeholder="Last Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
                         </div>
                         <div>
                             <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
@@ -241,7 +241,39 @@
                 });
             });
             document.getElementById('current-year').textContent = new Date().getFullYear();
+        // Form handling
+const form = document.getElementById('contact-form');
+const messageEl = document.getElementById('form-message');
+
+form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(form);
+    messageEl.textContent = 'Sending...';
+    messageEl.className = 'mt-4 text-sm text-blue-400';
+    
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
         });
+        
+        if (response.ok) {
+            messageEl.textContent = 'Thanks! I\'ll get back to you soon.';
+            messageEl.className = 'mt-4 text-sm text-green-400';
+            form.reset();
+        } else {
+            throw new Error('Form submission failed');
+        }
+    } catch (error) {
+        messageEl.textContent = 'Something went wrong. Try emailing me directly at contact@ssilva.space';
+        messageEl.className = 'mt-4 text-sm text-red-400';
+    }
+});
+});
     </script>
 
 </body>
