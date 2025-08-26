@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" href="https://placehold.co/32x32/3b82f6/000000?text=S" type="image/png">
+    <link rel="icon" href="https://placehold.co/32x32/3b82f6/FFFFFF?text=SA" type="image/png">
 
     <style>
         body {
@@ -33,11 +33,11 @@
             transform: translateY(-2px);
             box-shadow: 0 0 20px 0 rgba(59, 130, 246, 0.5);
         }
-        .section-border { border-top: 1px solid #404040; }
+        .section-border { border-top: 1px solid #27272a; }
         .text-glow { text-shadow: 0 0 15px rgba(59, 130, 246, 0.4); }
         .popular-glow {
-              box-shadow: 0 0 30px 0 rgba(59, 130, 246, 0.3);
-              border: 1px solid #3b82f6;
+            box-shadow: 0 0 30px 0 rgba(59, 130, 246, 0.3);
+            border: 1px solid #3b82f6;
         }
         .header-scrolled {
             background-color: rgba(0, 0, 0, 0.8);
@@ -51,11 +51,16 @@
 
     <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold font-display text-white">Silva Automation</a>
+            
+            <a href="#" aria-label="Silva Automation Home">
+                <img src="silvas.svg" alt="Silva Automation Logo" class="h-8 w-auto">
+            </a>
+
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#services" class="nav-link text-gray-300">Services</a>
+                <a href="#services" class="nav-link text-gray-300">How It Helps</a>
+                <a href="#founder-program" class="nav-link text-gray-300">Founder Program</a>
                 <a href="#pricing" class="nav-link text-gray-300">Pricing</a>
-                <a href="#about" class="nav-link text-gray-300">About</a>
+                <a href="#about" class="nav-link text-gray-300">About Me</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-gray-300">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -65,216 +70,211 @@
     </header>
 
     <main>
-        <section id="hero-section" class="relative min-h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?q=80&w=2070&auto=format&fit=crop');">
-            <div class="absolute inset-0 bg-black/60"></div>
+        <section id="hero-section" class="relative min-h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('hero.png');">
+            <div class="absolute inset-0 bg-black/75"></div>
             <div class="relative text-center p-6 text-white" data-aos="fade-up">
-                <h1 class="text-3xl md:text-4xl font-bold font-display leading-tight mb-4 text-glow">Stop Working <em>in</em> Your Business. Start Working <em>on</em> It.</h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-neutral-300">You're trapped in a cycle of answering calls, chasing quotes, and scheduling jobs. The day-to-day chaos is costing you time and money. As a former service pro, I don't just give you advice—I build the custom automation systems that handle the busywork, so you can finally get your time back and focus on growth.</p>
+                <h1 class="text-3xl md:text-5xl font-bold font-display leading-tight mb-4 text-glow">Stop Working <em>in</em> Your Business. Start Working <em>on</em> It.</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-neutral-300">Trapped answering calls and chasing quotes instead of growing your business? As a former service pro, I don't just give advice—I build the custom systems that win you back your time.</p>
                 <a href="#contact" class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block">Book My Free Strategy Call</a>
+                <p class="mt-4 text-sm text-neutral-400 max-w-md mx-auto">The same systems I used to save my own service business 10+ hours a week.</p>
             </div>
         </section>
 
-        <section id="features" class="py-20 md:py-28">
+
+
+        <section id="founder-program" class="py-20 md:py-28 section-border">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center p-8 md:p-12 bg-blue-500/10 border border-blue-500/20 rounded-lg" data-aos="fade-up">
+                    <h2 class="text-3xl md:text-4xl font-display mb-4">An Unfair Advantage: The Founding Client Program</h2>
+                    <p class="text-neutral-300 text-lg max-w-2xl mx-auto mb-6">To launch Silva Automation, I'm looking for a few forward-thinking business owners to partner with.</p>
+                    <p class="text-neutral-400 max-w-2xl mx-auto mb-8">As a Founding Client, you will receive my most comprehensive automation package (the future "Optimize" plan) at a **one-time-only, significantly reduced price**. In exchange, your feedback will help shape the future of this service, and your success will become my first case study.</p>
+                    <p class="font-bold text-white text-xl mb-8">There are only <span class="text-blue-400 text-glow">3 spots</span> available for this program.</p>
+                    <div class="bg-neutral-900/50 p-6 rounded-lg border border-neutral-700 max-w-md mx-auto">
+                        <h3 class="font-bold text-lg mb-2 text-white">Not Ready Yet?</h3>
+                        <p class="text-neutral-400 text-sm mb-4">Get notified when we officially launch + receive automation tips for service businesses.</p>
+                        <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-3">
+                            <input type="hidden" name="_subject" value="Email List Signup - Silva Automation">
+                            <input type="hidden" name="signup_type" value="waitlist">
+                            <input type="text" name="_gotcha" style="display:none">
+                            <input type="email" name="email" placeholder="Your Email" class="w-full p-2 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400 text-sm" required>
+                            <input type="text" name="business_type" placeholder="Type of business (optional)" class="w-full p-2 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400 text-sm">
+                            <button type="submit" class="w-full bg-neutral-700 hover:bg-neutral-600 text-white font-semibold py-2 px-4 rounded-md text-sm transition-colors">Join the Waitlist</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="py-20 md:py-28 section-border">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-20">
-                    <h2 class="text-4xl md:text-5xl font-display mb-4" data-aos="fade-up">A Simple, Proven Process.</h2>
-                    <p class="max-w-2xl mx-auto text-neutral-400" data-aos="fade-up" data-aos-delay="100">We get your automations running in three straightforward steps.</p>
+                    <h2 class="text-4xl md:text-5xl font-display mb-4" data-aos="fade-up">What Automation Actually Looks Like</h2>
                 </div>
-                <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto text-center">
-                    <div class="space-y-4" data-aos="fade-up">
-                        <div class="w-16 h-16 mx-auto rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-2xl">1</div>
-                        <div><h3 class="font-bold text-xl mb-2">Discovery Call</h3><p class="text-neutral-400 text-sm px-4">First, we'll have a quick chat to pinpoint exactly where your business is losing time and money. We'll identify the highest-impact opportunities for automation.</p></div>
+                <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8" data-aos="fade-up">
+                    <div class="bg-red-900/20 border border-red-500/30 rounded-lg p-6">
+                        <h3 class="font-bold text-lg mb-4 text-red-300">Instead of This:</h3>
+                        <ul class="space-y-2 text-sm text-neutral-400">
+                            <li>• Customer calls at 5 PM, you miss it</li>
+                            <li>• Manually entering info into 3 systems</li>
+                            <li>• Forgetting to send follow-up emails</li>
+                            <li>• Double-booking appointments</li>
+                            <li>• Chasing customers for reviews</li>
+                        </ul>
                     </div>
-                    <div class="space-y-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="w-16 h-16 mx-auto rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-2xl">2</div>
-                        <div><h3 class="font-bold text-xl mb-2">System Build-Out</h3><p class="text-neutral-400 text-sm px-4">I get to work building your custom system. Using powerful, industry-leading tools, I create and rigorously test every workflow to ensure it's bulletproof.</p></div>
-                    </div>
-                    <div class="space-y-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="w-16 h-16 mx-auto rounded-full bg-blue-500/20 text-blue-400 flex items-center justify-center font-bold text-2xl">3</div>
-                        <div><h3 class="font-bold text-xl mb-2">Launch & Monitor</h3><p class="text-neutral-400 text-sm px-4">We launch your new automated system. I'll monitor everything closely to ensure it runs flawlessly, saving you time and generating ROI from day one.</p></div>
+                    <div class="bg-green-900/20 border border-green-500/30 rounded-lg p-6">
+                        <h3 class="font-bold text-lg mb-4 text-green-300">You Get This:</h3>
+                        <ul class="space-y-2 text-sm text-neutral-400">
+                            <li>• Auto-capture missed calls → text response</li>
+                            <li>• One form updates everywhere instantly</li>
+                            <li>• Automatic follow-ups based on job status</li>
+                            <li>• Smart scheduling prevents conflicts</li>
+                            <li>• Review requests sent at perfect timing</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </section>
-
-        <section id="services" class="py-20 md:py-28 bg-neutral-900/50">
-             <div class="container mx-auto px-6">
-                <div class="text-center mb-20">
-                    <h2 class="text-4xl md:text-5xl font-display mb-4" data-aos="fade-up">Your Digital Employee, Working 24/7.</h2>
-                    <p class="max-w-3xl mx-auto text-neutral-400" data-aos="fade-up" data-aos-delay="100">From capturing a new lead to getting a 5-star review, we automate every step of your customer journey.</p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                    <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-800" data-aos="fade-up"><h3 class="font-bold text-lg mb-2 text-white">No-Show Prevention</h3><p class="text-neutral-400 text-sm">Smart reminder sequences that actually get responses and confirmations, protecting your revenue.</p></div>
-                    <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-800" data-aos="fade-up" data-aos-delay="50"><h3 class="font-bold text-lg mb-2 text-white">Review Automation</h3><p class="text-neutral-400 text-sm">Automatically request reviews from happy customers to build your online reputation while you sleep.</p></div>
-                    <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-800" data-aos="fade-up" data-aos-delay="100"><h3 class="font-bold text-lg mb-2 text-white">Follow-Up Sequences</h3><p class="text-neutral-400 text-sm">Turn one-time customers into repeat clients with personalized, automated follow-up campaigns.</p></div>
-                    <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-800" data-aos="fade-up" data-aos-delay="150"><h3 class="font-bold text-lg mb-2 text-white">Lead Nurturing</h3><p class="text-neutral-400 text-sm">Automatically follow up with potential clients who received a quote but didn't book, closing more deals.</p></div>
-                    <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-800" data-aos="fade-up" data-aos-delay="200"><h3 class="font-bold text-lg mb-2 text-white">Team Communication</h3><p class="text-neutral-400 text-sm">Keep your crew informed with automated dispatch notifications, job updates, and daily schedules.</p></div>
-                    <div class="bg-neutral-900 p-6 rounded-lg border border-neutral-800" data-aos="fade-up" data-aos-delay="250"><h3 class="font-bold text-lg mb-2 text-white">Customer Insights</h3><p class="text-neutral-400 text-sm">Automatically track customer satisfaction and get real-time alerts when someone needs attention.</p></div>
-                </div>
-             </div>
         </section>
         
-        <section id="pricing" class="py-20 md:py-28">
+        <section id="pricing" class="py-20 md:py-28 section-border">
             <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl md:text-5xl font-display mb-4" data-aos="fade-up">Simple Pricing. Powerful Results.</h2>
-                <p class="max-w-2xl mx-auto text-neutral-400 mb-20" data-aos="fade-up" data-aos-delay="100">A proven entry point that grows with your business. I'll personally build and manage your entire system.</p>
-                <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto items-stretch">
+                <h2 class="text-4xl md:text-5xl font-display mb-4" data-aos="fade-up">Transparent, Future-Proof Pricing</h2>
+                <p class="max-w-3xl mx-auto text-neutral-400 mb-12" data-aos="fade-up" data-aos-delay="100">The Founding Program is based on our standard plans. After the program concludes, this will be our pricing for all new clients.</p>
+                
+                <div class="grid lg:grid-cols-2 gap-8 max-w-5xl mx-auto items-stretch">
                     <div class="p-8 h-full rounded-lg border border-neutral-800 flex flex-col text-left" data-aos="fade-up">
-                        <h3 class="font-bold text-xl mb-2">Essential Setup</h3><p class="text-neutral-400 mb-6">The perfect starting point. We'll stop no-shows cold and build a foundation for your future automation.</p><p class="text-5xl font-display mb-2">$399<span class="text-lg text-neutral-400">/one-time</span></p><p class="text-blue-400 text-sm mb-6">Recoup your investment after 1-2 prevented no-shows.</p>
+                        <h3 class="font-bold text-xl mb-2">Automate</h3>
+                        <p class="text-neutral-400 mb-6 flex-grow">The essential foundation to eliminate your biggest administrative headache.</p>
+                        <p class="text-5xl font-display mb-2">$149<span class="text-lg text-neutral-400">/month</span></p>
+                        <p class="text-neutral-500 text-xs mb-6">+ One-Time Setup Fee</p>
                         <ul class="space-y-3 mb-8">
-                             <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>No-Show Prevention System</li>
-                             <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Custom SMS/Email Reminders</li>
-                             <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Confirmation Tracking</li>
-                             <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1-Hour Strategy Session</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Core Automation System</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Managed Hosting & Security</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Daily Performance Monitoring</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Email & Chat Support</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Bulletproof Reliability Guarantee</li>
                         </ul>
-                        <a href="#contact" class="cta-button w-full block text-center font-semibold py-3 px-6 rounded-md mt-auto">Get Started</a>
                     </div>
+                    
                     <div class="p-8 h-full rounded-lg popular-glow relative flex flex-col text-left" data-aos="fade-up" data-aos-delay="100">
                         <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</span>
-                        <h3 class="font-bold text-2xl mb-2">Pro Automation Suite</h3><p class="text-white mb-6">The all-in-one solution to put your business growth on autopilot. We handle everything from lead to loyalty.</p><p class="text-6xl font-display mb-2">$799<span class="text-lg text-neutral-400">/one-time</span></p><p class="text-blue-400 text-sm mb-6">Typically pays for itself in the first month.</p>
+                        <h3 class="font-bold text-2xl mb-2">Optimize</h3>
+                        <p class="text-white mb-6 flex-grow">A complete suite to streamline your customer journey, from lead to loyalty.</p>
+                        <p class="text-6xl font-display mb-2">$299<span class="text-lg text-neutral-400">/month</span></p>
+                        <p class="text-neutral-500 text-xs mb-6">+ One-Time Setup Fee</p>
                         <ul class="space-y-3 mb-8">
-                            <li class="flex items-center font-semibold text-white">Everything in Essential, plus:</li>
-                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Automated Review Requests</li>
-                             <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Customer Follow-Up Sequences</li>
-                             <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Lead Nurturing Workflows</li>
+                            <li class="flex items-center font-semibold text-white">Everything in Automate, plus:</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Automated Lead Nurturing</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Automatic Review Requests</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Client Follow-Up Sequences</li>
+                            <li class="flex items-center"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Bulletproof Reliability Guarantee</li>
                         </ul>
-                        <a href="#contact" class="cta-button w-full block text-center font-semibold py-3 px-6 rounded-md mt-auto">Choose Pro</a>
                     </div>
+                </div>
+                
+                <div class="max-w-3xl mx-auto mt-16 text-center" data-aos="fade-up">
+                    <h4 class="font-bold text-white mb-2 text-lg">Bulletproof Reliability Guarantee</h4>
+                    <p class="text-sm text-neutral-400">Your original system will run flawlessly. If any component breaks due to platform updates (not user modifications), I'll fix it immediately at no cost - even for 3 months after you cancel. <strong class="text-white">I stand behind what I build.</strong></p>
+                    <p class="text-xs text-neutral-500 mt-2"><em>Note: Adding your own nodes or modifications voids this guarantee.</em></p>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="py-20 md:py-28">
+        <section id="about" class="py-20 md:py-28 section-border">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto" data-aos="fade-up">
+                    
                     <div class="md:w-1/3 text-center">
                         <div class="relative inline-block">
                             <img src="about.png" alt="Savaiinaea Silva" class="w-48 h-48 rounded-full mx-auto border-2 border-neutral-700 object-cover object-top relative z-10">
                             <div class="absolute top-0 left-0 w-full h-full rounded-full bg-blue-500 blur-2xl opacity-30"></div>
                         </div>
                     </div>
+
                     <div class="md:w-2/3 text-center md:text-left">
                         <h2 class="text-3xl md:text-4xl font-display mb-4">Built by a Service Pro, For Service Pros.</h2>
-                        <p class="text-neutral-400 mb-4">Hey, I'm Savaiinaea Silva, but you can call me Naea. Before diving into automation, I ran my own junk removal business. I know the chaos of scheduling routes, the sting of last-minute cancellations, and the constant feeling that you're stuck working <em>in</em> your business instead of <em>on</em> it.</p>
-                        <p class="text-neutral-400 mb-4">I taught myself automation out of necessity, building systems that saved me 10+ hours a week and dramatically increased my profits.</p>
-                        <p class="text-white font-semibold">I created Silva Automation to give that power back to business owners like you. We'll solve the frustrating, time-wasting problems so you can get back to building the business you love.</p>
+                        <p class="text-neutral-400 mb-4">Hey, I'm Savaiinaea Silva. Before building automation, I ran my own junk removal business here in Hawaii. I know the chaos of scheduling, the sting of no-shows, and the feeling of being trapped working <em>in</em> your business, not <em>on</em> it.</p>
+                        <blockquote class="my-6 border-l-4 border-blue-500 pl-4 text-lg italic text-white">"I built the systems that saved my own business 10+ hours a week. Now, I build them for you."</blockquote>
+                        <p class="text-neutral-400">I created Silva Automation to give that same power back to other service pros. We'll solve the frustrating problems so you can get back to building the business you love.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="contact" class="py-20 md:py-28 bg-neutral-900/50">
+        
+        <section id="contact" class="py-20 md:py-28 section-border">
             <div class="container mx-auto px-6 text-center">
                  <div class="max-w-xl mx-auto" data-aos="fade-up">
-                    <h2 class="text-4xl md:text-5xl font-display mb-4 text-glow">Ready to Automate?</h2>
-                    <p class="text-neutral-400 mb-8">Book a free, 15-minute call to discover your business's biggest automation opportunities. No pressure, no obligation.</p>
-                    
-                    <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4" id="contact-form">
-                        <input type="hidden" name="_subject" value="New Contact Form Submission from Silva Automation">
-                        <input type="hidden" name="_format" value="plain">
-                        <input type="text" name="_gotcha" style="display:none">
-                        
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                            <input type="text" name="name" placeholder="First Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
-                            <input type="text" name="lastname" placeholder="Last Name" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
-                        </div>
-                        <div>
-                            <input type="tel" name="phone" placeholder="Phone Number" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
-                        </div>
-                        <div>
-                            <input type="email" name="email" placeholder="Your Email" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required>
-                        </div>
-                        <div>
-                            <textarea name="message" placeholder="Tell me a little about your business..." rows="4" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button w-full font-semibold py-3 px-6 rounded-md text-lg">Book My Free Call</button>
-                    </form>
-                    <p id="form-message" class="mt-4 text-sm"></p>
+                     <h2 class="text-4xl md:text-5xl font-display mb-4 text-glow">Ready to Get Your Time Back?</h2>
+                     <p class="text-neutral-400 mb-8">The fastest way to get started is to book a free, 15-minute discovery call. We'll map out your biggest automation opportunities. No pressure, no obligation.</p>
+                     <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="cta-button font-semibold text-base py-2 px-6 rounded-md inline-block">Find a Time That Works</a>
+                     <p class="text-sm text-neutral-500 mt-6"><a href="#" id="show-form-link" class="hover:text-white underline transition-colors">Or, have a quick question? Send a message.</a></p>
+                     <div id="contact-form-wrapper" class="mt-8 text-left" style="display: none;">
+                         <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4">
+                             <input type="hidden" name="_subject" value="New Contact Form Submission from Silva Automation"><input type="text" name="_gotcha" style="display:none">
+                             <div><input type="email" name="email" placeholder="Your Email" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required></div>
+                             <div><textarea name="message" placeholder="Your question or message..." rows="4" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required></textarea></div>
+                             <button type="submit" class="cta-button w-full font-semibold py-3 px-6 rounded-md text-lg">Send Message</button>
+                         </form>
+                     </div>
                  </div>
             </div>
         </section>
     </main>
 
-    <footer class="py-8 section-border text-center">
-        <div class="container mx-auto px-6 text-neutral-500">
-            <div class="mb-4 text-sm space-x-6">
-                <a href="tel:8083081107" class="hover:text-blue-500 transition-colors">(808) 308-1107</a>
-                <a href="mailto:contact@ssilva.space" class="hover:text-blue-500 transition-colors">contact@ssilva.space</a>
+    <footer class="bg-neutral-900 section-border text-neutral-400">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+                <div class="space-y-4">
+                    <a href="#"><img src="silvas.svg" alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0"></a>
+                    <p class="text-sm">Bespoke automation systems that save you time and help you grow your service business.</p>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="font-bold text-white uppercase tracking-wider">Menu</h4>
+                    <nav class="flex flex-col space-y-2 text-sm">
+                        <a href="#services" class="hover:text-blue-500 transition-colors">How It Helps</a>
+                        <a href="#founder-program" class="hover:text-blue-500 transition-colors">Founder Program</a>
+                        <a href="#pricing" class="hover:text-blue-500 transition-colors">Pricing</a>
+                        <a href="#about" class="hover:text-blue-500 transition-colors">About Me</a>
+                    </nav>
+                </div>
+                <div class="space-y-4">
+                     <h4 class="font-bold text-white uppercase tracking-wider">Contact</h4>
+                     <div class="flex justify-center md:justify-start space-x-6 text-sm">
+                         <a href="https://github.com/SavaiinaeaSIlva" target="_blank" class="hover:text-blue-500 transition-colors" aria-label="GitHub Profile">GitHub</a>
+                         <a href="#" target="_blank" class="hover:text-blue-500 transition-colors" aria-label="LinkedIn Profile">LinkedIn</a>
+                         <a href="mailto:contact@ssilva.space" class="hover:text-blue-500 transition-colors">Email</a>
+                     </div>
+                </div>
             </div>
-            <div class="flex justify-center space-x-6 mb-4">
-                 <a href="https://github.com/SavaiinaeaSIlva" target="_blank" class="hover:text-blue-500 transition-colors" aria-label="GitHub Profile">GitHub</a>
-                 <a href="#" target="_blank" class="hover:text-blue-500 transition-colors" aria-label="LinkedIn Profile">LinkedIn</a>
+            <div class="mt-12 pt-8 border-t border-neutral-800 text-center text-sm">
+                <p class="text-xs text-neutral-600">&copy; <span id="current-year"></span> Silva Automation. All Rights Reserved.</p>
             </div>
-            <p class="text-xs text-neutral-600">&copy; <span id="current-year"></span> Silva Automation. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             AOS.init({ duration: 800, once: true, offset: 50 });
             const header = document.getElementById('main-header');
             const mobileMenuButton = document.getElementById('mobile-menu-button');
             const mobileMenu = document.getElementById('mobile-menu');
-            
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 50) {
-                    header.classList.add('header-scrolled');
-                } else {
-                    header.classList.remove('header-scrolled');
-                }
-            });
-            
-            mobileMenuButton.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                if (!header.classList.contains('header-scrolled')) {
-                    header.classList.add('header-scrolled');
-                }
-            });
-            
+            window.addEventListener('scroll', () => { if (window.scrollY > 50) { header.classList.add('header-scrolled'); } else { header.classList.remove('header-scrolled'); } });
+            mobileMenuButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); if (!header.classList.contains('header-scrolled')) { header.classList.add('header-scrolled'); } });
             const desktopNav = document.querySelector('nav.hidden.md\\:flex');
             const mobileNavContainer = document.getElementById('mobile-menu');
-            
-            while (mobileNavContainer.firstChild) {
-                mobileNavContainer.removeChild(mobileNavContainer.firstChild);
-            }
-            
-            const mobileNav = document.createElement('nav');
-            mobileNav.innerHTML = desktopNav.innerHTML;
-            mobileNav.classList.add('flex', 'flex-col', 'items-center', 'space-y-4');
-            mobileNavContainer.appendChild(mobileNav);
-            
-            mobileNav.querySelectorAll('a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
+            mobileNavContainer.innerHTML = `<nav class="flex flex-col items-center space-y-4">${desktopNav.innerHTML}</nav>`;
+            mobileNavContainer.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
             document.getElementById('current-year').textContent = new Date().getFullYear();
-            
-            // Form handling - Let Formspree handle the submission
-            const form = document.getElementById('contact-form');
-            const messageEl = document.getElementById('form-message');
-            
-            // Bind to the form's submit event
-            form.addEventListener('submit', function(e) {
-                // Show a loading message
-                messageEl.textContent = 'Sending your message...';
-                messageEl.className = 'mt-4 text-sm text-blue-400';
-                
-                // Formspree will handle the actual submission
-                // We'll check for success after a brief delay
-                setTimeout(function() {
-                    // This is a simple approach - in a real scenario you might want to
-                    // use Formspree's webhooks or redirect to a thank you page
-                    messageEl.textContent = 'Message sent successfully! We\'ll be in touch soon.';
-                    messageEl.className = 'mt-4 text-sm text-green-400';
-                    form.reset();
-                }, 1000);
-            });
+            const showFormLink = document.getElementById('show-form-link');
+            const formWrapper = document.getElementById('contact-form-wrapper');
+            if (showFormLink && formWrapper) {
+                showFormLink.addEventListener('click', function(event) {
+                    event.preventDefault(); 
+                    formWrapper.style.display = 'block';
+                    showFormLink.style.display = 'none';
+                });
+            }
         });
     </script>
-
 </body>
 </html>
