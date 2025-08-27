@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silva Automation - Stop Working IN Your Business</title>
+    <title>About - Silva Automation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,14 +14,14 @@
 </head>
 <body class="antialiased">
 
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-scrolled">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" aria-label="Silva Automation Home">
                 <img src="assets/images/silvas.svg" alt="Silva Automation Logo" class="h-8 w-auto">
             </a>
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="pricing.html" class="nav-link text-gray-300">Pricing</a>
-                <a href="about.html" class="nav-link text-gray-300">About</a>
+                <a href="about.html" class="nav-link text-blue-500 font-bold">About</a>
                 <a href="contact.html" class="nav-link text-gray-300">Contact</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-gray-300">
@@ -31,14 +31,21 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4"></div>
     </header>
 
-    <main>
-        <section id="hero-section" class="relative min-h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/hero.png');">
-            <div class="absolute inset-0 bg-black/75"></div>
-            <div class="relative text-center p-6 text-white" data-aos="fade-up">
-                <h1 class="text-3xl md:text-5xl font-bold font-display leading-tight mb-4 text-glow">Stop Working <em>in</em> Your Business. Start Working <em>on</em> It.</h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-neutral-300">Trapped answering calls and chasing quotes instead of growing your business? As a former service pro, I don't just give advice—I build the custom systems that win you back your time.</p>
-                <a href="contact.html" class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block">Book My Free Strategy Call</a>
-                <p class="mt-4 text-sm text-neutral-400 max-w-md mx-auto">The same systems I used to save my own service business 10+ hours a week.</p>
+    <main class="pt-24">
+        <section id="about" class="py-20 md:py-28">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto" data-aos="fade-up">
+                    <div class="md:w-1/3 text-center">
+                         <img src="assets/images/about.png" alt="Savaiinaea Silva" class="w-48 h-48 rounded-full mx-auto border-2 border-neutral-700 object-cover object-top relative z-10">
+                    </div>
+
+                    <div class="md:w-2/3 text-center md:text-left">
+                        <h2 class="text-3xl md:text-4xl font-display mb-4">Built by a Service Pro, For Service Pros.</h2>
+                        <p class="text-neutral-400 mb-4">Hey, I'm Savaiinaea Silva. Before building automation, I ran my own junk removal business here in Waipahu. I know the chaos of scheduling, the sting of no-shows, and the feeling of being trapped working <em>in</em> your business, not <em>on</em> it.</p>
+                        <blockquote class="my-6 border-l-4 border-blue-500 pl-4 text-lg italic text-white">"I built the systems that saved my own business 10+ hours a week. Now, I build them for you."</blockquote>
+                        <p class="text-neutral-400">I created Silva Automation to give that same power back to other service pros. We'll solve the frustrating problems so you can get back to building the business you love.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
