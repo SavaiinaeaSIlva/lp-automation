@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silva Automation - Stop Working IN Your Business</title>
+    <title>Contact - Silva Automation</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,15 @@
 </head>
 <body class="antialiased">
 
-    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-scrolled">
+         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" aria-label="Silva Automation Home">
                 <img src="assets/images/silvas.svg" alt="Silva Automation Logo" class="h-8 w-auto">
             </a>
             <nav class="hidden md:flex items-center space-x-8">
                 <a href="pricing.html" class="nav-link text-gray-300">Pricing</a>
                 <a href="about.html" class="nav-link text-gray-300">About</a>
-                <a href="contact.html" class="nav-link text-gray-300">Contact</a>
+                <a href="contact.html" class="nav-link text-blue-500 font-bold">Contact</a>
             </nav>
             <button id="mobile-menu-button" class="md:hidden text-gray-300">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -31,18 +31,26 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4"></div>
     </header>
 
-    <main>
-        <section id="hero-section" class="relative min-h-screen bg-cover bg-center flex items-center justify-center" style="background-image: url('assets/images/hero.png');">
-            <div class="absolute inset-0 bg-black/75"></div>
-            <div class="relative text-center p-6 text-white" data-aos="fade-up">
-                <h1 class="text-3xl md:text-5xl font-bold font-display leading-tight mb-4 text-glow">Stop Working <em>in</em> Your Business. Start Working <em>on</em> It.</h1>
-                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-neutral-300">Trapped answering calls and chasing quotes instead of growing your business? As a former service pro, I don't just give advice—I build the custom systems that win you back your time.</p>
-                <a href="contact.html" class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block">Book My Free Strategy Call</a>
-                <p class="mt-4 text-sm text-neutral-400 max-w-md mx-auto">The same systems I used to save my own service business 10+ hours a week.</p>
+    <main class="pt-24">
+        <section id="contact" class="py-20 md:py-28">
+            <div class="container mx-auto px-6 text-center">
+                 <div class="max-w-xl mx-auto" data-aos="fade-up">
+                     <h2 class="text-4xl md:text-5xl font-display mb-4 text-glow">Ready to Get Your Time Back?</h2>
+                     <p class="text-neutral-400 mb-8">The fastest way to get started is to book a free, 15-minute discovery call. We'll map out your biggest automation opportunities. No pressure, no obligation.</p>
+                     <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="cta-button font-semibold text-base py-2 px-6 rounded-md inline-block">Find a Time That Works</a>
+                     <div class="mt-8 text-left">
+                         <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4">
+                             <input type="hidden" name="_subject" value="New Contact Form Submission from Silva Automation"><input type="text" name="_gotcha" style="display:none">
+                             <div><input type="email" name="email" placeholder="Your Email" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required></div>
+                             <div><textarea name="message" placeholder="Your question or message..." rows="4" class="w-full p-3 bg-neutral-800 border border-neutral-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-neutral-400" required></textarea></div>
+                             <button type="submit" class="cta-button w-full font-semibold py-3 px-6 rounded-md text-lg">Send Message</button>
+                         </form>
+                     </div>
+                 </div>
             </div>
         </section>
     </main>
-
+    
     <footer class="bg-neutral-900 section-border text-neutral-400">
         <div class="container mx-auto px-6 py-12">
             <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
