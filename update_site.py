@@ -67,6 +67,10 @@ NEW_FOOTER_HTML = """
       <a class="hover:text-white" href="cookie.html">
        Cookie Policy
       </a>
+      |
+      <a class="hover:text-white" href="refund.html">
+       Refund Policy
+      </a>
      </p>
     </div>
    </div>
