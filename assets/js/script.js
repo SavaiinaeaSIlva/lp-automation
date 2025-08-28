@@ -1,4 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Hero Logo Shrink and Hero Animate Out ---
+    const heroLogo = document.getElementById('hero-logo');
+    const heroContent = document.getElementById('hero-content');
+    const heroSection = document.getElementById('hero');
+
+    function handleHeroScroll() {
+        const scrollY = window.scrollY;
+        const heroRect = heroSection.getBoundingClientRect();
+        // Shrink logo when not at top
+        if (scrollY > 40) {
+            heroLogo && heroLogo.classList.add('hero-logo-shrink');
+        } else {
+            heroLogo && heroLogo.classList.remove('hero-logo-shrink');
+        }
+        // Animate hero content out when scrolled past hero
+        if (heroRect.bottom < 60) {
+            heroContent && heroContent.classList.add('hero-content-hidden');
+        } else {
+            heroContent && heroContent.classList.remove('hero-content-hidden');
+        }
+    }
+    window.addEventListener('scroll', handleHeroScroll);
+    // Run once on load
+    handleHeroScroll();
     // Initializes the "Animate On Scroll" library
     AOS.init({ 
         duration: 800, 

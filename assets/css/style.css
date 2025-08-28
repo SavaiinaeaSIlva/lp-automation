@@ -1,3 +1,21 @@
+/* --- Hero Logo Animation --- */
+#hero-logo {
+    transition: height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.hero-logo-shrink {
+    height: 2.5rem !important;
+    opacity: 0.85;
+}
+
+/* --- Hero Content Animate Out --- */
+#hero-content {
+    transition: opacity 0.5s, transform 0.5s;
+}
+.hero-content-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-40px) scale(0.98);
+}
 /* --- Improved Sticky Footer Solution --- */
 html, body {
     height: 100%;
