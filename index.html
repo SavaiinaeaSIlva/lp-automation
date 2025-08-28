@@ -14,7 +14,7 @@
   <link href="assets/css/style.css" rel="stylesheet"/>
 </head>
 
-<body class="antialiased">
+<body class="antialiased bg-black text-gray-300">
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -34,14 +34,18 @@
     </div>
    </div>
 </header>
+
 <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900/90 backdrop-blur-lg z-40 p-8 mobile-menu-closed md:hidden">
-    <nav class="flex flex-col space-y-6 text-lg text-right mt-16">
+    <nav class="flex flex-col space-y-8 mt-12 text-lg">
         <a class="nav-link text-gray-300 hover:text-white" href="#how-it-works">How It Works</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#about">About</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#pricing">Pricing</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#contact">Contact</a>
     </nav>
-</div>
+    <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    </div>
 
 <main>
 <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center" id="hero" style="background-image: url('https://images.unsplash.com/photo-1554435493-93422e8220c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80');">
@@ -54,7 +58,7 @@
      <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300">
       Trapped answering calls and chasing quotes? I build the custom automation systems that win you back your time and sanity.
      </p>
-     <a class="cta-button-primary font-semibold text-lg py-3 px-8 rounded-md inline-block" href="#contact">
+     <a class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block" href="#contact">
       Book a Free Strategy Call
      </a>
     </div>
@@ -95,6 +99,7 @@
      </div>
     </div>
    </section>
+
    <section class="py-20 sm:py-24 lg:py-32 bg-black/70" id="about">
     <div class="container mx-auto px-6">
      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
@@ -115,6 +120,7 @@
      </div>
     </div>
    </section>
+
     <section class="py-20 sm:py-24 lg:py-32" id="pricing">
     <div class="container mx-auto px-6">
      <div class="text-center" data-aos="fade-up">
@@ -159,7 +165,7 @@
                     <p class="text-lg text-gray-400 mb-8">
                         The first step is a free, 15-minute discovery call to map out your biggest automation opportunities. Or, send me a message directly using the form.
                     </p>
-                    <a class="cta-button-primary font-semibold text-lg py-3 px-8 rounded-md inline-block" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+                    <a class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block" href="https://calendly.com/silvaautomation/consultation" target="_blank">
                         Book a Free Call
                     </a>
                 </div>
@@ -167,18 +173,18 @@
                     <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4">
                         <div>
                             <label for="name" class="sr-only">Name</label>
-                            <input type="text" name="name" id="name" placeholder="Your Name" required class="form-input">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition duration-200 shadow-sm placeholder-gray-500" autocomplete="name">
                         </div>
                         <div>
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Your Email" required class="form-input">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition duration-200 shadow-sm placeholder-gray-500" autocomplete="email">
                         </div>
                         <div>
                             <label for="message" class="sr-only">Message</label>
-                            <textarea name="message" id="message" rows="4" placeholder="Your Message" required class="form-input"></textarea>
+                            <textarea name="message" id="message" rows="4" placeholder="Your Message" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition duration-200 shadow-sm placeholder-gray-500"></textarea>
                         </div>
                         <div>
-                            <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md transition-colors">
+                            <button type="submit" class="w-full cta-button bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
                                 Send Message
                             </button>
                         </div>
@@ -231,14 +237,15 @@
 </footer>
 
 <div id="cookie-banner">
-   <p class="text-sm">
-    This website uses cookies to ensure you get the best experience. By continuing, you agree to our
-    <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
-   </p>
-   <button id="accept-cookies" class="cta-button-primary text-sm py-2 px-4 rounded-md">
-    Accept
-   </button>
-</div>
+     <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 fixed bottom-0 left-0 right-0 z-50 shadow-lg">
+         <p class="text-sm">
+            This website uses cookies to ensure you get the best experience. By continuing, you agree to our
+            <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
+         </p>
+         <button id="accept-cookies" class="cta-button text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Accept
+         </button>
+     </div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/script.js"></script>
