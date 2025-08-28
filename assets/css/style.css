@@ -1,20 +1,18 @@
-/* --- Hero Logo Animation --- */
-#hero-logo {
-    transition: height 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.4s cubic-bezier(0.4,0,0.2,1);
-}
-.hero-logo-shrink {
-    height: 2.5rem !important;
-    opacity: 0.85;
-}
 
-/* --- Hero Content Animate Out --- */
-#hero-content {
-    transition: opacity 0.5s, transform 0.5s;
+/* --- Section Animate In/Out --- */
+.section-animate {
+    transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1);
+    will-change: opacity, transform;
 }
-.hero-content-hidden {
+.section-in {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+}
+.section-out {
     opacity: 0;
+    transform: translateY(40px) scale(0.98);
     pointer-events: none;
-    transform: translateY(-40px) scale(0.98);
 }
 /* --- Improved Sticky Footer Solution --- */
 html, body {

@@ -1,4 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Section Animate In/Out on Scroll ---
+    const animatedSections = document.querySelectorAll('.section-animate');
+    const sectionObserver = new window.IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-in');
+                entry.target.classList.remove('section-out');
+            } else {
+                entry.target.classList.remove('section-in');
+                entry.target.classList.add('section-out');
+            }
+        });
+    }, {
+        threshold: 0.25
+    });
+    animatedSections.forEach(section => {
+        sectionObserver.observe(section);
+    });
     // --- Hero Logo Shrink and Hero Animate Out ---
     const heroLogo = document.getElementById('hero-logo');
     const heroContent = document.getElementById('hero-content');
