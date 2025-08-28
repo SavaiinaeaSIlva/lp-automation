@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html class="scroll-smooth" lang="en">
- <head>
+
+<head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Privacy Policy - Silva Automation
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
+  <title>Privacy Policy - Silva Automation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link href="https://placehold.co/32x32/3b82f6/FFFFFF?text=SA" rel="icon" type="image/png"/>
   <link href="assets/css/style.css" rel="stylesheet"/>
- </head>
- <body class="antialiased">
-  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 header-scrolled" id="main-header">
-  </header>
-  <main class="pt-24">
-   <section class="py-20 md:py-28" id="privacy">
+</head>
+
+<body class="antialiased">
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
+   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a aria-label="Silva Automation Home" href="index.html">
+     <img alt="Silva Automation Logo" class="h-8 w-auto" src="assets/images/silvas.svg"/>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8 text-sm">
+     <a class="nav-link text-gray-300 hover:text-white" href="index.html">Back to Main Site</a>
+    </nav>
+    <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+   </div>
+</header>
+<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900/90 backdrop-blur-lg z-40 p-8 mobile-menu-closed md:hidden">
+    <nav class="flex flex-col space-y-6 text-lg text-right mt-16">
+        <a class="nav-link text-gray-300 hover:text-white" href="index.html">Back to Main Site</a>
+    </nav>
+</div>
+
+<main>
+<section class="py-20 md:py-28" id="privacy">
     <div class="container mx-auto px-6 max-w-4xl">
      <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">
       Privacy Policy
@@ -176,8 +195,9 @@
      </div>
     </div>
    </section>
-  </main>
-  <footer class="bg-neutral-900 section-border text-neutral-400">
+</main>
+
+<footer class="bg-neutral-900 border-t border-neutral-800 text-neutral-400">
    <div class="container mx-auto px-6 py-12">
     <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
      <div class="space-y-4">
@@ -189,69 +209,47 @@
       </p>
      </div>
      <div class="space-y-4">
-      <h4 class="font-bold text-white uppercase tracking-wider">
-       Menu
-      </h4>
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">Menu</h4>
       <nav class="flex flex-col space-y-2 text-sm">
-       <a class="hover:text-blue-500 transition-colors" href="index.html#how-it-works">
-        How It Works
-       </a>
-       <a class="hover:text-blue-500 transition-colors" href="pricing.html">
-        Pricing
-       </a>
-       <a class="hover:text-blue-500 transition-colors" href="about.html">
-        About
-       </a>
-       <a class="hover:text-blue-500 transition-colors" href="contact.html">
-        Contact
-       </a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#how-it-works">How It Works</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#about">About</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#pricing">Pricing</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#contact">Contact</a>
       </nav>
      </div>
      <div class="space-y-4">
-      <h4 class="font-bold text-white uppercase tracking-wider">
-       Contact
-      </h4>
-      <div class="flex justify-center md:justify-start space-x-6 text-sm">
-       <a aria-label="GitHub Profile" class="hover:text-blue-500 transition-colors" href="https://github.com/SavaiinaeaSIlva" target="_blank">
-        GitHub
-       </a>
-       <a class="hover:text-blue-500 transition-colors" href="mailto:contact@ssilva.space">
-        Email
-       </a>
-       <a class="hover:text-blue-500 transition-colors" href="tel:+18083081107">
-        Call
-       </a>
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">Contact</h4>
+      <div class="flex flex-col space-y-2 text-sm">
+        <a class="hover:text-blue-500 transition-colors" href="mailto:contact@ssilva.space">Email</a>
+        <a class="hover:text-blue-500 transition-colors" href="https://github.com/SavaiinaeaSIlva" target="_blank">GitHub</a>
+        <a class="hover:text-blue-500 transition-colors" href="tel:+18083081107">Call</a>
       </div>
      </div>
     </div>
     <div class="mt-12 pt-8 border-t border-neutral-800 text-center text-sm">
      <p class="text-xs text-neutral-600">
-      ©
-      <span id="current-year">
-      </span>
-      Silva Automation. All Rights Reserved. |
-      <a class="hover:text-white" href="terms.html">
-       Terms &amp; Conditions
-      </a>
-      |
-      <a class="hover:text-white" href="privacy.html">
-       Privacy Policy
-      </a>
-      |
-      <a class="hover:text-white" href="cookie.html">
-       Cookie Policy
-      </a>
-      |
-      <a class="hover:text-white" href="refund.html">
-       Refund Policy
-      </a>
+      © <span id="current-year"></span> Silva Automation. All Rights Reserved. |
+      <a class="hover:text-white" href="terms.html">Terms &amp; Conditions</a> |
+      <a class="hover:text-white" href="privacy.html">Privacy Policy</a> |
+      <a class="hover:text-white" href="cookie.html">Cookie Policy</a> |
+      <a class="hover:text-white" href="refund.html">Refund Policy</a>
      </p>
     </div>
    </div>
-  </footer>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
-  </script>
-  <script src="assets/js/script.js">
-  </script>
- </body>
+</footer>
+
+<div id="cookie-banner">
+   <p class="text-sm">
+    This website uses cookies to ensure you get the best experience. By continuing, you agree to our
+    <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
+   </p>
+   <button id="accept-cookies" class="cta-button-primary text-sm py-2 px-4 rounded-md">
+    Accept
+   </button>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
 </html>
