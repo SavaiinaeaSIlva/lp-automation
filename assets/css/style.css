@@ -18,11 +18,58 @@ footer {
     position: relative;
     z-index: 0;
 }
+
 /* --- Base Theme Styles --- */
 body {
     font-family: 'Inter', sans-serif;
     background-color: #000000; /* Matching your HTML */
     color: #a3a3a3;
+}
+
+@media (max-width: 640px) {
+    main {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    section {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}
+
+h1, h2, h3, .font-display {
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: -0.01em;
+}
+
+h1, .hero-title {
+    text-shadow: 0 4px 32px rgba(59,130,246,0.15), 0 1.5px 0 #000;
+}
+
+.section-title {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 16px rgba(59,130,246,0.10);
+}
+
+.card, .shadow-xl {
+    box-shadow: 0 8px 32px 0 rgba(59,130,246,0.10), 0 1.5px 0 #000;
+    border-radius: 1rem;
+}
+
+.shadow-2xl {
+    box-shadow: 0 16px 48px 0 rgba(59,130,246,0.18), 0 2px 0 #000;
+}
+
+.footer-logo {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
 }
 
 h1, h2, h3, .font-display {
