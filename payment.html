@@ -256,7 +256,44 @@ document.addEventListener('DOMContentLoaded', function() {
       cookieBanner.style.display = 'none';
     });
   }
+});// Add to the existing payment page script
+const paymentButtons = document.querySelectorAll('#checkout-starter-button, #checkout-standard-button');
+paymentButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        this.textContent = 'Processing...';
+        this.disabled = true;
+    });
 });
+
+// Add a function to handle payment errors
+function handlePaymentError(error) {
+    console.error('Payment Error:', error);
+    alert('There was an issue processing your payment. Please try again or contact us for assistance.');
+    
+    // Re-enable buttons
+    document.querySelectorAll('#checkout-starter-button, #checkout-standard-button').forEach(button => {
+        button.textContent = button.id.includes('starter') ? 'Pay Deposit' : 'Pay Deposit';
+        button.disabled = false;
+    });
+}
+
+// Update the redirectToCheckout function
+async function redirectToCheckout(priceId) {
+    try {
+        const { error } = await stripe.redirectToCheckout({
+            lineItems: [{ price: priceId, quantity: 1 }],
+            mode: 'payment',
+            successUrl: window.location.origin + '/success.html',
+            cancelUrl: window.location.href
+        });
+        
+        if (error) {
+            handlePaymentError(error);
+        }
+    } catch (error) {
+        handlePaymentError(error);
+    }
+}
 </script>
 
 </body>

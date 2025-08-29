@@ -1,4 +1,3 @@
-
 /* --- Section Animate In/Out --- */
 .section-animate {
     transition: opacity 0.6s cubic-bezier(0.4,0,0.2,1), transform 0.6s cubic-bezier(0.4,0,0.2,1);
@@ -14,6 +13,7 @@
     transform: translateY(40px) scale(0.98);
     pointer-events: none;
 }
+
 /* --- Improved Sticky Footer Solution --- */
 html, body {
     height: 100%;
@@ -38,8 +38,9 @@ footer {
 /* --- Base Theme Styles --- */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #000000; /* Matching your HTML */
+    background-color: #000000;
     color: #a3a3a3;
+    line-height: 1.6;
 }
 
 @media (max-width: 640px) {
@@ -53,9 +54,10 @@ body {
     }
 }
 
-h1, h2, h3, .font-display {
+h1, h2, h3, h4, .font-display {
     font-family: 'IBM Plex Mono', monospace;
     letter-spacing: -0.01em;
+    color: #fff;
 }
 
 h1, .hero-title {
@@ -63,11 +65,9 @@ h1, .hero-title {
 }
 
 .section-title {
-    color: #fff;
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 2rem;
-    letter-spacing: -0.01em;
     text-shadow: 0 2px 16px rgba(59,130,246,0.10);
 }
 
@@ -88,48 +88,48 @@ h1, .hero-title {
     margin-right: 0.5rem;
 }
 
-h1, h2, h3, .font-display {
-    font-family: 'IBM Plex Mono', monospace;
-}
-
 .cta-button {
     transition: all 0.3s;
     background: #3b82f6;
     color: #ffffff;
     border: 1px solid #3b82f6;
+    display: inline-block;
+    text-align: center;
 }
 
 .cta-button:hover {
     transform: translateY(-2px);
     box-shadow: 0 0 20px 0 rgba(59, 130, 246, 0.5);
+    background: #2563eb;
 }
 
 /* --- Header Scroll Effect --- */
 .header-scrolled {
     background-color: rgba(0, 0, 0, 0.8);
     border-bottom: 1px solid rgb(38, 38, 38);
-    -webkit-backdrop-filter: blur(16px);
     backdrop-filter: blur(16px);
 }
 
 /* --- Mobile Menu Animation --- */
 #mobile-menu {
-        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        will-change: transform;
-        box-shadow: -8px 0 32px 0 rgba(0,0,0,0.4);
-}
-.mobile-menu-closed {
-        transform: translateX(100%);
-        pointer-events: none;
-        opacity: 0.5;
-}
-.mobile-menu-open {
-        transform: translateX(0%);
-        pointer-events: auto;
-        opacity: 1;
+    transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.3s ease;
+    will-change: transform, opacity;
+    box-shadow: -8px 0 32px 0 rgba(0,0,0,0.4);
 }
 
-/* Overlay for mobile menu (optional, for extra polish) */
+.mobile-menu-closed {
+    transform: translateX(100%);
+    pointer-events: none;
+    opacity: 0;
+}
+
+.mobile-menu-open {
+    transform: translateX(0%);
+    pointer-events: auto;
+    opacity: 1;
+}
+
+/* Overlay for mobile menu */
 @media (max-width: 767px) {
     #mobile-menu {
         min-width: 70vw;
@@ -141,40 +141,124 @@ h1, h2, h3, .font-display {
         bottom: 0;
         left: auto;
         border-left: 1px solid #222;
+        z-index: 9999;
+    }
+    
+    /* Mobile menu overlay */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 9998;
+        display: none;
+    }
+    
+    .mobile-menu-open + .mobile-menu-overlay {
+        display: block;
     }
 }
+
 /* --- Contact Form Focus States --- */
-input:focus, textarea:focus {
+input:focus, textarea:focus, select:focus {
     outline: none !important;
     border-color: #3b82f6 !important;
-    box-shadow: 0 0 0 2px #2563eb33;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
 }
 
-input, textarea {
+input, textarea, select {
     background-color: #18181b;
     color: #fff;
     border-radius: 0.375rem;
     border: 1px solid #27272a;
     transition: border 0.2s, box-shadow 0.2s;
+    width: 100%;
+    padding: 0.75rem;
 }
 
 ::placeholder {
     color: #6b7280;
     opacity: 1;
 }
+
 /* --- Cookie Banner --- */
 #cookie-banner {
     position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 100;
-    background: none;
-    border: none;
-    box-shadow: none;
-    width: 100vw;
-    pointer-events: none;
+    z-index: 1000;
+    background: #0a0a0a;
+    border-top: 1px solid #262626;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
-#cookie-banner > div {
-    pointer-events: auto;
+
+@media (min-width: 768px) {
+    #cookie-banner {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+#cookie-banner p {
+    margin: 0;
+    text-align: center;
+}
+
+#cookie-banner a {
+    color: #60a5fa;
+    text-decoration: underline;
+}
+
+#cookie-banner button {
+    background: #3b82f6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+#cookie-banner button:hover {
+    background: #2563eb;
+}
+
+/* Hero logo animation */
+.hero-logo-shrink {
+    transform: scale(0.8);
+    transition: transform 0.3s ease;
+}
+
+.hero-content-hidden {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Improve readability for legal pages */
+.prose {
+    max-width: none;
+    color: #d4d4d4;
+    line-height: 1.7;
+}
+
+.prose h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.prose ul, .prose ol {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.prose li {
+    margin-bottom: 0.5rem;
 }
