@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroLogo = document.getElementById('hero-logo');
     const heroContent = document.getElementById('hero-content');
     const heroSection = document.getElementById('hero');
+    
 
+    if (heroSection) {
     function handleHeroScroll() {
         const scrollY = window.scrollY;
         const heroRect = heroSection.getBoundingClientRect();
