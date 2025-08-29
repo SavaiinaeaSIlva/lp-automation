@@ -9,6 +9,7 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <link href="assets/css/style.css" rel="stylesheet"/>
+  <script src="https://js.stripe.com/v3/"></script>
 </head>
 <body class="antialiased bg-black text-gray-300">
 
@@ -26,7 +27,7 @@
     </nav>
     <div class="md:hidden">
         <button id="mobile-menu-button" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0-0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         </button>
     </div>
    </div>
@@ -40,32 +41,23 @@
 
     <div class="flex flex-col gap-6 mb-10 max-w-lg mx-auto">
       
-      <!-- Starter -->
       <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-800 border border-neutral-700 w-full">
         <h2 class="font-display font-bold text-xl mb-2 text-white">Starter</h2>
         <p class="text-3xl font-display text-white mb-4">$950</p>
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-        <stripe-buy-button
-          buy-button-id="buy_btn_1S1GiXIQy49B3e9yp0GNQfHM"
-          publishable-key="pk_live_51S1CRsIQy49B3e9yWDESSx0FP97iGopxsxyxxnFZaowtnLKGdl9na8Zg7brgsQlL1QetuqVoCgv3CXuR34dshu5X00IDrWV16D"
-        >
-        </stripe-buy-button>
+        <button id="checkout-starter-button" class="cta-button font-semibold py-3 px-6 rounded-md w-full mt-auto text-center">
+            Pay Deposit
+        </button>
       </div>
       
-      <!-- Standard -->
       <div class="p-6 rounded-lg flex flex-col items-center bg-blue-600/10 border-2 border-blue-500 relative w-full">
         <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
         <h2 class="font-display font-bold text-xl mb-2 text-white">Standard</h2>
         <p class="text-3xl font-display text-white mb-4">$2,450</p>
-        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-        <stripe-buy-button
-          buy-button-id="buy_btn_1S1GleIQy49B3e9yxKoVwa3P"
-          publishable-key="pk_live_51S1CRsIQy49B3e9yWDESSx0FP97iGopxsxyxxnFZaowtnLKGdl9na8Zg7brgsQlL1QetuqVoCgv3CXuR34dshu5X00IDrWV16D"
-        >
-        </stripe-buy-button>
+        <button id="checkout-standard-button" class="cta-button font-semibold py-3 px-6 rounded-md w-full mt-auto text-center">
+            Pay Deposit
+        </button>
       </div>
       
-      <!-- Pro -->
       <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-800 border border-neutral-700 w-full">
         <h2 class="font-display font-bold text-xl mb-2 text-white">Pro</h2>
         <p class="text-3xl font-display text-white mb-4">Contact for Quote</p>
@@ -80,77 +72,52 @@
 </main>
 
 <footer class="bg-neutral-900 border-t border-neutral-800 text-neutral-400 mt-20">
-   <div class="container mx-auto px-6 py-12">
-    <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-     <div class="space-y-4">
-      <a href="index.html">
-       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="assets/images/silvas.svg"/>
-      </a>
-      <p class="text-sm">
-    Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
-      </p>
-     </div>
-     <div class="space-y-4">
-      <h4 class="font-bold text-white uppercase tracking-wider font-display">Menu</h4>
-      <nav class="flex flex-col space-y-2 text-sm">
-       <a class="hover:text-blue-500 transition-colors" href="index.html#how-it-works">How It Works</a>
-       <a class="hover:text-blue-500 transition-colors" href="index.html#about">About</a>
-       <a class="hover:text-blue-500 transition-colors" href="index.html#pricing">Pricing</a>
-       <a class="hover:text-blue-500 transition-colors" href="index.html#contact">Contact</a>
-       <a class="hover:text-blue-500 transition-colors" href="payment.html">Payment</a>
-      </nav>
-     </div>
-     <div class="space-y-4">
-      <h4 class="font-bold text-white uppercase tracking-wider font-display">Contact</h4>
-      <div class="flex flex-col space-y-2 text-sm">
-        <a class="hover:text-blue-500 transition-colors" href="mailto:contact@ssilva.space">Email</a>
-        <a class="hover:text-blue-500 transition-colors" href="https://github.com/SavaiinaeaSIlva" target="_blank">GitHub</a>
-        <a class="hover:text-blue-500 transition-colors" href="tel:+18083081107">Call</a>
-      </div>
-     </div>
-    </div>
-    <div class="mt-12 pt-8 border-t border-neutral-800 text-center text-sm">
-     <p class="text-xs text-neutral-600">
-      © <span id="current-year"></span> Silva Automation. All Rights Reserved. |
-    <a class="text-blue-400 hover:text-blue-600 underline transition-colors" href="terms.html">Terms &amp; Conditions</a> |
-    <a class="text-blue-400 hover:text-blue-600 underline transition-colors" href="privacy.html">Privacy Policy</a> |
-    <a class="text-blue-400 hover:text-blue-600 underline transition-colors" href="cookie.html">Cookie Policy</a> |
-    <a class="text-blue-400 hover:text-blue-600 underline transition-colors" href="refund.html">Refund Policy</a>
-     </p>
-    </div>
-   </div>
-  </footer>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="assets/js/script.js"></script>
-
-  <!-- Stripe.js -->
-<script src="https://js.stripe.com/v3/"></script>
+   </footer>
+  
 <script>
-  // Replace with your own Stripe publishable key
-  const stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX');
+  // Replace with your REAL Stripe publishable key
+  const stripe = Stripe('pk_live_51S1CRsIQy49B3e9yWDESSx0FP97iGopxsxyxxnFZaowtnLKGdl9na8Zg7brgsQlL1QetuqVoCgv3CXuR34dshu5X00IDrWV16D');
 
-  // Example product price IDs from Stripe Dashboard
+  // Your specific Price IDs are now included
   const priceIds = {
-    starter: 'price_starter_id',
-    standard: 'price_standard_id'
+    starter: 'price_1S1GaCIQy49B3e9yREq8CA3G', // Your Starter ID
+    standard: 'price_1S1GaCIQy49B3e9yFUS3hsZQ' // Your Standard ID
   };
 
+  // Function to redirect to Stripe Checkout
   async function redirectToCheckout(priceId) {
-    await stripe.redirectToCheckout({
-      lineItems: [{ price: priceId, quantity: 1 }],
-      mode: 'payment',
-      successUrl: window.location.origin + '/success.html',
-      cancelUrl: window.location.href
+    try {
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [{ price: priceId, quantity: 1 }],
+        mode: 'payment',
+        successUrl: window.location.origin + '/success.html',
+        cancelUrl: window.location.href
+      });
+      if (error) {
+        alert(error.message);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  }
+
+  // Event listener for the Starter button
+  const starterButton = document.getElementById('checkout-starter-button');
+  if (starterButton) {
+    starterButton.addEventListener('click', function() {
+      redirectToCheckout(priceIds.starter);
     });
   }
 
-  document.getElementById('stripe-starter').addEventListener('click', function() {
-    redirectToCheckout(priceIds.starter);
-  });
-
-  document.getElementById('stripe-standard').addEventListener('click', function() {
-    redirectToCheckout(priceIds.standard);
-  });
+  // Event listener for the Standard button
+  const standardButton = document.getElementById('checkout-standard-button');
+  if (standardButton) {
+    standardButton.addEventListener('click', function() {
+      redirectToCheckout(priceIds.standard);
+    });
+  }
 </script>
-  </body>
+<script src="assets/js/script.js"></script>
+  
+</body>
 </html>
