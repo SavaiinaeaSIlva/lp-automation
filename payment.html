@@ -8,9 +8,8 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link href="assets/css/style.css" rel="stylesheet"/>
-  <!-- Load Stripe.js first -->
-  <script src="https://js.stripe.com/v3/"></script>
 </head>  
 <body class="antialiased bg-black text-gray-300">
 
@@ -57,23 +56,26 @@
 
     <div class="flex flex-col gap-8 mb-10 max-w-lg mx-auto">
       
+      <!-- Starter Package -->
       <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-900 border border-neutral-800 w-full transition-all duration-300 shadow-xl shadow-white/5 hover:shadow-white/10 hover:border-neutral-700 hover:scale-[1.02]">
         <h2 class="font-display font-bold text-xl mb-2 text-white">Starter</h2>
         <p class="text-3xl font-display text-white mb-4">$950</p>
-        <button id="checkout-starter-button" class="cta-button font-semibold py-3 px-6 rounded-md w-full mt-auto text-center">
+        <a href="https://buy.stripe.com/14A4gA04O85N87meeuaEE03" class="cta-button font-semibold py-3 px-6 rounded-md w-full mt-auto text-center">
             Pay Deposit
-        </button>
+        </a>
       </div>
       
+      <!-- Standard Package -->
       <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-900 border border-blue-500 relative w-full transition-all duration-300 shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/30 hover:scale-[1.02]">
         <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
         <h2 class="font-display font-bold text-xl mb-2 text-white">Standard</h2>
         <p class="text-3xl font-display text-white mb-4">$2,450</p>
-        <button id="checkout-standard-button" class="cta-button font-semibold py-3 px-6 rounded-md w-full mt-auto text-center">
+        <a href="https://buy.stripe.com/5kQaEY04O3Px2N2c6maEE04" class="cta-button font-semibold py-3 px-6 rounded-md w-full mt-auto text-center">
             Pay Deposit
-        </button>
+        </a>
       </div>
       
+      <!-- Pro Package -->
       <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-900 border border-neutral-800 w-full transition-all duration-300 shadow-xl shadow-white/5 hover:shadow-white/10 hover:border-neutral-700 hover:scale-[1.02]">
         <h2 class="font-display font-bold text-xl mb-2 text-white">Pro</h2>
         <p class="text-3xl font-display text-white mb-4">Contact for Quote</p>
@@ -137,163 +139,33 @@
      </div>
 </div>
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="assets/js/script.js"></script>
 <script>
-// Wait for DOM to be fully loaded
+// Simple payment tracking
 document.addEventListener('DOMContentLoaded', function() {
-  // Initialize Stripe
-  const stripe = Stripe('pk_live_51S1CRsIQy49B3e9yWDESSx0FP97iGopxsxyxxnFZaowtnLKGdl9na8Zg7brgsQlL1QetuqVoCgv3CXuR34dshu5X00IDrWV16D');
-
-  const priceIds = {
-    starter: 'price_1S1GaCIQy49B3e9yREq8CA3G',
-    standard: 'price_1S1GaCIQy49B3e9yFUS3hsZQ'
-  };
-
-  async function redirectToCheckout(priceId) {
-    try {
-      const { error } = await stripe.redirectToCheckout({
-        lineItems: [{ price: priceId, quantity: 1 }],
-        mode: 'payment',
-        successUrl: window.location.origin + '/success.html',
-        cancelUrl: window.location.href
-      });
-      if (error) {
-        alert('Payment Error: ' + error.message);
-        console.error('Stripe error:', error);
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      alert('An unexpected error occurred. Please try again.');
-    }
-  }
-
-  // Add event listeners safely
-  const starterButton = document.getElementById('checkout-starter-button');
-  const standardButton = document.getElementById('checkout-standard-button');
-
-  if (starterButton) {
-    starterButton.addEventListener('click', function() {
-      console.log('Starter button clicked');
-      redirectToCheckout(priceIds.starter);
-    });
-  } else {
-    console.error('Starter button not found!');
-  }
-
-  if (standardButton) {
-    standardButton.addEventListener('click', function() {
-      console.log('Standard button clicked');
-      redirectToCheckout(priceIds.standard);
-    });
-  } else {
-    console.error('Standard button not found!');
-  }
-
-  // Run basic header functionality
-  const header = document.getElementById('main-header');
-  if (header) {
-    window.addEventListener('scroll', () => { 
-      if (window.scrollY > 50) { 
-        header.classList.add('header-scrolled'); 
-      } else { 
-        header.classList.remove('header-scrolled'); 
-      } 
-    });
-  }
-
-  // Mobile menu functionality
-  const mobileMenuButton = document.getElementById('mobile-menu-button');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const closeMobileMenuButton = document.getElementById('close-mobile-menu');
-
-  function openMobileMenu() {
-    if (mobileMenu) {
-      mobileMenu.classList.add('mobile-menu-open');
-      mobileMenu.classList.remove('mobile-menu-closed');
-    }
-  }
-
-  function closeMobileMenu() {
-    if (mobileMenu) {
-      mobileMenu.classList.add('mobile-menu-closed');
-      mobileMenu.classList.remove('mobile-menu-open');
-    }
-  }
-
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener('click', openMobileMenu);
-  }
-
-  if (closeMobileMenuButton && mobileMenu) {
-    closeMobileMenuButton.addEventListener('click', closeMobileMenu);
-  }
-
-  // Close menu when nav links are clicked
-  if (mobileMenu) {
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-  }
-
-  // Update copyright year
-  const currentYearSpan = document.getElementById('current-year');
-  if (currentYearSpan) {
-    currentYearSpan.textContent = new Date().getFullYear();
-  }
-
-  // Cookie banner logic
-  const cookieBanner = document.getElementById('cookie-banner');
-  const acceptCookiesButton = document.getElementById('accept-cookies');
-
-  if (cookieBanner && acceptCookiesButton) {
-    if (localStorage.getItem('cookiesAccepted') === 'true') {
-      cookieBanner.style.display = 'none';
-    } else {
-      cookieBanner.style.display = 'block';
-    }
+    // Initialize AOS
+    AOS.init({ duration: 800, once: true, offset: 50 });
     
-    acceptCookiesButton.addEventListener('click', function() {
-      localStorage.setItem('cookiesAccepted', 'true');
-      cookieBanner.style.display = 'none';
-    });
-  }
-});// Add to the existing payment page script
-const paymentButtons = document.querySelectorAll('#checkout-starter-button, #checkout-standard-button');
-paymentButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        this.textContent = 'Processing...';
-        this.disabled = true;
-    });
-});
-
-// Add a function to handle payment errors
-function handlePaymentError(error) {
-    console.error('Payment Error:', error);
-    alert('There was an issue processing your payment. Please try again or contact us for assistance.');
+    // Add click tracking for payment buttons
+    const paymentLinks = document.querySelectorAll('a[href^="https://buy.stripe.com/"]');
     
-    // Re-enable buttons
-    document.querySelectorAll('#checkout-starter-button, #checkout-standard-button').forEach(button => {
-        button.textContent = button.id.includes('starter') ? 'Pay Deposit' : 'Pay Deposit';
-        button.disabled = false;
-    });
-}
-
-// Update the redirectToCheckout function
-async function redirectToCheckout(priceId) {
-    try {
-        const { error } = await stripe.redirectToCheckout({
-            lineItems: [{ price: priceId, quantity: 1 }],
-            mode: 'payment',
-            successUrl: window.location.origin + '/success.html',
-            cancelUrl: window.location.href
+    paymentLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            const packageName = this.closest('div').querySelector('h2').textContent;
+            console.log('Payment initiated for:', packageName);
+            
+            // You can add analytics here later
+            // Example: gtag('event', 'begin_checkout', { items: [{ name: packageName }] });
         });
-        
-        if (error) {
-            handlePaymentError(error);
-        }
-    } catch (error) {
-        handlePaymentError(error);
+    });
+    
+    // Update copyright year
+    const currentYearSpan = document.getElementById('current-year');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
     }
-}
+});
 </script>
 
 </body>
