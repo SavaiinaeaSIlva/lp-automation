@@ -36,24 +36,37 @@
   <section class="w-full max-w-4xl mx-auto bg-neutral-900 rounded-lg shadow-lg p-8 border border-neutral-800">
     
     <h1 class="text-3xl md:text-4xl font-bold font-display mb-6 text-white text-center">Make a Payment</h1>
-    <p class="text-gray-400 mb-8 text-center">Please select your package to complete the deposit payment securely via PayPal.</p>
+    <p class="text-gray-400 mb-8 text-center">Please select your package to complete the deposit payment securely via Stripe.</p>
 
     <div class="flex flex-col gap-6 mb-10 max-w-lg mx-auto">
       
-      <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-800 border border-neutral-700">
+      <!-- Starter -->
+      <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-800 border border-neutral-700 w-full">
         <h2 class="font-display font-bold text-xl mb-2 text-white">Starter</h2>
         <p class="text-3xl font-display text-white mb-4">$950</p>
-        <div id="paypal-button-container-starter" class="mt-auto w-full"></div>
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S1GiXIQy49B3e9yp0GNQfHM"
+          publishable-key="pk_live_51S1CRsIQy49B3e9yWDESSx0FP97iGopxsxyxxnFZaowtnLKGdl9na8Zg7brgsQlL1QetuqVoCgv3CXuR34dshu5X00IDrWV16D"
+        >
+        </stripe-buy-button>
       </div>
       
-      <div class="p-6 rounded-lg flex flex-col items-center bg-blue-600/10 border-2 border-blue-500 relative">
+      <!-- Standard -->
+      <div class="p-6 rounded-lg flex flex-col items-center bg-blue-600/10 border-2 border-blue-500 relative w-full">
         <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
         <h2 class="font-display font-bold text-xl mb-2 text-white">Standard</h2>
         <p class="text-3xl font-display text-white mb-4">$2,450</p>
-        <div id="paypal-button-container-standard" class="mt-auto w-full"></div>
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+        <stripe-buy-button
+          buy-button-id="buy_btn_1S1GleIQy49B3e9yxKoVwa3P"
+          publishable-key="pk_live_51S1CRsIQy49B3e9yWDESSx0FP97iGopxsxyxxnFZaowtnLKGdl9na8Zg7brgsQlL1QetuqVoCgv3CXuR34dshu5X00IDrWV16D"
+        >
+        </stripe-buy-button>
       </div>
       
-      <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-800 border border-neutral-700">
+      <!-- Pro -->
+      <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-800 border border-neutral-700 w-full">
         <h2 class="font-display font-bold text-xl mb-2 text-white">Pro</h2>
         <p class="text-3xl font-display text-white mb-4">Contact for Quote</p>
         <a href="index.html#contact" class="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-2 px-6 rounded-md transition-colors w-full mt-auto text-center">Contact Us</a>
@@ -109,5 +122,35 @@
   </footer>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="assets/js/script.js"></script>
+
+  <!-- Stripe.js -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  // Replace with your own Stripe publishable key
+  const stripe = Stripe('pk_test_XXXXXXXXXXXXXXXXXXXXXXXX');
+
+  // Example product price IDs from Stripe Dashboard
+  const priceIds = {
+    starter: 'price_starter_id',
+    standard: 'price_standard_id'
+  };
+
+  async function redirectToCheckout(priceId) {
+    await stripe.redirectToCheckout({
+      lineItems: [{ price: priceId, quantity: 1 }],
+      mode: 'payment',
+      successUrl: window.location.origin + '/success.html',
+      cancelUrl: window.location.href
+    });
+  }
+
+  document.getElementById('stripe-starter').addEventListener('click', function() {
+    redirectToCheckout(priceIds.starter);
+  });
+
+  document.getElementById('stripe-standard').addEventListener('click', function() {
+    redirectToCheckout(priceIds.standard);
+  });
+</script>
   </body>
 </html>
