@@ -19,7 +19,7 @@
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a aria-label="Silva Automation Home" href="index.html">
-    <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg"/>
+    <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg" id="hero-logo"/>
     </a>
     <nav class="hidden md:flex items-center space-x-8 text-sm">
      <a class="nav-link text-gray-300 hover:text-white" href="#how-it-works">How It Works</a>
@@ -37,6 +37,9 @@
 </header>
 
 <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900/90 backdrop-blur-lg z-40 p-8 mobile-menu-closed md:hidden">
+    <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
     <nav class="flex flex-col space-y-8 mt-12 text-lg">
         <a class="nav-link text-gray-300 hover:text-white" href="#how-it-works">How It Works</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#about">About</a>
@@ -44,10 +47,7 @@
         <a class="nav-link text-gray-300 hover:text-white" href="#contact">Contact</a>
         <a class="nav-link text-gray-300 hover:text-white" href="payment.html">Payment</a>
     </nav>
-    <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none">
-        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-    </button>
-    </div>
+</div>
 
 <main>
 <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center" id="hero" style="background-image: url('https://images.unsplash.com/photo-1554435493-93422e8220c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1600&q=80');">
@@ -74,7 +74,7 @@
     Stop Losing Time to Repetitive Tasks.
        </h2>
        <p class="text-lg text-gray-400 mb-8 max-w-xl">
-    You didn’t start your business to do paperwork. Let automation handle the stuff you hate, so you can get back to real work—and real life.
+    You didn't start your business to do paperwork. Let automation handle the stuff you hate, so you can get back to real work—and real life.
        </p>
        <div class="space-y-6">
         <div>
@@ -82,7 +82,7 @@
           Before (The Old Way)
          </h3>
          <p class="text-gray-400">
-          You miss a 5 PM call while on a job, losing a potential lead. That night, you’re stuck at your kitchen table, typing client info into a spreadsheet instead of relaxing.
+          You miss a 5 PM call while on a job, losing a potential lead. That night, you're stuck at your kitchen table, typing client info into a spreadsheet instead of relaxing.
          </p>
         </div>
         <div>
@@ -90,7 +90,7 @@
           After (With Automation)
          </h3>
          <p class="text-gray-400">
-          Your system texts back missed calls, captures every lead, and files their info for you. You’re done for the day when the work is done—not when the paperwork is done.
+          Your system texts back missed calls, captures every lead, and files their info for you. You're done for the day when the work is done—not when the paperwork is done.
          </p>
         </div>
        </div>
@@ -116,7 +116,7 @@
     I started out just like you—overwhelmed by endless admin. I learned to automate out of desperation, and now I help others escape the grind.
        </p>
        <blockquote class="my-6 border-l-4 border-blue-500 pl-6 text-xl italic text-white">Service pros shouldn't be drowning in admin work       </blockquote>
-    <blockquote class="my-6 border-l-4 border-blue-500 pl-6 text-xl italic text-white">You’re great at your trade. I’m great at building the systems that let you focus on it.</blockquote>
+    <blockquote class="my-6 border-l-4 border-blue-500 pl-6 text-xl italic text-white">You're great at your trade. I'm great at building the systems that let you focus on it.</blockquote>
       </div>
      </div>
     </div>
@@ -193,7 +193,7 @@
                         Ready to Stop Drowning in Busy work?
                     </h2>
                     <p class="text-lg text-gray-400 mb-8">
-                        Book a free, no-pressure call to see how much time you could save—or just send me a message below. I’ll get back to you fast.
+                        Book a free, no-pressure call to see how much time you could save—or just send me a message below. I'll get back to you fast.
                     </p>
                     <a class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block" href="https://calendly.com/silvaautomation/consultation" target="_blank">
                         Get My Free Automation Call
@@ -267,23 +267,20 @@
    </div>
 </footer>
 
-<div id="cookie-banner">
+<div id="cookie-banner" style="display: none;">
      <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 fixed bottom-0 left-0 right-0 z-50 shadow-lg">
-         <div id="cookie-banner" style="display: none;">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 fixed bottom-0 left-0 right-0 z-50 shadow-lg">
-        <p class="text-sm text-center md:text-left">
+         <p class="text-sm text-center md:text-left">
             This website uses cookies to ensure you get the best experience. By continuing, you agree to our
             <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
-        </p>
-        <button id="accept-cookies" class="cta-button text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+         </p>
+         <button id="accept-cookies" class="cta-button text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
             Accept
-        </button>
-    </div>
-</div>
+         </button>
      </div>
+</div>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="assets/js/script.js"></script>
 
 </body>
-</html>
+</html>x

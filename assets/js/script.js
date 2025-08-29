@@ -1,15 +1,16 @@
-// script.js - CORRECTED VERSION
+// script.js - ENHANCED VERSION
 document.addEventListener('DOMContentLoaded', function() {
-    // ALL code should be inside this callback
-    const animatedSections = document.querySelectorAll('.section-animate');
-    // ... existing code ...
-    
-    // Move ALL functionality inside this callback
+    // Initialize AOS
     AOS.init({ duration: 800, once: true, offset: 50 });
     
     // Header scroll behavior
     const header = document.getElementById('main-header');
     if (header) {
+        // Check initial scroll position
+        if (window.scrollY > 50) {
+            header.classList.add('header-scrolled');
+        }
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
                 header.classList.add('header-scrolled');
@@ -24,7 +25,58 @@ document.addEventListener('DOMContentLoaded', function() {
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMobileMenuButton = document.getElementById('close-mobile-menu');
     
-    // ... rest of mobile menu code ...
+    function openMobileMenu() {
+        if (mobileMenu) {
+            mobileMenu.classList.add('mobile-menu-open');
+            mobileMenu.classList.remove('mobile-menu-closed');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+        }
+    }
+
+    function closeMobileMenu() {
+        if (mobileMenu) {
+            mobileMenu.classList.add('mobile-menu-closed');
+            mobileMenu.classList.remove('mobile-menu-open');
+            document.body.style.overflow = ''; // Re-enable scrolling
+        }
+    }
+
+    if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+    }
+
+    if (closeMobileMenuButton && mobileMenu) {
+        closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (mobileMenu && mobileMenu.classList.contains('mobile-menu-open') && 
+            !mobileMenu.contains(event.target) && 
+            event.target !== mobileMenuButton) {
+            closeMobileMenu();
+        }
+    });
+
+    // Close menu when nav links are clicked
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', closeMobileMenu);
+        });
+    }
+    
+    // Close menu on escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('mobile-menu-open')) {
+            closeMobileMenu();
+        }
+    });
+    
+    // Update copyright year
+    const currentYearSpan = document.getElementById('current-year');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
     
     // Cookie banner logic
     const cookieBanner = document.getElementById('cookie-banner');
@@ -34,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem('cookiesAccepted') === 'true') {
             cookieBanner.style.display = 'none';
         } else {
-            cookieBanner.style.display = '';
+            cookieBanner.style.display = 'block';
         }
         
         acceptCookiesButton.addEventListener('click', function() {
@@ -42,4 +94,22 @@ document.addEventListener('DOMContentLoaded', function() {
             cookieBanner.style.display = 'none';
         });
     }
-}); // ONLY ONE closing brace and parenthesis here
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
