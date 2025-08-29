@@ -9,13 +9,15 @@
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <link href="assets/css/style.css" rel="stylesheet"/>
+  <!-- Load Stripe.js first -->
+  <script src="https://js.stripe.com/v3/"></script>
 </head>  
 <body class="antialiased bg-black text-gray-300">
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a aria-label="Silva Automation Home" href="index.html">
-    <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg"/>
+    <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg" id="hero-logo"/>
     </a>
     <nav class="hidden md:flex items-center space-x-8 text-sm">
      <a class="nav-link text-gray-300 hover:text-white" href="index.html#how-it-works">How It Works</a>
@@ -26,11 +28,24 @@
     </nav>
     <div class="md:hidden">
         <button id="mobile-menu-button" class="text-white focus:outline-none">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0-0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         </button>
     </div>
    </div>
 </header>
+
+<div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900/90 backdrop-blur-lg z-40 p-8 mobile-menu-closed md:hidden">
+    <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+    </button>
+    <nav class="flex flex-col space-y-8 mt-12 text-lg">
+        <a class="nav-link text-gray-300 hover:text-white" href="index.html#how-it-works">How It Works</a>
+        <a class="nav-link text-gray-300 hover:text-white" href="index.html#about">About</a>
+        <a class="nav-link text-gray-300 hover:text-white" href="index.html#pricing">Pricing</a>
+        <a class="nav-link text-gray-300 hover:text-white" href="index.html#contact">Contact</a>
+        <a class="nav-link text-gray-300 hover:text-white" href="payment.html">Payment</a>
+    </nav>
+</div>
 
 <main class="pt-32 pb-20 min-h-screen">
   <section class="w-full max-w-4xl mx-auto p-8">
@@ -73,19 +88,66 @@
 </main>
 
 <footer class="bg-neutral-900 border-t border-neutral-800 text-neutral-400 mt-20">
-   </footer>
-  
+   <div class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+     <div class="space-y-4">
+      <a href="index.html">
+       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="assets/images/silvas.svg"/>
+      </a>
+      <p class="text-sm">
+    Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
+      </p>
+     </div>
+     <div class="space-y-4">
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">Menu</h4>
+      <nav class="flex flex-col space-y-2 text-sm">
+       <a class="hover:text-blue-500 transition-colors" href="index.html#how-it-works">How It Works</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#about">About</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#pricing">Pricing</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#contact">Contact</a>
+       <a class="hover:text-blue-500 transition-colors" href="payment.html">Payment</a>
+      </nav>
+     </div>
+     <div class="space-y-4">
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">Contact</h4>
+      <div class="flex flex-col space-y-2 text-sm">
+        <a class="hover:text-blue-500 transition-colors" href="mailto:contact@ssilva.space">Email</a>
+        <a class="hover:text-blue-500 transition-colors" href="https://github.com/SavaiinaeaSIlva" target="_blank">GitHub</a>
+        <a class="hover:text-blue-500 transition-colors" href="tel:+18083081107">Call</a>
+      </div>
+     </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-neutral-800 text-center text-sm">
+     <p class="text-xs text-neutral-600">
+      © <span id="current-year"></span> Silva Automation. All Rights Reserved.
+     </p>
+    </div>
+   </div>
+</footer>
+
+<div id="cookie-banner" style="display: none;">
+     <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 fixed bottom-0 left-0 right-0 z-50 shadow-lg">
+         <p class="text-sm">
+            This website uses cookies to ensure you get the best experience. By continuing, you agree to our
+            <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
+         </p>
+         <button id="accept-cookies" class="cta-button text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Accept
+         </button>
+     </div>
+</div>
+
 <script>
-  // Replace with your REAL Stripe publishable key
+// Wait for DOM to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Stripe
   const stripe = Stripe('pk_live_51S1CRsIQy49B3e9yWDESSx0FP97iGopxsxyxxnFZaowtnLKGdl9na8Zg7brgsQlL1QetuqVoCgv3CXuR34dshu5X00IDrWV16D');
 
-  // Your specific Price IDs are now included
   const priceIds = {
-    starter: 'price_1S1GaCIQy49B3e9yREq8CA3G', // Your Starter ID
-    standard: 'price_1S1GaCIQy49B3e9yFUS3hsZQ' // Your Standard ID
+    starter: 'price_1S1GaCIQy49B3e9yREq8CA3G',
+    standard: 'price_1S1GaCIQy49B3e9yFUS3hsZQ'
   };
 
-  // Function to redirect to Stripe Checkout
   async function redirectToCheckout(priceId) {
     try {
       const { error } = await stripe.redirectToCheckout({
@@ -95,30 +157,107 @@
         cancelUrl: window.location.href
       });
       if (error) {
-        alert(error.message);
+        alert('Payment Error: ' + error.message);
+        console.error('Stripe error:', error);
       }
     } catch (error) {
       console.error('Error:', error);
+      alert('An unexpected error occurred. Please try again.');
     }
   }
 
-  // Event listener for the Starter button
+  // Add event listeners safely
   const starterButton = document.getElementById('checkout-starter-button');
+  const standardButton = document.getElementById('checkout-standard-button');
+
   if (starterButton) {
     starterButton.addEventListener('click', function() {
+      console.log('Starter button clicked');
       redirectToCheckout(priceIds.starter);
+    });
+  } else {
+    console.error('Starter button not found!');
+  }
+
+  if (standardButton) {
+    standardButton.addEventListener('click', function() {
+      console.log('Standard button clicked');
+      redirectToCheckout(priceIds.standard);
+    });
+  } else {
+    console.error('Standard button not found!');
+  }
+
+  // Run basic header functionality
+  const header = document.getElementById('main-header');
+  if (header) {
+    window.addEventListener('scroll', () => { 
+      if (window.scrollY > 50) { 
+        header.classList.add('header-scrolled'); 
+      } else { 
+        header.classList.remove('header-scrolled'); 
+      } 
     });
   }
 
-  // Event listener for the Standard button
-  const standardButton = document.getElementById('checkout-standard-button');
-  if (standardButton) {
-    standardButton.addEventListener('click', function() {
-      redirectToCheckout(priceIds.standard);
+  // Mobile menu functionality
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+
+  function openMobileMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.add('mobile-menu-open');
+      mobileMenu.classList.remove('mobile-menu-closed');
+    }
+  }
+
+  function closeMobileMenu() {
+    if (mobileMenu) {
+      mobileMenu.classList.add('mobile-menu-closed');
+      mobileMenu.classList.remove('mobile-menu-open');
+    }
+  }
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', openMobileMenu);
+  }
+
+  if (closeMobileMenuButton && mobileMenu) {
+    closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+  }
+
+  // Close menu when nav links are clicked
+  if (mobileMenu) {
+    mobileMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
     });
   }
+
+  // Update copyright year
+  const currentYearSpan = document.getElementById('current-year');
+  if (currentYearSpan) {
+    currentYearSpan.textContent = new Date().getFullYear();
+  }
+
+  // Cookie banner logic
+  const cookieBanner = document.getElementById('cookie-banner');
+  const acceptCookiesButton = document.getElementById('accept-cookies');
+
+  if (cookieBanner && acceptCookiesButton) {
+    if (localStorage.getItem('cookiesAccepted') === 'true') {
+      cookieBanner.style.display = 'none';
+    } else {
+      cookieBanner.style.display = 'block';
+    }
+    
+    acceptCookiesButton.addEventListener('click', function() {
+      localStorage.setItem('cookiesAccepted', 'true');
+      cookieBanner.style.display = 'none';
+    });
+  }
+});
 </script>
-<script src="https://js.stripe.com/v3/"></script>
-<script src="assets/js/script.js"></script>
+
 </body>
 </html>
