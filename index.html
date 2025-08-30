@@ -4,14 +4,14 @@
 <head>
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>Silva Automation - Bespoke Systems for Service Businesses</title>
+  <title>Silva Automation - Systems for Service Businesses</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link href="https://placehold.co/32x32/3b82f6/FFFFFF?text=SA" rel="icon" type="image/png"/>
-  <link href="assets/css/style.css" rel="stylesheet"/>
+  <link href="assets/css/style.css?v=3" rel="stylesheet"/>
 </head>
 
 <body class="antialiased bg-black text-gray-300">
@@ -19,7 +19,7 @@
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a aria-label="Silva Automation Home" href="index.html">
-    <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg" id="hero-logo"/>
+    <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg" id="hero-logo" width="200" height="48"/>
     </a>
     <nav class="hidden md:flex items-center space-x-8 text-sm">
      <a class="nav-link text-gray-300 hover:text-white" href="#how-it-works">How It Works</a>
@@ -28,7 +28,7 @@
      <a class="nav-link text-gray-300 hover:text-white" href="#contact">Contact</a>
     </nav>
     <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-white focus:outline-none">
+        <button id="mobile-menu-button" class="text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         </button>
     </div>
@@ -47,141 +47,142 @@
     </nav>
 </div>
 
-<section class="relative min-h-screen bg-cover bg-center flex items-center justify-center" id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1581091226825-a6a2a5a0a48a?auto=format&fit=crop&w=1600&q=80');">
-    <div class="relative text-center p-6 text-white flex flex-col items-center" id="hero-content" data-aos="fade-up">
-        <h1 class="text-4xl md:text-6xl font-bold font-display leading-tight mb-4">
-            Drowning in Admin? <br/>
-            Get Your Life Back.
-        </h1>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300">
-            Sick of missing calls, chasing quotes, and working late just to keep up? I build simple systems that handle the busywork, so you can finally breathe again.
-        </p>
-        <a class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block" href="#contact">
-            Get My Free Automation Call
-        </a>
-    </div>
-</section>
-
 <main>
-   
-<section class="py-24 lg:py-32" id="how-it-works">
+    <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center md:justify-start" id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero.png');">
     <div class="container mx-auto px-6">
-        <div class="text-center max-w-3xl mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
-                How This Actually Works
-            </h2>
-            <p class="text-lg text-gray-400 mb-12">
-                No tech jargon. Here’s the simple, three-step way I get the busywork off your plate.
+        <div class="relative text-center md:text-left text-white flex flex-col items-center md:items-start max-w-2xl" id="hero-content" data-aos="fade-up">
+            <h1 class="text-4xl md:text-6xl font-bold font-display leading-tight mb-4">
+                Drowning in Admin? <br/>
+                Get Your Life Back.
+            </h1>
+            <p class="text-lg md:text-xl mb-8 text-gray-300">
+                Sick of missing calls, chasing quotes, and working late just to keep up? I build simple systems that handle the busywork, so you can finally breathe again.
             </p>
-        </div>
-        <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
-            <div data-aos="fade-up" data-aos-delay="0">
-                <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">1</div>
-                <h3 class="font-display font-bold text-xl mb-3 text-white">We Find the Repetitive Job</h3>
-                <p class="text-gray-400">
-                    First, we find the one task you hate doing over and over. For example: A potential customer calls, but you're on a ladder and miss it. Now you have to chase them down later.
-                </p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="100">
-                <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">2</div>
-                <h3 class="font-display font-bold text-xl mb-3 text-white">I Build a System to Do It For You</h3>
-                <p class="text-gray-400">
-                    I build a simple system that automatically texts them back, saves their info, and puts a follow-up call on your calendar. You don't have to touch anything.
-                </p>
-            </div>
-            <div data-aos="fade-up" data-aos-delay="200">
-                <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">3</div>
-                <h3 class="font-display font-bold text-xl mb-3 text-white">You Get the Result, Without the Work</h3>
-                <p class="text-gray-400">
-                    You finish your job and see a new client appointment already set. You just got a lead while on the ladder, without ever stopping your real work.
-                </p>
-            </div>
+            <a href="#contact" class="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-md transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+                Get My Free Automation Call
+            </a>
         </div>
     </div>
 </section>
 
-<section class="py-24 lg:py-32 bg-black/70" id="about">
-    <div class="container mx-auto px-6">
-     <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-      <div class="text-center" data-aos="fade-right">
-       <img alt="Savaiinaea Silva" class="w-40 h-40 md:w-48 md:h-48 rounded-full inline-block border-2 border-gray-700 object-cover object-top" src="assets/images/about.png"/>
-      </div>
-      <div data-aos="fade-left">
-       <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
-        Built by a Service Pro, for Service Pros.
-       </h2>
-       <p class="text-lg text-gray-400 mb-6">
-        I started out just like you—overwhelmed by endless admin. I learned to automate out of desperation, and now I help others escape the grind.
-       </p>
-       <blockquote class="my-6 border-l-4 border-blue-500 pl-6 text-xl italic text-white">
-        My goal is simple: get you off the paperwork and back on the tools—or home to your family sooner.
-       </blockquote>
-      </div>
-     </div>
-    </div>
-</section>
+    <section class="py-24 lg:py-32" id="how-it-works">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
+                    How This Actually Works
+                </h2>
+                <p class="text-lg text-gray-400 mb-12">
+                    No tech jargon. Here’s the simple, three-step way I get the busywork off your plate.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
+                <div data-aos="fade-up" data-aos-delay="0">
+                    <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">1</div>
+                    <h3 class="font-display font-bold text-xl mb-3 text-white">We Find the Repetitive Job</h3>
+                    <p class="text-gray-400">
+                        First, we find the one task you hate doing over and over. For example: A potential customer calls, but you're on a ladder and miss it. Now you have to chase them down later.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">2</div>
+                    <h3 class="font-display font-bold text-xl mb-3 text-white">I Build a System to Do It For You</h3>
+                    <p class="text-gray-400">
+                        I build a simple system that automatically texts them back, saves their info, and puts a follow-up call on your calendar. You don't have to touch anything.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">3</div>
+                    <h3 class="font-display font-bold text-xl mb-3 text-white">You Get the Result, Without the Work</h3>
+                    <p class="text-gray-400">
+                        You finish your job and see a new client appointment already set. You just got a lead while on the ladder, without ever stopping your real work.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-   <section class="py-24 lg:py-32" id="pricing">
-    <div class="container mx-auto px-6">
-     <div class="text-center" data-aos="fade-up">
-        <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
-            No-Nonsense Packages. Real Results.
-        </h2>
-        <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-12">
-            One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.
-        </p>
-     </div>
-     <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="p-8 rounded-lg flex flex-col transition-transform hover:scale-105 duration-300" data-aos="fade-up">
-            <h3 class="font-display font-bold text-2xl mb-2 text-white">Starter</h3>
-            <p class="text-gray-400 mb-6 flex-grow">Tackle your single biggest headache by automating the one repetitive task that wastes the most time.</p>
-            <div class="text-left text-sm">
-                <p class="font-bold text-gray-300 mb-2">What you get:</p>
-                <ul class="space-y-2 list-disc list-inside text-gray-400">
-                    <li>1 "Done-For-You" automated workflow</li>
-                    <li>Integration of 2 essential apps</li>
-                    <li>A personal video guide</li>
-                </ul>
-            </div>
-            <p class="text-4xl font-display text-white mb-6 mt-6">$950</p>
-            <a class="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
+    <section class="py-24 lg:py-32 bg-black/70" id="about">
+        <div class="container mx-auto px-6">
+         <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+          <div class="text-center" data-aos="fade-right">
+           <img alt="Savaiinaea Silva" class="w-40 h-40 md:w-48 md:h-48 rounded-full inline-block border-2 border-gray-700 object-cover object-top" src="assets/images/about.png" width="192" height="192"/>
+          </div>
+          <div data-aos="fade-left">
+           <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
+            Built by a Service Pro, for Service Pros.
+           </h2>
+           <p class="text-lg text-gray-400 mb-6">
+            I started out just like you—overwhelmed by endless admin. I learned to automate out of desperation, and now I help others escape the grind.
+           </p>
+           <blockquote class="my-6 border-l-4 border-blue-500 pl-6 text-xl italic text-white">
+            My goal is simple: get you off the paperwork and back on the tools—or home to your family sooner.
+           </blockquote>
+          </div>
+         </div>
         </div>
-        <div class="p-8 rounded-lg bg-blue-600/10 border-2 border-blue-500 flex flex-col relative transition-transform hover:scale-105 duration-300" data-aos="fade-up" data-aos-delay="100">
-            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
-            <h3 class="font-display font-bold text-2xl mb-2 text-white">Standard</h3>
-            <p class="text-gray-300 mb-6 flex-grow">Automate an entire process like client intake or project follow-ups to stop losing leads and start saving hours every week.</p>
-            <div class="text-left text-sm">
-                <p class="font-bold text-white mb-2">What you get:</p>
-                <ul class="space-y-2 list-disc list-inside text-gray-300">
-                    <li>1 complete multi-step process automated</li>
-                    <li>Integration of up to 5 business apps</li>
-                    <li>A custom dashboard to track results</li>
-                    <li>Everything in the Starter Package</li>
-                </ul>
-            </div>
-            <p class="text-4xl font-display text-white mb-6 mt-6">$2,450</p>
-            <a class="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
-        </div>
-        <div class="p-8 rounded-lg flex flex-col transition-transform hover:scale-105 duration-300" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="font-display font-bold text-2xl mb-2 text-white">Pro</h3>
-            <p class="text-gray-400 mb-6 flex-grow">Overhaul your entire operation by integrating multiple systems, allowing you to finally step back and work on the business, not in it.</p>
-            <div class="text-left text-sm">
-                <p class="font-bold text-gray-300 mb-2">What you get:</p>
-                <ul class="space-y-2 list-disc list-inside text-gray-400">
-                    <li>Full business operations audit & strategy</li>
-                    <li>Multiple, interconnected automated systems</li>
-                    <li>Unlimited app integrations</li>
-                    <li>Everything in the Standard Package</li>
-                </ul>
-            </div>
-            <p class="text-4xl font-display text-white mb-6 mt-6">Contact for Quote</p>
-            <a class="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
-        </div>
-     </div>
-    </div>
-</section>
+    </section>
 
-   <section class="py-24 lg:py-32" id="contact">
+    <section class="py-24 lg:py-32" id="pricing">
+        <div class="container mx-auto px-6">
+         <div class="text-center" data-aos="fade-up">
+            <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
+                No-Nonsense Packages. Real Results.
+            </h2>
+            <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-12">
+                One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.
+            </p>
+         </div>
+         <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="bg-neutral-900 p-8 rounded-lg flex flex-col transition-transform hover:scale-105 duration-300" data-aos="fade-up">
+                <h3 class="font-display font-bold text-2xl mb-2 text-white">Starter</h3>
+                <p class="text-gray-400 mb-6 flex-grow">Tackle your single biggest headache by automating the one repetitive task that wastes the most time.</p>
+                <div class="text-left text-sm">
+                    <p class="font-bold text-gray-300 mb-2">What you get:</p>
+                    <ul class="space-y-2 list-disc list-inside text-gray-400">
+                        <li>1 "Done-For-You" automated workflow</li>
+                        <li>Integration of 2 essential apps</li>
+                        <li>A personal video guide</li>
+                    </ul>
+                </div>
+                <p class="text-4xl font-display text-white mb-6 mt-6">$950</p>
+                <a class="bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
+            </div>
+            <div class="p-8 rounded-lg bg-blue-600/10 border-2 border-blue-500 flex flex-col relative transition-transform hover:scale-105 duration-300" data-aos="fade-up" data-aos-delay="100">
+                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
+                <h3 class="font-display font-bold text-2xl mb-2 text-white">Standard</h3>
+                <p class="text-gray-300 mb-6 flex-grow">Automate an entire process like client intake or project follow-ups to stop losing leads and start saving hours every week.</p>
+                <div class="text-left text-sm">
+                    <p class="font-bold text-white mb-2">What you get:</p>
+                    <ul class="space-y-2 list-disc list-inside text-gray-300">
+                        <li>1 complete multi-step process automated</li>
+                        <li>Integration of up to 5 business apps</li>
+                        <li>A custom dashboard to track results</li>
+                        <li>Everything in the Starter Package</li>
+                    </ul>
+                </div>
+                <p class="text-4xl font-display text-white mb-6 mt-6">$2,450</p>
+                <a class="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
+            </div>
+            <div class="bg-neutral-900 p-8 rounded-lg flex flex-col transition-transform hover:scale-105 duration-300" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="font-display font-bold text-2xl mb-2 text-white">Pro</h3>
+                <p class="text-gray-400 mb-6 flex-grow">Overhaul your entire operation by integrating multiple systems, allowing you to finally step back and work on the business, not in it.</p>
+                <div class="text-left text-sm">
+                    <p class="font-bold text-gray-300 mb-2">What you get:</p>
+                    <ul class="space-y-2 list-disc list-inside text-gray-400">
+                        <li>Full business operations audit & strategy</li>
+                        <li>Multiple, interconnected automated systems</li>
+                        <li>Unlimited app integrations</li>
+                        <li>Everything in the Standard Package</li>
+                    </ul>
+                </div>
+                <p class="text-4xl font-display text-white mb-6 mt-6">Contact for Quote</p>
+                <a class="bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
+            </div>
+         </div>
+        </div>
+    </section>
+
+    <section class="py-24 lg:py-32" id="contact">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div data-aos="fade-right">
@@ -191,7 +192,7 @@
                     <p class="text-lg text-gray-400 mb-8">
                         Book a free, no-pressure call to see how much time you could save—or just send me a message below. I'll get back to you fast.
                     </p>
-                    <a class="cta-button font-semibold text-lg py-3 px-8 rounded-md inline-block" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+                    <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-md transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]">
                         Get My Free Automation Call
                     </a>
                 </div>
@@ -199,18 +200,18 @@
                     <form action="https://formspree.io/f/xandwpzq" method="POST" class="space-y-4">
                         <div>
                             <label for="name" class="sr-only">Name</label>
-                            <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition duration-200 shadow-sm placeholder-gray-500" autocomplete="name">
+                            <input type="text" name="name" id="name" placeholder="Your Name" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 transition duration-200 shadow-sm placeholder-gray-500 hover:border-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600" autocomplete="name">
                         </div>
                         <div>
                             <label for="email" class="sr-only">Email</label>
-                            <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition duration-200 shadow-sm placeholder-gray-500" autocomplete="email">
+                            <input type="email" name="email" id="email" placeholder="Your Email" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 transition duration-200 shadow-sm placeholder-gray-500 hover:border-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600" autocomplete="email">
                         </div>
                         <div>
                             <label for="message" class="sr-only">Message</label>
-                            <textarea name="message" id="message" rows="4" placeholder="Your Message" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 focus:outline-none transition duration-200 shadow-sm placeholder-gray-500"></textarea>
+                            <textarea name="message" id="message" rows="4" placeholder="Your Message" required class="w-full bg-neutral-900 border border-neutral-700 text-white rounded-md p-3 transition duration-200 shadow-sm placeholder-gray-500 hover:border-neutral-500 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600"></textarea>
                         </div>
                         <div>
-                            <button type="submit" class="w-full cta-button bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-md transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <button type="submit" class="w-full text-white font-semibold py-3 px-6 rounded-md transition-all duration-300 bg-blue-600 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black focus:ring-blue-500">
                                 Send Message
                             </button>
                         </div>
@@ -229,7 +230,7 @@
        <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="assets/images/silvas.svg"/>
       </a>
       <p class="text-sm">
-    Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
+        Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
       </p>
      </div>
      <div class="space-y-4">
@@ -262,13 +263,13 @@
    </div>
 </footer>
 
-<div id="cookie-banner" style="display: none;">
-     <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 fixed bottom-0 left-0 right-0 z-50 shadow-lg">
-         <p class="text-sm text-center md:text-left">
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[100]" style="display: none;">
+     <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 shadow-lg">
+         <p class="text-sm text-center md:text-left text-gray-300">
             This website uses cookies to ensure you get the best experience. By continuing, you agree to our
             <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
          </p>
-         <button id="accept-cookies" class="cta-button text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+         <button id="accept-cookies" class="flex-shrink-0 text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-900 bg-blue-600 text-white hover:bg-blue-700 transition-colors">
             Accept
          </button>
      </div>
