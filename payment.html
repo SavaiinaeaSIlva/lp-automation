@@ -8,7 +8,6 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
   <link href="assets/css/style.css" rel="stylesheet"/>
 </head>  
 <body class="antialiased bg-black text-gray-300">
@@ -23,7 +22,6 @@
      <a class="nav-link text-gray-300 hover:text-white" href="index.html#about">About</a>
      <a class="nav-link text-gray-300 hover:text-white" href="index.html#pricing">Pricing</a>
      <a class="nav-link text-gray-300 hover:text-white" href="index.html#contact">Contact</a>
-     <a class="nav-link text-gray-300 hover:text-white" href="payment.html">Payment</a>
     </nav>
     <div class="md:hidden">
         <button id="mobile-menu-button" class="text-white focus:outline-none">
@@ -42,46 +40,39 @@
         <a class="nav-link text-gray-300 hover:text-white" href="index.html#about">About</a>
         <a class="nav-link text-gray-300 hover:text-white" href="index.html#pricing">Pricing</a>
         <a class="nav-link text-gray-300 hover:text-white" href="index.html#contact">Contact</a>
-        <a class="nav-link text-gray-300 hover:text-white" href="payment.html">Payment</a>
     </nav>
 </div>
 
-<main class="pt-32 pb-20 min-h-screen">
-  <section class="w-full max-w-4xl mx-auto p-8">
+<main class="pt-32 pb-20 min-h-screen flex items-center">
+  <section class="w-full max-w-md mx-auto p-8">
     
-    <div class="text-center mb-12">
-      <h1 class="text-3xl md:text-4xl font-bold font-display text-white">Make a Payment</h1>
-      <p class="text-gray-400 mt-4">Please select your package to complete the deposit payment securely via Stripe.</p>
+    <div class="text-center mb-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-green-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+      </svg>
+      <h1 class="text-3xl md:text-4xl font-bold font-display text-white">Finalize Your Project Deposit</h1>
+      <p class="text-gray-400 mt-3">Select your package to complete the 50% deposit payment securely with Stripe.</p>
     </div>
 
-    <div class="flex flex-col gap-8 mb-10 max-w-lg mx-auto">
+    <div class="space-y-6 bg-neutral-900 border border-neutral-800 rounded-lg p-8">
+      <div>
+        <label for="package-select" class="block text-sm font-medium text-gray-300 mb-2">1. Select Your Package</label>
+        <select id="package-select" class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:outline-none transition duration-200">
+          <option value="">-- Please choose an option --</option>
+          <option value="starter">Starter Package - $475 Deposit</option>
+          <option value="standard">Standard Package - $1,225 Deposit</option>
+        </select>
+      </div>
       
-      <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-900 border border-neutral-800 w-full transition-all duration-300 shadow-xl shadow-white/5 hover:shadow-white/10 hover:border-neutral-700 hover:scale-[1.02]">
-        <h2 class="font-display font-bold text-xl mb-2 text-white">Starter</h2>
-        <p class="text-3xl font-display text-white mb-4">$950</p>
-        <a href="https://buy.stripe.com/14A4gA04O85N87meeuaEE03" class="cta-button font-semibold py-3 px-6 rounded-md w-full mt-auto text-center">
-            Pay Deposit
+      <div>
+        <label class="block text-sm font-medium text-gray-300 mb-2">2. Proceed to Secure Payment</label>
+        <a id="payment-button" class="cta-button font-semibold py-3 px-6 rounded-md w-full text-center block bg-gray-600 cursor-not-allowed opacity-50">
+            Select a Package to Continue
         </a>
       </div>
-      
-      <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-900 border border-blue-500 relative w-full transition-all duration-300 shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/30 hover:scale-[1.02]">
-        <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
-        <h2 class="font-display font-bold text-xl mb-2 text-white">Standard</h2>
-        <p class="text-3xl font-display text-white mb-4">$2,450</p>
-        <a href="https://buy.stripe.com/5kQaEY04O3Px2N2c6maEE04" class="cta-button font-semibold py-3 px-6 rounded-md w-full mt-auto text-center">
-            Pay Deposit
-        </a>
-      </div>
-      
-      <div class="p-6 rounded-lg flex flex-col items-center bg-neutral-900 border border-neutral-800 w-full transition-all duration-300 shadow-xl shadow-white/5 hover:shadow-white/10 hover:border-neutral-700 hover:scale-[1.02]">
-        <h2 class="font-display font-bold text-xl mb-2 text-white">Pro</h2>
-        <p class="text-3xl font-display text-white mb-4">Contact for Quote</p>
-        <a href="index.html#contact" class="border border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white font-semibold py-3 px-6 rounded-md transition-colors w-full mt-auto text-center">Contact Us</a>
-      </div>
-
     </div>
-    <div class="text-center text-sm text-gray-500">
-      For custom packages or questions, <a href="index.html#contact" class="text-blue-400 hover:underline">contact us directly</a>.
+    <div class="text-center text-sm text-gray-500 mt-8">
+      For the Pro package or custom inquiries, please <a href="index.html#contact" class="text-blue-400 hover:underline">contact us directly</a>.
     </div>
   </section>
 </main>
@@ -94,7 +85,7 @@
        <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="assets/images/silvas.svg"/>
       </a>
       <p class="text-sm">
-    Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
+        Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
       </p>
      </div>
      <div class="space-y-4">
@@ -104,7 +95,6 @@
        <a class="hover:text-blue-500 transition-colors" href="index.html#about">About</a>
        <a class="hover:text-blue-500 transition-colors" href="index.html#pricing">Pricing</a>
        <a class="hover:text-blue-500 transition-colors" href="index.html#contact">Contact</a>
-       <a class="hover:text-blue-500 transition-colors" href="payment.html">Payment</a>
       </nav>
      </div>
      <div class="space-y-4">
@@ -124,39 +114,29 @@
    </div>
 </footer>
 
-<div id="cookie-banner" style="display: none;">
-     <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 fixed bottom-0 left-0 right-0 z-50 shadow-lg">
-         <p class="text-sm">
-            This website uses cookies to ensure you get the best experience. By continuing, you agree to our
-            <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
-         </p>
-         <button id="accept-cookies" class="cta-button text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
-            Accept
-         </button>
-     </div>
-</div>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="assets/js/script.js"></script>
 <script>
-// Simple payment tracking
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS
-    AOS.init({ duration: 800, once: true, offset: 50 });
-    
-    // Add click tracking for payment buttons
-    const paymentLinks = document.querySelectorAll('a[href^="https://buy.stripe.com/"]');
-    
-    paymentLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            const packageName = this.closest('div').querySelector('h2').textContent;
-            console.log('Payment initiated for:', packageName);
-            
-            // You can add analytics here later
-            // Example: gtag('event', 'begin_checkout', { items: [{ name: packageName }] });
-        });
+    const packageSelect = document.getElementById('package-select');
+    const paymentButton = document.getElementById('payment-button');
+
+    const paymentLinks = {
+        starter: 'https://buy.stripe.com/14A4gA04O85N87meeuaEE03',
+        standard: 'https://buy.stripe.com/5kQaEY04O3Px2N2c6maEE04'
+    };
+
+    packageSelect.addEventListener('change', function() {
+        const selectedPackage = this.value;
+        if (selectedPackage && paymentLinks[selectedPackage]) {
+            paymentButton.href = paymentLinks[selectedPackage];
+            paymentButton.textContent = `Proceed to Pay ${selectedPackage === 'starter' ? '$475' : '$1,225'} Deposit`;
+            paymentButton.classList.remove('bg-gray-600', 'cursor-not-allowed', 'opacity-50');
+        } else {
+            paymentButton.removeAttribute('href');
+            paymentButton.textContent = 'Select a Package to Continue';
+            paymentButton.classList.add('bg-gray-600', 'cursor-not-allowed', 'opacity-50');
+        }
     });
-    
+
     // Update copyright year
     const currentYearSpan = document.getElementById('current-year');
     if (currentYearSpan) {
