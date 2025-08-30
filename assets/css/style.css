@@ -168,6 +168,10 @@ input:focus, textarea:focus, select:focus {
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
 }
 
+input:hover, textarea:hover, select:hover {
+    border-color: #737373; /* Corresponds to Tailwind's neutral-500 */
+}
+
 input, textarea, select {
     background-color: #18181b;
     color: #fff;
@@ -189,7 +193,6 @@ input, textarea, select {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1000;
     background: #0a0a0a;
     border-top: 1px solid #262626;
     padding: 1rem;
