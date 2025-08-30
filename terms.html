@@ -2,16 +2,39 @@
 <html class="scroll-smooth" lang="en">
 
 <head>
-  <!-- ... head content remains unchanged ... -->
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Terms and Conditions - Silva Automation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="https://placehold.co/32x32/3b82f6/FFFFFF?text=SA" rel="icon" type="image/png"/>
+  <link href="assets/css/style.css" rel="stylesheet"/>
 </head>
 
 <body class="antialiased">
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-   <!-- ... header content remains unchanged ... -->
+   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a aria-label="Silva Automation Home" href="index.html">
+     <img alt="Silva Automation Logo" class="h-8 w-auto" src="assets/images/silvas.svg"/>
+    </a>
+    <nav class="hidden md:flex items-center space-x-8 text-sm">
+     <a class="nav-link text-gray-300 hover:text-white" href="index.html">Back to Main Site</a>
+    </nav>
+    <div class="md:hidden">
+        <button id="mobile-menu-button" class="text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </div>
+   </div>
 </header>
 <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900/90 backdrop-blur-lg z-40 p-8 mobile-menu-closed md:hidden">
-    <!-- ... mobile menu content remains unchanged ... -->
+    <nav class="flex flex-col space-y-6 text-lg text-right mt-16">
+        <a class="nav-link text-gray-300 hover:text-white" href="index.html">Back to Main Site</a>
+    </nav>
 </div>
 
 <main>
@@ -45,54 +68,142 @@
       <p>
        You agree to use our Site and services only for lawful purposes and in a manner that does not infringe upon the rights of others. You agree to provide accurate and complete information when using our contact forms or engaging our services. You are prohibited from:
       </p>
-      <!-- ... remaining content with updated h2 styles ... -->
-      
+      <ul class="list-disc pl-6 space-y-2">
+       <li>
+        Using the Site in any way that could damage, disable, overburden, or impair the Site.
+       </li>
+       <li>
+        Attempting to gain unauthorized access to any part of the Site or our systems.
+       </li>
+       <li>
+        Using any automated means, such as robots, spiders, or scrapers, to access the Site without our express written permission.
+       </li>
+      </ul>
+
       <h2 class="text-2xl font-bold text-white pt-4 mb-4 border-b border-neutral-700 pb-2">
        3. Intellectual Property
       </h2>
-      <!-- ... content ... -->
-      
+      <p>
+       All content on the Site, including text, graphics, logos, images, and software, is the property of Silva Automation or its content suppliers and is protected by intellectual property laws.
+       As per our Service Agreement, upon full and final payment, the client will own the custom work product created specifically for them. Silva Automation retains ownership of all underlying code, general tools, templates, and pre-existing intellectual property used to create the work product.
+      </p>
+
       <h2 class="text-2xl font-bold text-white pt-4 mb-4 border-b border-neutral-700 pb-2">
        4. Payments, Fees, and Hawaii General Excise Tax (GET)
       </h2>
-      <!-- ... content ... -->
-      
+      <ul class="list-disc pl-6 space-y-2">
+       <li>
+        All prices for services are quoted in United States Dollars (USD).
+       </li>
+       <li>
+        Services are subject to a fixed price as detailed in the Project Proposal.
+       </li>
+       <li>
+        You agree to pay all fees and charges associated with your use of the services.
+       </li>
+       <li>
+        As a business operating in Hawaii, we are subject to the Hawaii General Excise Tax (GET). This is a tax on the gross income received by a business for the privilege of doing business in Hawaii. It is not a sales tax on the customer. We may visibly pass on the cost of the GET to you, as is a common practice in Hawaii, and this will be added to your invoices as required. The GET rate for services is typically 4%.
+       </li>
+      </ul>
+
       <h2 class="text-2xl font-bold text-white pt-4 mb-4 border-b border-neutral-700 pb-2">
        5. Refund and Cancellation Policy
       </h2>
-      <!-- ... content ... -->
-      
+      <p>
+       Our Refund and Cancellation Policy is a separate document that governs the terms for refunds and project cancellations. By engaging our services, you agree to the terms outlined in that policy.
+      </p>
+
       <h2 class="text-2xl font-bold text-white pt-4 mb-4 border-b border-neutral-700 pb-2">
        6. Disclaimers and Limitation of Liability
       </h2>
-      <!-- ... content ... -->
-      
+      <p>
+       Our services are provided "as is" and "as available," without any warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.
+       Silva Automation, its owners, and employees shall not be liable for any direct, indirect, incidental, special, or consequential damages, including but not limited to loss of profits, data, or business interruption, arising out of the use or inability to use our services, even if we have been advised of the possibility of such damages.
+      </p>
+      <p>
+       Our total liability to you for any and all claims arising out of or in connection with these Terms or the services shall not exceed the amount you have paid to us for the services in question.
+      </p>
+
       <h2 class="text-2xl font-bold text-white pt-4 mb-4 border-b border-neutral-700 pb-2">
        7. Governing Law and Jurisdiction
       </h2>
-      <!-- ... content ... -->
-      
+      <p>
+       These Terms shall be governed by and construed in accordance with the laws of the State of Hawaii, without regard to its conflict of law principles. Any dispute arising from these Terms or the use of our services shall be resolved exclusively in the state and federal courts located in Honolulu County, Hawaii.
+      </p>
+
       <h2 class="text-2xl font-bold text-white pt-4 mb-4 border-b border-neutral-700 pb-2">
        8. Changes to the Terms
       </h2>
-      <!-- ... content ... -->
-      
+      <p>
+       We reserve the right to modify these Terms at any time. When we make changes, we will update the "Effective Date" at the top of this document. Your continued use of the Site and services after any such changes constitutes your acceptance of the new Terms.
+      </p>
+
       <h2 class="text-2xl font-bold text-white pt-4 mb-4 border-b border-neutral-700 pb-2">
        9. Contact Information
       </h2>
-      <!-- ... content ... -->
+      <p>
+       If you have any questions or concerns regarding these Terms, please contact us at:<br>
+       Silva Automation<br>
+       Email:
+       <a class="text-blue-400 hover:underline" href="mailto:contact@ssilva.space">
+        contact@ssilva.space
+       </a>
+      </p>
      </div>
     </div>
    </section>
 </main>
 
 <footer class="bg-neutral-900 border-t border-neutral-800 text-neutral-400">
-   <!-- ... footer content remains unchanged ... -->
+   <div class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+     <div class="space-y-4">
+      <a href="index.html">
+       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="assets/images/silvas.svg"/>
+      </a>
+      <p class="text-sm">
+       Bespoke automation systems that save you time and help you grow your service business.
+      </p>
+     </div>
+     <div class="space-y-4">
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">Menu</h4>
+      <nav class="flex flex-col space-y-2 text-sm">
+       <a class="hover:text-blue-500 transition-colors" href="index.html#how-it-works">How It Works</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#about">About</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#pricing">Pricing</a>
+       <a class="hover:text-blue-500 transition-colors" href="index.html#contact">Contact</a>
+      </nav>
+     </div>
+     <div class="space-y-4">
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">Contact</h4>
+      <div class="flex flex-col space-y-2 text-sm">
+        <a class="hover:text-blue-500 transition-colors" href="mailto:contact@ssilva.space">Email</a>
+        <a class="hover:text-blue-500 transition-colors" href="https://github.com/SavaiinaeaSIlva" target="_blank">GitHub</a>
+        <a class="hover:text-blue-500 transition-colors" href="tel:+18083081107">Call</a>
+      </div>
+     </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-neutral-800 text-center text-sm">
+     <p class="text-xs text-neutral-600">
+      © <span id="current-year"></span> Silva Automation. All Rights Reserved. |
+      <a class="hover:text-white" href="terms.html">Terms &amp; Conditions</a> |
+      <a class="hover:text-white" href="privacy.html">Privacy Policy</a> |
+      <a class="hover:text-white" href="cookie.html">Cookie Policy</a> |
+      <a class="hover:text-white" href="refund.html">Refund Policy</a>
+     </p>
+    </div>
+   </div>
 </footer>
 
 <div id="cookie-banner" style="display: none;">
-    <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 fixed bottom-0 left-0 right-0 z-50 shadow-lg z-50">
-        <!-- ... cookie banner content remains unchanged ... -->
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 fixed bottom-0 left-0 right-0 z-50 shadow-lg">
+        <p class="text-sm text-center md:text-left">
+            This website uses cookies to ensure you get the best experience. By continuing, you agree to our
+            <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
+        </p>
+        <button id="accept-cookies" class="cta-button text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+            Accept
+        </button>
     </div>
 </div>
 
