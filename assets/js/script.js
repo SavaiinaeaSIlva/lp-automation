@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Header scroll behavior
     const header = document.getElementById('main-header');
     if (header) {
-        // Check initial scroll position
         if (window.scrollY > 50) {
             header.classList.add('header-scrolled');
         }
@@ -26,18 +25,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const closeMobileMenuButton = document.getElementById('close-mobile-menu');
     
     function openMobileMenu() {
-        if (mobileMenu) {
+        if (mobileMenu && mobileMenuButton) {
             mobileMenu.classList.add('mobile-menu-open');
             mobileMenu.classList.remove('mobile-menu-closed');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            mobileMenuButton.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
         }
     }
 
     function closeMobileMenu() {
-        if (mobileMenu) {
+        if (mobileMenu && mobileMenuButton) {
             mobileMenu.classList.add('mobile-menu-closed');
             mobileMenu.classList.remove('mobile-menu-open');
-            document.body.style.overflow = ''; // Re-enable scrolling
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
         }
     }
 
@@ -49,11 +50,11 @@ document.addEventListener('DOMContentLoaded', function() {
         closeMobileMenuButton.addEventListener('click', closeMobileMenu);
     }
 
-    // Close menu when clicking outside
+    // Close menu when clicking outside (FIXED)
     document.addEventListener('click', function(event) {
         if (mobileMenu && mobileMenu.classList.contains('mobile-menu-open') && 
             !mobileMenu.contains(event.target) && 
-            event.target !== mobileMenuButton) {
+            !mobileMenuButton.contains(event.target)) { // <-- FIX is here
             closeMobileMenu();
         }
     });
@@ -83,11 +84,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const acceptCookiesButton = document.getElementById('accept-cookies');
     
     if (cookieBanner && acceptCookiesButton) {
-        if (localStorage.getItem('cookiesAccepted') === 'true') {
-            cookieBanner.style.display = 'none';
-        } else {
-            cookieBanner.style.display = 'block';
-        }
+        // Use a slight delay to prevent layout shift issues on load
+        setTimeout(() => {
+            if (localStorage.getItem('cookiesAccepted') !== 'true') {
+                cookieBanner.style.display = 'block';
+            }
+        }, 500);
         
         acceptCookiesButton.addEventListener('click', function() {
             localStorage.setItem('cookiesAccepted', 'true');
@@ -100,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
-            
             if (targetId === '#') return;
             
             const targetElement = document.querySelector(targetId);
@@ -113,3 +114,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
