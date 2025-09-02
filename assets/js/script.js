@@ -115,3 +115,48 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Handle custom contact form submission
+document.addEventListener('DOMContentLoaded', () => {
+    const contactForm = document.getElementById('contact-form');
+    const formStatus = document.getElementById('form-status');
+    
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop the default page reload
+
+            const form = e.target;
+            const data = new FormData(form);
+            const action = form.action;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+
+            // Give user feedback
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+            formStatus.textContent = ''; 
+
+            fetch(action, {
+                method: 'POST',
+                body: data,
+            })
+            .then(response => {
+                if (response.ok) {
+                    formStatus.textContent = "Thanks! Your message has been sent.";
+                    formStatus.className = 'text-center h-4 text-green-400';
+                    form.reset(); // Clear the form
+                } else {
+                    throw new Error('Server responded with an error.');
+                }
+            })
+            .catch(error => {
+                formStatus.textContent = 'Sorry, there was an error. Please try again.';
+                formStatus.className = 'text-center h-4 text-red-400';
+            })
+            .finally(() => {
+                // Restore button
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        });
+    }
+});
