@@ -112,14 +112,13 @@
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a aria-label="Silva Automation Home" href="#" id="home-logo-link">
-        <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="https://placehold.co/200x48/000000/FFFFFF?text=Silva&font=ibmplexmono" width="200" height="48"/>
+        <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg" width="200" height="48"/>
     </a>
     <nav class="hidden md:flex items-center space-x-8 text-sm">
      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#how-it-works">How It Works</a>
      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#about">About</a>
      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#pricing">Pricing</a>
      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#contact">Contact</a>
-     <a class="nav-link text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition-colors" href="payment.html">Client Portal</a>
     </nav>
     <div class="md:hidden">
         <button id="mobile-menu-button" class="text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu">
@@ -139,7 +138,6 @@
         <a class="nav-link text-gray-300 hover:text-white" href="#about">About</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#pricing">Pricing</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#contact">Contact</a>
-        <a class="nav-link text-gray-300 hover:text-white" href="payment.html">Client Portal</a>
     </nav>
 </div>
 
@@ -147,7 +145,7 @@
 <main>
     <div id="main-view">
         <!-- Hero Section -->
-        <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center md:justify-start" id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080/1a1a1a/333333?text=Service+Pro+at+Work');">
+        <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center md:justify-start" id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero.png');">
             <div class="container mx-auto px-6">
                 <div class="relative text-center md:text-left text-white flex flex-col items-center md:items-start max-w-2xl" data-aos="fade-up">
                     <h1 class="text-4xl md:text-6xl font-bold font-display leading-tight mb-4">
@@ -206,7 +204,7 @@
             <div class="container mx-auto px-6">
              <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
               <div class="text-center" data-aos="fade-right">
-               <img alt="Savaiinaea Silva" class="w-40 h-40 md:w-48 md:h-48 rounded-full inline-block border-2 border-gray-700 object-cover object-top" src="https://placehold.co/192x192/333333/FFFFFF?text=S.S." width="192" height="192"/>
+               <img alt="Savaiinaea Silva" class="w-40 h-40 md:w-48 md:h-48 rounded-full inline-block border-2 border-gray-700 object-cover object-top" src="assets/images/about.png" width="192" height="192"/>
               </div>
               <div data-aos="fade-left">
                <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
@@ -427,7 +425,7 @@
     <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
      <div class="space-y-4">
       <a href="#" id="home-footer-link">
-       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="https://placehold.co/160x32/000000/FFFFFF?text=Silva&font=ibmplexmono"/>
+       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="assets/images/silvas.svg"/>
       </a>
       <p class="text-sm">
         Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
@@ -440,7 +438,6 @@
        <a class="hover:text-blue-500 transition-colors" href="#about">About</a>
        <a class="hover:text-blue-500 transition-colors" href="#pricing">Pricing</a>
        <a class="hover:text-blue-500 transition-colors" href="#contact">Contact</a>
-       <a class="hover:text-blue-500 transition-colors" href="payment.html">Client Portal</a>
       </nav>
      </div>
      <div class="space-y-4">
@@ -522,11 +519,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (mobileMenuButton) mobileMenuButton.addEventListener('click', openMobileMenu);
     if (closeMobileMenuButton) closeMobileMenuButton.addEventListener('click', closeMobileMenu);
-    if (mobileMenu) mobileMenu.querySelectorAll('a').forEach(link => {
-        if (!link.href.includes('payment.html')) {
+    if (mobileMenu) {
+        mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMobileMenu);
-        }
-    });
+        });
+    }
     
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape' && mobileMenu.classList.contains('mobile-menu-open')) {
