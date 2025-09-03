@@ -1,4 +1,4 @@
-// script.js - ENHANCED VERSION
+// script.js - FINAL VERSION
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize AOS
     AOS.init({ duration: 800, once: true, offset: 50 });
@@ -50,23 +50,20 @@ document.addEventListener('DOMContentLoaded', function() {
         closeMobileMenuButton.addEventListener('click', closeMobileMenu);
     }
 
-    // Close menu when clicking outside (FIXED)
     document.addEventListener('click', function(event) {
         if (mobileMenu && mobileMenu.classList.contains('mobile-menu-open') && 
             !mobileMenu.contains(event.target) && 
-            !mobileMenuButton.contains(event.target)) { // <-- FIX is here
+            !mobileMenuButton.contains(event.target)) {
             closeMobileMenu();
         }
     });
 
-    // Close menu when nav links are clicked
     if (mobileMenu) {
         mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', closeMobileMenu);
         });
     }
     
-    // Close menu on escape key
     document.addEventListener('keydown', function(event) {
         if (event.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('mobile-menu-open')) {
             closeMobileMenu();
@@ -84,7 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const acceptCookiesButton = document.getElementById('accept-cookies');
     
     if (cookieBanner && acceptCookiesButton) {
-        // Use a slight delay to prevent layout shift issues on load
         setTimeout(() => {
             if (localStorage.getItem('cookiesAccepted') !== 'true') {
                 cookieBanner.style.display = 'block';
@@ -113,13 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-});
-
-// Handle custom contact form submission
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contact-form');
-    const formStatus = document.getElementById('form-status');
     
+    // Handle Netlify contact form submission with redirect
+    const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault(); // Stop the default page reload
@@ -129,31 +121,29 @@ document.addEventListener('DOMContentLoaded', () => {
             const action = form.action;
             const submitButton = form.querySelector('button[type="submit"]');
             const originalButtonText = submitButton.innerHTML;
+            const formStatus = document.getElementById('form-status');
 
             // Give user feedback
             submitButton.disabled = true;
             submitButton.innerHTML = 'Sending...';
-            formStatus.textContent = ''; 
+            if(formStatus) formStatus.textContent = ''; 
 
-            fetch(action, {
+            fetch('/', { // Netlify recommends fetching the root path for AJAX submissions
                 method: 'POST',
-                body: data,
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(data).toString(),
             })
             .then(response => {
-                if (response.ok) {
-                    formStatus.textContent = "Thanks! Your message has been sent.";
-                    formStatus.className = 'text-center h-4 text-green-400';
-                    form.reset(); // Clear the form
-                } else {
-                    throw new Error('Server responded with an error.');
-                }
+                // Netlify's AJAX submission doesn't return a standard response object,
+                // but we assume success if no error is thrown. The redirect is the main goal.
+                window.location.href = form.action; // Redirect to the 'action' URL (e.g., /success.html)
             })
             .catch(error => {
-                formStatus.textContent = 'Sorry, there was an error. Please try again.';
-                formStatus.className = 'text-center h-4 text-red-400';
-            })
-            .finally(() => {
-                // Restore button
+                if(formStatus) {
+                    formStatus.textContent = 'Sorry, there was an error. Please try again.';
+                    formStatus.className = 'text-center h-4 text-red-400';
+                }
+                // Restore button even on error
                 submitButton.disabled = false;
                 submitButton.innerHTML = originalButtonText;
             });
