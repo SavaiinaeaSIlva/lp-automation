@@ -1,42 +1,137 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Silva Automation - Systems for Service Businesses</title>
+
+  <!-- External Libraries -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet"/>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
-  <link href="https://placehold.co/32x32/3b82f6/FFFFFF?text=SA" rel="icon" type="image/png"/>
-  <link href="assets/css/style.css?v=3" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  
+  <!-- Self-contained SVG Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%233b82f6%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2250%22 font-family=%22monospace%22 fill=%22%23fff%22>SA</text></svg>" />
+
+  <!-- Embedded CSS -->
+  <style>
+    /* --- Base Setup --- */
+    html {
+        /* Offset for fixed header on anchor links */
+        scroll-padding-top: 80px; 
+    }
+    
+    body {
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main {
+        flex: 1 0 auto;
+    }
+
+    footer {
+        flex-shrink: 0;
+    }
+    
+    /* --- Typography & Custom Effects --- */
+    h1, h2, h3, h4, .font-display {
+        font-family: 'IBM Plex Mono', monospace;
+        letter-spacing: -0.01em;
+        color: #fff;
+    }
+
+    h1 {
+        text-shadow: 0 4px 32px rgba(59,130,246,0.15), 0 1.5px 0 #000;
+    }
+
+    /* --- Header Scroll Effect --- */
+    .header-scrolled {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-bottom: 1px solid rgb(38, 38, 38);
+        backdrop-filter: blur(16px);
+    }
+
+    /* --- Mobile Menu Animation --- */
+    #mobile-menu {
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        will-change: transform;
+        box-shadow: -8px 0 32px 0 rgba(0,0,0,0.4);
+    }
+
+    .mobile-menu-closed {
+        transform: translateX(100%);
+        pointer-events: none;
+    }
+
+    .mobile-menu-open {
+        transform: translateX(0%);
+        pointer-events: auto;
+    }
+    /* --- Legal Page Styles --- */
+    .prose {
+        color: #d4d4d4;
+        line-height: 1.7;
+    }
+    .prose h2 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid #404040;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    .prose ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .prose li {
+        margin-bottom: 0.5rem;
+    }
+    .prose a {
+        color: #60a5fa;
+        text-decoration: underline;
+    }
+    .prose a:hover {
+        color: #93c5fd;
+    }
+  </style>
 </head>
 
 <body class="antialiased bg-black text-gray-300">
 
+<!-- Header Section -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-    <a aria-label="Silva Automation Home" href="index.html">
-    <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg" id="hero-logo" width="200" height="48"/>
+    <a aria-label="Silva Automation Home" href="#" id="home-logo-link">
+        <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="https://placehold.co/200x48/000000/FFFFFF?text=Silva&font=ibmplexmono" width="200" height="48"/>
     </a>
     <nav class="hidden md:flex items-center space-x-8 text-sm">
-     <a class="nav-link text-gray-300 hover:text-white" href="#how-it-works">How It Works</a>
-     <a class="nav-link text-gray-300 hover:text-white" href="#about">About</a>
-     <a class="nav-link text-gray-300 hover:text-white" href="#pricing">Pricing</a>
-     <a class="nav-link text-gray-300 hover:text-white" href="#contact">Contact</a>
+     <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#how-it-works">How It Works</a>
+     <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#about">About</a>
+     <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#pricing">Pricing</a>
+     <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#contact">Contact</a>
+     <a class="nav-link text-white bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-md transition-colors" href="payment.html">Client Portal</a>
     </nav>
     <div class="md:hidden">
-        <button id="mobile-menu-button" class="text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false">
+        <button id="mobile-menu-button" class="text-white focus:outline-none" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
         </button>
     </div>
    </div>
 </header>
 
+<!-- Mobile Menu -->
 <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900/90 backdrop-blur-lg z-40 p-8 mobile-menu-closed md:hidden">
-    <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none">
+    <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none" aria-label="Close mobile menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
     </button>
     <nav class="flex flex-col space-y-8 mt-12 text-lg">
@@ -44,195 +139,295 @@
         <a class="nav-link text-gray-300 hover:text-white" href="#about">About</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#pricing">Pricing</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#contact">Contact</a>
+        <a class="nav-link text-gray-300 hover:text-white" href="payment.html">Client Portal</a>
     </nav>
 </div>
 
+<!-- Main Content -->
 <main>
-    <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center md:justify-start" id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero.png');">
-    <div class="container mx-auto px-6">
-        <div class="relative text-center md:text-left text-white flex flex-col items-center md:items-start max-w-2xl" id="hero-content" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl font-bold font-display leading-tight mb-4">
-                Drowning in Admin? <br/>
-                Get Your Life Back.
-            </h1>
-            <p class="text-lg md:text-xl mb-8 text-gray-300">
-                Sick of missing calls, chasing quotes, and working late just to keep up? I build simple systems that handle the busywork, so you can finally breathe again.
-            </p>
-            <a href="#contact" class="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-md transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]">
-                Get My Free Automation Call
-            </a>
-        </div>
-    </div>
-</section>
-
-    <section class="py-24 lg:py-32" id="how-it-works">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-3xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
-                    How This Actually Works
-                </h2>
-                <p class="text-lg text-gray-400 mb-12">
-                    No tech jargon. Here’s the simple, three-step way I get the busywork off your plate.
-                </p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
-                <div data-aos="fade-up" data-aos-delay="0">
-                    <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">1</div>
-                    <h3 class="font-display font-bold text-xl mb-3 text-white">We Find the Repetitive Job</h3>
-                    <p class="text-gray-400">
-                        First, we find the one task you hate doing over and over. For example: A potential customer calls, but you're on a ladder and miss it. Now you have to chase them down later.
+    <div id="main-view">
+        <!-- Hero Section -->
+        <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center md:justify-start" id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://placehold.co/1920x1080/1a1a1a/333333?text=Service+Pro+at+Work');">
+            <div class="container mx-auto px-6">
+                <div class="relative text-center md:text-left text-white flex flex-col items-center md:items-start max-w-2xl" data-aos="fade-up">
+                    <h1 class="text-4xl md:text-6xl font-bold font-display leading-tight mb-4">
+                        Drowning in Admin? <br/>
+                        Get Your Life Back.
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 text-gray-300">
+                        Sick of missing calls, chasing quotes, and working late just to keep up? I build simple systems that handle the busywork, so you can finally breathe again.
                     </p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="100">
-                    <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">2</div>
-                    <h3 class="font-display font-bold text-xl mb-3 text-white">I Build a System to Do It For You</h3>
-                    <p class="text-gray-400">
-                        I build a simple system that automatically texts them back, saves their info, and puts a follow-up call on your calendar. You don't have to touch anything.
-                    </p>
-                </div>
-                <div data-aos="fade-up" data-aos-delay="200">
-                    <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">3</div>
-                    <h3 class="font-display font-bold text-xl mb-3 text-white">You Get the Result, Without the Work</h3>
-                    <p class="text-gray-400">
-                        You finish your job and see a new client appointment already set. You just got a lead while on the ladder, without ever stopping your real work.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 lg:py-32 bg-black/70" id="about">
-        <div class="container mx-auto px-6">
-         <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-          <div class="text-center" data-aos="fade-right">
-           <img alt="Savaiinaea Silva" class="w-40 h-40 md:w-48 md:h-48 rounded-full inline-block border-2 border-gray-700 object-cover object-top" src="assets/images/about.png" width="192" height="192"/>
-          </div>
-          <div data-aos="fade-left">
-           <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
-            Built by a Service Pro, for Service Pros.
-           </h2>
-           <p class="text-lg text-gray-400 mb-6">
-            I started out just like you—overwhelmed by endless admin. I learned to automate out of desperation, and now I help others escape the grind.
-           </p>
-           <blockquote class="my-6 border-l-4 border-blue-500 pl-6 text-xl italic text-white">
-            My goal is simple: get you off the paperwork and back on the tools—or home to your family sooner.
-           </blockquote>
-          </div>
-         </div>
-        </div>
-    </section>
-
-    <section class="py-24 lg:py-32" id="pricing">
-        <div class="container mx-auto px-6">
-         <div class="text-center" data-aos="fade-up">
-            <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
-                No-Nonsense Packages. Real Results.
-            </h2>
-            <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-12">
-                One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.
-            </p>
-         </div>
-         <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div class="bg-neutral-900 p-8 rounded-lg flex flex-col transition-transform hover:scale-105 duration-300" data-aos="fade-up">
-                <h3 class="font-display font-bold text-2xl mb-2 text-white">Starter</h3>
-                <p class="text-gray-400 mb-6 flex-grow">Tackle your single biggest headache by automating the one repetitive task that wastes the most time.</p>
-                <div class="text-left text-sm">
-                    <p class="font-bold text-gray-300 mb-2">What you get:</p>
-                    <ul class="space-y-2 list-disc list-inside text-gray-400">
-                        <li>1 "Done-For-You" automated workflow</li>
-                        <li>Integration of 2 essential apps</li>
-                        <li>A personal video guide</li>
-                    </ul>
-                </div>
-                <p class="text-4xl font-display text-white mb-6 mt-6">$950</p>
-                <a class="bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
-            </div>
-            <div class="p-8 rounded-lg bg-blue-600/10 border-2 border-blue-500 flex flex-col relative transition-transform hover:scale-105 duration-300" data-aos="fade-up" data-aos-delay="100">
-                <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
-                <h3 class="font-display font-bold text-2xl mb-2 text-white">Standard</h3>
-                <p class="text-gray-300 mb-6 flex-grow">Automate an entire process like client intake or project follow-ups to stop losing leads and start saving hours every week.</p>
-                <div class="text-left text-sm">
-                    <p class="font-bold text-white mb-2">What you get:</p>
-                    <ul class="space-y-2 list-disc list-inside text-gray-300">
-                        <li>1 complete multi-step process automated</li>
-                        <li>Integration of up to 5 business apps</li>
-                        <li>A custom dashboard to track results</li>
-                        <li>Everything in the Starter Package</li>
-                    </ul>
-                </div>
-                <p class="text-4xl font-display text-white mb-6 mt-6">$2,450</p>
-                <a class="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
-            </div>
-            <div class="bg-neutral-900 p-8 rounded-lg flex flex-col transition-transform hover:scale-105 duration-300" data-aos="fade-up" data-aos-delay="200">
-                <h3 class="font-display font-bold text-2xl mb-2 text-white">Pro</h3>
-                <p class="text-gray-400 mb-6 flex-grow">Overhaul your entire operation by integrating multiple systems, allowing you to finally step back and work on the business, not in it.</p>
-                <div class="text-left text-sm">
-                    <p class="font-bold text-gray-300 mb-2">What you get:</p>
-                    <ul class="space-y-2 list-disc list-inside text-gray-400">
-                        <li>Full business operations audit & strategy</li>
-                        <li>Multiple, interconnected automated systems</li>
-                        <li>Unlimited app integrations</li>
-                        <li>Everything in the Standard Package</li>
-                    </ul>
-                </div>
-                <p class="text-4xl font-display text-white mb-6 mt-6">Contact for Quote</p>
-                <a class="bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
-            </div>
-         </div>
-        </div>
-    </section>
-
-    <section class="py-24 lg:py-32" id="contact">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div data-aos="fade-right">
-                    <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
-                        Ready to Stop Drowning in Busywork?
-                    </h2>
-                    <p class="text-lg text-gray-400 mb-8">
-                        Book a free, no-pressure call to see how much time you could save—or just send me a message below. I'll get back to you fast.
-                    </p>
-                    <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-md transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+                    <a href="#contact" class="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-md transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]">
                         Get My Free Automation Call
                     </a>
                 </div>
-                <div data-aos="fade-left"
-<form id="contact-form" name="contact" method="POST" data-netlify="true" action="/success.html" class="space-y-6 bg-neutral-900 p-8 rounded-lg">
-    <div>
-        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-        <input type="text" name="name" id="name" required class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="John Doe">
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="py-24 lg:py-32" id="how-it-works">
+            <div class="container mx-auto px-6">
+                <div class="text-center max-w-3xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
+                        How This Actually Works
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-12">
+                        No tech jargon. Here’s the simple, three-step way I get the busywork off your plate.
+                    </p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
+                    <div data-aos="fade-up" data-aos-delay="0">
+                        <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">1</div>
+                        <h3 class="font-display font-bold text-xl mb-3 text-white">We Find the Bottleneck</h3>
+                        <p class="text-gray-400">
+                            First, we find the one repetitive task you hate doing. For example: A potential customer calls, but you're on a ladder and miss it. Now you have to chase them down later.
+                        </p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100">
+                        <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">2</div>
+                        <h3 class="font-display font-bold text-xl mb-3 text-white">I Build the System</h3>
+                        <p class="text-gray-400">
+                            I build a simple system that automatically texts them back, saves their info, and puts a follow-up call on your calendar. You don't have to touch anything.
+                        </p>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200">
+                        <div class="bg-blue-500/10 text-blue-400 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 font-display text-2xl font-bold">3</div>
+                        <h3 class="font-display font-bold text-xl mb-3 text-white">You Get the Result</h3>
+                        <p class="text-gray-400">
+                            You finish your job and see a new client appointment already set. You just captured a lead while on the ladder, without ever stopping your real work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="py-24 lg:py-32 bg-black/70" id="about">
+            <div class="container mx-auto px-6">
+             <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+              <div class="text-center" data-aos="fade-right">
+               <img alt="Savaiinaea Silva" class="w-40 h-40 md:w-48 md:h-48 rounded-full inline-block border-2 border-gray-700 object-cover object-top" src="https://placehold.co/192x192/333333/FFFFFF?text=S.S." width="192" height="192"/>
+              </div>
+              <div data-aos="fade-left">
+               <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
+                Built by a Service Pro, for Service Pros.
+               </h2>
+               <p class="text-lg text-gray-400 mb-6">
+                I started out just like you—overwhelmed by endless admin. I learned to automate out of desperation, and now I help others escape the grind.
+               </p>
+               <blockquote class="my-6 border-l-4 border-blue-500 pl-6 text-xl italic text-white">
+                My goal is simple: get you off the paperwork and back on the tools—or home to your family sooner.
+               </blockquote>
+              </div>
+             </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-24 lg:py-32" id="pricing">
+            <div class="container mx-auto px-6">
+             <div class="text-center" data-aos="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
+                    No-Nonsense Packages. Real Results.
+                </h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-12">
+                    One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.
+                </p>
+             </div>
+             <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-neutral-900 p-8 rounded-lg flex flex-col transition-transform hover:scale-105 duration-300" data-aos="fade-up">
+                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Starter</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">Tackle your single biggest headache by automating the one repetitive task that wastes the most time.</p>
+                    <div class="text-left text-sm">
+                        <p class="font-bold text-gray-300 mb-2">What you get:</p>
+                        <ul class="space-y-2 list-disc list-inside text-gray-400">
+                            <li>1 "Done-For-You" automated workflow</li>
+                            <li>Integration of 2 essential apps</li>
+                            <li>A personal video guide</li>
+                        </ul>
+                    </div>
+                    <p class="text-4xl font-display text-white mb-6 mt-6">$950</p>
+                    <a class="bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
+                </div>
+                <div class="p-8 rounded-lg bg-blue-600/10 border-2 border-blue-500 flex flex-col relative transition-transform hover:scale-105 duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Recommended</span>
+                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Standard</h3>
+                    <p class="text-gray-300 mb-6 flex-grow">Automate an entire process like client intake or project follow-ups to stop losing leads and start saving hours every week.</p>
+                    <div class="text-left text-sm">
+                        <p class="font-bold text-white mb-2">What you get:</p>
+                        <ul class="space-y-2 list-disc list-inside text-gray-300">
+                            <li>1 complete multi-step process automated</li>
+                            <li>Integration of up to 5 business apps</li>
+                            <li>A custom dashboard to track results</li>
+                            <li>Everything in the Starter Package</li>
+                        </ul>
+                    </div>
+                    <p class="text-4xl font-display text-white mb-6 mt-6">$2,450</p>
+                    <a class="bg-blue-500 hover:bg-blue-600 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
+                </div>
+                <div class="bg-neutral-900 p-8 rounded-lg flex flex-col transition-transform hover:scale-105 duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Pro</h3>
+                    <p class="text-gray-400 mb-6 flex-grow">Overhaul your entire operation by integrating multiple systems, allowing you to finally step back and work on the business, not in it.</p>
+                    <div class="text-left text-sm">
+                        <p class="font-bold text-gray-300 mb-2">What you get:</p>
+                        <ul class="space-y-2 list-disc list-inside text-gray-400">
+                            <li>Full business operations audit & strategy</li>
+                            <li>Multiple, interconnected automated systems</li>
+                            <li>Unlimited app integrations</li>
+                            <li>Everything in the Standard Package</li>
+                        </ul>
+                    </div>
+                    <p class="text-4xl font-display text-white mb-6 mt-6">Contact for Quote</p>
+                    <a class="bg-blue-600 hover:bg-blue-700 text-white text-center font-semibold py-2 px-6 rounded-md transition-colors" href="#contact">Book a Call</a>
+                </div>
+             </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-24 lg:py-32" id="contact">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div data-aos="fade-right">
+                        <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
+                            Ready to Stop Drowning?
+                        </h2>
+                        <p class="text-lg text-gray-400 mb-8">
+                            Book a free, no-pressure call to see how much time you could save—or just send me a message below. I'll get back to you fast.
+                        </p>
+                        <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-md transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)]">
+                            Get My Free Automation Call
+                        </a>
+                    </div>
+                    <div data-aos="fade-left">
+                        <form id="contact-form" name="contact" method="POST" data-netlify="true" action="success.html" class="space-y-6 bg-neutral-900 p-8 rounded-lg">
+                            <input type="hidden" name="form-name" value="contact" />
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
+                                <input type="text" name="name" id="name" required class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
+                                <input type="email" name="email" id="email" required class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="you@example.com">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number (Optional)</label>
+                                <input type="tel" name="phone" id="phone" class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="(555) 555-5555">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">How can I help?</label>
+                                <textarea name="message" id="message" rows="5" required class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Tell me about the task you want to automate..."></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" class="w-full text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-md transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-900 focus:ring-blue-500">
+                                    Send Message
+                                </button>
+                            </div>
+                            <div id="form-status" class="text-center h-4 text-sm"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <div>
-        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-        <input type="email" name="email" id="email" required class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="you@example.com">
-    </div>
-    <div>
-        <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number (Optional)</label>
-        <input type="tel" name="phone" id="phone" class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="(555) 555-5555">
-    </div>
-    <div>
-        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">How can I help?</label>
-        <textarea name="message" id="message" rows="5" required class="w-full bg-neutral-800 border border-neutral-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Tell me about the task you want to automate..."></textarea>
-    </div>
-    <div>
-        <button type="submit" class="w-full text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-md transition-all duration-300 hover:bg-blue-700 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-neutral-900 focus:ring-blue-500">
-            Send Message
-        </button>
-    </div>
-    <div id="form-status" class="text-center h-4"></div>
-</form>
+
+    <div id="legal-view" class="hidden">
+      <section class="py-24 lg:py-32">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="mb-8">
+              <button id="back-to-main" class="text-blue-400 hover:text-blue-300 transition-colors">&larr; Back to main site</button>
+            </div>
+            
+            <!-- Terms and Conditions Page -->
+            <div id="terms-page" class="legal-page hidden">
+                <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">Terms and Conditions</h1>
+                <div class="prose max-w-none space-y-6">
+                    <p class="text-sm"><strong>Effective Date:</strong> September 3, 2025</p>
+                    <p>This website, https://ssilva.space/ (the "Site"), and the services offered through it, are owned and operated by Silva Automation, a sole proprietorship organized under Hawaii law ("Silva Automation," "we," "us," or "our"). By accessing or using our Site and services, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree with any part of these Terms, you must not use our Site or services.</p>
+                    <h2>1. Description of Services</h2>
+                    <p>Silva Automation provides business-to-business automation services, including but not limited to workflow optimization, CRM setup, and automated marketing campaigns. The specific scope of work for each project will be outlined in a separate Service Agreement and a Project Proposal, which are incorporated into these Terms by reference.</p>
+                    <h2>2. User Obligations</h2>
+                    <p>You agree to use our Site and services only for lawful purposes and in a manner that does not infringe upon the rights of others. You agree to provide accurate and complete information when using our contact forms or engaging our services. You are prohibited from:</p>
+                    <ul>
+                     <li>Using the Site in any way that could damage, disable, overburden, or impair the Site.</li>
+                     <li>Attempting to gain unauthorized access to any part of the Site or our systems.</li>
+                     <li>Using any automated means, such as robots, spiders, or scrapers, to access the Site without our express written permission.</li>
+                    </ul>
+                    <h2>3. Intellectual Property</h2>
+                    <p>All content on the Site, including text, graphics, logos, images, and software, is the property of Silva Automation or its content suppliers and is protected by intellectual property laws. As per our Service Agreement, upon full and final payment, the client will own the custom work product created specifically for them. Silva Automation retains ownership of all underlying code, general tools, templates, and pre-existing intellectual property used to create the work product.</p>
+                    <h2>4. Payments, Fees, and Hawaii General Excise Tax (GET)</h2>
+                    <ul>
+                     <li>All prices for services are quoted in United States Dollars (USD).</li>
+                     <li>Services are subject to a fixed price as detailed in the Project Proposal.</li>
+                     <li>You agree to pay all fees and charges associated with your use of the services.</li>
+                     <li>As a business operating in Hawaii, we are subject to the Hawaii General Excise Tax (GET). This is a tax on the gross income received by a business for the privilege of doing business in Hawaii. It is not a sales tax on the customer. We may visibly pass on the cost of the GET to you, as is a common practice in Hawaii, and this will be added to your invoices as required. The GET rate for services is typically 4%.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Privacy Policy Page -->
+            <div id="privacy-page" class="legal-page hidden">
+                <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">Privacy Policy</h1>
+                <div class="prose max-w-none space-y-6">
+                    <p class="text-sm"><strong>Effective Date:</strong> September 3, 2025</p>
+                    <p>This Privacy Policy describes how Silva Automation ("we," "us," or "our") collects, uses, and discloses information from users of our website and services, located at https://ssilva.space/ . We are committed to protecting your privacy and complying with all applicable laws, including the data protection principles of the State of Hawaii.</p>
+                    <h2>1. Information We Collect</h2>
+                    <p>We collect information to provide and improve our services and to communicate with you. The types of information we may collect include:</p>
+                    <ul>
+                        <li><strong>Personal Information:</strong> This includes data you voluntarily provide to us via contact forms, project inquiries, or scheduling software. This may include your name, company name, email address, phone number, and any other information you provide in your communications.</li>
+                        <li><strong>Project and Service Data:</strong> We collect and process data required to perform our automation services, which may include customer relationship management (CRM) data, marketing campaign data, and other business information necessary to complete a project. This data is handled with strict confidentiality.</li>
+                        <li><strong>Usage and Technical Data:</strong> When you visit our website, we automatically collect certain information about your device and your activity. This includes your IP address, browser type, device type, operating system, and data about your interaction with our site, such as pages viewed and time spent.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cookie Policy Page -->
+            <div id="cookie-page" class="legal-page hidden">
+                <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">Cookie Policy</h1>
+                <div class="prose max-w-none space-y-6">
+                    <p class="text-sm"><strong>Effective Date:</strong> September 3, 2025</p>
+                    <h2>1. What Are Cookies?</h2>
+                    <p>Cookies are small text files that are placed on your device (computer, phone, or tablet) when you visit a website. They are widely used to make websites work more efficiently and to provide information to the site owners. Cookies can be "session" cookies, which are temporary and deleted when you close your browser, or "persistent" cookies, which remain on your device for a set period.</p>
+                    <h2>2. How We Use Cookies</h2>
+                    <p>We use cookies for several purposes to enhance your experience and improve our services:</p>
+                    <ul>
+                        <li><strong>Essential Cookies:</strong> These cookies are strictly necessary for the operation of our website. They enable core functions such as website navigation and access to secure areas. The website cannot function properly without these cookies.</li>
+                        <li><strong>Analytics Cookies:</strong> We use third-party analytics services, such as Google Analytics, to collect information about how users interact with our website. This data helps us understand site traffic, measure the performance of our content, and identify areas for improvement. The information collected is aggregated and does not directly identify you.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Refund Policy Page -->
+            <div id="refund-page" class="legal-page hidden">
+                <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">Refund & Cancellation Policy</h1>
+                <div class="prose max-w-none space-y-6">
+                    <p class="text-sm"><strong>Effective Date:</strong> September 3, 2025</p>
+                    <p>This Refund & Cancellation Policy outlines the conditions under which Silva Automation ("we," "us," or "our") provides refunds and allows for the cancellation of services. This policy applies to all services purchased from us.</p>
+                    <h2>1. General Principles</h2>
+                    <ul>
+                        <li><strong>Transparency and Fairness:</strong> We are committed to transparency and fairness in all our dealings. Our refund and cancellation terms are designed to protect both our business and your investment.</li>
+                        <li><strong>Service-Based:</strong> As a service-based business, our work cannot be "returned" like a physical product. Therefore, refunds are considered only when there is a documented failure on our part to meet the agreed-upon project specifications as outlined in the Project Proposal and Service Agreement.</li>
+                    </ul>
+                    <h2>2. Cancellation and Refund Schedule</h2>
+                    <ul>
+                        <li><strong>Cancellation Before Work Commences:</strong> If you wish to cancel a project before any work has started, you may do so by providing written notice. A full refund will be granted, minus a 15% administrative fee to cover initial consultation, proposal drafting, and administrative costs. This request must be submitted in writing within 15 days of the initial payment.</li>
+                        <li><strong>Cancellation During the Project:</strong> Once a project has started, cancellation is subject to the work completed at the time of the cancellation request. We will retain all payments made for work completed up to that point.</li>
+                    </ul>
                 </div>
             </div>
         </div>
-    </section>
+      </section>
+    </div>
+
 </main>
 
+<!-- Footer -->
 <footer class="bg-neutral-900 border-t border-neutral-800 text-neutral-400">
    <div class="container mx-auto px-6 py-12">
     <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
      <div class="space-y-4">
-      <a href="index.html">
-       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="assets/images/silvas.svg"/>
+      <a href="#" id="home-footer-link">
+       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="https://placehold.co/160x32/000000/FFFFFF?text=Silva&font=ibmplexmono"/>
       </a>
       <p class="text-sm">
         Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
@@ -241,38 +436,37 @@
      <div class="space-y-4">
       <h4 class="font-bold text-white uppercase tracking-wider font-display">Menu</h4>
       <nav class="flex flex-col space-y-2 text-sm">
-       <a class="hover:text-blue-500 transition-colors" href="index.html#how-it-works">How It Works</a>
-       <a class="hover:text-blue-500 transition-colors" href="index.html#about">About</a>
-       <a class="hover:text-blue-500 transition-colors" href="index.html#pricing">Pricing</a>
-       <a class="hover:text-blue-500 transition-colors" href="index.html#contact">Contact</a>
+       <a class="hover:text-blue-500 transition-colors" href="#how-it-works">How It Works</a>
+       <a class="hover:text-blue-500 transition-colors" href="#about">About</a>
+       <a class="hover:text-blue-500 transition-colors" href="#pricing">Pricing</a>
+       <a class="hover:text-blue-500 transition-colors" href="#contact">Contact</a>
+       <a class="hover:text-blue-500 transition-colors" href="payment.html">Client Portal</a>
       </nav>
      </div>
      <div class="space-y-4">
-      <h4 class="font-bold text-white uppercase tracking-wider font-display">Contact</h4>
-      <div class="flex flex-col space-y-2 text-sm">
-        <a class="hover:text-blue-500 transition-colors" href="mailto:contact@ssilva.space">Email</a>
-        <a class="hover:text-blue-500 transition-colors" href="https://github.com/SavaiinaeaSIlva" target="_blank">GitHub</a>
-        <a class="hover:text-blue-500 transition-colors" href="tel:+18083081107">Call</a>
-      </div>
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">Legal</h4>
+        <nav class="flex flex-col space-y-2 text-sm">
+            <a class="legal-link hover:text-blue-500 transition-colors" href="#terms" data-page="terms-page">Terms &amp; Conditions</a>
+            <a class="legal-link hover:text-blue-500 transition-colors" href="#privacy" data-page="privacy-page">Privacy Policy</a>
+            <a class="legal-link hover:text-blue-500 transition-colors" href="#cookie" data-page="cookie-page">Cookie Policy</a>
+            <a class="legal-link hover:text-blue-500 transition-colors" href="#refund" data-page="refund-page">Refund Policy</a>
+        </nav>
      </div>
     </div>
     <div class="mt-12 pt-8 border-t border-neutral-800 text-center text-sm">
      <p class="text-xs text-neutral-600">
-      © <span id="current-year"></span> Silva Automation. All Rights Reserved. |
-    <a class="text-blue-400 hover:text-blue-600 underline transition-colors" href="terms.html">Terms &amp; Conditions</a> |
-    <a class="text-blue-400 hover:text-blue-600 underline transition-colors" href="privacy.html">Privacy Policy</a> |
-    <a class="text-blue-400 hover:text-blue-600 underline transition-colors" href="cookie.html">Cookie Policy</a> |
-    <a class="text-blue-400 hover:text-blue-600 underline transition-colors" href="refund.html">Refund Policy</a>
+      © <span id="current-year"></span> Silva Automation. All Rights Reserved.
      </p>
     </div>
    </div>
 </footer>
 
+<!-- Cookie Banner -->
 <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[100]" style="display: none;">
      <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 shadow-lg">
          <p class="text-sm text-center md:text-left text-gray-300">
             This website uses cookies to ensure you get the best experience. By continuing, you agree to our
-            <a class="text-blue-400 hover:underline" href="privacy.html">Privacy Policy</a>.
+            <a class="legal-link text-blue-400 hover:underline" href="#privacy" data-page="privacy-page">Privacy Policy</a>.
          </p>
          <button id="accept-cookies" class="flex-shrink-0 text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-neutral-900 bg-blue-600 text-white hover:bg-blue-700 transition-colors">
             Accept
@@ -280,8 +474,195 @@
      </div>
 </div>
 
+<!-- External Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="assets/js/script.js"></script>
 <script src="//code.tidio.co/j7grbfnaaaz7csaaeby58imgyek804ik.js" async></script>
+
+<!-- Embedded Page-Specific JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // --- Initialize Animate On Scroll (AOS) Library ---
+    AOS.init({ 
+        duration: 800, 
+        once: true, 
+        offset: 50
+    });
+    
+    // --- Header Scroll Behavior ---
+    const header = document.getElementById('main-header');
+    if (header) {
+        const handleScroll = () => {
+            if (window.scrollY > 50) header.classList.add('header-scrolled');
+            else header.classList.remove('header-scrolled');
+        };
+        handleScroll(); 
+        window.addEventListener('scroll', handleScroll);
+    }
+    
+    // --- Mobile Menu Functionality ---
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenuButton = document.getElementById('close-mobile-menu');
+    
+    const openMobileMenu = () => {
+        if (!mobileMenu || !mobileMenuButton) return;
+        mobileMenu.classList.add('mobile-menu-open');
+        mobileMenu.classList.remove('mobile-menu-closed');
+        mobileMenuButton.setAttribute('aria-expanded', 'true');
+        document.body.style.overflow = 'hidden';
+    };
+
+    const closeMobileMenu = () => {
+        if (!mobileMenu || !mobileMenuButton) return;
+        mobileMenu.classList.add('mobile-menu-closed');
+        mobileMenu.classList.remove('mobile-menu-open');
+        mobileMenuButton.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    };
+
+    if (mobileMenuButton) mobileMenuButton.addEventListener('click', openMobileMenu);
+    if (closeMobileMenuButton) closeMobileMenuButton.addEventListener('click', closeMobileMenu);
+    if (mobileMenu) mobileMenu.querySelectorAll('a').forEach(link => {
+        if (!link.href.includes('payment.html')) {
+            link.addEventListener('click', closeMobileMenu);
+        }
+    });
+    
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && mobileMenu.classList.contains('mobile-menu-open')) {
+            closeMobileMenu();
+        }
+    });
+    
+    // --- Dynamic Copyright Year ---
+    const currentYearSpan = document.getElementById('current-year');
+    if (currentYearSpan) {
+        currentYearSpan.textContent = new Date().getFullYear();
+    }
+    
+    // --- Cookie Banner Logic ---
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptCookiesButton = document.getElementById('accept-cookies');
+    
+    if (cookieBanner && acceptCookiesButton) {
+        setTimeout(() => {
+            if (localStorage.getItem('cookiesAccepted') !== 'true') {
+                cookieBanner.style.display = 'block';
+            }
+        }, 500);
+        
+        acceptCookiesButton.addEventListener('click', function() {
+            localStorage.setItem('cookiesAccepted', 'true');
+            cookieBanner.style.display = 'none';
+        });
+    }
+    
+    // --- Smooth Scrolling for Anchor Links ---
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href.length < 2) return;
+            const targetElement = document.querySelector(href);
+            if (targetElement && !anchor.classList.contains('legal-link')) {
+                e.preventDefault();
+                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+    
+    // --- Netlify Contact Form AJAX Submission ---
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const form = e.target;
+            const formData = new FormData(form);
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            const formStatus = document.getElementById('form-status');
+
+            submitButton.disabled = true;
+            submitButton.innerHTML = 'Sending...';
+            if(formStatus) formStatus.textContent = ''; 
+
+            fetch('/', {
+                method: 'POST',
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                window.location.href = form.getAttribute('action');
+            })
+            .catch(() => {
+                if(formStatus) {
+                    formStatus.textContent = 'Sorry, there was an error. Please try again.';
+                    formStatus.className = 'text-center h-4 text-red-400 text-sm';
+                }
+            })
+            .finally(() => {
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        });
+    }
+
+    // --- Single-Page View Logic ---
+    const mainView = document.getElementById('main-view');
+    const legalView = document.getElementById('legal-view');
+    const legalPages = document.querySelectorAll('.legal-page');
+    const legalLinks = document.querySelectorAll('.legal-link');
+    const backToMainButton = document.getElementById('back-to-main');
+    const homeLogoLink = document.getElementById('home-logo-link');
+    const homeFooterLink = document.getElementById('home-footer-link');
+
+    const showMainView = () => {
+        mainView.classList.remove('hidden');
+        legalView.classList.add('hidden');
+        window.scrollTo(0, 0);
+        history.pushState(null, null, window.location.pathname);
+    };
+
+    const showLegalPage = (pageId) => {
+        mainView.classList.add('hidden');
+        legalView.classList.remove('hidden');
+        legalPages.forEach(page => page.classList.add('hidden'));
+        const pageToShow = document.getElementById(pageId);
+        if(pageToShow) pageToShow.classList.remove('hidden');
+        window.scrollTo(0, 0);
+    };
+
+    legalLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const pageId = link.dataset.page;
+            showLegalPage(pageId);
+            history.pushState({page: pageId}, null, link.getAttribute('href'));
+        });
+    });
+
+    if (backToMainButton) backToMainButton.addEventListener('click', showMainView);
+    if (homeLogoLink) homeLogoLink.addEventListener('click', (e) => { e.preventDefault(); showMainView(); });
+    if (homeFooterLink) homeFooterLink.addEventListener('click', (e) => { e.preventDefault(); showMainView(); });
+
+    // Handle browser back/forward buttons
+    window.addEventListener('popstate', (e) => {
+        if (e.state && e.state.page) {
+            showLegalPage(e.state.page);
+        } else {
+            showMainView();
+        }
+    });
+
+    // Check URL on initial load
+    const hash = window.location.hash.substring(1);
+    const pageMap = {'terms': 'terms-page', 'privacy': 'privacy-page', 'cookie': 'cookie-page', 'refund': 'refund-page'};
+    if (pageMap[hash]) {
+        showLegalPage(pageMap[hash]);
+    }
+
+});
+</script>
+
 </body>
 </html>
+
