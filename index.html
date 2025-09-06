@@ -6,116 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Silva Automation - Systems for Service Businesses</title>
 
-  <!-- External Libraries -->
+  <meta name="description" content="Stop drowning in admin work. Silva Automation builds simple systems for service businesses to handle missed calls, quotes, and follow-ups, so you can get your time back." />
+  <meta property="og:title" content="Silva Automation - Systems for Service Businesses" />
+  <meta property="og:description" content="Stop drowning in admin work. I build simple systems for service pros to handle the busywork, so you can get your life back." />
+  <meta property="og:image" content="assets/images/social-share.png" />
+  <meta property="og:url" content="https://ssilva.space/" />
+  <meta property="og:type" content="website" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   
-  <!-- Self-contained SVG Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%233b82f6%22></rect><text x=%2250%%22 y=%2250%%22 dominant-baseline=%22central%22 text-anchor=%22middle%22 font-size=%2250%22 font-family=%22monospace%22 fill=%22%23fff%22>SA</text></svg>" />
+  <link rel="icon" href="logo.png" type="image/png" />
 
-  <!-- Embedded CSS -->
   <style>
-    /* --- Base Setup --- */
-    html {
-        /* Offset for fixed header on anchor links */
-        scroll-padding-top: 80px; 
-    }
-    
-    body {
-        font-family: 'Inter', sans-serif;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-    }
-
-    main {
-        flex: 1 0 auto;
-    }
-
-    footer {
-        flex-shrink: 0;
-    }
-    
-    /* --- Typography & Custom Effects --- */
-    h1, h2, h3, h4, .font-display {
-        font-family: 'IBM Plex Mono', monospace;
-        letter-spacing: -0.01em;
-        color: #fff;
-    }
-
-    h1 {
-        text-shadow: 0 4px 32px rgba(59,130,246,0.15), 0 1.5px 0 #000;
-    }
-
-    /* --- Header Scroll Effect --- */
-    .header-scrolled {
-        background-color: rgba(0, 0, 0, 0.8);
-        border-bottom: 1px solid rgb(38, 38, 38);
-        backdrop-filter: blur(16px);
-    }
-
-    /* --- Mobile Menu Animation --- */
-    #mobile-menu {
-        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        will-change: transform;
-        box-shadow: -8px 0 32px 0 rgba(0,0,0,0.4);
-    }
-
-    .mobile-menu-closed {
-        transform: translateX(100%);
-        pointer-events: none;
-    }
-
-    .mobile-menu-open {
-        transform: translateX(0%);
-        pointer-events: auto;
-    }
-    /* --- Legal Page Styles --- */
-    .prose {
-        color: #d4d4d4;
-        line-height: 1.7;
-    }
-    .prose h2 {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: #fff;
-        padding-bottom: 0.5rem;
-        border-bottom: 1px solid #404040;
-        margin-top: 2rem;
-        margin-bottom: 1rem;
-    }
-    .prose ul {
-        list-style-type: disc;
-        padding-left: 1.5rem;
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-    }
-    .prose li {
-        margin-bottom: 0.5rem;
-    }
-    .prose a {
-        color: #60a5fa;
-        text-decoration: underline;
-    }
-    .prose a:hover {
-        color: #93c5fd;
-    }
+    html { scroll-padding-top: 80px; }
+    body { font-family: 'Inter', sans-serif; min-height: 100vh; display: flex; flex-direction: column; }
+    main { flex: 1 0 auto; }
+    footer { flex-shrink: 0; }
+    h1, h2, h3, h4, .font-display { font-family: 'IBM Plex Mono', monospace; letter-spacing: -0.01em; color: #fff; }
+    h1 { text-shadow: 0 4px 32px rgba(59,130,246,0.15), 0 1.5px 0 #000; }
+    .header-scrolled { background-color: rgba(0, 0, 0, 0.8); border-bottom: 1px solid rgb(38, 38, 38); backdrop-filter: blur(16px); }
+    #mobile-menu { transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform; box-shadow: -8px 0 32px 0 rgba(0,0,0,0.4); }
+    .mobile-menu-closed { transform: translateX(100%); pointer-events: none; }
+    .mobile-menu-open { transform: translateX(0%); pointer-events: auto; }
+    .prose { color: #d4d4d4; line-height: 1.7; }
+    .prose h2 { font-size: 1.5rem; font-weight: 700; color: #fff; padding-bottom: 0.5rem; border-bottom: 1px solid #404040; margin-top: 2rem; margin-bottom: 1rem; }
+    .prose h3 { font-size: 1.25rem; font-weight: 600; color: #fff; margin-top: 1.5rem; margin-bottom: 0.5rem; }
+    .prose ul { list-style-type: disc; padding-left: 1.5rem; margin-top: 1rem; margin-bottom: 1rem; }
+    .prose li { margin-bottom: 0.5rem; }
+    .prose a { color: #60a5fa; text-decoration: underline; }
+    .prose a:hover { color: #93c5fd; }
   </style>
 </head>
 
 <body class="antialiased bg-black text-gray-300">
 
-<!-- Header Section -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a aria-label="Silva Automation Home" href="#" id="home-logo-link">
-        <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto transition-all duration-300" src="assets/images/silvas.svg" width="200" height="48"/>
+        <img alt="Silva Automation Logo" class="h-12 md:h-16 w-auto transition-all duration-300" src="logo.png" width="200" height="64"/>
     </a>
     <nav class="hidden md:flex items-center space-x-8 text-sm">
      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#how-it-works">How It Works</a>
+     <a class="nav-link text-gray-300 hover:text-white transition-colors" href="process.html">Our Process</a>
      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#about">About</a>
      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#pricing">Pricing</a>
      <a class="nav-link text-gray-300 hover:text-white transition-colors" href="#contact">Contact</a>
@@ -128,23 +64,21 @@
    </div>
 </header>
 
-<!-- Mobile Menu -->
 <div id="mobile-menu" class="fixed top-0 right-0 h-full w-64 bg-gray-900/90 backdrop-blur-lg z-40 p-8 mobile-menu-closed md:hidden">
     <button id="close-mobile-menu" class="absolute top-4 right-4 text-gray-400 hover:text-white focus:outline-none" aria-label="Close mobile menu">
         <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
     </button>
     <nav class="flex flex-col space-y-8 mt-12 text-lg">
         <a class="nav-link text-gray-300 hover:text-white" href="#how-it-works">How It Works</a>
+        <a class="nav-link text-gray-300 hover:text-white" href="process.html">Our Process</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#about">About</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#pricing">Pricing</a>
         <a class="nav-link text-gray-300 hover:text-white" href="#contact">Contact</a>
     </nav>
 </div>
 
-<!-- Main Content -->
 <main>
     <div id="main-view">
-        <!-- Hero Section -->
         <section class="relative min-h-screen bg-cover bg-center flex items-center justify-center md:justify-start" id="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('assets/images/hero.png');">
             <div class="container mx-auto px-6">
                 <div class="relative text-center md:text-left text-white flex flex-col items-center md:items-start max-w-2xl" data-aos="fade-up">
@@ -162,7 +96,6 @@
             </div>
         </section>
 
-        <!-- How It Works Section -->
         <section class="py-24 lg:py-32" id="how-it-works">
             <div class="container mx-auto px-6">
                 <div class="text-center max-w-3xl mx-auto">
@@ -170,7 +103,7 @@
                         How This Actually Works
                     </h2>
                     <p class="text-lg text-gray-400 mb-12">
-                        No tech jargon. Here’s the simple, three-step way I get the busywork off your plate.
+                        No tech jargon. Here’s the simple, three-step way I get the busywork off your plate. <a href="process.html" class="text-blue-400 hover:underline">Learn more.</a>
                     </p>
                 </div>
                 <div class="grid md:grid-cols-3 gap-8 md:gap-12 text-center">
@@ -199,7 +132,6 @@
             </div>
         </section>
 
-        <!-- About Section -->
         <section class="py-24 lg:py-32 bg-black/70" id="about">
             <div class="container mx-auto px-6">
              <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
@@ -221,7 +153,6 @@
             </div>
         </section>
 
-        <!-- Pricing Section -->
         <section class="py-24 lg:py-32" id="pricing">
             <div class="container mx-auto px-6">
              <div class="text-center" data-aos="fade-up">
@@ -282,7 +213,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section class="py-24 lg:py-32" id="contact">
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
@@ -336,7 +266,6 @@
               <button id="back-to-main" class="text-blue-400 hover:text-blue-300 transition-colors">&larr; Back to main site</button>
             </div>
             
-            <!-- Terms and Conditions Page -->
             <div id="terms-page" class="legal-page hidden">
                 <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">Terms and Conditions</h1>
                 <div class="prose max-w-none space-y-6">
@@ -360,15 +289,30 @@
                      <li>You agree to pay all fees and charges associated with your use of the services.</li>
                      <li>As a business operating in Hawaii, we are subject to the Hawaii General Excise Tax (GET). This is a tax on the gross income received by a business for the privilege of doing business in Hawaii. It is not a sales tax on the customer. We may visibly pass on the cost of the GET to you, as is a common practice in Hawaii, and this will be added to your invoices as required. The GET rate for services is typically 4%.</li>
                     </ul>
+                    <h2>5. Limitation of Liability</h2>
+                    <p>To the fullest extent permitted by law, Silva Automation shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our services.</p>
+                    <h2>6. Indemnification</h2>
+                    <p>You agree to indemnify and hold harmless Silva Automation, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorney's fees, arising out of or in any way connected with your use of our services or your violation of these Terms.</p>
+                    <h2>7. Termination</h2>
+                    <p>We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the services will cease immediately.</p>
+                    <h2>8. Governing Law and Dispute Resolution</h2>
+                    <p>These Terms shall be governed by and construed in accordance with the laws of the State of Hawaii, without regard to its conflict of law principles. Any disputes arising under or in connection with these Terms shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, conducted in Honolulu, Hawaii.</p>
+                    <h2>9. Changes to Terms</h2>
+                    <p>We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms on this page and updating the "Effective Date" at the top. Your continued use of our services after any such changes constitutes your acceptance of the new Terms.</p>
+                    <h2>10. Contact Information</h2>
+                    <p>If you have any questions about these Terms, please contact us at:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:contact@ssilva.space">contact@ssilva.space</a></li>
+                        <li>Address: Silva Automation, Hawaii</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Privacy Policy Page -->
             <div id="privacy-page" class="legal-page hidden">
                 <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">Privacy Policy</h1>
                 <div class="prose max-w-none space-y-6">
                     <p class="text-sm"><strong>Effective Date:</strong> September 3, 2025</p>
-                    <p>This Privacy Policy describes how Silva Automation ("we," "us," or "our") collects, uses, and discloses information from users of our website and services, located at https://ssilva.space/ . We are committed to protecting your privacy and complying with all applicable laws, including the data protection principles of the State of Hawaii.</p>
+                    <p>This Privacy Policy describes how Silva Automation ("we," "us," or "our") collects, uses, and discloses information from users of our website and services, located at https://ssilva.space/. We are committed to protecting your privacy and complying with all applicable laws, including the data protection principles of the State of Hawaii.</p>
                     <h2>1. Information We Collect</h2>
                     <p>We collect information to provide and improve our services and to communicate with you. The types of information we may collect include:</p>
                     <ul>
@@ -376,10 +320,50 @@
                         <li><strong>Project and Service Data:</strong> We collect and process data required to perform our automation services, which may include customer relationship management (CRM) data, marketing campaign data, and other business information necessary to complete a project. This data is handled with strict confidentiality.</li>
                         <li><strong>Usage and Technical Data:</strong> When you visit our website, we automatically collect certain information about your device and your activity. This includes your IP address, browser type, device type, operating system, and data about your interaction with our site, such as pages viewed and time spent.</li>
                     </ul>
+                    <h2>2. How We Use Your Information</h2>
+                    <p>We use the collected information for the following purposes:</p>
+                    <ul>
+                        <li><strong>Service Delivery:</strong> To provide, maintain, and improve our automation services</li>
+                        <li><strong>Communication:</strong> To respond to your inquiries, send project updates, and provide customer support</li>
+                        <li><strong>Business Operations:</strong> To process payments, manage contracts, and conduct business analysis</li>
+                        <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and legal processes</li>
+                        <li><strong>Marketing:</strong> To send you information about our services (with your consent where required)</li>
+                    </ul>
+                    <h2>3. Information Sharing and Disclosure</h2>
+                    <p>We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:</p>
+                    <ul>
+                        <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and conducting business (e.g., payment processors, hosting providers)</li>
+                        <li><strong>Legal Requirements:</strong> We may disclose information when required by law, court order, or government request</li>
+                        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, customer information may be transferred</li>
+                        <li><strong>Consent:</strong> With your explicit consent for specific purposes</li>
+                    </ul>
+                    <h2>4. Data Security</h2>
+                    <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+                    <h2>5. Data Retention</h2>
+                    <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Project-related data is typically retained for 7 years after project completion for business and legal purposes.</p>
+                    <h2>6. Your Rights</h2>
+                    <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+                    <ul>
+                        <li><strong>Access:</strong> Request access to your personal information</li>
+                        <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
+                        <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal and contractual obligations)</li>
+                        <li><strong>Portability:</strong> Request a copy of your data in a structured format</li>
+                        <li><strong>Objection:</strong> Object to certain processing activities</li>
+                    </ul>
+                    <p>To exercise these rights, contact us at <a href="mailto:contact@ssilva.space">contact@ssilva.space</a>.</p>
+                    <h2>7. Third-Party Links</h2>
+                    <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+                    <h2>8. Changes to This Privacy Policy</h2>
+                    <p>We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Effective Date." We encourage you to review this Privacy Policy regularly.</p>
+                    <h2>9. Contact Information</h2>
+                    <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:contact@ssilva.space">contact@ssilva.space</a></li>
+                        <li>Address: Silva Automation, Hawaii</li>
+                    </ul>
                 </div>
             </div>
 
-            <!-- Cookie Policy Page -->
             <div id="cookie-page" class="legal-page hidden">
                 <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">Cookie Policy</h1>
                 <div class="prose max-w-none space-y-6">
@@ -391,26 +375,110 @@
                     <ul>
                         <li><strong>Essential Cookies:</strong> These cookies are strictly necessary for the operation of our website. They enable core functions such as website navigation and access to secure areas. The website cannot function properly without these cookies.</li>
                         <li><strong>Analytics Cookies:</strong> We use third-party analytics services, such as Google Analytics, to collect information about how users interact with our website. This data helps us understand site traffic, measure the performance of our content, and identify areas for improvement. The information collected is aggregated and does not directly identify you.</li>
+                        <li><strong>Functional Cookies:</strong> These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings when you return to our website.</li>
+                        <li><strong>Performance Cookies:</strong> These cookies collect information about how visitors use our website, such as which pages are most popular and if users encounter error messages. This helps us improve our website's performance.</li>
+                    </ul>
+                    <h2>3. Types of Cookies We Use</h2>
+                    <h3>Essential Cookies</h3>
+                    <ul>
+                        <li>Session management cookies</li>
+                        <li>Security cookies for authentication</li>
+                        <li>Load balancing cookies</li>
+                    </ul>
+                    <h3>Analytics and Performance Cookies</h3>
+                    <ul>
+                        <li>Google Analytics (_ga, _gid, _gat)</li>
+                        <li>Website performance monitoring cookies</li>
+                        <li>Traffic analysis cookies</li>
+                    </ul>
+                    <h3>Functional Cookies</h3>
+                    <ul>
+                        <li>User preference cookies</li>
+                        <li>Language selection cookies</li>
+                        <li>Form auto-fill cookies</li>
+                    </ul>
+                    <h2>4. Third-Party Cookies</h2>
+                    <p>We may allow certain third-party services to place cookies on your device through our website. These include:</p>
+                    <ul>
+                        <li><strong>Google Analytics:</strong> For website analytics and performance monitoring</li>
+                        <li><strong>Social Media Plugins:</strong> If we include social media buttons or feeds</li>
+                        <li><strong>Customer Support Tools:</strong> For live chat or support ticket functionality</li>
+                    </ul>
+                    <h2>5. Managing Your Cookie Preferences</h2>
+                    <p>You have several options for managing cookies:</p>
+                    <p><strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings preferences. You can typically:</p>
+                    <ul>
+                        <li>View what cookies are stored on your device</li>
+                        <li>Delete cookies individually or all at once</li>
+                        <li>Block cookies from specific websites</li>
+                        <li>Block all cookies (though this may affect website functionality)</li>
+                    </ul>
+                    <p><strong>Opt-Out Tools:</strong> For specific services like Google Analytics, you can use their opt-out tools:</p>
+                    <ul>
+                        <li>Google Analytics Opt-out Browser Add-on</li>
+                    </ul>
+                    <p><strong>Cookie Consent:</strong> When you first visit our website, you may see a cookie consent banner allowing you to accept or decline non-essential cookies.</p>
+                    <h2>6. Impact of Disabling Cookies</h2>
+                    <p>If you choose to disable cookies, please note that:</p>
+                    <ul>
+                        <li>Some features of our website may not function properly</li>
+                        <li>You may need to re-enter information more frequently</li>
+                        <li>Your user experience may be less personalized</li>
+                        <li>We may not be able to remember your preferences</li>
+                    </ul>
+                    <h2>7. Cookie Retention</h2>
+                    <p>Different cookies have different lifespans:</p>
+                    <ul>
+                        <li><strong>Session Cookies:</strong> Deleted when you close your browser</li>
+                        <li><strong>Persistent Cookies:</strong> Remain for a set period, typically 1-24 months</li>
+                        <li><strong>Third-Party Cookies:</strong> Governed by the third party's retention policy</li>
+                    </ul>
+                    <h2>8. Updates to This Cookie Policy</h2>
+                    <p>We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Please revisit this page periodically to stay informed about our use of cookies.</p>
+                    <h2>9. Contact Us</h2>
+                    <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us at:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:contact@ssilva.space">contact@ssilva.space</a></li>
+                        <li>Address: Silva Automation, Hawaii</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Refund Policy Page -->
             <div id="refund-page" class="legal-page hidden">
                 <h1 class="text-4xl md:text-5xl font-display mb-12 text-center">Refund & Cancellation Policy</h1>
                 <div class="prose max-w-none space-y-6">
                     <p class="text-sm"><strong>Effective Date:</strong> September 3, 2025</p>
                     <p>This Refund & Cancellation Policy outlines the conditions under which Silva Automation ("we," "us," or "our") provides refunds and allows for the cancellation of services. This policy applies to all services purchased from us.</p>
                     <h2>1. General Principles</h2>
-                    <ul>
-                        <li><strong>Transparency and Fairness:</strong> We are committed to transparency and fairness in all our dealings. Our refund and cancellation terms are designed to protect both our business and your investment.</li>
-                        <li><strong>Service-Based:</strong> As a service-based business, our work cannot be "returned" like a physical product. Therefore, refunds are considered only when there is a documented failure on our part to meet the agreed-upon project specifications as outlined in the Project Proposal and Service Agreement.</li>
-                    </ul>
+                    <p><strong>Transparency and Fairness:</strong> We are committed to transparency and fairness in all our dealings. Our refund and cancellation terms are designed to protect both our business and your investment.</p>
+                    <p><strong>Service-Based:</strong> As a service-based business, our work cannot be "returned" like a physical product. Therefore, refunds are considered only when there is a documented failure on our part to meet the agreed-upon project specifications as outlined in the Project Proposal and Service Agreement.</p>
                     <h2>2. Cancellation and Refund Schedule</h2>
+                    <p><strong>Cancellation Before Work Commences:</strong> If you wish to cancel a project before any work has started, you may do so by providing written notice. A full refund will be granted, minus a 15% administrative fee to cover initial consultation, proposal drafting, and administrative costs. This request must be submitted in writing within 15 days of the initial payment.</p>
+                    <p><strong>Cancellation During the Project:</strong> Once a project has started, cancellation is subject to the work completed at the time of the cancellation request. We will retain all payments made for work completed up to that point.</p>
+                    <h2>3. Refund Eligibility</h2>
+                    <p>Refunds may be considered in the following circumstances:</p>
                     <ul>
-                        <li><strong>Cancellation Before Work Commences:</strong> If you wish to cancel a project before any work has started, you may do so by providing written notice. A full refund will be granted, minus a 15% administrative fee to cover initial consultation, proposal drafting, and administrative costs. This request must be submitted in writing within 15 days of the initial payment.</li>
-                        <li><strong>Cancellation During the Project:</strong> Once a project has started, cancellation is subject to the work completed at the time of the cancellation request. We will retain all payments made for work completed up to that point.</li>
+                        <li><strong>Non-delivery of Services:</strong> If we fail to deliver the agreed-upon services within the timeframe specified in the Project Proposal, and no alternative arrangement has been made.</li>
+                        <li><strong>Material Breach:</strong> If there is a documented material breach of the Service Agreement on our part that substantially affects the project deliverables.</li>
+                        <li><strong>Technical Impossibility:</strong> If it becomes technically impossible to complete the project as specified through no fault of the client.</li>
                     </ul>
+                    <h2>4. Refund Process</h2>
+                    <ul>
+                        <li>All refund requests must be submitted in writing to <a href="mailto:contact@ssilva.space">contact@ssilva.space</a></li>
+                        <li>Include detailed reasons for the refund request and supporting documentation</li>
+                        <li>We will review and respond to refund requests within 10 business days</li>
+                        <li>Approved refunds will be processed within 30 days using the original payment method</li>
+                    </ul>
+                    <h2>5. Non-Refundable Items</h2>
+                    <p>The following are generally not eligible for refunds:</p>
+                    <ul>
+                        <li>Custom work that has been delivered and meets the agreed specifications</li>
+                        <li>Third-party software licenses or tools purchased for your project</li>
+                        <li>Time spent on consultation, planning, and project setup (beyond the initial consultation)</li>
+                        <li>Change requests or scope modifications initiated by the client</li>
+                    </ul>
+                    <h2>6. Dispute Resolution</h2>
+                    <p>If you disagree with our refund decision, you may request a review by providing additional documentation. As a final resort, disputes may be resolved through mediation or arbitration as outlined in our Terms and Conditions.</p>
                 </div>
             </div>
         </div>
@@ -419,13 +487,12 @@
 
 </main>
 
-<!-- Footer -->
 <footer class="bg-neutral-900 border-t border-neutral-800 text-neutral-400">
    <div class="container mx-auto px-6 py-12">
     <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
      <div class="space-y-4">
       <a href="#" id="home-footer-link">
-       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="assets/images/silvas.svg"/>
+       <img alt="Silva Automation Logo" class="h-8 w-auto mx-auto md:mx-0" src="logo.png"/>
       </a>
       <p class="text-sm">
         Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
@@ -435,6 +502,7 @@
       <h4 class="font-bold text-white uppercase tracking-wider font-display">Menu</h4>
       <nav class="flex flex-col space-y-2 text-sm">
        <a class="hover:text-blue-500 transition-colors" href="#how-it-works">How It Works</a>
+       <a class="hover:text-blue-500 transition-colors" href="process.html">Our Process</a>
        <a class="hover:text-blue-500 transition-colors" href="#about">About</a>
        <a class="hover:text-blue-500 transition-colors" href="#pricing">Pricing</a>
        <a class="hover:text-blue-500 transition-colors" href="#contact">Contact</a>
@@ -458,7 +526,6 @@
    </div>
 </footer>
 
-<!-- Cookie Banner -->
 <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[100]" style="display: none;">
      <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-neutral-900 border-t border-neutral-800 shadow-lg">
          <p class="text-sm text-center md:text-left text-gray-300">
@@ -471,21 +538,13 @@
      </div>
 </div>
 
-<!-- External Scripts -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="//code.tidio.co/j7grbfnaaaz7csaaeby58imgyek804ik.js" async></script>
 
-<!-- Embedded Page-Specific JavaScript -->
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // --- Initialize Animate On Scroll (AOS) Library ---
-    AOS.init({ 
-        duration: 800, 
-        once: true, 
-        offset: 50
-    });
+    AOS.init({ duration: 800, once: true, offset: 50 });
     
-    // --- Header Scroll Behavior ---
     const header = document.getElementById('main-header');
     if (header) {
         const handleScroll = () => {
@@ -496,7 +555,6 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('scroll', handleScroll);
     }
     
-    // --- Mobile Menu Functionality ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
     const mobileMenu = document.getElementById('mobile-menu');
     const closeMobileMenuButton = document.getElementById('close-mobile-menu');
@@ -521,7 +579,9 @@ document.addEventListener('DOMContentLoaded', function() {
     if (closeMobileMenuButton) closeMobileMenuButton.addEventListener('click', closeMobileMenu);
     if (mobileMenu) {
         mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', closeMobileMenu);
+            if (link.getAttribute('href').startsWith('#') || link.getAttribute('href') === 'process.html') {
+                link.addEventListener('click', closeMobileMenu);
+            }
         });
     }
     
@@ -531,13 +591,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // --- Dynamic Copyright Year ---
     const currentYearSpan = document.getElementById('current-year');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
     }
     
-    // --- Cookie Banner Logic ---
     const cookieBanner = document.getElementById('cookie-banner');
     const acceptCookiesButton = document.getElementById('accept-cookies');
     
@@ -554,7 +612,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // --- Smooth Scrolling for Anchor Links ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
@@ -567,7 +624,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // --- Netlify Contact Form AJAX Submission ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
@@ -603,7 +659,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- Single-Page View Logic ---
     const mainView = document.getElementById('main-view');
     const legalView = document.getElementById('legal-view');
     const legalPages = document.querySelectorAll('.legal-page');
@@ -616,7 +671,9 @@ document.addEventListener('DOMContentLoaded', function() {
         mainView.classList.remove('hidden');
         legalView.classList.add('hidden');
         window.scrollTo(0, 0);
-        history.pushState(null, null, window.location.pathname);
+        if (window.location.hash) {
+            history.pushState(null, null, window.location.pathname);
+        }
     };
 
     const showLegalPage = (pageId) => {
@@ -634,6 +691,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const pageId = link.dataset.page;
             showLegalPage(pageId);
             history.pushState({page: pageId}, null, link.getAttribute('href'));
+            closeMobileMenu();
         });
     });
 
@@ -641,7 +699,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (homeLogoLink) homeLogoLink.addEventListener('click', (e) => { e.preventDefault(); showMainView(); });
     if (homeFooterLink) homeFooterLink.addEventListener('click', (e) => { e.preventDefault(); showMainView(); });
 
-    // Handle browser back/forward buttons
     window.addEventListener('popstate', (e) => {
         if (e.state && e.state.page) {
             showLegalPage(e.state.page);
@@ -650,7 +707,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Check URL on initial load
     const hash = window.location.hash.substring(1);
     const pageMap = {'terms': 'terms-page', 'privacy': 'privacy-page', 'cookie': 'cookie-page', 'refund': 'refund-page'};
     if (pageMap[hash]) {
@@ -662,4 +718,3 @@ document.addEventListener('DOMContentLoaded', function() {
 
 </body>
 </html>
-
