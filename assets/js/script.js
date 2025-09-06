@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // --- Header Scroll Behavior ---
+    /*
     const header = document.getElementById('main-header');
     if (header) {
         const handleScroll = () => {
@@ -21,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         handleScroll(); 
         window.addEventListener('scroll', handleScroll);
     }
+    */
     
     // --- Mobile Menu Functionality ---
     const mobileMenuButton = document.getElementById('mobile-menu-button');
