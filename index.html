@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Silva Automation - No BS. Real Pros. Real Solutions.</title>
+  <title>Silva Automation - Real Solutions for Real Service Pros.</title>
 
   <meta name="description" content="I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back." />
   <meta property="og:title" content="Silva Automation - No BS. Real Pros. Real Solutions." />
   <meta property="og:description" content="Tired of missing calls and working late? I build simple automation systems for service pros so you can focus on growing your business." />
   <meta property="og:image" content="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&h=630&fit=crop&crop=entropy" />
-  <meta property="og:url" content="https://ssilva.space/" />
+  <meta property="og:url" content="https://www.silvaautomation.com/" />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image">
 
@@ -51,6 +51,7 @@
     }
     .font-display { font-family: 'IBM Plex Mono', monospace; }
     .hero-glow { text-shadow: 0 0 15px rgba(59, 130, 246, 0.3), 0 0 30px rgba(59, 130, 246, 0.2); }
+    #main-header { transition: transform 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease; }
     .header-scrolled { background-color: rgba(15, 23, 42, 0.8); border-bottom-color: #1e293b; backdrop-filter: blur(16px); }
     .prose { color: var(--text-secondary); line-height: 1.7; }
     .prose h2 { font-size: 1.5rem; font-weight: 700; color: #fff; padding-bottom: 0.5rem; border-bottom: 1px solid #334155; margin-top: 2rem; margin-bottom: 1rem; }
@@ -69,7 +70,7 @@
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b border-transparent" id="main-header">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a aria-label="Silva Automation Home" href="#" id="home-logo-link">
-        <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto" src="logo.png" />
+        <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" src="logo.png" />
       </a>
       <div class="flex items-center">
         <nav class="hidden md:flex items-center space-x-8 text-sm">
@@ -111,7 +112,7 @@
                     <p class="text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto">
                         I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back.
                     </p>
-                    <a href="#contact" class="inline-block text-lg font-semibold text-white bg-blue-600 py-4 px-10 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+                    <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="inline-block text-lg font-semibold text-white bg-blue-600 py-4 px-10 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
                         Claim My Spot & Get 50% Off
                     </a>
                 </div>
@@ -218,115 +219,127 @@
             </div>
         </section>
 
-        <section class="py-24 lg:py-32" id="offer">
+        <section class="min-h-screen flex items-center py-16" id="offer">
             <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+                <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
                     <div class="text-center md:text-left" data-aos="fade-right">
-                        <span class="inline-block bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-1 rounded-full mb-4">Limited Time Opportunity</span>
-                        <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
-                            Be a Founding Client
+                        <span class="inline-block bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-1 rounded-full mb-3">Limited Time Opportunity</span>
+                        <h2 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">
+                            Work Directly With Me
                         </h2>
-                        <p class="text-lg text-gray-400 mb-6">
-                            To launch Silva Automation, I'm looking for my first three partners. To thank you for being a foundational client, you will receive:
+                        <div class="flex items-center mb-4">
+                            <img alt="Savaiinaea Silva, Founder of Silva Automation" class="w-16 h-16 rounded-full border-2 border-slate-800 object-cover shadow-lg mr-4" src="about.png" onerror="this.onerror=null;this.src='https://placehold.co/192x192/1e293b/e2e8f0?text=S.S.';"/>
+                            <div class="text-left">
+                                <h3 class="text-white font-bold text-lg">Savaiinaea Silva</h3>
+                                <p class="text-gray-400 text-sm">Founder, Silva Automation</p>
+                            </div>
+                        </div>
+                        <p class="text-base text-gray-400 mb-4">
+                            I'm looking for three founding partners to launch Silva Automation. As one of my first clients, you'll receive:
                         </p>
-                        <ul class="space-y-4 text-gray-300 text-left">
-                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>A Full 50% Discount</strong> on any automation package.</span></li>
-                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>1 Full Year of FREE Support</strong> on the system we build.</span></li>
-                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Direct, Priority Access</strong> to me for any questions or tweaks.</span></li>
+                        <ul class="space-y-3 text-gray-300 text-left">
+                           <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>A Full 50% Discount</strong> on any automation package.</span></li>
+                           <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>1 Full Year of FREE Support</strong> on the system we build.</span></li>
+                           <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Direct, Priority Access</strong> to me for any questions or tweaks.</span></li>
                         </ul>
-                         <p class="mt-6 text-gray-400 font-semibold">This offer is strictly limited. Once the 3 spots are filled, it's gone for good.</p>
+                        <p class="mt-4 text-gray-400 font-semibold text-sm">This offer is strictly limited. Once the 3 spots are filled, it's gone for good.</p>
+                        <div class="mt-6">
+                            <a href="#contact" class="inline-block text-lg font-semibold text-white bg-blue-600 py-3 px-8 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
+                                Claim My Spot & Get 50% Off
+                            </a>
+                        </div>
                     </div>
-                    <div data-aos="fade-left" class="flex items-center justify-center">
-                        <img src="https://placehold.co/500x300/0f172a/3b82f6?text=3+Spots+Left&font=plex-mono" alt="3 Founding Client Spots Available" class="rounded-lg shadow-2xl">
+                    <div data-aos="fade-left" class="text-center md:text-left">
+                        <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-800">
+                            <h3 class="font-display font-bold text-lg mb-4 text-white">Why Work With Me?</h3>
+                            <ul class="space-y-3 text-gray-300 text-sm">
+                               <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Real-World Experience:</strong> I've helped dozens of service businesses streamline their operations.</span></li>
+                               <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>No Geek Speak:</strong> I explain everything in plain English and focus on what matters to your business.</span></li>
+                               <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Results Focused:</strong> I'm not here to sell you fancy tech - I'm here to solve your business problems.</span></li>
+                            </ul>
+                            <div class="mt-6 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                                <p class="text-blue-400 text-center font-semibold text-sm">Only 3 Founding Client Spots Available</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="py-24 lg:py-32" id="pricing">
+        <section class="min-h-screen flex items-center bg-white py-16" id="pricing">
             <div class="container mx-auto px-6">
              <div class="text-center" data-aos="fade-up">
-                <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
+                <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-slate-900">
                     No-Nonsense Packages. Real Results.
                 </h2>
-                <p class="max-w-2xl mx-auto text-lg text-gray-400 mb-6">
+                <p class="max-w-2xl mx-auto text-lg text-slate-600 mb-6">
                     One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.
                 </p>
-                 <div class="inline-block bg-blue-500/10 border border-blue-500 text-blue-300 px-6 py-3 rounded-lg mb-12">
+                 <div class="inline-block bg-blue-100 border border-blue-200 text-blue-600 px-6 py-3 rounded-lg mb-12 shadow-sm">
                      <strong>Founding Client Offer:</strong> Take <strong>50% OFF</strong> any package below! (Only 3 spots available)
                  </div>
              </div>
-             <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-start">
-                <div class="bg-slate-900/50 p-8 rounded-lg flex flex-col border border-slate-800 h-full" data-aos="fade-up">
-                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Starter</h3>
-                    <p class="text-gray-400 mb-6 flex-grow">Tackle your single biggest headache by automating the one repetitive task that wastes the most time.</p>
-                    <p class="text-5xl font-display text-white mb-6">$950</p>
-                    <ul class="space-y-3 list-inside text-gray-400 mb-8">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 "Done-For-You" automated workflow</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration of 2 essential apps</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>A personal video guide</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>30 days of post-launch support</li>
+             <div class="grid lg:grid-cols-3 gap-12 max-w-6xl mx-auto items-start">
+                <div class="bg-gradient-to-b from-white to-slate-50 p-8 rounded-xl flex flex-col border-2 border-slate-200 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full" data-aos="fade-up">
+                    <div class="p-4 -mt-12 mb-6 bg-slate-800 w-fit rounded-lg mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-2 text-slate-900 text-center">Starter</h3>
+                    <p class="text-slate-600 mb-6 flex-grow text-center">Tackle your single biggest headache by automating the one repetitive task that wastes the most time.</p>
+                    <p class="text-5xl font-display text-slate-900 mb-6 text-center">$950</p>
+                    <ul class="space-y-3 list-inside text-slate-700 mb-8">
+                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 "Done-For-You" automated workflow</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration of 2 essential apps</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>A personal video guide</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>30 days of post-launch support</li>
                     </ul>
-                     <a class="mt-auto w-full text-lg font-semibold text-white bg-blue-600 py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]" href="#contact">Claim My Spot & Get 50% Off</a>
+                     <a class="mt-auto w-full text-lg font-semibold text-white bg-blue-600 py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Claim My Spot & Get 50% Off</a>
                 </div>
-                <div class="p-8 rounded-lg bg-slate-900 flex flex-col relative h-full pricing-card-recommended" data-aos="fade-up" data-aos-delay="100">
-                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-blue-500 text-white text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider">Recommended</span>
-                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Standard</h3>
-                    <p class="text-gray-300 mb-6 flex-grow">Automate an entire process like client intake or project follow-ups to stop losing leads and start saving hours every week.</p>
-                     <div class="mb-6">
-                        <span class="text-2xl font-display text-gray-500 line-through mr-2">$2,450</span>
+                <div class="p-8 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex flex-col relative h-full shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 transform scale-105" data-aos="fade-up" data-aos-delay="100">
+                    <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-white text-blue-600 text-sm font-bold px-6 py-2 rounded-full uppercase tracking-wider shadow-md border border-blue-100">Most Popular</div>
+                    <div class="p-4 -mt-12 mb-6 bg-white/20 backdrop-blur-lg w-fit rounded-lg mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-2 text-white text-center">Standard</h3>
+                    <p class="text-blue-100 mb-6 flex-grow text-center">Automate an entire process like client intake or project follow-ups to stop losing leads and start saving hours every week.</p>
+                     <div class="mb-6 text-center">
+                        <span class="text-2xl font-display text-blue-200 line-through mr-2">$2,450</span>
                         <span class="text-5xl font-display text-white">$1,225</span>
                     </div>
-                    <ul class="space-y-3 list-inside text-gray-300 mb-8">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Starter, plus:</strong></li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 complete multi-step process automated</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration of up to 5 business apps</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>A custom dashboard to track results</li>
+                    <ul class="space-y-3 list-inside text-blue-100 mb-8">
+                        <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Starter, plus:</strong></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 complete multi-step process automated</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration of up to 5 business apps</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>A custom dashboard to track results</li>
                     </ul>
-                    <a class="mt-auto w-full text-lg font-semibold text-white bg-blue-600 py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]" href="#contact">Claim My Spot & Get 50% Off</a>
+                    <a class="mt-auto w-full text-lg font-semibold bg-white text-blue-600 py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Claim My Spot & Get 50% Off</a>
                 </div>
-                <div class="bg-slate-900/50 p-8 rounded-lg flex flex-col border border-slate-800 h-full" data-aos="fade-up" data-aos-delay="200">
-                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Pro</h3>
-                    <p class="text-gray-400 mb-6 flex-grow">Overhaul your entire operation by integrating multiple systems, allowing you to finally step back and work ON the business, not IN it.</p>
-                    <p class="text-5xl font-display text-white mb-6">Custom</p>
-                    <ul class="space-y-3 list-inside text-gray-400 mb-8">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Standard, plus:</strong></li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full business operations audit & strategy</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Multiple, interconnected automated systems</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-500 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited app integrations</li>
+                <div class="bg-gradient-to-b from-white to-slate-50 p-8 rounded-xl flex flex-col border-2 border-slate-200 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="200">
+                    <div class="p-4 -mt-12 mb-6 bg-slate-800 w-fit rounded-lg mx-auto">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                        </svg>
+                    </div>
+                    <h3 class="font-display font-bold text-2xl mb-2 text-slate-900 text-center">Pro</h3>
+                    <p class="text-slate-600 mb-6 flex-grow text-center">Overhaul your entire operation by integrating multiple systems, allowing you to finally step back and work ON the business, not IN it.</p>
+                    <p class="text-5xl font-display text-slate-900 mb-6 text-center">Custom</p>
+                    <ul class="space-y-3 list-inside text-slate-700 mb-8">
+                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Standard, plus:</strong></li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full business operations audit & strategy</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Multiple, interconnected automated systems</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited app integrations</li>
                     </ul>
-                    <a class="mt-auto w-full text-lg font-semibold text-white bg-blue-600 py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]" href="#contact">Claim My Spot & Get 50% Off</a>
+                    <a class="mt-auto w-full text-lg font-semibold text-white bg-blue-600 py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Claim My Spot & Get 50% Off</a>
                 </div>
              </div>
             </div>
         </section>
 
-        <section class="py-24 lg:py-32" id="about">
-            <div class="container mx-auto px-6">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <div data-aos="fade-right">
-                         <img alt="Savaiinaea Silva, Founder of Silva Automation" class="w-48 h-48 rounded-full mb-8 border-4 border-slate-800 object-cover shadow-lg" src="about.png" onerror="this.onerror=null;this.src='https://placehold.co/192x192/1e293b/e2e8f0?text=S.S.';"/>
-                        <h2 class="text-4xl md:text-5xl font-bold font-display mb-4 text-white">
-                            Meet Your Automation Partner
-                        </h2>
-                        <p class="text-lg text-gray-400 mb-8">
-                            Hi, I'm Savaiinaea Silva. I specialize in building simple, effective automation systems that help service professionals like you win back their time and grow their business.
-                        </p>
-                        <a href="#contact" class="inline-block text-lg font-semibold text-white bg-blue-600 py-4 px-10 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
-                           Let's Talk About Your Business
-                        </a>
-                    </div>
-                    <div data-aos="fade-left" class="bg-slate-900/50 p-8 rounded-lg border border-slate-800">
-                        <h3 class="font-display font-bold text-xl mb-6 text-white">Why Work With Me?</h3>
-                        <ul class="space-y-4 text-gray-300">
-                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Real-World Experience:</strong> I've helped dozens of service businesses streamline their operations.</span></li>
-                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>No Geek Speak:</strong> I explain everything in plain English and focus on what matters to your business.</span></li>
-                           <li class="flex items-start"><svg class="w-6 h-6 text-blue-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Results Focused:</strong> I'm not here to sell you fancy tech - I'm here to solve your business problems.</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <section class="py-24 lg:py-32" id="faq">
             <div class="container mx-auto px-6">
@@ -374,7 +387,11 @@
         <section class="py-24 lg:py-32" id="contact">
             <div class="container mx-auto px-6">
                 <div class="max-w-xl mx-auto">
-                    <form id="contact-form" name="contact" method="POST" data-netlify="true" action="/success.html" class="space-y-6 bg-slate-900/50 p-8 rounded-lg border border-slate-800">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">Have Questions? Let's Talk</h2>
+                        <p class="text-gray-400">Fill out the form below and I'll personally get back to you within 24 hours to discuss how we can transform your business operations.</p>
+                    </div>
+                    <form id="contact-form" action="https://formspree.io/f/mzzaydop" method="POST" class="space-y-6 bg-slate-900/50 p-8 rounded-lg border border-slate-800">
                         <input type="hidden" name="form-name" value="contact" />
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
@@ -442,7 +459,7 @@
             
             <h3>10. Contact Information</h3>
             <p>If you have any questions about these Terms, please contact us at:</p>
-            <p>Email: contact@ssilva.space<br>Address: Silva Automation, Hawaii</p>
+            <p>Email: contact@silvaautomation.com<br>Phone: (808) 308-1107<br>Address: 94-207 Waipahu Street, Waipahu HI 96797</p>
         </div>
 
         <div id="privacy-page" class="legal-page prose prose-invert max-w-none hidden">
@@ -585,7 +602,7 @@
 
             <h3>4. Refund Process</h3>
             <ul>
-                <li>All refund requests must be submitted in writing to contact@ssilva.space</li>
+                <li>All refund requests must be submitted in writing to contact@silvaautomation.com</li>
                 <li>Include detailed reasons for the refund request and supporting documentation</li>
                 <li>We will review and respond to refund requests within 10 business days</li>
                 <li>Approved refunds will be processed within 30 days using the original payment method</li>
@@ -664,17 +681,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize animations on scroll
     AOS.init({ duration: 800, once: true, offset: 50 });
     
-    // Header scroll effect
+    // Header visibility control
     const header = document.getElementById('main-header');
-    if (header) {
+    const hero = document.getElementById('hero');
+    if (header && hero) {
+        let lastScrollY = window.scrollY;
         const handleScroll = () => {
-            if (window.scrollY > 50) {
+            const heroBottom = hero.offsetTop + hero.offsetHeight;
+            const currentScrollY = window.scrollY;
+            
+            // Show header when at top of page or scrolling up above hero
+            if (currentScrollY < 50 || (currentScrollY < heroBottom && currentScrollY < lastScrollY)) {
+                header.style.transform = 'translateY(0)';
                 header.classList.add('header-scrolled');
-            } else {
-                header.classList.remove('header-scrolled');
             }
+            // Hide header when scrolling down past hero
+            else if (currentScrollY > lastScrollY && currentScrollY > heroBottom) {
+                header.style.transform = 'translateY(-100%)';
+            }
+            // Show header when scrolling up
+            else if (currentScrollY < lastScrollY) {
+                header.style.transform = 'translateY(0)';
+                header.classList.add('header-scrolled');
+            }
+            
+            lastScrollY = currentScrollY;
         };
-        handleScroll(); 
+        handleScroll();
         window.addEventListener('scroll', handleScroll, { passive: true });
     }
     
