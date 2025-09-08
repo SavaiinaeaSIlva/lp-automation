@@ -1,0 +1,15 @@
+{
+  "name": "landingpagen8n",
+  "version": "1.0.0",
+  "description": "Website for Silva Automation",
+  "main": "index.js",
+  "scripts": {
+    "dev": "./node_modules/.bin/tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "keywords": [],
+  "author": "Savaiinaea Silva",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}
