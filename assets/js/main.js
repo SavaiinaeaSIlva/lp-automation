@@ -9,6 +9,7 @@ function initializeApp() {
     setupMobileMenu();
     setupBackToTopButton();
     setupSmoothScrolling();
+    setupScrollSnap();
     setupCookieBanner();
     setupLegalPages();
     setCurrentYear();
@@ -103,6 +104,87 @@ function setupSmoothScrolling() {
                 });
             }
         });
+    });
+}
+
+// Enhanced scroll snap functionality
+function setupScrollSnap() {
+    let isScrolling = false;
+    let scrollTimeout;
+    
+    // Add scroll snap behavior
+    document.documentElement.style.scrollSnapType = 'y mandatory';
+    
+    // Handle scroll events for smooth transitions
+    window.addEventListener('scroll', function() {
+        if (!isScrolling) {
+            isScrolling = true;
+            document.body.classList.add('scrolling');
+        }
+        
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+            isScrolling = false;
+            document.body.classList.remove('scrolling');
+        }, 150);
+    });
+    
+    // Add intersection observer for section visibility
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -20% 0px',
+        threshold: 0.5
+    };
+    
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Skip scaling animation for FAQ section to prevent vibrating
+                if (!entry.target.id === 'faq') {
+                    entry.target.classList.add('section-active');
+                }
+                // Add subtle animation to section content
+                const content = entry.target.querySelector('.section-content');
+                if (content) {
+                    content.style.animation = 'fadeInUp 0.8s ease-out';
+                }
+            } else {
+                entry.target.classList.remove('section-active');
+            }
+        });
+    }, observerOptions);
+    
+    // Observe all sections
+    document.querySelectorAll('section').forEach(section => {
+        observer.observe(section);
+    });
+    
+    // Enhanced keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            e.preventDefault();
+            const sections = Array.from(document.querySelectorAll('section'));
+            const currentSection = sections.find(section => {
+                const rect = section.getBoundingClientRect();
+                return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
+            });
+            
+            if (currentSection) {
+                const currentIndex = sections.indexOf(currentSection);
+                let targetIndex;
+                
+                if (e.key === 'ArrowDown') {
+                    targetIndex = Math.min(currentIndex + 1, sections.length - 1);
+                } else {
+                    targetIndex = Math.max(currentIndex - 1, 0);
+                }
+                
+                sections[targetIndex].scrollIntoView({ 
+                    behavior: 'smooth', 
+                    block: 'start' 
+                });
+            }
+        }
     });
 }
 
