@@ -17,10 +17,9 @@
 html { 
   scroll-behavior: smooth; 
   scroll-padding-top: 80px;
-  scroll-snap-type: y mandatory;
 }
 body {
-  background-color: #000000 !important; /* Force black background */
+  background-color: #000000; /* Force black background */
   color: #fff; /* optional: makes text white */
   font-family: 'Inter', sans-serif; 
   color: var(--text-primary);
@@ -29,16 +28,10 @@ body {
 main {
   width: 100%;
   overflow-x: hidden;
-  scroll-snap-type: y mandatory;
 }
 section {
   width: 100%;
   background-color: #000000;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
   position: relative;
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -53,7 +46,15 @@ section#pricing {
   text-shadow: 0 0 15px rgba(59, 130, 246, 0.3), 0 0 30px rgba(59, 130, 246, 0.2); 
 }
 #main-header { 
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
   transition: transform 0.3s ease, background-color 0.3s ease, border-bottom-color 0.3s ease; 
+  background-color: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(16px);
+  transform: translateY(0);
 }
 .header-scrolled { 
   background-color: rgba(15, 23, 42, 0.8); 
@@ -107,12 +108,10 @@ section#pricing {
   transform: rotate(180deg); 
 }
 
-/* Scroll Snap Enhancements */
+/* Section Container */
 .section-container {
   width: 100%;
-  height: 100vh;
   overflow-y: auto;
-  scroll-snap-type: y mandatory;
 }
 
 /* Smooth section transitions */
@@ -190,7 +189,6 @@ section:hover::before {
 
 #faq-contact {
   background: linear-gradient(180deg, #0f0f0f 0%, #000000 100%);
-  scroll-snap-align: start;
 }
 
 #faq-contact.section-active {
@@ -271,14 +269,9 @@ section {
 
 /* Smooth gradient transitions between sections - removed separating lines */
 
-/* Mobile scroll snap improvements */
+/* Mobile improvements */
 @media (max-width: 768px) {
   section {
-    scroll-snap-align: start;
-    min-height: 100vh;
-  }
-  
-  html {
-    scroll-snap-type: y mandatory;
+    min-height: auto;
   }
 }

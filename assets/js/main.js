@@ -7,11 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
     initializeAnimations();
     setupMobileMenu();
-    setupBackToTopButton();
+    // setupBackToTopButton(); // Removed to avoid clash with chat widget
     setupSmoothScrolling();
     setupScrollSnap();
     setupCookieBanner();
     setupLegalPages();
+    setupHeaderScrollBehavior();
     setCurrentYear();
 }
 
@@ -24,6 +25,22 @@ function initializeAnimations() {
             offset: 50,
             easing: 'ease-out-cubic'
         });
+    } else {
+        // Fallback: wait for AOS to load (shouldn't happen with sync loading)
+        const checkAOS = setInterval(() => {
+            if (typeof AOS !== 'undefined') {
+                AOS.init({ 
+                    duration: 800, 
+                    once: true, 
+                    offset: 50,
+                    easing: 'ease-out-cubic'
+                });
+                clearInterval(checkAOS);
+            }
+        }, 50);
+        
+        // Stop checking after 2 seconds
+        setTimeout(() => clearInterval(checkAOS), 2000);
     }
 }
 
@@ -53,6 +70,12 @@ function openMobileMenu() {
     if (mobileMenu) {
         mobileMenu.classList.remove('translate-x-full');
         document.body.style.overflow = 'hidden';
+        
+        // Update aria-expanded for accessibility
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (mobileMenuButton) {
+            mobileMenuButton.setAttribute('aria-expanded', 'true');
+        }
     }
 }
 
@@ -61,10 +84,18 @@ function closeMobileMenu() {
     if (mobileMenu) {
         mobileMenu.classList.add('translate-x-full');
         document.body.style.overflow = '';
+        
+        // Update aria-expanded for accessibility
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        if (mobileMenuButton) {
+            mobileMenuButton.setAttribute('aria-expanded', 'false');
+        }
     }
 }
 
 // Back to top button
+// Removed back to top button to avoid clash with chat widget
+/*
 function setupBackToTopButton() {
     const backToTopBtn = document.createElement('button');
     backToTopBtn.id = 'back-to-top-btn';
@@ -87,6 +118,7 @@ function setupBackToTopButton() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 }
+*/
 
 // Smooth scrolling
 function setupSmoothScrolling() {
@@ -102,6 +134,8 @@ function setupSmoothScrolling() {
                     behavior: 'smooth', 
                     block: 'start' 
                 });
+            } else {
+                console.warn(`Target element not found for href: ${href}`);
             }
         });
     });
@@ -140,7 +174,7 @@ function setupScrollSnap() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 // Skip scaling animation for FAQ section to prevent vibrating
-                if (!entry.target.id === 'faq') {
+                if (entry.target.id !== 'faq') {
                     entry.target.classList.add('section-active');
                 }
                 // Add subtle animation to section content
@@ -286,6 +320,39 @@ function setupLegalPages() {
     if (pageMap[hash]) {
         showLegalPage(pageMap[hash]);
     }
+}
+
+// Header scroll behavior - hide on scroll down, show on scroll up
+function setupHeaderScrollBehavior() {
+    const header = document.getElementById('main-header');
+    if (!header) return;
+    
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+    
+    function updateHeader() {
+        const currentScrollY = window.scrollY;
+        
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // Scrolling down and past 100px - hide header
+            header.style.transform = 'translateY(-100%)';
+        } else {
+            // Scrolling up or at top - show header
+            header.style.transform = 'translateY(0)';
+        }
+        
+        lastScrollY = currentScrollY;
+        ticking = false;
+    }
+    
+    function requestTick() {
+        if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }
+    
+    window.addEventListener('scroll', requestTick, { passive: true });
 }
 
 // Utility function to set current year
