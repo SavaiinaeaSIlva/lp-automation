@@ -13,6 +13,7 @@ function initializeApp() {
     setupCookieBanner();
     setupLegalPages();
     setupHeaderScrollBehavior();
+    setupContactForm();
     setCurrentYear();
 }
 
@@ -360,6 +361,92 @@ function setCurrentYear() {
     const currentYearSpan = document.getElementById('current-year');
     if (currentYearSpan) {
         currentYearSpan.textContent = new Date().getFullYear();
+    }
+}
+
+// Contact form handling with n8n webhook
+function setupContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if (!contactForm) return;
+    
+    contactForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        
+        const submitButton = contactForm.querySelector('button[type="submit"]');
+        const originalButtonText = submitButton.textContent;
+        
+        // Show loading state
+        submitButton.textContent = 'Sending...';
+        submitButton.disabled = true;
+        
+        try {
+            // Get form data
+            const formData = new FormData(contactForm);
+            const data = {
+                name: formData.get('name'),
+                email: formData.get('email'),
+                message: formData.get('message'),
+                form_type: 'contact',
+                source: 'landing_page',
+                timestamp: new Date().toISOString(),
+                url: window.location.href
+            };
+            
+            // Send to n8n webhook
+            const response = await fetch('https://n8n.ssilva.space/webhook/31d9264e-2d99-4c75-bbd8-eb86c0ede5ee', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            });
+            
+            if (response.ok) {
+                // Show success message
+                showFormMessage(contactForm, 'Thank you! I\'ll get back to you within 24 hours.', 'success');
+                contactForm.reset();
+            } else {
+                throw new Error('Failed to send message');
+            }
+            
+        } catch (error) {
+            console.error('Form submission error:', error);
+            showFormMessage(contactForm, 'Sorry, there was an error sending your message. Please try again or contact me directly.', 'error');
+        } finally {
+            // Reset button state
+            submitButton.textContent = originalButtonText;
+            submitButton.disabled = false;
+        }
+    });
+}
+
+// Helper function to show form messages
+function showFormMessage(form, message, type) {
+    // Remove any existing messages
+    const existingMessage = form.querySelector('.form-message');
+    if (existingMessage) {
+        existingMessage.remove();
+    }
+    
+    // Create new message element
+    const messageDiv = document.createElement('div');
+    messageDiv.className = `form-message p-4 rounded-lg text-sm font-medium ${
+        type === 'success' 
+            ? 'bg-green-500/10 border border-green-500/20 text-green-400' 
+            : 'bg-red-500/10 border border-red-500/20 text-red-400'
+    }`;
+    messageDiv.textContent = message;
+    
+    // Insert message before the submit button
+    const submitButton = form.querySelector('button[type="submit"]');
+    form.insertBefore(messageDiv, submitButton.parentElement);
+    
+    // Auto-remove success messages after 5 seconds
+    if (type === 'success') {
+        setTimeout(() => {
+            messageDiv.remove();
+        }, 5000);
     }
 }
 
