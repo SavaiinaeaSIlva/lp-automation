@@ -1,3 +1,10 @@
+// Contact information constants
+const CONTACT_INFO = {
+    email: 'contact@silvaautomation.com',
+    phone: '(808) 308-1107',
+    address: 'Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797'
+};
+
 // DOM Ready function
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
@@ -7,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeApp() {
     initializeAnimations();
     setupMobileMenu();
-    // setupBackToTopButton(); // Removed to avoid clash with chat widget
     setupSmoothScrolling();
     setupScrollSnap();
     setupCookieBanner();
@@ -94,32 +100,6 @@ function closeMobileMenu() {
     }
 }
 
-// Back to top button
-// Removed back to top button to avoid clash with chat widget
-/*
-function setupBackToTopButton() {
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.id = 'back-to-top-btn';
-    backToTopBtn.textContent = '↑ Top';
-    backToTopBtn.className = 'fixed right-8 bottom-8 z-50 p-3 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 transition-all duration-300 opacity-0 pointer-events-none';
-    
-    document.body.appendChild(backToTopBtn);
-
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 400) {
-            backToTopBtn.classList.remove('opacity-0', 'pointer-events-none');
-            backToTopBtn.classList.add('opacity-100', 'pointer-events-auto');
-        } else {
-            backToTopBtn.classList.remove('opacity-100', 'pointer-events-auto');
-            backToTopBtn.classList.add('opacity-0', 'pointer-events-none');
-        }
-    });
-
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-}
-*/
 
 // Smooth scrolling
 function setupSmoothScrolling() {
