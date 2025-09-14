@@ -386,6 +386,7 @@ function setupContactForm() {
             const data = {
                 name: formData.get('name'),
                 email: formData.get('email'),
+                phone: formData.get('phone'),
                 message: formData.get('message'),
                 form_type: 'contact',
                 source: 'landing_page',

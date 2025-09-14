@@ -26,6 +26,10 @@
                         <input type="email" name="email" id="email" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="you@example.com">
                     </div>
                     <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="(808) 123-4567">
+                    </div>
+                    <div>
                         <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Test Message</label>
                         <textarea name="message" id="message" rows="3" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="This is a test message for the webhook..."></textarea>
                     </div>
@@ -62,6 +66,7 @@
                 const data = {
                     name: formData.get('name'),
                     email: formData.get('email'),
+                    phone: formData.get('phone'),
                     message: formData.get('message'),
                     form_type: 'test',
                     source: 'webhook_test',
