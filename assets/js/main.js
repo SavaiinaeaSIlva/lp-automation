@@ -374,8 +374,8 @@ function setupContactForm() {
                 url: window.location.href
             };
             
-            // Send to n8n webhook
-            const response = await fetch('https://n8n.ssilva.space/webhook/31d9264e-2d99-4c75-bbd8-eb86c0ede5ee', {
+            // Send to Netlify function proxy (avoids CORS and hides webhook URL)
+            const response = await fetch('/.netlify/functions/submit-contact', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
