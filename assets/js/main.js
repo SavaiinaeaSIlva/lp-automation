@@ -344,8 +344,12 @@ function setCurrentYear() {
     }
 }
 
-// Contact form handling with n8n webhook
+// Contact form handling - Switched to Formspree
 function setupContactForm() {
+    // The form submission is now handled by the 'action' attribute in the HTML.
+    // The JavaScript fetch logic is no longer needed.
+    // I am leaving the old code here, commented out, in case you want to switch back to n8n later.
+    /*
     const contactForm = document.getElementById('contact-form');
     
     if (!contactForm) return;
@@ -400,9 +404,10 @@ function setupContactForm() {
             submitButton.disabled = false;
         }
     });
+    */
 }
 
-// Helper function to show form messages
+// Helper function to show form messages - This is no longer used by the form, but kept for potential future use.
 function showFormMessage(form, message, type) {
     // Remove any existing messages
     const existingMessage = form.querySelector('.form-message');
