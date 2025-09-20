@@ -38,6 +38,7 @@
                     <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#offer">About</a>
                     <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#pricing">Pricing</a>
                     <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#faq-contact">Contact</a>
+                    <a class="nav-link bg-blue-600 text-white hover:bg-blue-700 transition-all duration-300 px-4 py-2 rounded-full border border-blue-600" href="blog.html">Blog</a>
                 </nav>
                 <div class="md:hidden ml-4">
                     <button id="mobile-menu-button" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu">
@@ -58,6 +59,7 @@
             <a class="nav-link text-gray-300 hover:text-white" href="#offer">About</a>
             <a class="nav-link text-gray-300 hover:text-white" href="#pricing">Pricing</a>
             <a class="nav-link text-gray-300 hover:text-white" href="#faq-contact">Contact</a>
+            <a class="nav-link text-blue-400 font-semibold" href="blog.html">Blog</a>
         </nav>
     </div>
 
@@ -282,62 +284,76 @@
                 </div>
             </section>
     
-            <section class="py-8 lg:py-12 relative" id="pricing">
+            <section class="py-8 lg:py-12 relative bg-slate-900" id="pricing">
                 
                 <div class="container mx-auto px-6 section-content">
                  <div class="text-center" data-aos="fade-up">
-                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-3 text-slate-900">No-Nonsense Packages. Real Results.</h2>
-                    <p class="max-w-2xl mx-auto text-base text-slate-600 mb-4">One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.</p>
-                     <div class="inline-block bg-blue-100 border border-blue-200 text-blue-600 px-4 py-2 rounded-lg mb-8 shadow-sm text-sm"><strong>Founding Client Offer:</strong> Take <strong>50% OFF</strong> any package below!</div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-3 text-white">No-Nonsense Packages. Real Results.</h2>
+                    <p class="max-w-2xl mx-auto text-base text-gray-300 mb-4">One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.</p>
+                     <div class="inline-block bg-red-100 border border-red-200 text-red-600 px-4 py-2 rounded-lg mb-4 shadow-sm text-sm"><strong>Limited Time Offer:</strong> Take <strong>50% OFF</strong> any package below!</div>
+                     <div class="inline-block bg-orange-100 border border-orange-200 text-orange-600 px-4 py-2 rounded-lg mb-8 shadow-sm text-sm font-bold">⚡ Only 3 Spots Left - Act Fast!</div>
                  </div>
                  <div class="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
-                    <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl flex flex-col border-2 border-slate-200 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full" data-aos="fade-up">
+                    <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-xl flex flex-col border-2 border-slate-700 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full" data-aos="fade-up">
                         <div class="p-3 -mt-8 mb-4 bg-slate-800 w-fit rounded-lg mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
-                        <h3 class="font-display font-bold text-xl mb-2 text-slate-900 text-center">Starter Package</h3>
-                        <p class="text-4xl font-display text-slate-900 mb-4 text-center">$950</p>
-                        <div class="mb-4 flex-grow">
-                            <p class="text-slate-700 mb-3 text-sm"><strong>The Problem It Solves:</strong> You miss out on new jobs because you're too busy to reply to website inquiries instantly. Leads fall through the cracks.</p>
-                            <p class="text-slate-700 mb-3 text-sm"><strong>The Solution:</strong> We automate your lead capture. The moment a potential customer fills out your website form, they get an instant, professional text or email confirmation, and you get a text alert with their info.</p>
+                        <h3 class="font-display font-bold text-xl mb-2 text-white text-center">Essential Package</h3>
+                        <div class="text-center mb-4">
+                            <p class="text-4xl font-display text-white">$950</p>
+                            <p class="text-lg text-gray-400 mb-1">Regular Price: $1,900</p>
+                            <p class="text-sm text-green-400 font-semibold">Founding Client: $475 (50% OFF)</p>
                         </div>
-                        <ul class="space-y-2 list-inside text-slate-700 mb-6 text-sm">
+                        <div class="mb-4 flex-grow">
+                            <p class="text-gray-300 mb-3 text-sm"><strong>The Problem It Solves:</strong> You miss out on new jobs because you're too busy to reply to website inquiries instantly. Leads fall through the cracks.</p>
+                            <p class="text-gray-300 mb-3 text-sm"><strong>The Solution:</strong> We automate your lead capture. The moment a potential customer fills out your website form, they get an instant, professional text or email confirmation, and you get a text alert with their info.</p>
+                        </div>
+                        <ul class="space-y-2 list-inside text-gray-300 mb-6 text-sm">
                             <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 "Done-For-You" lead capture workflow</li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration of 2 essential apps (e.g., your website and your phone)</li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personal video guide on how it works</li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>30 days of post-launch support</li>
                         </ul>
-                         <a class="mt-auto w-full text-base font-semibold text-white bg-blue-600 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Claim My Spot & Get 50% Off</a>
+                         <a class="mt-auto w-full text-base font-semibold text-white bg-blue-600 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Automate My Business</a>
                     </div>
                     <div class="p-6 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex flex-col relative h-full shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 transform scale-105" data-aos="fade-up" data-aos-delay="100">
                         <div class="p-3 -mt-8 mb-4 bg-white/20 backdrop-blur-lg w-fit rounded-lg mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg></div>
-                        <h3 class="font-display font-bold text-xl mb-2 text-white text-center">Standard Package</h3>
-                        <p class="text-4xl font-display text-white mb-4 text-center">$2,450</p>
+                        <h3 class="font-display font-bold text-xl mb-2 text-white text-center">Growth Package</h3>
+                        <div class="text-center mb-4">
+                            <div class="inline-block bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold mb-2">Recommended</div>
+                            <p class="text-4xl font-display text-white">$2,950</p>
+                            <p class="text-lg text-blue-200 mb-1">Regular Price: $5,900</p>
+                            <p class="text-sm text-green-300 font-semibold">Founding Client: $1,475 (50% OFF)</p>
+                        </div>
                         <div class="mb-4 flex-grow">
                             <p class="text-blue-100 mb-3 text-sm"><strong>The Problem It Solves:</strong> The endless back-and-forth emails and phone calls to schedule an appointment are wasting hours of your valuable time.</p>
-                            <p class="text-blue-100 mb-3 text-sm"><strong>The Solution:</strong> Includes everything in the <strong>Starter Package</strong>, plus a complete, automated scheduling system. New leads are automatically sent a link to book an appointment directly on your calendar.</p>
+                            <p class="text-blue-100 mb-3 text-sm"><strong>The Solution:</strong> Includes everything in the <strong>Essential Package</strong>, plus a complete, automated scheduling system. New leads are automatically sent a link to book an appointment directly on your calendar.</p>
                         </div>
                         <ul class="space-y-2 list-inside text-blue-100 mb-6 text-sm">
-                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Starter Package, plus:</strong></li>
+                            <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Essential Package, plus:</strong></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 complete multi-step scheduling & reminder process automated</li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration of up to 5 business apps (e.g., website, calendar, video chat)</li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>A custom dashboard to track results</li>
                         </ul>
-                        <a class="mt-auto w-full text-base font-semibold bg-white text-blue-600 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Claim My Spot & Get 50% Off</a>
+                        <a class="mt-auto w-full text-base font-semibold bg-white text-blue-600 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-50 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Start My Project</a>
                     </div>
-                    <div class="bg-gradient-to-b from-white to-slate-50 p-6 rounded-xl flex flex-col border-2 border-slate-200 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-xl flex flex-col border-2 border-slate-700 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="200">
                         <div class="p-3 -mt-8 mb-4 bg-slate-800 w-fit rounded-lg mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
-                        <h3 class="font-display font-bold text-xl mb-2 text-slate-900 text-center">Custom Package</h3>
-                        <p class="text-4xl font-display text-slate-900 mb-4 text-center">Custom Price</p>
-                        <div class="mb-4 flex-grow">
-                            <p class="text-slate-700 mb-3 text-sm"><strong>The Problem It Solves:</strong> You're running your entire operation from your truck and a notebook. You need a real system to handle everything from getting paid to getting 5-star reviews.</p>
-                            <p class="text-slate-700 mb-3 text-sm"><strong>The Solution:</strong> The complete operational overhaul. We automate your entire client journey, from the first lead to getting paid, reviewed, and earning repeat business.</p>
+                        <h3 class="font-display font-bold text-xl mb-2 text-white text-center">Enterprise Package</h3>
+                        <div class="text-center mb-4">
+                            <p class="text-4xl font-display text-white">$3,950</p>
+                            <p class="text-lg text-gray-400 mb-1">Regular Price: $7,900</p>
+                            <p class="text-sm text-green-400 font-semibold">Founding Client: $1,975 (50% OFF)</p>
                         </div>
-                        <ul class="space-y-2 list-inside text-slate-700 mb-6 text-sm">
-                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Standard Package, plus:</strong></li>
+                        <div class="mb-4 flex-grow">
+                            <p class="text-gray-300 mb-3 text-sm"><strong>The Problem It Solves:</strong> You're running your entire operation from your truck and a notebook. You need a real system to handle everything from getting paid to getting 5-star reviews.</p>
+                            <p class="text-gray-300 mb-3 text-sm"><strong>The Solution:</strong> The complete operational overhaul. We automate your entire client journey, from the first lead to getting paid, reviewed, and earning repeat business.</p>
+                        </div>
+                        <ul class="space-y-2 list-inside text-gray-300 mb-6 text-sm">
+                            <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Growth Package, plus:</strong></li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full business operations audit & strategy</li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Multiple, interconnected automated systems (e.g., Invoicing, Payment Processing, Review Requests, Loyalty Programs)</li>
                             <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited app integrations</li>
                         </ul>
-                        <a class="mt-auto w-full text-base font-semibold text-white bg-blue-600 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Claim My Spot & Get 50% Off</a>
+                        <a class="mt-auto w-full text-base font-semibold text-white bg-blue-600 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Automate My Business</a>
                     </div>
                  </div>
                 </div>

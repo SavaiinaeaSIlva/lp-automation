@@ -436,6 +436,7 @@ function showFormMessage(form, message, type) {
     }
 }
 
+
 // Export functions for global access if needed
 window.App = {
     openMobileMenu,
