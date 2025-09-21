@@ -1,10 +1,3 @@
-// Contact information constants
-const CONTACT_INFO = {
-    email: 'contact@silvaautomation.com',
-    phone: '(808) 308-1107',
-    address: 'Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797'
-};
-
 // DOM Ready function
 document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
@@ -15,7 +8,6 @@ function initializeApp() {
     initializeAnimations();
     setupMobileMenu();
     setupSmoothScrolling();
-    // setupScrollSnap();
     setupCookieBanner();
     setupLegalPages();
     setupHeaderScrollBehavior();
@@ -66,7 +58,7 @@ function setupMobileMenu() {
     }
 
     // Close mobile menu when nav links are clicked
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('#mobile-menu .nav-link');
     navLinks.forEach(link => {
         link.addEventListener('click', closeMobileMenu);
     });
@@ -78,7 +70,6 @@ function openMobileMenu() {
         mobileMenu.classList.remove('translate-x-full');
         document.body.style.overflow = 'hidden';
         
-        // Update aria-expanded for accessibility
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         if (mobileMenuButton) {
             mobileMenuButton.setAttribute('aria-expanded', 'true');
@@ -92,7 +83,6 @@ function closeMobileMenu() {
         mobileMenu.classList.add('translate-x-full');
         document.body.style.overflow = '';
         
-        // Update aria-expanded for accessibility
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         if (mobileMenuButton) {
             mobileMenuButton.setAttribute('aria-expanded', 'false');
@@ -101,11 +91,12 @@ function closeMobileMenu() {
 }
 
 
-// Smooth scrolling
+// Smooth scrolling for anchor links on the same page
 function setupSmoothScrolling() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
+            // Ignore simple hash links and legal links handled by SPA logic
             if (href === '#' || this.classList.contains('legal-link')) return;
             
             const targetElement = document.querySelector(href);
@@ -115,91 +106,8 @@ function setupSmoothScrolling() {
                     behavior: 'smooth', 
                     block: 'start' 
                 });
-            } else {
-                console.warn(`Target element not found for href: ${href}`);
             }
         });
-    });
-}
-
-// Enhanced scroll snap functionality
-function setupScrollSnap() {
-    let isScrolling = false;
-    let scrollTimeout;
-    
-    // Add scroll snap behavior
-    document.documentElement.style.scrollSnapType = 'y mandatory';
-    
-    // Handle scroll events for smooth transitions
-    window.addEventListener('scroll', function() {
-        if (!isScrolling) {
-            isScrolling = true;
-            document.body.classList.add('scrolling');
-        }
-        
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(function() {
-            isScrolling = false;
-            document.body.classList.remove('scrolling');
-        }, 150);
-    });
-    
-    // Add intersection observer for section visibility
-    const observerOptions = {
-        root: null,
-        rootMargin: '-20% 0px -20% 0px',
-        threshold: 0.5
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Skip scaling animation for FAQ section to prevent vibrating
-                if (entry.target.id !== 'faq') {
-                    entry.target.classList.add('section-active');
-                }
-                // Add subtle animation to section content
-                const content = entry.target.querySelector('.section-content');
-                if (content) {
-                    content.style.animation = 'fadeInUp 0.8s ease-out';
-                }
-            } else {
-                entry.target.classList.remove('section-active');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all sections
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
-    
-    // Enhanced keyboard navigation
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-            e.preventDefault();
-            const sections = Array.from(document.querySelectorAll('section'));
-            const currentSection = sections.find(section => {
-                const rect = section.getBoundingClientRect();
-                return rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2;
-            });
-            
-            if (currentSection) {
-                const currentIndex = sections.indexOf(currentSection);
-                let targetIndex;
-                
-                if (e.key === 'ArrowDown') {
-                    targetIndex = Math.min(currentIndex + 1, sections.length - 1);
-                } else {
-                    targetIndex = Math.max(currentIndex - 1, 0);
-                }
-                
-                sections[targetIndex].scrollIntoView({ 
-                    behavior: 'smooth', 
-                    block: 'start' 
-                });
-            }
-        }
     });
 }
 
@@ -274,8 +182,15 @@ function setupLegalPages() {
     homeLinks.forEach(link => {
         if (link) {
             link.addEventListener('click', (e) => { 
-                e.preventDefault(); 
-                showMainView(); 
+                // If we're already on the main view, this acts as a "scroll to top"
+                if (!mainView.classList.contains('hidden')) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                    // If on a legal page, go back to main view
+                    e.preventDefault();
+                    showMainView();
+                }
             });
         }
     });
@@ -303,37 +218,22 @@ function setupLegalPages() {
     }
 }
 
-// Header scroll behavior - hide on scroll down, show on scroll up
+// Header scroll behavior
 function setupHeaderScrollBehavior() {
     const header = document.getElementById('main-header');
     if (!header) return;
     
     let lastScrollY = window.scrollY;
-    let ticking = false;
     
-    function updateHeader() {
+    window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
-        
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            // Scrolling down and past 100px - hide header
             header.style.transform = 'translateY(-100%)';
         } else {
-            // Scrolling up or at top - show header
             header.style.transform = 'translateY(0)';
         }
-        
         lastScrollY = currentScrollY;
-        ticking = false;
-    }
-    
-    function requestTick() {
-        if (!ticking) {
-            requestAnimationFrame(updateHeader);
-            ticking = true;
-        }
-    }
-    
-    window.addEventListener('scroll', requestTick, { passive: true });
+    }, { passive: true });
 }
 
 // Utility function to set current year
@@ -344,98 +244,11 @@ function setCurrentYear() {
     }
 }
 
-// Contact form handling - Switched to Formspree
+// Contact form handling - now uses Formspree
 function setupContactForm() {
     // The form submission is now handled by the 'action' attribute in the HTML.
-    // The JavaScript fetch logic is no longer needed.
-    // I am leaving the old code here, commented out, in case you want to switch back to n8n later.
-    /*
-    const contactForm = document.getElementById('contact-form');
-    
-    if (!contactForm) return;
-    
-    contactForm.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const submitButton = contactForm.querySelector('button[type="submit"]');
-        const originalButtonText = submitButton.textContent;
-        
-        // Show loading state
-        submitButton.textContent = 'Sending...';
-        submitButton.disabled = true;
-        
-        try {
-            // Get form data
-            const formData = new FormData(contactForm);
-            const data = {
-                name: formData.get('name'),
-                email: formData.get('email'),
-                phone: formData.get('phone'),
-                message: formData.get('message'),
-                form_type: 'contact',
-                source: 'landing_page',
-                timestamp: new Date().toISOString(),
-                url: window.location.href
-            };
-            
-            // Send to n8n webhook
-            const response = await fetch('https://n8n.ssilva.space/webhook/31d9264e-2d99-4c75-bbd8-eb86c0ede5ee', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data)
-            });
-            
-            if (response.ok) {
-                // Show success message
-                showFormMessage(contactForm, 'Thank you! I\'ll get back to you within 24 hours.', 'success');
-                contactForm.reset();
-            } else {
-                throw new Error('Failed to send message');
-            }
-            
-        } catch (error) {
-            console.error('Form submission error:', error);
-            showFormMessage(contactForm, 'Sorry, there was an error sending your message. Please try again or contact me directly.', 'error');
-        } finally {
-            // Reset button state
-            submitButton.textContent = originalButtonText;
-            submitButton.disabled = false;
-        }
-    });
-    */
+    // No specific JavaScript is needed for submission itself.
 }
-
-// Helper function to show form messages - This is no longer used by the form, but kept for potential future use.
-function showFormMessage(form, message, type) {
-    // Remove any existing messages
-    const existingMessage = form.querySelector('.form-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-    
-    // Create new message element
-    const messageDiv = document.createElement('div');
-    messageDiv.className = `form-message p-4 rounded-lg text-sm font-medium ${
-        type === 'success' 
-            ? 'bg-green-500/10 border border-green-500/20 text-green-400' 
-            : 'bg-red-500/10 border border-red-500/20 text-red-400'
-    }`;
-    messageDiv.textContent = message;
-    
-    // Insert message before the submit button
-    const submitButton = form.querySelector('button[type="submit"]');
-    form.insertBefore(messageDiv, submitButton.parentElement);
-    
-    // Auto-remove success messages after 5 seconds
-    if (type === 'success') {
-        setTimeout(() => {
-            messageDiv.remove();
-        }, 5000);
-    }
-}
-
 
 // Export functions for global access if needed
 window.App = {
