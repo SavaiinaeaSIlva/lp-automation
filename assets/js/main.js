@@ -15,7 +15,7 @@ function initializeApp() {
     initializeAnimations();
     setupMobileMenu();
     setupSmoothScrolling();
-    setupScrollSnap();
+    // setupScrollSnap();
     setupCookieBanner();
     setupLegalPages();
     setupHeaderScrollBehavior();

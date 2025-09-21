@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV=/home/nza094/venv
+VIRTUAL_ENV=/home/nza094/lib/lp-automation/venv
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

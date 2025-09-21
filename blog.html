@@ -1,259 +1,293 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog - Silva Automation | Hawaii Business Automation Insights</title>
-    
-    <meta name="theme-color" content="#000000" />
-    <meta name="color-scheme" content="dark" />
-    <meta name="description" content="Insights and guides on Hawaii business automation, productivity tips, and real solutions for service professionals." />
-    <meta property="og:title" content="Blog - Silva Automation | Hawaii Business Automation Insights" />
-    <meta property="og:description" content="Insights and guides on Hawaii business automation, productivity tips, and real solutions for service professionals." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&h=630&fit=crop&crop=entropy" />
-    <meta property="og:url" content="https://www.silvaautomation.com/blog" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image"/>
-    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="dist/output.css" />
-</head>
-<body class="antialiased">
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a aria-label="Silva Automation Home" href="index.html" id="home-logo-link">
-                <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" src="assets/images/logo.png" loading="eager" />
-            </a>
-            <div class="flex items-center">
-                <nav class="hidden md:flex items-center space-x-2 text-sm">
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="index.html#solution">Solution</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="index.html#process">Process</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="index.html#offer">About</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="index.html#pricing">Pricing</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="index.html#faq-contact">Contact</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="blog.html">Blog</a>
-                </nav>
-                <div class="md:hidden ml-4">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div id="mobile-menu" class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden" aria-hidden="true">
-        <div class="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-xl border-l border-slate-800 p-6">
-            <div class="flex justify-between items-center mb-8">
-                <img alt="Silva Automation Logo" class="h-12 w-auto" src="assets/images/logo.png" />
-                <button id="mobile-menu-close" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                </button>
-            </div>
-            <nav class="space-y-4">
-                <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#solution">Solution</a>
-                <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#process">Process</a>
-                <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#offer">About</a>
-                <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#pricing">Pricing</a>
-                <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#faq-contact">Contact</a>
-                <a class="block text-blue-400 font-semibold py-2" href="blog.html">Blog</a>
-            </nav>
-        </div>
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Blog - Silva Automation | Hawaii Business Automation Insights
+  </title>
+  <meta content="#000000" name="theme-color"/>
+  <meta content="dark" name="color-scheme"/>
+  <meta content="Insights and guides on Hawaii business automation, productivity tips, and real solutions for service professionals." name="description"/>
+  <meta content="Blog - Silva Automation | Hawaii Business Automation Insights" property="og:title"/>
+  <meta content="Insights and guides on Hawaii business automation, productivity tips, and real solutions for service professionals." property="og:description"/>
+  <meta content="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&amp;w=1200&amp;h=630&amp;fit=crop&amp;crop=entropy" property="og:image"/>
+  <meta content="https://www.silvaautomation.com/blog" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="dist/output.css" rel="stylesheet"/>
+ </head>
+ <body class="antialiased">
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
+   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a aria-label="Silva Automation Home" href="#" id="home-logo-link">
+     <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" loading="eager" src="assets/images/logo.png"/>
+    </a>
+    <div class="flex items-center">
+     <nav class="hidden md:flex items-center space-x-2 text-sm">
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#solution">
+       Solution
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#process">
+       Process
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#offer">
+       About
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#pricing">
+       Pricing
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#faq-contact">
+       Contact
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="blog.html">
+       Blog
+      </a>
+     </nav>
+     <div class="md:hidden ml-4">
+      <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </button>
+     </div>
     </div>
-
-    <section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div class="absolute inset-0 bg-[url('assets/images/blog.png')] bg-cover bg-center bg-no-repeat opacity-20"></div>
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/60 to-slate-900/80"></div>
-        
-        <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
-                <span class="block">Hawaii Business</span>
-                <span class="block bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">Automation Blog</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Real insights, practical solutions, and proven strategies for service professionals in Hawaii
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#blog-posts" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
-                    View All Posts
-                </a>
-                <a href="index.html#pricing" class="inline-block bg-white/10 backdrop-blur-md text-white hover:bg-white/20 font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 border border-white/20 hover:border-white/40">
-                    Get Started
-                </a>
-            </div>
+   </div>
+  </header>
+  <div aria-hidden="true" class="fixed inset-0 z-40 bg-black/50 backdrop-blur-sm hidden" id="mobile-menu">
+   <div class="fixed top-0 right-0 h-full w-80 bg-slate-900/95 backdrop-blur-xl border-l border-slate-800 p-6">
+    <div class="flex justify-between items-center mb-8">
+     <img alt="Silva Automation Logo" class="h-12 w-auto" src="assets/images/logo.png"/>
+     <button class="text-white focus:outline-none" id="mobile-menu-close">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+       <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+       </path>
+      </svg>
+     </button>
+    </div>
+    <nav class="space-y-4">
+     <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#solution">
+      Solution
+     </a>
+     <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#process">
+      Process
+     </a>
+     <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#offer">
+      About
+     </a>
+     <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#pricing">
+      Pricing
+     </a>
+     <a class="block text-white hover:text-blue-400 transition-colors duration-300 py-2" href="index.html#faq-contact">
+      Contact
+     </a>
+     <a class="block text-blue-400 font-semibold py-2" href="blog.html">
+      Blog
+     </a>
+    </nav>
+   </div>
+  </div>
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+   <div class="absolute inset-0 bg-[url('assets/images/blog.png')] bg-cover bg-center bg-no-repeat opacity-20">
+   </div>
+   <div class="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/60 to-slate-900/80">
+   </div>
+   <div class="container mx-auto px-6 relative z-10 text-center" data-aos="fade-up">
+    <h1 class="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-white mb-6 leading-tight">
+     <span class="block">
+      Hawaii Business
+     </span>
+     <span class="block bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent">
+      Automation Blog
+     </span>
+    </h1>
+    <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+     Real insights, practical solutions, and proven strategies for service professionals in Hawaii
+    </p>
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+     <a class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]" href="#blog-posts">
+      View All Posts
+     </a>
+     <a class="inline-block bg-white/10 backdrop-blur-md text-white hover:bg-white/20 font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 border border-white/20 hover:border-white/40" href="index.html#pricing">
+      Get Started
+     </a>
+    </div>
+   </div>
+  </section>
+  <section class="py-16 lg:py-24 bg-slate-900 dark:bg-slate-900" id="blog-posts">
+   <div class="container mx-auto px-6">
+    <div class="max-w-4xl mx-auto">
+     <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-12 text-center" data-aos="fade-up">
+      Insights from Silva Automation
+     </h2>
+     <div class="space-y-12">
+      <article class="grid md:grid-cols-3 gap-8 items-center" data-aos="fade-up">
+       <div class="md:col-span-1">
+        <a href="marketing-agency-onboarding-guide.html">
+         <img alt="Team discussing a project on a whiteboard" class="rounded-lg hover:opacity-80 transition-opacity duration-300" src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&amp;w=800&amp;h=500&amp;fit=crop"/>
+        </a>
+       </div>
+       <div class="md:col-span-2">
+        <div class="mb-2">
+         <span class="inline-block bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-xs font-semibold">
+          Marketing Agencies
+         </span>
         </div>
-    </section>
-
-    <section class="py-16 lg:py-24 bg-slate-900 dark:bg-slate-900" id="blog-posts">
-        <div class="container mx-auto px-6">
-            <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-12 text-center" data-aos="fade-up">
-                    Insights from Silva Automation
-                </h2>
-
-                <div class="space-y-12">
-
-                    <article class="grid md:grid-cols-3 gap-8 items-center" data-aos="fade-up">
-                        <div class="md:col-span-1">
-                            <a href="marketing-agency-onboarding-guide.html">
-                                <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=800&h=500&fit=crop" alt="Team discussing a project on a whiteboard" class="rounded-lg hover:opacity-80 transition-opacity duration-300">
-                            </a>
-                        </div>
-                        <div class="md:col-span-2">
-                            <div class="mb-2">
-                                <span class="inline-block bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-xs font-semibold">
-                                    Marketing Agencies
-                                </span>
-                            </div>
-                            <h3 class="text-2xl font-bold font-display text-white mb-3">
-                                <a href="marketing-agency-onboarding-guide.html" class="hover:text-blue-400 transition-colors">
-                                    Stop Losing Clients in the Onboarding Chaos: A Practical Automation Guide
-                                </a>
-                            </h3>
-                            <p class="text-gray-400 mb-4">
-                                This article is your roadmap to transforming client onboarding chaos into a smooth, professional system that impresses clients and gives you back your time.
-                            </p>
-                            <div class="flex items-center text-gray-500 text-sm">
-                                <span>Published on September 2025</span>
-                                <span class="mx-2">•</span>
-                                <span>6 min read</span>
-                            </div>
-                        </div>
-                    </article>
-
-                    <article class="grid md:grid-cols-3 gap-8 items-center" data-aos="fade-up">
-                        <div class="md:col-span-1">
-                            <a href="hawaii-business-automation-guide.html">
-                                <img src="https://images.unsplash.com/photo-1605910246477-74f03ee44aaa?q=80&w=800&h=500&fit=crop" alt="An overview of a business workflow on a desk" class="rounded-lg hover:opacity-80 transition-opacity duration-300">
-                            </a>
-                        </div>
-                        <div class="md:col-span-2">
-                            <div class="mb-2">
-                                <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
-                                    Business Automation
-                                </span>
-                            </div>
-                            <h3 class="text-2xl font-bold font-display text-white mb-3">
-                                <a href="hawaii-business-automation-guide.html" class="hover:text-blue-400 transition-colors">
-                                    Don't Let Manual Tasks Steal Your Profitability: A Guide to Hawaii Business Automation
-                                </a>
-                            </h3>
-                            <p class="text-gray-400 mb-4">
-                                A hidden cost you pay every single day in wasted hours, frustrated staff, and missed opportunities. This article is your guide to eliminating that cost.
-                            </p>
-                            <div class="flex items-center text-gray-500 text-sm">
-                                <span>Published on December 2024</span>
-                                <span class="mx-2">•</span>
-                                <span>5 min read</span>
-                            </div>
-                        </div>
-                    </article>
-
-                </div>
-                </div>
+        <h3 class="text-2xl font-bold font-display text-white mb-3">
+         <a class="hover:text-blue-400 transition-colors" href="marketing-agency-onboarding-guide.html">
+          Stop Losing Clients in the Onboarding Chaos: A Practical Automation Guide
+         </a>
+        </h3>
+        <p class="text-gray-400 mb-4">
+         This article is your roadmap to transforming client onboarding chaos into a smooth, professional system that impresses clients and gives you back your time.
+        </p>
+        <div class="flex items-center text-gray-500 text-sm">
+         <span>
+          Published on September 2025
+         </span>
+         <span class="mx-2">
+          •
+         </span>
+         <span>
+          6 min read
+         </span>
         </div>
-    </section>
-
-    <section class="py-16 lg:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
-        <div class="absolute inset-0 bg-[url('assets/images/hero2.png')] bg-cover bg-center bg-no-repeat opacity-10"></div>
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-                <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-6">
-                    Ready to Transform Your Business?
-                </h2>
-                <p class="text-xl text-gray-300 mb-8">
-                    Stop letting manual tasks hold you back. Let's build the automated systems that will free up your time and grow your business.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]">
-                        Book Free Consultation
-                    </a>
-                    <a href="index.html#pricing" class="inline-block bg-white/10 backdrop-blur-md text-white hover:bg-white/20 font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 border border-white/20 hover:border-white/40">
-                        View Packages
-                    </a>
-                </div>
-            </div>
+       </div>
+      </article>
+      <article class="grid md:grid-cols-3 gap-8 items-center" data-aos="fade-up">
+       <div class="md:col-span-1">
+        <a href="hawaii-business-automation-guide.html">
+         <img alt="An overview of a business workflow on a desk" class="rounded-lg hover:opacity-80 transition-opacity duration-300" src="https://images.unsplash.com/photo-1605910246477-74f03ee44aaa?q=80&amp;w=800&amp;h=500&amp;fit=crop"/>
+        </a>
+       </div>
+       <div class="md:col-span-2">
+        <div class="mb-2">
+         <span class="inline-block bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
+          Business Automation
+         </span>
         </div>
-    </section>
-
-    <footer class="bg-slate-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div>
-                    <img alt="Silva Automation Logo" class="h-12 w-auto mb-4" src="assets/images/logo.png" />
-                    <p class="text-gray-400 mb-4">
-                        Real automation solutions for Hawaii service professionals. No BS. Just results.
-                    </p>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="index.html#solution" class="hover:text-white transition-colors">Solution</a></li>
-                        <li><a href="index.html#process" class="hover:text-white transition-colors">Process</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition-colors">Pricing</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="hover:text-white transition-colors">Book Consultation</a></li>
-                        <li><a href="mailto:hello@silvaautomation.com" class="hover:text-white transition-colors">hello@silvaautomation.com</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-slate-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2024 Silva Automation. All rights reserved.</p>
-            </div>
+        <h3 class="text-2xl font-bold font-display text-white mb-3">
+         <a class="hover:text-blue-400 transition-colors" href="hawaii-business-automation-guide.html">
+          Don't Let Manual Tasks Steal Your Profitability: A Guide to Hawaii Business Automation
+         </a>
+        </h3>
+        <p class="text-gray-400 mb-4">
+         A hidden cost you pay every single day in wasted hours, frustrated staff, and missed opportunities. This article is your guide to eliminating that cost.
+        </p>
+        <div class="flex items-center text-gray-500 text-sm">
+         <span>
+          Published on December 2024
+         </span>
+         <span class="mx-2">
+          •
+         </span>
+         <span>
+          5 min read
+         </span>
         </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', 'true');
-        });
-
-        mobileMenuClose.addEventListener('click', () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenuButton.setAttribute('aria-expanded', 'false');
-        });
-        
-        mobileMenu.addEventListener('click', (e) => {
-            if (e.target === mobileMenu) {
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-            }
-        });
-
-        // Header scroll effect
-        const header = document.getElementById('main-header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('bg-slate-900/95', 'backdrop-blur-md');
-            } else {
-                header.classList.remove('bg-slate-900/95', 'backdrop-blur-md');
-            }
-        });
-    </script>
-</body>
+       </div>
+      </article>
+     </div>
+    </div>
+   </div>
+  </section>
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden">
+   <div class="absolute inset-0 bg-[url('assets/images/hero2.png')] bg-cover bg-center bg-no-repeat opacity-10">
+   </div>
+   <div class="container mx-auto px-6 relative z-10">
+    <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+     <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-6">
+      Ready to Transform Your Business?
+     </h2>
+     <p class="text-xl text-gray-300 mb-8">
+      Stop letting manual tasks hold you back. Let's build the automated systems that will free up your time and grow your business.
+     </p>
+     <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)]" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+       Book Free Consultation
+      </a>
+      <a class="inline-block bg-white/10 backdrop-blur-md text-white hover:bg-white/20 font-semibold py-4 px-8 rounded-lg transition-all duration-300 hover:-translate-y-1 border border-white/20 hover:border-white/40" href="index.html#pricing">
+       View Packages
+      </a>
+     </div>
+    </div>
+   </div>
+  </section>
+  <footer class="bg-slate-900/50 border-t border-slate-800 text-slate-400">
+   <div class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+     <div class="space-y-4">
+      <a class="inline-block" href="#" id="home-footer-link">
+       <img alt="Silva Automation Logo" class="h-10 w-auto mx-auto md:mx-0" loading="lazy" src="assets/images/logo.png"/>
+      </a>
+      <p class="text-sm">
+       Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
+      </p>
+     </div>
+     <div class="space-y-4">
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">
+       Menu
+      </h4>
+      <nav class="flex flex-col space-y-2 text-sm">
+       <a class="hover:text-blue-400 transition-colors" href="#solution">
+        Solution
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="#process">
+        Process
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="#offer">
+        About
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="#pricing">
+        Pricing
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="#faq-contact">
+        Contact
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="blog.html">
+        Blog
+       </a>
+      </nav>
+     </div>
+     <div class="space-y-4">
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">
+       Legal
+      </h4>
+      <nav class="flex flex-col space-y-2 text-sm">
+       <a class="legal-link hover:text-blue-400 transition-colors" data-page="terms-page" href="#terms">
+        Terms &amp; Conditions
+       </a>
+       <a class="legal-link hover:text-blue-400 transition-colors" data-page="privacy-page" href="#privacy">
+        Privacy Policy
+       </a>
+       <a class="legal-link hover:text-blue-400 transition-colors" data-page="cookie-page" href="#cookie">
+        Cookie Policy
+       </a>
+       <a class="legal-link hover:text-blue-400 transition-colors" data-page="refund-page" href="#refund">
+        Refund Policy
+       </a>
+      </nav>
+     </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-slate-800 text-center text-sm">
+     <p class="text-xs text-slate-500">
+      ©
+      <span id="current-year">
+      </span>
+      Silva Automation. All Rights Reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script src="assets/js/main.js">
+  </script>
+ </body>
 </html>

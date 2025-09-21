@@ -1,4 +1,4 @@
-#!/home/nza094/venv/bin/python3
+#!/home/nza094/lib/lp-automation/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
