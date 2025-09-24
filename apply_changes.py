@@ -1,21 +1,21 @@
-# fix_subheading.py
+# fix_subheading_v2.py
 import sys
 from bs4 import BeautifulSoup
 
 # --- DEFINE THE CORRECT SUBHEADING ---
 
-# The correct text for the subheading
+# The text you want to display
 subheading_text = "One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day."
 
-# The correct Tailwind classes to make it visible (light gray text)
-subheading_classes = "max-w-2xl mx-auto text-base text-gray-300 mb-4"
+# The new "badge" style classes to make it pop
+subheading_classes = "inline-block text-lg font-medium text-blue-300 bg-blue-500/10 border border-blue-500/30 rounded-full px-6 py-3 mb-8"
 
 
-# --- SCRIPT LOGIC ---
+# --- SCRIPT LOGIC (More Robust Version) ---
 
 file_path = 'index.html'
 
-print(f"🔄 Attempting to fix subheading in '{file_path}'...")
+print(f"🔄 Attempting to robustly fix subheading in '{file_path}'...")
 
 try:
     # Read the original HTML file
@@ -25,39 +25,41 @@ try:
     # Find the pricing section by its ID
     pricing_section = soup.find('section', id='pricing')
     if not pricing_section:
-        print("❌ Error: Could not find the pricing section with id='pricing'.")
-        sys.exit(1)
+        raise ValueError("Could not find the pricing section with id='pricing'.")
 
-    # Find the h2 heading within the pricing section
-    h2_tag = pricing_section.find('h2', string=lambda t: 'No-Nonsense' in t if t else False)
+    # Find the container div with the text-center class
+    text_center_div = pricing_section.find('div', class_='text-center')
+    if not text_center_div:
+        raise ValueError("Could not find the 'text-center' div inside the pricing section.")
+        
+    # Find the main heading (h2) to use as an anchor for placement
+    h2_tag = text_center_div.find('h2')
     if not h2_tag:
-        print("❌ Error: Could not find the main 'No-Nonsense' heading.")
-        sys.exit(1)
+        raise ValueError("Could not find the h2 heading inside the 'text-center' div.")
 
-    # Find the paragraph that should be the subheading (the first <p> after the <h2>)
-    subheading_p = h2_tag.find_next_sibling('p')
+    # Find the first paragraph (the old subheading) inside this container
+    old_subheading = text_center_div.find('p')
+    if old_subheading:
+        print("   - Found old subheading, removing it...")
+        old_subheading.decompose() # This completely removes the old tag
 
-    if subheading_p:
-        # If the tag exists, update its class and text to be sure it's correct
-        subheading_p['class'] = subheading_classes.split()
-        subheading_p.string = subheading_text
-        print("✅ Found existing subheading tag and corrected it.")
-    else:
-        # If the tag was deleted, create a new one and insert it
-        new_subheading_p = soup.new_tag('p')
-        new_subheading_p['class'] = subheading_classes.split()
-        new_subheading_p.string = subheading_text
-        h2_tag.insert_after(new_subheading_p)
-        print("✅ Subheading tag was missing. A new one has been created and inserted.")
+    # Create the new, correctly styled subheading tag
+    new_subheading_p = soup.new_tag('p')
+    new_subheading_p['class'] = subheading_classes.split()
+    new_subheading_p.string = subheading_text
+
+    # Insert the new tag immediately after the h2 heading
+    h2_tag.insert_after(new_subheading_p)
+    print("   - Inserted new, correctly styled subheading.")
 
     # Write the modified content back to the HTML file
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(str(soup.prettify()))
 
     print(f"✅ Successfully saved changes to '{file_path}'.")
-    print("\nNext step: Remember to run your Tailwind build command!")
+    print("\nNext step: Run your Tailwind build command!")
 
 except FileNotFoundError:
     print(f"❌ Error: '{file_path}' not found. Make sure this script is in the same folder as your HTML file.")
 except Exception as e:
-    print(f"An unexpected error occurred: {e}")
+    print(f"An error occurred: {e}")
