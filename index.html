@@ -1,788 +1,1690 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silva Automation - Real Solutions for Real Service Pros.</title>
-    
-    <meta name="theme-color" content="#000000" />
-    <meta name="color-scheme" content="dark" />
-    <meta name="description" content="I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back." />
-    <meta property="og:title" content="Silva Automation - No BS. Real Pros. Real Solutions." />
-    <meta property="og:description" content="Tired of missing calls and working late? I build simple automation systems for service pros so you can focus on growing your business." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&w=1200&h=630&fit=crop&crop=entropy" />
-    <meta property="og:url" content="https://www.silvaautomation.com/" />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image"/>
-    <link rel="icon" href="assets/images/favicon.png" type="image/png" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <link rel="stylesheet" href="dist/output.css" />
-</head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85"></script>
-<script>
+<html class="scroll-smooth" lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Silva Automation - Real Solutions for Real Service Pros.
+  </title>
+  <meta content="#000000" name="theme-color"/>
+  <meta content="dark" name="color-scheme"/>
+  <meta content="I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back." name="description"/>
+  <meta content="Silva Automation - No BS. Real Pros. Real Solutions." property="og:title"/>
+  <meta content="Tired of missing calls and working late? I build simple automation systems for service pros so you can focus on growing your business." property="og:description"/>
+  <meta content="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?q=80&amp;w=1200&amp;h=630&amp;fit=crop&amp;crop=entropy" property="og:image"/>
+  <meta content="https://www.silvaautomation.com/" property="og:url"/>
+  <meta content="website" property="og:type"/>
+  <meta content="summary_large_image" name="twitter:card"/>
+  <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+  <link href="dist/output.css" rel="stylesheet"/>
+ </head>
+ <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85">
+ </script>
+ <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
   gtag('config', 'G-6T97Y5LX85');
-</script>
-<body class="antialiased">
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a aria-label="Silva Automation Home" href="#" id="home-logo-link">
-                <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" src="assets/images/logo.png" loading="eager" />
-            </a>
-            <div class="flex items-center">
-                <nav class="hidden md:flex items-center space-x-2 text-sm">
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#solution">Solution</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#process">Process</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#offer">About</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#pricing">Pricing</a>
-                    <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#faq-contact">Contact</a>
-                </nav>
-                <div class="md:hidden ml-4">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <div id="mobile-menu" class="fixed top-0 right-0 h-full w-72 bg-slate-900/95 backdrop-blur-lg z-40 p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden">
-        <button id="close-mobile-menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none" aria-label="Close mobile menu">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-        </button>
-        <nav class="flex flex-col space-y-8 mt-12 text-lg">
-            <a class="nav-link text-gray-300 hover:text-white" href="#solution">Solution</a>
-            <a class="nav-link text-gray-300 hover:text-white" href="#process">Process</a>
-            <a class="nav-link text-gray-300 hover:text-white" href="#offer">About</a>
-            <a class="nav-link text-gray-300 hover:text-white" href="#pricing">Pricing</a>
-            <a class="nav-link text-gray-300 hover:text-white" href="#faq-contact">Contact</a>
-        </nav>
+ </script>
+ <body class="antialiased">
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="main-header">
+   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <a aria-label="Silva Automation Home" href="#" id="home-logo-link">
+     <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" loading="eager" src="assets/images/logo.png"/>
+    </a>
+    <div class="flex items-center">
+     <nav class="hidden md:flex items-center space-x-2 text-sm">
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#solution">
+       Solution
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#process">
+       Process
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#offer">
+       About
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#pricing">
+       Pricing
+      </a>
+      <a class="nav-link bg-white/10 backdrop-blur-md text-white hover:bg-white/20 transition-all duration-300 px-4 py-2 rounded-full border border-white/20 hover:border-white/40" href="#faq-contact">
+       Contact
+      </a>
+     </nav>
+     <div class="md:hidden ml-4">
+      <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
+       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        </path>
+       </svg>
+      </button>
+     </div>
     </div>
-
-    <main>
-        <div id="main-view">
-            <section class="relative min-h-screen flex items-center pt-32 pb-16 md:pt-16 md:pb-0" id="hero" style="background-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%), url('assets/images/hero2.png'); background-color: #000000; background-size: cover; background-position: center top; background-repeat: no-repeat;">
-                
-                <div class="container mx-auto px-6 relative z-10">
-                    <div class="grid lg:grid-cols-2 gap-8 items-center min-h-screen py-16">
-                        <div class="text-left lg:pr-8" data-aos="fade-right">
-                            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-4 text-white">
-                                Stop Working IN Your<br/>
-                                Business.<br/>
-                                <span class="text-blue-400">Start Working ON It.</span>
-                        </h1>
-                            <p class="text-base md:text-lg mb-8 text-gray-200 max-w-lg">
-                            I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back.
-                        </p>
-                            <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="inline-block text-base font-semibold text-white bg-orange-600 py-3 px-8 rounded-lg transition-all duration-300 hover:bg-orange-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]">
-                            Start My Project
-                        </a>
-                        </div>
-                        
-                    </div>
-                </div>
-            </section>
-    
-            <section class="py-24 lg:py-32" id="problem">
-                <div class="container mx-auto px-6 section-content">
-                    <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
-                        <div data-aos="fade-right">
-                            <img src="assets/images/painpoint.png" alt="Illustration of business owner pain points" class="rounded-lg shadow-2xl aspect-video object-cover" loading="lazy">
-                        </div>
-                        <div data-aos="fade-left">
-                            <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
-                                Does This Sound Familiar?
-                            </h2>
-                            <p class="text-lg text-gray-400 mb-6">You're great at your trade, but the office work is killing you. Every day is a battle against...</p>
-                            <ul class="space-y-4 text-gray-300">
-                               <li class="flex items-start"><svg class="w-6 h-6 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><strong>Missed calls</strong> that could have been your next big job.</span></li>
-                               <li class="flex items-start"><svg class="w-6 h-6 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><strong>Forgotten follow-ups</strong> on quotes, leaving money on the table.</span></li>
-                               <li class="flex items-start"><svg class="w-6 h-6 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><strong>Endless phone tag</strong> just to schedule a simple appointment.</span></li>
-                               <li class="flex items-start"><svg class="w-6 h-6 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg><span><strong>Late nights</strong> catching up on invoices instead of with your family.</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="py-24 lg:py-32" id="solution">
-                <div class="container mx-auto px-6 section-content">
-                    <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
-                        <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">Your Business, Running on Autopilot.</h2>
-                        <p class="text-lg text-gray-400 mb-16">I don't just sell software; I build you a hands-free system that works 24/7, so you don't have to. Imagine a world where...</p>
-                    </div>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="bg-slate-900/50 p-8 rounded-lg border border-slate-800" data-aos="fade-up" data-aos-delay="0">
-                            <div class="bg-blue-500/10 text-blue-400 w-12 h-12 rounded-lg flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" /></svg></div>
-                            <h3 class="font-display font-bold text-xl mb-3 text-white">Never Miss a Lead</h3>
-                            <p class="text-gray-400">A missed call instantly triggers a text to the customer, capturing their details and letting them book a call on your calendar automatically.</p>
-                        </div>
-                        <div class="bg-slate-900/50 p-8 rounded-lg border border-slate-800" data-aos="fade-up" data-aos-delay="100">
-                             <div class="bg-blue-500/10 text-blue-400 w-12 h-12 rounded-lg flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></div>
-                            <h3 class="font-display font-bold text-xl mb-3 text-white">Close More Quotes</h3>
-                            <p class="text-gray-400">Your system automatically sends polite, professional follow-ups on every quote you send, keeping you top-of-mind until the deal is closed.</p>
-                        </div>
-                        <div class="bg-slate-900/50 p-8 rounded-lg border border-slate-800" data-aos="fade-up" data-aos-delay="200">
-                             <div class="bg-blue-500/10 text-blue-400 w-12 h-12 rounded-lg flex items-center justify-center mb-5"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div>
-                            <h3 class="font-display font-bold text-xl mb-3 text-white">Effortless Scheduling</h3>
-                            <p class="text-gray-400">Clients book themselves into your calendar based on your real-time availability—no more back-and-forth emails or phone calls.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="py-24 lg:py-32" id="process">
-                <div class="container mx-auto px-6 section-content">
-                     <div class="text-center max-w-4xl mx-auto mb-20" data-aos="fade-up">
-                        <div class="inline-block bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-2 rounded-full mb-6">Simple Process</div>
-                        <h2 class="text-4xl md:text-6xl font-bold font-display mb-6 text-white">From Chaos to <span class="text-blue-400">Automation</span> in 3 Steps</h2>
-                        <p class="text-xl text-gray-300 max-w-2xl mx-auto">No complex tech jargon. No months of setup. Just a straightforward path to getting your time back.</p>
-                    </div>
-                    <div class="max-w-6xl mx-auto">
-                        <div class="flex flex-col lg:flex-row items-center mb-20" data-aos="fade-up" data-aos-delay="0">
-                            <div class="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                                <div class="flex items-center mb-6">
-                                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">1</div>
-                                    <h3 class="text-3xl font-display font-bold text-white">Discovery Call</h3>
-                                </div>
-                                <p class="text-lg text-gray-300 mb-6">We'll spend 30 minutes diving deep into your business to identify the single biggest time-waster that's eating up your day.</p>
-                                <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
-                                    <p class="text-blue-400 font-medium mb-2">What we'll uncover:</p>
-                                    <ul class="text-gray-300 space-y-1">
-                                        <li>• Your biggest repetitive task</li>
-                                        <li>• Where you're losing the most time</li>
-                                        <li>• What's causing the most stress</li>
-                                        <li>• The perfect automation solution</li>
-                                    </ul>
-                                </div>
-                                <p class="text-sm text-gray-400 mt-4 italic">No pressure, no sales pitch. Just honest business advice.</p>
-                            </div>
-                            <div class="lg:w-1/2 lg:pl-12">
-                                <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-8 rounded-2xl border border-blue-500/30">
-                                    <div class="text-center">
-                                        <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                                            </svg>
-                                        </div>
-                                        <h4 class="text-xl font-bold text-white mb-2">30 Minutes</h4>
-                                        <p class="text-blue-200">That's all it takes to change your business forever</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col lg:flex-row-reverse items-center mb-20" data-aos="fade-up" data-aos-delay="100">
-                            <div class="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
-                                <div class="flex items-center mb-6">
-                                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">2</div>
-                                    <h3 class="text-3xl font-display font-bold text-white">I Build Your System</h3>
-                                </div>
-                                <p class="text-lg text-gray-300 mb-6">While you focus on your business, I get to work building the perfect automation that connects your existing tools and puts your admin tasks on autopilot.</p>
-                                <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
-                                    <p class="text-blue-400 font-medium mb-2">What I'll create:</p>
-                                    <ul class="text-gray-300 space-y-1">
-                                        <li>• Custom workflow automation</li>
-                                        <li>• Integration with your existing tools</li>
-                                        <li>• Testing and optimization</li>
-                                        <li>• Simple setup instructions</li>
-                                    </ul>
-                                </div>
-                                <p class="text-sm text-gray-400 mt-4 italic">You don't need to understand the tech - just enjoy the results.</p>
-                            </div>
-                            <div class="lg:w-1/2 lg:pr-12">
-                                <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-8 rounded-2xl border border-blue-500/30">
-                                    <div class="text-center">
-                                        <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0 3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                            </svg>
-                                        </div>
-                                        <h4 class="text-xl font-bold text-white mb-2">7-14 Days</h4>
-                                        <p class="text-blue-200">From concept to working automation</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex flex-col lg:flex-row items-center" data-aos="fade-up" data-aos-delay="200">
-                            <div class="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
-                                <div class="flex items-center mb-6">
-                                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">3</div>
-                                    <h3 class="text-3xl font-display font-bold text-white">Go Live & Save Time</h3>
-                                </div>
-                                <p class="text-lg text-gray-300 mb-6">I hand you the keys with a simple video guide. You immediately start saving time, and I provide 30 days of full support to make sure everything runs perfectly.</p>
-                                <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
-                                    <p class="text-blue-400 font-medium mb-2">What you get:</p>
-                                    <ul class="text-gray-300 space-y-1">
-                                        <li>• Step-by-step video guide</li>
-                                        <li>• 30 days of full support</li>
-                                        <li>• Immediate time savings</li>
-                                        <li>• Your evenings back</li>
-                                    </ul>
-                                </div>
-                                <p class="text-sm text-gray-400 mt-4 italic">Finally, work ON your business instead of IN it.</p>
-                            </div>
-                            <div class="lg:w-1/2 lg:pl-12">
-                                <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-8 rounded-2xl border border-blue-500/30">
-                                    <div class="text-center">
-                                        <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                                            </svg>
-                                        </div>
-                                        <h4 class="text-xl font-bold text-white mb-2">Instant Results</h4>
-                                        <p class="text-blue-200">Start saving time from day one</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-    
-            <section class="min-h-screen flex items-center py-16" id="offer">
-                <div class="container mx-auto px-6 section-content">
-                    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                        <div class="text-center md:text-left" data-aos="fade-right">
-                            <span class="inline-block bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-1 rounded-full mb-3">Limited Time Opportunity</span>
-                            <h2 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">Work Directly With Me</h2>
-                            <div class="flex items-center mb-4">
-                                <img alt="Savaiinaea Silva, Founder of Silva Automation" class="w-16 h-16 rounded-full border-2 border-slate-800 object-cover shadow-lg mr-4" src="assets/images/about.png" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/192x192/1e293b/e2e8f0?text=S.S.';"/>
-                                <div class="text-left">
-                                    <h3 class="text-white font-bold text-lg">Savaiinaea Silva</h3>
-                                    <p class="text-gray-400 text-sm">Founder, Silva Automation</p>
-                                </div>
-                            </div>
-                            <p class="text-base text-gray-400 mb-4">I'm looking for three founding partners to launch Silva Automation. As one of my first clients, you'll receive:</p>
-                            <ul class="space-y-3 text-gray-300 text-left">
-                               <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>A Full 50% Discount</strong> on any automation package.</span></li>
-                               <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>1 Full Year of FREE Support</strong> on the system we build.</span></li>
-                               <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Direct, Priority Access</strong> to me for any questions or tweaks.</span></li>
-                            </ul>
-                            <p class="mt-4 text-gray-400 font-semibold text-sm">This offer is strictly limited. Once the 3 spots are filled, it's gone for good.</p>
-                        </div>
-                        <div data-aos="fade-left" class="text-center md:text-left">
-                            <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-800">
-                                <h3 class="font-display font-bold text-lg mb-4 text-white">Why Work With Me?</h3>
-                                <ul class="space-y-3 text-gray-300 text-sm">
-                                   <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Technical Expertise:</strong> I specialize in building automation systems that actually work, not just look impressive.</span></li>
-                                   <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>No Geek Speak:</strong> I explain everything in plain English and focus on what matters to your business.</span></li>
-                                   <li class="flex items-start"><svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span><strong>Results Focused:</strong> I'm not here to sell you fancy tech - I'm here to solve your business problems.</span></li>
-                                </ul>
-                                <div class="mt-6 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
-                                    <p class="text-blue-400 text-center font-semibold text-sm">Limited Spots Available</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="py-8 lg:py-12 relative bg-slate-900" id="pricing">
-                <div class="container mx-auto px-6 section-content">
-                    <div class="text-center" data-aos="fade-up">
-                        <h2 class="text-3xl md:text-4xl font-bold font-display mb-3 text-white">No-Nonsense Packages. Real Results.</h2>
-                        <p class="max-w-2xl mx-auto text-base text-gray-300 mb-4">One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.</p>
-                        <div class="inline-block bg-red-100 border border-red-200 text-red-600 px-4 py-2 rounded-lg mb-4 shadow-sm text-sm"><strong>Limited Time Offer:</strong> Take <strong>50% OFF</strong> any package below!</div>
-                        <div class="inline-block bg-orange-100 border border-orange-200 text-orange-600 px-4 py-2 rounded-lg mb-8 shadow-sm text-sm font-bold">⚡ Only 3 Spots Left - Act Fast!</div>
-                    </div>
-                    <div class="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
-                        <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-xl flex flex-col border-2 border-slate-700 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full" data-aos="fade-up">
-                            <div class="p-3 -mt-8 mb-4 bg-slate-800 w-fit rounded-lg mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg></div>
-                            <h3 class="font-display font-bold text-xl mb-2 text-white text-center">Essential Package</h3>
-                            <div class="text-center mb-4">
-                                <p class="text-4xl font-display text-white">$950</p>
-                                <p class="text-sm text-green-400 font-semibold">Founding Client: $475 (50% OFF)</p>
-                            </div>
-                            <div class="mb-4 flex-grow">
-                                <p class="text-gray-300 mb-3 text-sm"><strong>The Problem It Solves:</strong> You miss out on new jobs because you're too busy to reply to website inquiries instantly. Leads fall through the cracks.</p>
-                                <p class="text-gray-300 mb-3 text-sm"><strong>The Solution:</strong> We automate your lead capture. The moment a potential customer fills out your website form, they get an instant, professional text or email confirmation, and you get a text alert with their info.</p>
-                            </div>
-                            <ul class="space-y-2 list-inside text-gray-300 mb-6 text-sm">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 "Done-For-You" lead capture workflow</li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration of 2 essential apps (e.g., your website and your phone)</li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Personal video guide on how it works</li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>30 days of post-launch support</li>
-                            </ul>
-                            <a class="mt-auto w-full text-base font-semibold bg-transparent border-2 border-blue-500 text-blue-400 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Automate My Business</a>
-                        </div>
-                        <div class="p-6 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex flex-col relative h-full shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 transform scale-105" data-aos="fade-up" data-aos-delay="100">
-                            <div class="p-3 -mt-8 mb-4 bg-white/20 backdrop-blur-lg w-fit rounded-lg mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg></div>
-                            <h3 class="font-display font-bold text-xl mb-2 text-white text-center">Growth Package</h3>
-                            <div class="text-center mb-4">
-                                <div class="inline-block bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold mb-2">Recommended</div>
-                                <p class="text-4xl font-display text-white">$2,950</p>
-                                <p class="text-sm text-green-300 font-semibold">Founding Client: $1,475 (50% OFF)</p>
-                            </div>
-                            <div class="mb-4 flex-grow">
-                                <p class="text-blue-100 mb-3 text-sm"><strong>The Problem It Solves:</strong> The endless back-and-forth emails and phone calls to schedule an appointment are wasting hours of your valuable time.</p>
-                                <p class="text-blue-100 mb-3 text-sm"><strong>The Solution:</strong> Includes everything in the <strong>Essential Package</strong>, plus a complete, automated scheduling system. New leads are automatically sent a link to book an appointment directly on your calendar.</p>
-                            </div>
-                            <ul class="space-y-2 list-inside text-blue-100 mb-6 text-sm">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Essential Package, plus:</strong></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>1 complete multi-step scheduling & reminder process automated</li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Integration of up to 5 business apps (e.g., website, calendar, video chat)</li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>A custom dashboard to track results</li>
-                            </ul>
-                            <a class="mt-auto w-full text-base font-semibold bg-orange-600 text-white py-2 px-4 rounded-lg transition-all duration-300 hover:bg-orange-700 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Start My Project</a>
-                        </div>
-                        <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-xl flex flex-col border-2 border-slate-700 shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 h-full" data-aos="fade-up" data-aos-delay="200">
-                            <div class="p-3 -mt-8 mb-4 bg-slate-800 w-fit rounded-lg mx-auto"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg></div>
-                            <h3 class="font-display font-bold text-xl mb-2 text-white text-center">Enterprise Package</h3>
-                            <div class="text-center mb-4">
-                                <p class="text-4xl font-display text-white">$3,950</p>
-                                <p class="text-sm text-green-400 font-semibold">Founding Client: $1,975 (50% OFF)</p>
-                            </div>
-                            <div class="mb-4 flex-grow">
-                                <p class="text-gray-300 mb-3 text-sm"><strong>The Problem It Solves:</strong> You're running your entire operation from your truck and a notebook. You need a real system to handle everything from getting paid to getting 5-star reviews.</p>
-                                <p class="text-gray-300 mb-3 text-sm"><strong>The Solution:</strong> The complete operational overhaul. We automate your entire client journey, from the first lead to getting paid, reviewed, and earning repeat business.</p>
-                            </div>
-                            <ul class="space-y-2 list-inside text-gray-300 mb-6 text-sm">
-                                <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><strong>Everything in Growth Package, plus:</strong></li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Full business operations audit & strategy</li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Multiple, interconnected automated systems (e.g., Invoicing, Payment Processing, Review Requests, Loyalty Programs)</li>
-                                <li class="flex items-start"><svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>Unlimited app integrations</li>
-                            </ul>
-                            <a class="mt-auto w-full text-base font-semibold bg-transparent border-2 border-blue-500 text-blue-400 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">Automate My Business</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="py-24 lg:py-32 relative" id="faq-contact">
-                
-                <div class="container mx-auto px-6 section-content">
-                    <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-                        <div data-aos="fade-right">
-                            <h2 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">Frequently Asked Questions</h2>
-                            <p class="text-gray-400 mb-8">Quick answers to common questions from service pros like you.</p>
-                            <div class="space-y-4">
-                                <details class="faq-item group bg-slate-900/50 p-6 rounded-lg border border-slate-800 cursor-pointer">
-                                    <summary class="flex justify-between items-center font-medium text-white list-none">
-                                       Do I need to be tech-savvy?
-                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                                    </summary>
-                                    <p class="text-gray-400 mt-4">Not at all. That's my job. I handle all the technical setup and give you a simple system that just works. If you can use a smartphone, you can use what I build for you.</p>
-                                </details>
-                                <details class="faq-item group bg-slate-900/50 p-6 rounded-lg border border-slate-800 cursor-pointer">
-                                    <summary class="flex justify-between items-center font-medium text-white list-none">
-                                       What apps can you automate?
-                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                                    </summary>
-                                    <p class="text-gray-400 mt-4">I can connect thousands of the most popular business apps: your CRM (like Jobber or Housecall Pro), email marketing tools, calendars, spreadsheets, accounting software (like QuickBooks), and much more.</p>
-                                </details>
-                                <details class="faq-item group bg-slate-900/50 p-6 rounded-lg border border-slate-800 cursor-pointer">
-                                    <summary class="flex justify-between items-center font-medium text-white list-none">
-                                       Is this a monthly subscription?
-                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                                    </summary>
-                                    <p class="text-gray-400 mt-4">No. My packages are a one-time investment to build and implement your custom automation system. You own it. Some of the underlying software tools may have their own minimal costs, but I always prioritize free or low-cost options.</p>
-                                </details>
-                                 <details class="faq-item group bg-slate-900/50 p-6 rounded-lg border border-slate-800 cursor-pointer">
-                                    <summary class="flex justify-between items-center font-medium text-white list-none">
-                                       How long does it take to get started?
-                                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 transform transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-                                    </summary>
-                                    <p class="text-gray-400 mt-4">After our initial discovery call, most "Starter" and "Standard" packages are fully built, tested, and handed off to you within 7-14 business days.</p>
-                                </details>
-                            </div>
-                        </div>
-
-                        <div data-aos="fade-left">
-                            <h3 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">Let's Talk</h3>
-                            <p class="text-gray-400 mb-6">Still have questions? Fill out the form and I'll personally get back to you within 24 hours.</p>
-                            <form id="contact-form" class="space-y-4 bg-slate-900/50 p-6 rounded-lg border border-slate-800" action="https://formspree.io/f/mzzaydop" method="POST">
-                                <input type="hidden" name="form-name" value="contact" />
-                                    <div>
-                                        <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Full Name</label>
-                                        <input type="text" name="name" id="name" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="John Doe">
-                                    </div>
-                                    <div>
-                                        <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email Address</label>
-                                        <input type="email" name="email" id="email" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="you@example.com">
-                                    </div>
-                                    <div>
-                                        <label for="phone" class="block text-sm font-medium text-gray-300 mb-2">Phone Number</label>
-                                        <input type="tel" name="phone" id="phone" class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="(808) 123-4567">
-                                    </div>
-                                    <div>
-                                        <label for="message" class="block text-sm font-medium text-gray-300 mb-2">How can I help?</label>
-                                        <textarea name="message" id="message" rows="3" required class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" placeholder="Tell me about the task you hate doing the most..."></textarea>
-                                    </div>
-                                    <div>
-                                        <button type="submit" class="w-full text-base font-semibold text-white bg-blue-600 py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-blue-500">
-                                            Send Message
-                                        </button>
-                                    </div>
-                                </form>
-                        </div>
-                    </div>
-                </div>
-            </section>
+   </div>
+  </header>
+  <div class="fixed top-0 right-0 h-full w-72 bg-slate-900/95 backdrop-blur-lg z-40 p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
+   <button aria-label="Close mobile menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none" id="close-mobile-menu">
+    <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+     <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+     </path>
+    </svg>
+   </button>
+   <nav class="flex flex-col space-y-8 mt-12 text-lg">
+    <a class="nav-link text-gray-300 hover:text-white" href="#solution">
+     Solution
+    </a>
+    <a class="nav-link text-gray-300 hover:text-white" href="#process">
+     Process
+    </a>
+    <a class="nav-link text-gray-300 hover:text-white" href="#offer">
+     About
+    </a>
+    <a class="nav-link text-gray-300 hover:text-white" href="#pricing">
+     Pricing
+    </a>
+    <a class="nav-link text-gray-300 hover:text-white" href="#faq-contact">
+     Contact
+    </a>
+   </nav>
+  </div>
+  <main>
+   <div id="main-view">
+    <section class="relative min-h-screen flex items-center pt-32 pb-16 md:pt-16 md:pb-0" id="hero" style="background-image: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%), url('assets/images/hero2.png'); background-color: #000000; background-size: cover; background-position: center top; background-repeat: no-repeat;">
+     <div class="container mx-auto px-6 relative z-10">
+      <div class="grid lg:grid-cols-2 gap-8 items-center min-h-screen py-16">
+       <div class="text-left lg:pr-8" data-aos="fade-right">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-4 text-white">
+         Stop Working IN Your
+         <br/>
+         Business.
+         <br/>
+         <span class="text-blue-400">
+          Start Working ON It.
+         </span>
+        </h1>
+        <p class="text-base md:text-lg mb-8 text-gray-200 max-w-lg">
+         I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back.
+        </p>
+        <a class="inline-block text-base font-semibold text-white bg-orange-600 py-3 px-8 rounded-lg transition-all duration-300 hover:bg-orange-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(249,115,22,0.5)]" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+         Start My Project
+        </a>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="py-24 lg:py-32" id="problem">
+     <div class="container mx-auto px-6 section-content">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+       <div data-aos="fade-right">
+        <img alt="Illustration of business owner pain points" class="rounded-lg shadow-2xl aspect-video object-cover" loading="lazy" src="assets/images/painpoint.png"/>
+       </div>
+       <div data-aos="fade-left">
+        <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
+         Does This Sound Familiar?
+        </h2>
+        <p class="text-lg text-gray-400 mb-6">
+         You're great at your trade, but the office work is killing you. Every day is a battle against...
+        </p>
+        <ul class="space-y-4 text-gray-300">
+         <li class="flex items-start">
+          <svg class="w-6 h-6 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Missed calls
+           </strong>
+           that could have been your next big job.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="w-6 h-6 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Forgotten follow-ups
+           </strong>
+           on quotes, leaving money on the table.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="w-6 h-6 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Endless phone tag
+           </strong>
+           just to schedule a simple appointment.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="w-6 h-6 text-red-400 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Late nights
+           </strong>
+           catching up on invoices instead of with your family.
+          </span>
+         </li>
+        </ul>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="py-24 lg:py-32" id="solution">
+     <div class="container mx-auto px-6 section-content">
+      <div class="text-center max-w-3xl mx-auto" data-aos="fade-up">
+       <h2 class="text-4xl md:text-5xl font-bold font-display mb-6 text-white">
+        Your Business, Running on Autopilot.
+       </h2>
+       <p class="text-lg text-gray-400 mb-16">
+        I don't just sell software; I build you a hands-free system that works 24/7, so you don't have to. Imagine a world where...
+       </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+       <div class="bg-slate-900/50 p-8 rounded-lg border border-slate-800" data-aos="fade-up" data-aos-delay="0">
+        <div class="bg-blue-500/10 text-blue-400 w-12 h-12 rounded-lg flex items-center justify-center mb-5">
+         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          </path>
+         </svg>
         </div>
-    
-        <div id="legal-view" class="hidden">
-          <div class="container mx-auto px-6 py-24 lg:py-32 max-w-4xl">
-            <a href="#" id="back-to-main" class="inline-block mb-12 text-blue-400 hover:text-blue-300">&larr; Back to Main Site</a>
-            <div id="terms-page" class="legal-page prose prose-invert max-w-none">
-                <h1 class="mb-6">Terms and Conditions</h1>
-                <p class="mb-6"><strong>Effective Date: January 15, 2025</strong></p>
-                
-                <p>This website, www.silvaautomation.com (the "Site"), and the services offered through it, are owned and operated by Silva Automation, a sole proprietorship organized under Hawaii law ("Silva Automation," "we," "us," or "our"). By accessing or using our Site and services, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree with any part of these Terms, you must not use our Site or services.</p>
-                
-                <h2>1. Description of Services</h2>
-                <p>Silva Automation provides business-to-business automation services, including but not limited to workflow optimization, CRM setup, and automated marketing campaigns. The specific scope of work for each project will be outlined in a separate Service Agreement and a Project Proposal, which are incorporated into these Terms by reference.</p>
-                
-                <h2>2. User Obligations</h2>
-                <p>You agree to use our Site and services only for lawful purposes and in a manner that does not infringe upon the rights of others. You agree to provide accurate and complete information when using our contact forms or engaging our services. You are prohibited from:</p>
-                <ul>
-                    <li>Using the Site in any way that could damage, disable, overburden, or impair the Site.</li>
-                    <li>Attempting to gain unauthorized access to any part of the Site or our systems.</li>
-                    <li>Using any automated means, such as robots, spiders, or scrapers, to access the Site without our express written permission.</li>
-                </ul>
-                
-                <h2>3. Intellectual Property</h2>
-                <p>All content on the Site, including text, graphics, logos, images, and software, is the property of Silva Automation or its content suppliers and is protected by intellectual property laws. As per our Service Agreement, upon full and final payment, the client will own the custom work product created specifically for them. Silva Automation retains ownership of all underlying code, general tools, templates, and pre-existing intellectual property used to create the work product.</p>
-                
-                <h2>4. Payments, Fees, and Hawaii General Excise Tax (GET)</h2>
-                <ul>
-                    <li>All prices for services are quoted in United States Dollars (USD).</li>
-                    <li>Services are subject to a fixed price as detailed in the Project Proposal.</li>
-                    <li>You agree to pay all fees and charges associated with your use of the services.</li>
-                    <li>As a business operating in Hawaii, we are subject to the Hawaii General Excise Tax (GET). This is a tax on the gross income received by a business for the privilege of doing business in Hawaii. It is not a sales tax on the customer. We may visibly pass on the cost of the GET to you, as is a common practice in Hawaii, and this will be added to your invoices as required. The GET rate for services is typically 4%.</li>
-                </ul>
-                
-                <h2>5. Limitation of Liability</h2>
-                <p>To the fullest extent permitted by law, Silva Automation shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our services.</p>
-                
-                <h2>6. Indemnification</h2>
-                <p>You agree to indemnify and hold harmless Silva Automation, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorney's fees, arising out of or in any way connected with your use of our services or your violation of these Terms.</p>
-                
-                <h2>7. Termination</h2>
-                <p>We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the services will cease immediately.</p>
-                
-                <h2>8. Governing Law and Dispute Resolution</h2>
-                <p>These Terms shall be governed by and construed in accordance with the laws of the State of Hawaii, without regard to its conflict of law principles. Any disputes arising under or in connection with these Terms shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, conducted in Honolulu, Hawaii.</p>
-                
-                <h2>9. Changes to Terms</h2>
-                <p>We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms on this page and updating the "Effective Date" at the top. Your continued use of our services after any such changes constitutes your acceptance of the new Terms.</p>
-                
-                <h2>10. Force Majeure</h2>
-                <p>Silva Automation shall not be liable for any failure or delay in performance under these Terms which is due to fire, flood, earthquake, elements of nature or acts of God, acts of war, terrorism, labor strikes, or any other cause which is beyond the reasonable control of Silva Automation, whether or not similar to the foregoing.</p>
-                
-                <h2>11. Severability</h2>
-                <p>If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. The invalid or unenforceable provision shall be replaced with a valid and enforceable provision that most closely approximates the intent of the original provision.</p>
-                
-                <h2>12. Entire Agreement</h2>
-                <p>These Terms, together with any Service Agreement and Project Proposal, constitute the entire agreement between you and Silva Automation regarding the use of our services and supersede all prior and contemporaneous understandings, agreements, representations, and warranties.</p>
-                
-                <h2>13. Warranty Disclaimer</h2>
-                <p>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. SILVA AUTOMATION MAKES NO WARRANTY THAT THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE.</p>
-                
-                <h2>14. Contact Information</h2>
-                <p>If you have any questions about these Terms, please contact us at:</p>
-                <ul>
-                    <li>Email: contact@silvaautomation.com</li>
-                    <li>Phone: (808) 308-1107</li>
-                    <li>Address: Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797</li>
-                </ul>
-            </div>
-            <div id="privacy-page" class="legal-page prose prose-invert max-w-none hidden">
-                <h1 class="mb-6">Privacy Policy</h1>
-                <p class="mb-6"><strong>Effective Date: January 15, 2025</strong></p>
-                
-                <p>This Privacy Policy describes how Silva Automation ("we," "us," or "our") collects, uses, and discloses information from users of our website and services, located at www.silvaautomation.com. We are committed to protecting your privacy and complying with all applicable laws, including the data protection principles of the State of Hawaii.</p>
-                
-                <h2>1. Information We Collect</h2>
-                <p>We collect information to provide and improve our services and to communicate with you. The types of information we may collect include:</p>
-                
-                <p><strong>Personal Information:</strong> This includes data you voluntarily provide to us via contact forms, project inquiries, or scheduling software. This may include your name, company name, email address, phone number, and any other information you provide in your communications.</p>
-                
-                <p><strong>Project and Service Data:</strong> We collect and process data required to perform our automation services, which may include customer relationship management (CRM) data, marketing campaign data, and other business information necessary to complete a project. This data is handled with strict confidentiality.</p>
-                
-                <p><strong>Usage and Technical Data:</strong> When you visit our website, we automatically collect certain information about your device and your activity. This includes your IP address, browser type, device type, operating system, and data about your interaction with our site, such as pages viewed and time spent.</p>
-                
-                <h2>2. How We Use Your Information</h2>
-                <p>We use the collected information for the following purposes:</p>
-                <ul>
-                    <li><strong>Service Delivery:</strong> To provide, maintain, and improve our automation services</li>
-                    <li><strong>Communication:</strong> To respond to your inquiries, send project updates, and provide customer support</li>
-                    <li><strong>Business Operations:</strong> To process payments, manage contracts, and conduct business analysis</li>
-                    <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and legal processes</li>
-                    <li><strong>Marketing:</strong> To send you information about our services (with your consent where required)</li>
-                </ul>
-                
-                <h2>3. Information Sharing and Disclosure</h2>
-                <p>We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:</p>
-                <ul>
-                    <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and conducting business (e.g., payment processors, hosting providers)</li>
-                    <li><strong>Legal Requirements:</strong> We may disclose information when required by law, court order, or government request</li>
-                    <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, customer information may be transferred</li>
-                    <li><strong>Consent:</strong> With your explicit consent for specific purposes</li>
-                </ul>
-                
-                <h2>4. Data Security</h2>
-                <p>We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
-                
-                <h2>5. Data Retention</h2>
-                <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Project-related data is typically retained for 7 years after project completion for business and legal purposes.</p>
-                
-                <h2>6. Your Rights</h2>
-                <p>Depending on your location, you may have the following rights regarding your personal information:</p>
-                <ul>
-                    <li><strong>Access:</strong> Request access to your personal information</li>
-                    <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
-                    <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal and contractual obligations)</li>
-                    <li><strong>Portability:</strong> Request a copy of your data in a structured format</li>
-                    <li><strong>Objection:</strong> Object to certain processing activities</li>
-                </ul>
-                <p>To exercise these rights, contact us at contact@silvaautomation.com.</p>
-                
-                <h2>7. Third-Party Links</h2>
-                <p>Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
-                
-                <h2>8. Data Breach Notification</h2>
-                <p>In the event of a data breach that may affect your personal information, we will notify you and relevant authorities as required by applicable law. We will provide notice without unreasonable delay and in no case later than 72 hours after becoming aware of the breach, unless the personal data breach is unlikely to result in a risk to your rights and freedoms.</p>
-                
-                <h2>9. Children's Privacy</h2>
-                <p>Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13 without parental consent, we will take steps to remove such information from our servers. If you believe we have collected information from a child under 13, please contact us immediately.</p>
-                
-                <h2>10. International Data Transfers</h2>
-                <p>If you are accessing our services from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States where our servers are located. By using our services, you consent to the transfer of your information to the United States and processing in accordance with this Privacy Policy.</p>
-                
-                <h2>11. Changes to This Privacy Policy</h2>
-                <p>We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Effective Date." We encourage you to review this Privacy Policy regularly.</p>
-                
-                <h2>12. Contact Information</h2>
-                <p>If you have questions or concerns about this Privacy Policy, please contact us at:</p>
-                <ul>
-                    <li>Email: contact@silvaautomation.com</li>
-                    <li>Phone: (808) 308-1107</li>
-                    <li>Address: Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797</li>
-                </ul>
-            </div>
-            <div id="cookie-page" class="legal-page prose prose-invert max-w-none hidden">
-                <h1 class="mb-6">Cookie Policy</h1>
-                <p class="mb-6"><strong>Effective Date: January 15, 2025</strong></p>
-                
-                <h2>1. What Are Cookies?</h2>
-                <p>Cookies are small text files that are placed on your device (computer, phone, or tablet) when you visit a website. They are widely used to make websites work more efficiently and to provide information to the site owners. Cookies can be "session" cookies, which are temporary and deleted when you close your browser, or "persistent" cookies, which remain on your device for a set period.</p>
-                
-                <h2>2. How We Use Cookies</h2>
-                <p>We use cookies for several purposes to enhance your experience and improve our services:</p>
-                
-                <p><strong>Essential Cookies:</strong> These cookies are strictly necessary for the operation of our website. They enable core functions such as website navigation and access to secure areas. The website cannot function properly without these cookies.</p>
-                
-                <p><strong>Analytics Cookies:</strong> We use third-party analytics services, such as Google Analytics, to collect information about how users interact with our website. This data helps us understand site traffic, measure the performance of our content, and identify areas for improvement. The information collected is aggregated and does not directly identify you.</p>
-                
-                <p><strong>Functional Cookies:</strong> These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings when you return to our website.</p>
-                
-                <p><strong>Performance Cookies:</strong> These cookies collect information about how visitors use our website, such as which pages are most popular and if users encounter error messages. This helps us improve our website's performance.</p>
-                
-                <h2>3. Types of Cookies We Use</h2>
-                <h3>Essential Cookies</h3>
-                <ul>
-                    <li>Session management cookies</li>
-                    <li>Security cookies for authentication</li>
-                    <li>Load balancing cookies</li>
-                </ul>
-                
-                <h3>Analytics and Performance Cookies</h3>
-                <ul>
-                    <li>Google Analytics (_ga, _gid, _gat)</li>
-                    <li>Website performance monitoring cookies</li>
-                    <li>Traffic analysis cookies</li>
-                </ul>
-                
-                <h3>Functional Cookies</h3>
-                <ul>
-                    <li>User preference cookies</li>
-                    <li>Language selection cookies</li>
-                    <li>Form auto-fill cookies</li>
-                </ul>
-                
-                <h2>4. Third-Party Cookies</h2>
-                <p>We may allow certain third-party services to place cookies on your device through our website. These include:</p>
-                <ul>
-                    <li><strong>Google Analytics:</strong> For website analytics and performance monitoring</li>
-                    <li><strong>Social Media Plugins:</strong> If we include social media buttons or feeds</li>
-                    <li><strong>Customer Support Tools:</strong> For live chat or support ticket functionality</li>
-                </ul>
-                
-                <h2>5. Managing Your Cookie Preferences</h2>
-                <p>You have several options for managing cookies:</p>
-                
-                <p><strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings preferences. You can typically:</p>
-                <ul>
-                    <li>View what cookies are stored on your device</li>
-                    <li>Delete cookies individually or all at once</li>
-                    <li>Block cookies from specific websites</li>
-                    <li>Block all cookies (though this may affect website functionality)</li>
-                </ul>
-                
-                <p><strong>Opt-Out Tools:</strong> For specific services like Google Analytics, you can use their opt-out tools:</p>
-                <ul>
-                    <li>Google Analytics Opt-out Browser Add-on</li>
-                </ul>
-                
-                <p><strong>Cookie Consent:</strong> When you first visit our website, you may see a cookie consent banner allowing you to accept or decline non-essential cookies.</p>
-                
-                <h2>6. Impact of Disabling Cookies</h2>
-                <p>If you choose to disable cookies, please note that:</p>
-                <ul>
-                    <li>Some features of our website may not function properly</li>
-                    <li>You may need to re-enter information more frequently</li>
-                    <li>Your user experience may be less personalized</li>
-                    <li>We may not be able to remember your preferences</li>
-                </ul>
-                
-                <h2>7. Cookie Retention</h2>
-                <p>Different cookies have different lifespans:</p>
-                <ul>
-                    <li><strong>Session Cookies:</strong> Deleted when you close your browser</li>
-                    <li><strong>Persistent Cookies:</strong> Remain for a set period, typically 1-24 months</li>
-                    <li><strong>Third-Party Cookies:</strong> Governed by the third party's retention policy</li>
-                </ul>
-                
-                <h2>8. Updates to This Cookie Policy</h2>
-                <p>We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Please revisit this page periodically to stay informed about our use of cookies.</p>
-                
-                <h2>9. Contact Us</h2>
-                <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us at:</p>
-                <ul>
-                    <li>Email: contact@silvaautomation.com</li>
-                    <li>Phone: (808) 308-1107</li>
-                    <li>Address: Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797</li>
-                </ul>
-            </div>
-            <div id="refund-page" class="legal-page prose prose-invert max-w-none hidden">
-                <h1 class="mb-6">Refund & Cancellation Policy</h1>
-                <p class="mb-6"><strong>Effective Date: January 15, 2025</strong></p>
-                
-                <p class="mb-6">This Refund & Cancellation Policy outlines the conditions under which Silva Automation ("we," "us," or "our") provides refunds and allows for the cancellation of services. This policy applies to all services purchased from us.</p>
-                
-                <h2>1. General Principles</h2>
-                <p><strong>Transparency and Fairness:</strong> We are committed to transparency and fairness in all our dealings. Our refund and cancellation terms are designed to protect both our business and your investment.</p>
-                
-                <p><strong>Service-Based:</strong> As a service-based business, our work cannot be "returned" like a physical product. Therefore, refunds are considered only when there is a documented failure on our part to meet the agreed-upon project specifications as outlined in the Project Proposal and Service Agreement.</p>
-                
-                <h2>2. Cancellation and Refund Schedule</h2>
-                <p><strong>Cancellation Before Work Commences:</strong> If you wish to cancel a project before any work has started, you may do so by providing written notice. A full refund will be granted, minus a 15% administrative fee to cover initial consultation, proposal drafting, and administrative costs. This request must be submitted in writing within 15 days of the initial payment.</p>
-                
-                <p><strong>Cancellation During the Project:</strong> Once a project has started, cancellation is subject to the work completed at the time of the cancellation request. We will retain all payments made for work completed up to that point.</p>
-                
-                <h2>3. Refund Eligibility</h2>
-                <p>Refunds may be considered in the following circumstances:</p>
-                <ul>
-                    <li><strong>Non-delivery of Services:</strong> If we fail to deliver the agreed-upon services within the timeframe specified in the Project Proposal, and no alternative arrangement has been made.</li>
-                    <li><strong>Material Breach:</strong> If there is a documented material breach of the Service Agreement on our part that substantially affects the project deliverables.</li>
-                    <li><strong>Technical Impossibility:</strong> If it becomes technically impossible to complete the project as specified through no fault of the client.</li>
-                </ul>
-                
-                <h2>4. Refund Process</h2>
-                <ul>
-                    <li>All refund requests must be submitted in writing to contact@silvaautomation.com</li>
-                    <li>Include detailed reasons for the refund request and supporting documentation</li>
-                    <li>We will review and respond to refund requests within 10 business days</li>
-                    <li>Approved refunds will be processed within 30 days using the original payment method</li>
-                </ul>
-                
-                <h2>5. Time Limits for Refund Requests</h2>
-                <p>Refund requests must be submitted within 30 days of project completion or service delivery. Requests submitted after this period will not be considered unless there are extenuating circumstances that prevented timely submission, as determined by Silva Automation in its sole discretion.</p>
-                
-                <h2>6. Refund Processing Time</h2>
-                <p>Once a refund is approved, processing times vary by payment method:</p>
-                <ul>
-                    <li>Credit/Debit Cards: 5-10 business days</li>
-                    <li>Bank Transfers: 10-15 business days</li>
-                    <li>PayPal: 3-5 business days</li>
-                    <li>Other payment methods: 10-15 business days</li>
-                </ul>
-                <p>Refunds will appear on your statement as a credit from Silva Automation. The time it takes for the refund to appear in your account depends on your financial institution.</p>
-                
-                <h2>7. Non-Refundable Items</h2>
-                <p>The following are generally not eligible for refunds:</p>
-                <ul>
-                    <li>Custom work that has been delivered and meets the agreed specifications</li>
-                    <li>Third-party software licenses or tools purchased for your project</li>
-                    <li>Time spent on consultation, planning, and project setup (beyond the initial consultation)</li>
-                    <li>Change requests or scope modifications initiated by the client</li>
-                </ul>
-                
-                <h2>8. Dispute Resolution</h2>
-                <p>If you disagree with our refund decision, you may request a review by providing additional documentation. As a final resort, disputes may be resolved through mediation or arbitration as outlined in our Terms and Conditions.</p>
-            </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-white">
+         Never Miss a Lead
+        </h3>
+        <p class="text-gray-400">
+         A missed call instantly triggers a text to the customer, capturing their details and letting them book a call on your calendar automatically.
+        </p>
+       </div>
+       <div class="bg-slate-900/50 p-8 rounded-lg border border-slate-800" data-aos="fade-up" data-aos-delay="100">
+        <div class="bg-blue-500/10 text-blue-400 w-12 h-12 rounded-lg flex items-center justify-center mb-5">
+         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          </path>
+         </svg>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-white">
+         Close More Quotes
+        </h3>
+        <p class="text-gray-400">
+         Your system automatically sends polite, professional follow-ups on every quote you send, keeping you top-of-mind until the deal is closed.
+        </p>
+       </div>
+       <div class="bg-slate-900/50 p-8 rounded-lg border border-slate-800" data-aos="fade-up" data-aos-delay="200">
+        <div class="bg-blue-500/10 text-blue-400 w-12 h-12 rounded-lg flex items-center justify-center mb-5">
+         <svg class="h-6 w-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          </path>
+         </svg>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-3 text-white">
+         Effortless Scheduling
+        </h3>
+        <p class="text-gray-400">
+         Clients book themselves into your calendar based on your real-time availability—no more back-and-forth emails or phone calls.
+        </p>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="py-24 lg:py-32" id="process">
+     <div class="container mx-auto px-6 section-content">
+      <div class="text-center max-w-4xl mx-auto mb-20" data-aos="fade-up">
+       <div class="inline-block bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
+        Simple Process
+       </div>
+       <h2 class="text-4xl md:text-6xl font-bold font-display mb-6 text-white">
+        From Chaos to
+        <span class="text-blue-400">
+         Automation
+        </span>
+        in 3 Steps
+       </h2>
+       <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+        No complex tech jargon. No months of setup. Just a straightforward path to getting your time back.
+       </p>
+      </div>
+      <div class="max-w-6xl mx-auto">
+       <div class="flex flex-col lg:flex-row items-center mb-20" data-aos="fade-up" data-aos-delay="0">
+        <div class="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
+         <div class="flex items-center mb-6">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
+           1
           </div>
-        </div>
-    </main>
-
-
-    <footer class="bg-slate-900/50 border-t border-slate-800 text-slate-400">
-       <div class="container mx-auto px-6 py-12">
-        <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
-         <div class="space-y-4">
-          <a href="#" id="home-footer-link" class="inline-block">
-           <img alt="Silva Automation Logo" class="h-10 w-auto mx-auto md:mx-0" src="assets/images/logo.png" loading="lazy"/>
-          </a>
-          <p class="text-sm">
-            Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
+          <h3 class="text-3xl font-display font-bold text-white">
+           Discovery Call
+          </h3>
+         </div>
+         <p class="text-lg text-gray-300 mb-6">
+          We'll spend 30 minutes diving deep into your business to identify the single biggest time-waster that's eating up your day.
+         </p>
+         <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+          <p class="text-blue-400 font-medium mb-2">
+           What we'll uncover:
           </p>
+          <ul class="text-gray-300 space-y-1">
+           <li>
+            • Your biggest repetitive task
+           </li>
+           <li>
+            • Where you're losing the most time
+           </li>
+           <li>
+            • What's causing the most stress
+           </li>
+           <li>
+            • The perfect automation solution
+           </li>
+          </ul>
          </div>
-         <div class="space-y-4">
-          <h4 class="font-bold text-white uppercase tracking-wider font-display">Menu</h4>
-          <nav class="flex flex-col space-y-2 text-sm">
-           <a class="hover:text-blue-400 transition-colors" href="#solution">Solution</a>
-           <a class="hover:text-blue-400 transition-colors" href="#process">Process</a>
-           <a class="hover:text-blue-400 transition-colors" href="#offer">About</a>
-           <a class="hover:text-blue-400 transition-colors" href="#pricing">Pricing</a>
-           <a class="hover:text-blue-400 transition-colors" href="#faq-contact">Contact</a>
-          </nav>
-         </div>
-         <div class="space-y-4">
-          <h4 class="font-bold text-white uppercase tracking-wider font-display">Legal</h4>
-            <nav class="flex flex-col space-y-2 text-sm">
-                <a class="legal-link hover:text-blue-400 transition-colors" href="#terms" data-page="terms-page">Terms &amp; Conditions</a>
-                <a class="legal-link hover:text-blue-400 transition-colors" href="#privacy" data-page="privacy-page">Privacy Policy</a>
-                <a class="legal-link hover:text-blue-400 transition-colors" href="#cookie" data-page="cookie-page">Cookie Policy</a>
-                <a class="legal-link hover:text-blue-400 transition-colors" href="#refund" data-page="refund-page">Refund Policy</a>
-            </nav>
-         </div>
-        </div>
-        <div class="mt-12 pt-8 border-t border-slate-800 text-center text-sm">
-         <p class="text-xs text-slate-500">
-          © <span id="current-year"></span> Silva Automation. All Rights Reserved.
+         <p class="text-sm text-gray-400 mt-4 italic">
+          No pressure, no sales pitch. Just honest business advice.
          </p>
         </div>
-       </div>
-    </footer>
-
-
-    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-[100] transform translate-y-full transition-transform duration-500 ease-out">
-         <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-slate-900 border-t border-slate-800 shadow-lg">
-             <p class="text-sm text-center md:text-left text-gray-300">
-                This website uses cookies to ensure you get the best experience. By continuing, you agree to our
-                <a class="legal-link text-blue-400 hover:underline" href="#privacy" data-page="privacy-page">Privacy Policy</a>.
-             </p>
-             <button id="accept-cookies" class="flex-shrink-0 text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 bg-blue-600 text-white hover:bg-blue-700 transition-colors">
-                Accept
-             </button>
+        <div class="lg:w-1/2 lg:pl-12">
+         <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-8 rounded-2xl border border-blue-500/30">
+          <div class="text-center">
+           <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+             </path>
+            </svg>
+           </div>
+           <h4 class="text-xl font-bold text-white mb-2">
+            30 Minutes
+           </h4>
+           <p class="text-blue-200">
+            That's all it takes to change your business forever
+           </p>
+          </div>
          </div>
+        </div>
+       </div>
+       <div class="flex flex-col lg:flex-row-reverse items-center mb-20" data-aos="fade-up" data-aos-delay="100">
+        <div class="lg:w-1/2 lg:pl-12 mb-8 lg:mb-0">
+         <div class="flex items-center mb-6">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
+           2
+          </div>
+          <h3 class="text-3xl font-display font-bold text-white">
+           I Build Your System
+          </h3>
+         </div>
+         <p class="text-lg text-gray-300 mb-6">
+          While you focus on your business, I get to work building the perfect automation that connects your existing tools and puts your admin tasks on autopilot.
+         </p>
+         <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+          <p class="text-blue-400 font-medium mb-2">
+           What I'll create:
+          </p>
+          <ul class="text-gray-300 space-y-1">
+           <li>
+            • Custom workflow automation
+           </li>
+           <li>
+            • Integration with your existing tools
+           </li>
+           <li>
+            • Testing and optimization
+           </li>
+           <li>
+            • Simple setup instructions
+           </li>
+          </ul>
+         </div>
+         <p class="text-sm text-gray-400 mt-4 italic">
+          You don't need to understand the tech - just enjoy the results.
+         </p>
+        </div>
+        <div class="lg:w-1/2 lg:pr-12">
+         <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-8 rounded-2xl border border-blue-500/30">
+          <div class="text-center">
+           <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0 3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+             </path>
+             <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+             </path>
+            </svg>
+           </div>
+           <h4 class="text-xl font-bold text-white mb-2">
+            7-14 Days
+           </h4>
+           <p class="text-blue-200">
+            From concept to working automation
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="flex flex-col lg:flex-row items-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="lg:w-1/2 lg:pr-12 mb-8 lg:mb-0">
+         <div class="flex items-center mb-6">
+          <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold mr-4">
+           3
+          </div>
+          <h3 class="text-3xl font-display font-bold text-white">
+           Go Live &amp; Save Time
+          </h3>
+         </div>
+         <p class="text-lg text-gray-300 mb-6">
+          I hand you the keys with a simple video guide. You immediately start saving time, and I provide 30 days of full support to make sure everything runs perfectly.
+         </p>
+         <div class="bg-slate-900/50 p-4 rounded-lg border border-slate-700">
+          <p class="text-blue-400 font-medium mb-2">
+           What you get:
+          </p>
+          <ul class="text-gray-300 space-y-1">
+           <li>
+            • Step-by-step video guide
+           </li>
+           <li>
+            • 30 days of full support
+           </li>
+           <li>
+            • Immediate time savings
+           </li>
+           <li>
+            • Your evenings back
+           </li>
+          </ul>
+         </div>
+         <p class="text-sm text-gray-400 mt-4 italic">
+          Finally, work ON your business instead of IN it.
+         </p>
+        </div>
+        <div class="lg:w-1/2 lg:pl-12">
+         <div class="bg-gradient-to-br from-blue-500/20 to-blue-600/20 p-8 rounded-2xl border border-blue-500/30">
+          <div class="text-center">
+           <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+            <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+             </path>
+            </svg>
+           </div>
+           <h4 class="text-xl font-bold text-white mb-2">
+            Instant Results
+           </h4>
+           <p class="text-blue-200">
+            Start saving time from day one
+           </p>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="min-h-screen flex items-center py-16" id="offer">
+     <div class="container mx-auto px-6 section-content">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+       <div class="text-center md:text-left" data-aos="fade-right">
+        <span class="inline-block bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-1 rounded-full mb-3">
+         Limited Time Opportunity
+        </span>
+        <h2 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">
+         Work Directly With Me
+        </h2>
+        <div class="flex items-center mb-4">
+         <img alt="Savaiinaea Silva, Founder of Silva Automation" class="w-16 h-16 rounded-full border-2 border-slate-800 object-cover shadow-lg mr-4" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/192x192/1e293b/e2e8f0?text=S.S.';" src="assets/images/about.png">
+          <div class="text-left">
+           <h3 class="text-white font-bold text-lg">
+            Savaiinaea Silva
+           </h3>
+           <p class="text-gray-400 text-sm">
+            Founder, Silva Automation
+           </p>
+          </div>
+         </img>
+        </div>
+        <p class="text-base text-gray-400 mb-4">
+         I'm looking for three founding partners to launch Silva Automation. As one of my first clients, you'll receive:
+        </p>
+        <ul class="space-y-3 text-gray-300 text-left">
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            A Full 50% Discount
+           </strong>
+           on any automation package.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            1 Full Year of FREE Support
+           </strong>
+           on the system we build.
+          </span>
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <span>
+           <strong>
+            Direct, Priority Access
+           </strong>
+           to me for any questions or tweaks.
+          </span>
+         </li>
+        </ul>
+        <p class="mt-4 text-gray-400 font-semibold text-sm">
+         This offer is strictly limited. Once the 3 spots are filled, it's gone for good.
+        </p>
+       </div>
+       <div class="text-center md:text-left" data-aos="fade-left">
+        <div class="bg-slate-900/50 p-6 rounded-lg border border-slate-800">
+         <h3 class="font-display font-bold text-lg mb-4 text-white">
+          Why Work With Me?
+         </h3>
+         <ul class="space-y-3 text-gray-300 text-sm">
+          <li class="flex items-start">
+           <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+           </svg>
+           <span>
+            <strong>
+             Technical Expertise:
+            </strong>
+            I specialize in building automation systems that actually work, not just look impressive.
+           </span>
+          </li>
+          <li class="flex items-start">
+           <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+           </svg>
+           <span>
+            <strong>
+             No Geek Speak:
+            </strong>
+            I explain everything in plain English and focus on what matters to your business.
+           </span>
+          </li>
+          <li class="flex items-start">
+           <svg class="w-5 h-5 text-blue-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+            <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+           </svg>
+           <span>
+            <strong>
+             Results Focused:
+            </strong>
+            I'm not here to sell you fancy tech - I'm here to solve your business problems.
+           </span>
+          </li>
+         </ul>
+         <div class="mt-6 p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+          <p class="text-blue-400 text-center font-semibold text-sm">
+           Limited Spots Available
+          </p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="py-8 lg:py-12 relative bg-slate-900" id="pricing">
+     <div class="container mx-auto px-6 section-content">
+      <div class="text-center" data-aos="fade-up">
+       <h2 class="text-3xl md:text-4xl font-bold font-display mb-3 text-white">
+        No-Nonsense Packages. Real Results.
+       </h2>
+       <p class="max-w-2xl mx-auto text-base text-gray-300 mb-4">
+        One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day.
+       </p>
+       <div class="inline-block bg-red-100 border border-red-200 text-red-600 px-4 py-2 rounded-lg mb-4 shadow-sm text-sm">
+        <strong>
+         Limited Time Offer:
+        </strong>
+        Take
+        <strong>
+         50% OFF
+        </strong>
+        any package below!
+       </div>
+       <div class="inline-block bg-orange-100 border border-orange-200 text-orange-600 px-4 py-2 rounded-lg mb-8 shadow-sm text-sm font-bold">
+        ⚡ Only 3 Spots Left - Act Fast!
+       </div>
+      </div>
+      <div class="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto items-start">
+       <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-xl flex flex-col border-2 border-blue-500 shadow-lg transition-all duration-300 h-full scale-95 hover:scale-100 hover:z-20" data-aos="fade-up">
+        <div class="p-3 -mt-8 mb-4 bg-slate-800 w-fit rounded-lg mx-auto">
+         <svg class="h-6 w-6 text-blue-400" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          </path>
+         </svg>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2 text-white text-center">
+         Essential Package
+        </h3>
+        <div class="text-center mb-4">
+         <p class="text-4xl font-display text-white">
+          $950
+         </p>
+         <p class="text-sm text-green-400 font-semibold">
+          Founding Client: $475 (50% OFF)
+         </p>
+        </div>
+        <div class="mb-4 flex-grow">
+         <p class="text-gray-300 mb-3 text-sm">
+          <strong>
+           The Problem It Solves:
+          </strong>
+          You miss out on new jobs because you're too busy to reply to website inquiries instantly. Leads fall through the cracks.
+         </p>
+         <p class="text-gray-300 mb-3 text-sm">
+          <strong>
+           The Solution:
+          </strong>
+          We automate your lead capture. The moment a potential customer fills out your website form, they get an instant, professional text or email confirmation, and you get a text alert with their info.
+         </p>
+        </div>
+        <ul class="space-y-2 list-inside text-gray-300 mb-6 text-sm">
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          1 "Done-For-You" lead capture workflow
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          Integration of 2 essential apps (e.g., your website and your phone)
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          Personal video guide on how it works
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          30 days of post-launch support
+         </li>
+        </ul>
+        <a class="mt-auto w-full text-base font-semibold bg-transparent border-2 border-blue-500 text-blue-400 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+         Automate My Business
+        </a>
+       </div>
+       <div class="p-6 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex flex-col relative h-full shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 transform scale-105 z-10" data-aos="fade-up" data-aos-delay="100">
+        <div class="p-3 -mt-8 mb-4 bg-white/20 backdrop-blur-lg w-fit rounded-lg mx-auto">
+         <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          </path>
+         </svg>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2 text-white text-center">
+         Growth Package
+        </h3>
+        <div class="text-center mb-4">
+         <div class="inline-block bg-yellow-400 text-yellow-900 px-3 py-1 rounded-full text-sm font-bold mb-2">
+          Recommended
+         </div>
+         <p class="text-4xl font-display text-white">
+          $2,950
+         </p>
+         <p class="text-sm text-green-300 font-semibold">
+          Founding Client: $1,475 (50% OFF)
+         </p>
+        </div>
+        <div class="mb-4 flex-grow">
+         <p class="text-blue-100 mb-3 text-sm">
+          <strong>
+           The Problem It Solves:
+          </strong>
+          The endless back-and-forth emails and phone calls to schedule an appointment are wasting hours of your valuable time.
+         </p>
+         <p class="text-blue-100 mb-3 text-sm">
+          <strong>
+           The Solution:
+          </strong>
+          Includes everything in the
+          <strong>
+           Essential Package
+          </strong>
+          , plus a complete, automated scheduling system. New leads are automatically sent a link to book an appointment directly on your calendar.
+         </p>
+        </div>
+        <ul class="space-y-2 list-inside text-blue-100 mb-6 text-sm">
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <strong>
+           Everything in Essential Package, plus:
+          </strong>
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          1 complete multi-step scheduling &amp; reminder process automated
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          Integration of up to 5 business apps (e.g., website, calendar, video chat)
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          A custom dashboard to track results
+         </li>
+        </ul>
+        <a class="mt-auto w-full text-base font-semibold bg-orange-600 text-white py-2 px-4 rounded-lg transition-all duration-300 hover:bg-orange-700 hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+         Start My Project
+        </a>
+       </div>
+       <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-xl flex flex-col border-2 border-blue-500 shadow-lg transition-all duration-300 h-full scale-95 hover:scale-100 hover:z-20" data-aos="fade-up" data-aos-delay="200">
+        <div class="p-3 -mt-8 mb-4 bg-slate-800 w-fit rounded-lg mx-auto">
+         <svg class="h-6 w-6 text-blue-400" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          </path>
+         </svg>
+        </div>
+        <h3 class="font-display font-bold text-xl mb-2 text-white text-center">
+         Enterprise Package
+        </h3>
+        <div class="text-center mb-4">
+         <p class="text-4xl font-display text-white">
+          $3,950
+         </p>
+         <p class="text-sm text-green-400 font-semibold">
+          Founding Client: $1,975 (50% OFF)
+         </p>
+        </div>
+        <div class="mb-4 flex-grow">
+         <p class="text-gray-300 mb-3 text-sm">
+          <strong>
+           The Problem It Solves:
+          </strong>
+          You're running your entire operation from your truck and a notebook. You need a real system to handle everything from getting paid to getting 5-star reviews.
+         </p>
+         <p class="text-gray-300 mb-3 text-sm">
+          <strong>
+           The Solution:
+          </strong>
+          The complete operational overhaul. We automate your entire client journey, from the first lead to getting paid, reviewed, and earning repeat business.
+         </p>
+        </div>
+        <ul class="space-y-2 list-inside text-gray-300 mb-6 text-sm">
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          <strong>
+           Everything in Growth Package, plus:
+          </strong>
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          Full business operations audit &amp; strategy
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          Multiple, interconnected automated systems (e.g., Invoicing, Payment Processing, Review Requests, Loyalty Programs)
+         </li>
+         <li class="flex items-start">
+          <svg class="w-5 h-5 text-blue-600 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+           <path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+           </path>
+          </svg>
+          Unlimited app integrations
+         </li>
+        </ul>
+        <a class="mt-auto w-full text-base font-semibold bg-transparent border-2 border-blue-500 text-blue-400 py-2 px-4 rounded-lg transition-all duration-300 hover:bg-blue-500 hover:text-white hover:-translate-y-1 hover:shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+         Automate My Business
+        </a>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="py-24 lg:py-32 relative" id="faq-contact">
+     <div class="container mx-auto px-6 section-content">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+       <div data-aos="fade-right">
+        <h2 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">
+         Frequently Asked Questions
+        </h2>
+        <p class="text-gray-400 mb-8">
+         Quick answers to common questions from service pros like you.
+        </p>
+        <div class="space-y-4">
+         <details class="faq-item group bg-slate-900/50 p-6 rounded-lg border border-slate-800 cursor-pointer">
+          <summary class="flex justify-between items-center font-medium text-white list-none">
+           Do I need to be tech-savvy?
+           <svg class="h-5 w-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+           </svg>
+          </summary>
+          <p class="text-gray-400 mt-4">
+           Not at all. That's my job. I handle all the technical setup and give you a simple system that just works. If you can use a smartphone, you can use what I build for you.
+          </p>
+         </details>
+         <details class="faq-item group bg-slate-900/50 p-6 rounded-lg border border-slate-800 cursor-pointer">
+          <summary class="flex justify-between items-center font-medium text-white list-none">
+           What apps can you automate?
+           <svg class="h-5 w-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+           </svg>
+          </summary>
+          <p class="text-gray-400 mt-4">
+           I can connect thousands of the most popular business apps: your CRM (like Jobber or Housecall Pro), email marketing tools, calendars, spreadsheets, accounting software (like QuickBooks), and much more.
+          </p>
+         </details>
+         <details class="faq-item group bg-slate-900/50 p-6 rounded-lg border border-slate-800 cursor-pointer">
+          <summary class="flex justify-between items-center font-medium text-white list-none">
+           Is this a monthly subscription?
+           <svg class="h-5 w-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+           </svg>
+          </summary>
+          <p class="text-gray-400 mt-4">
+           No. My packages are a one-time investment to build and implement your custom automation system. You own it. Some of the underlying software tools may have their own minimal costs, but I always prioritize free or low-cost options.
+          </p>
+         </details>
+         <details class="faq-item group bg-slate-900/50 p-6 rounded-lg border border-slate-800 cursor-pointer">
+          <summary class="flex justify-between items-center font-medium text-white list-none">
+           How long does it take to get started?
+           <svg class="h-5 w-5 transform transition-transform duration-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+           </svg>
+          </summary>
+          <p class="text-gray-400 mt-4">
+           After our initial discovery call, most "Starter" and "Standard" packages are fully built, tested, and handed off to you within 7-14 business days.
+          </p>
+         </details>
+        </div>
+       </div>
+       <div data-aos="fade-left">
+        <h3 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">
+         Let's Talk
+        </h3>
+        <p class="text-gray-400 mb-6">
+         Still have questions? Fill out the form and I'll personally get back to you within 24 hours.
+        </p>
+        <form action="https://formspree.io/f/mzzaydop" class="space-y-4 bg-slate-900/50 p-6 rounded-lg border border-slate-800" id="contact-form" method="POST">
+         <input name="form-name" type="hidden" value="contact"/>
+         <div>
+          <label class="block text-sm font-medium text-gray-300 mb-2" for="name">
+           Full Name
+          </label>
+          <input class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+         </div>
+         <div>
+          <label class="block text-sm font-medium text-gray-300 mb-2" for="email">
+           Email Address
+          </label>
+          <input class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" id="email" name="email" placeholder="you@example.com" required="" type="email"/>
+         </div>
+         <div>
+          <label class="block text-sm font-medium text-gray-300 mb-2" for="phone">
+           Phone Number
+          </label>
+          <input class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" id="phone" name="phone" placeholder="(808) 123-4567" type="tel"/>
+         </div>
+         <div>
+          <label class="block text-sm font-medium text-gray-300 mb-2" for="message">
+           How can I help?
+          </label>
+          <textarea class="w-full bg-slate-800 border border-slate-700 text-white rounded-md p-3 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition" id="message" name="message" placeholder="Tell me about the task you hate doing the most..." required="" rows="3"></textarea>
+         </div>
+         <div>
+          <button class="w-full text-base font-semibold text-white bg-blue-600 py-3 px-6 rounded-lg transition-all duration-300 hover:bg-blue-700 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900 focus:ring-blue-500" type="submit">
+           Send Message
+          </button>
+         </div>
+        </form>
+       </div>
+      </div>
+     </div>
+    </section>
+   </div>
+   <div class="hidden" id="legal-view">
+    <div class="container mx-auto px-6 py-24 lg:py-32 max-w-4xl">
+     <a class="inline-block mb-12 text-blue-400 hover:text-blue-300" href="#" id="back-to-main">
+      ← Back to Main Site
+     </a>
+     <div class="legal-page prose prose-invert max-w-none" id="terms-page">
+      <h1 class="mb-6">
+       Terms and Conditions
+      </h1>
+      <p class="mb-6">
+       <strong>
+        Effective Date: January 15, 2025
+       </strong>
+      </p>
+      <p>
+       This website, www.silvaautomation.com (the "Site"), and the services offered through it, are owned and operated by Silva Automation, a sole proprietorship organized under Hawaii law ("Silva Automation," "we," "us," or "our"). By accessing or using our Site and services, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree with any part of these Terms, you must not use our Site or services.
+      </p>
+      <h2>
+       1. Description of Services
+      </h2>
+      <p>
+       Silva Automation provides business-to-business automation services, including but not limited to workflow optimization, CRM setup, and automated marketing campaigns. The specific scope of work for each project will be outlined in a separate Service Agreement and a Project Proposal, which are incorporated into these Terms by reference.
+      </p>
+      <h2>
+       2. User Obligations
+      </h2>
+      <p>
+       You agree to use our Site and services only for lawful purposes and in a manner that does not infringe upon the rights of others. You agree to provide accurate and complete information when using our contact forms or engaging our services. You are prohibited from:
+      </p>
+      <ul>
+       <li>
+        Using the Site in any way that could damage, disable, overburden, or impair the Site.
+       </li>
+       <li>
+        Attempting to gain unauthorized access to any part of the Site or our systems.
+       </li>
+       <li>
+        Using any automated means, such as robots, spiders, or scrapers, to access the Site without our express written permission.
+       </li>
+      </ul>
+      <h2>
+       3. Intellectual Property
+      </h2>
+      <p>
+       All content on the Site, including text, graphics, logos, images, and software, is the property of Silva Automation or its content suppliers and is protected by intellectual property laws. As per our Service Agreement, upon full and final payment, the client will own the custom work product created specifically for them. Silva Automation retains ownership of all underlying code, general tools, templates, and pre-existing intellectual property used to create the work product.
+      </p>
+      <h2>
+       4. Payments, Fees, and Hawaii General Excise Tax (GET)
+      </h2>
+      <ul>
+       <li>
+        All prices for services are quoted in United States Dollars (USD).
+       </li>
+       <li>
+        Services are subject to a fixed price as detailed in the Project Proposal.
+       </li>
+       <li>
+        You agree to pay all fees and charges associated with your use of the services.
+       </li>
+       <li>
+        As a business operating in Hawaii, we are subject to the Hawaii General Excise Tax (GET). This is a tax on the gross income received by a business for the privilege of doing business in Hawaii. It is not a sales tax on the customer. We may visibly pass on the cost of the GET to you, as is a common practice in Hawaii, and this will be added to your invoices as required. The GET rate for services is typically 4%.
+       </li>
+      </ul>
+      <h2>
+       5. Limitation of Liability
+      </h2>
+      <p>
+       To the fullest extent permitted by law, Silva Automation shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our services.
+      </p>
+      <h2>
+       6. Indemnification
+      </h2>
+      <p>
+       You agree to indemnify and hold harmless Silva Automation, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorney's fees, arising out of or in any way connected with your use of our services or your violation of these Terms.
+      </p>
+      <h2>
+       7. Termination
+      </h2>
+      <p>
+       We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the services will cease immediately.
+      </p>
+      <h2>
+       8. Governing Law and Dispute Resolution
+      </h2>
+      <p>
+       These Terms shall be governed by and construed in accordance with the laws of the State of Hawaii, without regard to its conflict of law principles. Any disputes arising under or in connection with these Terms shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, conducted in Honolulu, Hawaii.
+      </p>
+      <h2>
+       9. Changes to Terms
+      </h2>
+      <p>
+       We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms on this page and updating the "Effective Date" at the top. Your continued use of our services after any such changes constitutes your acceptance of the new Terms.
+      </p>
+      <h2>
+       10. Force Majeure
+      </h2>
+      <p>
+       Silva Automation shall not be liable for any failure or delay in performance under these Terms which is due to fire, flood, earthquake, elements of nature or acts of God, acts of war, terrorism, labor strikes, or any other cause which is beyond the reasonable control of Silva Automation, whether or not similar to the foregoing.
+      </p>
+      <h2>
+       11. Severability
+      </h2>
+      <p>
+       If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions shall remain in full force and effect. The invalid or unenforceable provision shall be replaced with a valid and enforceable provision that most closely approximates the intent of the original provision.
+      </p>
+      <h2>
+       12. Entire Agreement
+      </h2>
+      <p>
+       These Terms, together with any Service Agreement and Project Proposal, constitute the entire agreement between you and Silva Automation regarding the use of our services and supersede all prior and contemporaneous understandings, agreements, representations, and warranties.
+      </p>
+      <h2>
+       13. Warranty Disclaimer
+      </h2>
+      <p>
+       THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. SILVA AUTOMATION MAKES NO WARRANTY THAT THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE.
+      </p>
+      <h2>
+       14. Contact Information
+      </h2>
+      <p>
+       If you have any questions about these Terms, please contact us at:
+      </p>
+      <ul>
+       <li>
+        Email: contact@silvaautomation.com
+       </li>
+       <li>
+        Phone: (808) 308-1107
+       </li>
+       <li>
+        Address: Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797
+       </li>
+      </ul>
+     </div>
+     <div class="legal-page prose prose-invert max-w-none hidden" id="privacy-page">
+      <h1 class="mb-6">
+       Privacy Policy
+      </h1>
+      <p class="mb-6">
+       <strong>
+        Effective Date: January 15, 2025
+       </strong>
+      </p>
+      <p>
+       This Privacy Policy describes how Silva Automation ("we," "us," or "our") collects, uses, and discloses information from users of our website and services, located at www.silvaautomation.com. We are committed to protecting your privacy and complying with all applicable laws, including the data protection principles of the State of Hawaii.
+      </p>
+      <h2>
+       1. Information We Collect
+      </h2>
+      <p>
+       We collect information to provide and improve our services and to communicate with you. The types of information we may collect include:
+      </p>
+      <p>
+       <strong>
+        Personal Information:
+       </strong>
+       This includes data you voluntarily provide to us via contact forms, project inquiries, or scheduling software. This may include your name, company name, email address, phone number, and any other information you provide in your communications.
+      </p>
+      <p>
+       <strong>
+        Project and Service Data:
+       </strong>
+       We collect and process data required to perform our automation services, which may include customer relationship management (CRM) data, marketing campaign data, and other business information necessary to complete a project. This data is handled with strict confidentiality.
+      </p>
+      <p>
+       <strong>
+        Usage and Technical Data:
+       </strong>
+       When you visit our website, we automatically collect certain information about your device and your activity. This includes your IP address, browser type, device type, operating system, and data about your interaction with our site, such as pages viewed and time spent.
+      </p>
+      <h2>
+       2. How We Use Your Information
+      </h2>
+      <p>
+       We use the collected information for the following purposes:
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Service Delivery:
+        </strong>
+        To provide, maintain, and improve our automation services
+       </li>
+       <li>
+        <strong>
+         Communication:
+        </strong>
+        To respond to your inquiries, send project updates, and provide customer support
+       </li>
+       <li>
+        <strong>
+         Business Operations:
+        </strong>
+        To process payments, manage contracts, and conduct business analysis
+       </li>
+       <li>
+        <strong>
+         Legal Compliance:
+        </strong>
+        To comply with applicable laws, regulations, and legal processes
+       </li>
+       <li>
+        <strong>
+         Marketing:
+        </strong>
+        To send you information about our services (with your consent where required)
+       </li>
+      </ul>
+      <h2>
+       3. Information Sharing and Disclosure
+      </h2>
+      <p>
+       We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Service Providers:
+        </strong>
+        We may share information with trusted third-party service providers who assist us in operating our website and conducting business (e.g., payment processors, hosting providers)
+       </li>
+       <li>
+        <strong>
+         Legal Requirements:
+        </strong>
+        We may disclose information when required by law, court order, or government request
+       </li>
+       <li>
+        <strong>
+         Business Transfers:
+        </strong>
+        In the event of a merger, acquisition, or sale of assets, customer information may be transferred
+       </li>
+       <li>
+        <strong>
+         Consent:
+        </strong>
+        With your explicit consent for specific purposes
+       </li>
+      </ul>
+      <h2>
+       4. Data Security
+      </h2>
+      <p>
+       We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.
+      </p>
+      <h2>
+       5. Data Retention
+      </h2>
+      <p>
+       We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Project-related data is typically retained for 7 years after project completion for business and legal purposes.
+      </p>
+      <h2>
+       6. Your Rights
+      </h2>
+      <p>
+       Depending on your location, you may have the following rights regarding your personal information:
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Access:
+        </strong>
+        Request access to your personal information
+       </li>
+       <li>
+        <strong>
+         Correction:
+        </strong>
+        Request correction of inaccurate or incomplete information
+       </li>
+       <li>
+        <strong>
+         Deletion:
+        </strong>
+        Request deletion of your personal information (subject to legal and contractual obligations)
+       </li>
+       <li>
+        <strong>
+         Portability:
+        </strong>
+        Request a copy of your data in a structured format
+       </li>
+       <li>
+        <strong>
+         Objection:
+        </strong>
+        Object to certain processing activities
+       </li>
+      </ul>
+      <p>
+       To exercise these rights, contact us at contact@silvaautomation.com.
+      </p>
+      <h2>
+       7. Third-Party Links
+      </h2>
+      <p>
+       Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.
+      </p>
+      <h2>
+       8. Data Breach Notification
+      </h2>
+      <p>
+       In the event of a data breach that may affect your personal information, we will notify you and relevant authorities as required by applicable law. We will provide notice without unreasonable delay and in no case later than 72 hours after becoming aware of the breach, unless the personal data breach is unlikely to result in a risk to your rights and freedoms.
+      </p>
+      <h2>
+       9. Children's Privacy
+      </h2>
+      <p>
+       Our services are not directed to children under 13 years of age. We do not knowingly collect personal information from children under 13. If we become aware that we have collected personal information from a child under 13 without parental consent, we will take steps to remove such information from our servers. If you believe we have collected information from a child under 13, please contact us immediately.
+      </p>
+      <h2>
+       10. International Data Transfers
+      </h2>
+      <p>
+       If you are accessing our services from outside the United States, please be aware that your information may be transferred to, stored, and processed in the United States where our servers are located. By using our services, you consent to the transfer of your information to the United States and processing in accordance with this Privacy Policy.
+      </p>
+      <h2>
+       11. Changes to This Privacy Policy
+      </h2>
+      <p>
+       We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Effective Date." We encourage you to review this Privacy Policy regularly.
+      </p>
+      <h2>
+       12. Contact Information
+      </h2>
+      <p>
+       If you have questions or concerns about this Privacy Policy, please contact us at:
+      </p>
+      <ul>
+       <li>
+        Email: contact@silvaautomation.com
+       </li>
+       <li>
+        Phone: (808) 308-1107
+       </li>
+       <li>
+        Address: Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797
+       </li>
+      </ul>
+     </div>
+     <div class="legal-page prose prose-invert max-w-none hidden" id="cookie-page">
+      <h1 class="mb-6">
+       Cookie Policy
+      </h1>
+      <p class="mb-6">
+       <strong>
+        Effective Date: January 15, 2025
+       </strong>
+      </p>
+      <h2>
+       1. What Are Cookies?
+      </h2>
+      <p>
+       Cookies are small text files that are placed on your device (computer, phone, or tablet) when you visit a website. They are widely used to make websites work more efficiently and to provide information to the site owners. Cookies can be "session" cookies, which are temporary and deleted when you close your browser, or "persistent" cookies, which remain on your device for a set period.
+      </p>
+      <h2>
+       2. How We Use Cookies
+      </h2>
+      <p>
+       We use cookies for several purposes to enhance your experience and improve our services:
+      </p>
+      <p>
+       <strong>
+        Essential Cookies:
+       </strong>
+       These cookies are strictly necessary for the operation of our website. They enable core functions such as website navigation and access to secure areas. The website cannot function properly without these cookies.
+      </p>
+      <p>
+       <strong>
+        Analytics Cookies:
+       </strong>
+       We use third-party analytics services, such as Google Analytics, to collect information about how users interact with our website. This data helps us understand site traffic, measure the performance of our content, and identify areas for improvement. The information collected is aggregated and does not directly identify you.
+      </p>
+      <p>
+       <strong>
+        Functional Cookies:
+       </strong>
+       These cookies enable enhanced functionality and personalization, such as remembering your preferences and settings when you return to our website.
+      </p>
+      <p>
+       <strong>
+        Performance Cookies:
+       </strong>
+       These cookies collect information about how visitors use our website, such as which pages are most popular and if users encounter error messages. This helps us improve our website's performance.
+      </p>
+      <h2>
+       3. Types of Cookies We Use
+      </h2>
+      <h3>
+       Essential Cookies
+      </h3>
+      <ul>
+       <li>
+        Session management cookies
+       </li>
+       <li>
+        Security cookies for authentication
+       </li>
+       <li>
+        Load balancing cookies
+       </li>
+      </ul>
+      <h3>
+       Analytics and Performance Cookies
+      </h3>
+      <ul>
+       <li>
+        Google Analytics (_ga, _gid, _gat)
+       </li>
+       <li>
+        Website performance monitoring cookies
+       </li>
+       <li>
+        Traffic analysis cookies
+       </li>
+      </ul>
+      <h3>
+       Functional Cookies
+      </h3>
+      <ul>
+       <li>
+        User preference cookies
+       </li>
+       <li>
+        Language selection cookies
+       </li>
+       <li>
+        Form auto-fill cookies
+       </li>
+      </ul>
+      <h2>
+       4. Third-Party Cookies
+      </h2>
+      <p>
+       We may allow certain third-party services to place cookies on your device through our website. These include:
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Google Analytics:
+        </strong>
+        For website analytics and performance monitoring
+       </li>
+       <li>
+        <strong>
+         Social Media Plugins:
+        </strong>
+        If we include social media buttons or feeds
+       </li>
+       <li>
+        <strong>
+         Customer Support Tools:
+        </strong>
+        For live chat or support ticket functionality
+       </li>
+      </ul>
+      <h2>
+       5. Managing Your Cookie Preferences
+      </h2>
+      <p>
+       You have several options for managing cookies:
+      </p>
+      <p>
+       <strong>
+        Browser Settings:
+       </strong>
+       Most web browsers allow you to control cookies through their settings preferences. You can typically:
+      </p>
+      <ul>
+       <li>
+        View what cookies are stored on your device
+       </li>
+       <li>
+        Delete cookies individually or all at once
+       </li>
+       <li>
+        Block cookies from specific websites
+       </li>
+       <li>
+        Block all cookies (though this may affect website functionality)
+       </li>
+      </ul>
+      <p>
+       <strong>
+        Opt-Out Tools:
+       </strong>
+       For specific services like Google Analytics, you can use their opt-out tools:
+      </p>
+      <ul>
+       <li>
+        Google Analytics Opt-out Browser Add-on
+       </li>
+      </ul>
+      <p>
+       <strong>
+        Cookie Consent:
+       </strong>
+       When you first visit our website, you may see a cookie consent banner allowing you to accept or decline non-essential cookies.
+      </p>
+      <h2>
+       6. Impact of Disabling Cookies
+      </h2>
+      <p>
+       If you choose to disable cookies, please note that:
+      </p>
+      <ul>
+       <li>
+        Some features of our website may not function properly
+       </li>
+       <li>
+        You may need to re-enter information more frequently
+       </li>
+       <li>
+        Your user experience may be less personalized
+       </li>
+       <li>
+        We may not be able to remember your preferences
+       </li>
+      </ul>
+      <h2>
+       7. Cookie Retention
+      </h2>
+      <p>
+       Different cookies have different lifespans:
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Session Cookies:
+        </strong>
+        Deleted when you close your browser
+       </li>
+       <li>
+        <strong>
+         Persistent Cookies:
+        </strong>
+        Remain for a set period, typically 1-24 months
+       </li>
+       <li>
+        <strong>
+         Third-Party Cookies:
+        </strong>
+        Governed by the third party's retention policy
+       </li>
+      </ul>
+      <h2>
+       8. Updates to This Cookie Policy
+      </h2>
+      <p>
+       We may update this Cookie Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. Please revisit this page periodically to stay informed about our use of cookies.
+      </p>
+      <h2>
+       9. Contact Us
+      </h2>
+      <p>
+       If you have any questions about our use of cookies or this Cookie Policy, please contact us at:
+      </p>
+      <ul>
+       <li>
+        Email: contact@silvaautomation.com
+       </li>
+       <li>
+        Phone: (808) 308-1107
+       </li>
+       <li>
+        Address: Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797
+       </li>
+      </ul>
+     </div>
+     <div class="legal-page prose prose-invert max-w-none hidden" id="refund-page">
+      <h1 class="mb-6">
+       Refund &amp; Cancellation Policy
+      </h1>
+      <p class="mb-6">
+       <strong>
+        Effective Date: January 15, 2025
+       </strong>
+      </p>
+      <p class="mb-6">
+       This Refund &amp; Cancellation Policy outlines the conditions under which Silva Automation ("we," "us," or "our") provides refunds and allows for the cancellation of services. This policy applies to all services purchased from us.
+      </p>
+      <h2>
+       1. General Principles
+      </h2>
+      <p>
+       <strong>
+        Transparency and Fairness:
+       </strong>
+       We are committed to transparency and fairness in all our dealings. Our refund and cancellation terms are designed to protect both our business and your investment.
+      </p>
+      <p>
+       <strong>
+        Service-Based:
+       </strong>
+       As a service-based business, our work cannot be "returned" like a physical product. Therefore, refunds are considered only when there is a documented failure on our part to meet the agreed-upon project specifications as outlined in the Project Proposal and Service Agreement.
+      </p>
+      <h2>
+       2. Cancellation and Refund Schedule
+      </h2>
+      <p>
+       <strong>
+        Cancellation Before Work Commences:
+       </strong>
+       If you wish to cancel a project before any work has started, you may do so by providing written notice. A full refund will be granted, minus a 15% administrative fee to cover initial consultation, proposal drafting, and administrative costs. This request must be submitted in writing within 15 days of the initial payment.
+      </p>
+      <p>
+       <strong>
+        Cancellation During the Project:
+       </strong>
+       Once a project has started, cancellation is subject to the work completed at the time of the cancellation request. We will retain all payments made for work completed up to that point.
+      </p>
+      <h2>
+       3. Refund Eligibility
+      </h2>
+      <p>
+       Refunds may be considered in the following circumstances:
+      </p>
+      <ul>
+       <li>
+        <strong>
+         Non-delivery of Services:
+        </strong>
+        If we fail to deliver the agreed-upon services within the timeframe specified in the Project Proposal, and no alternative arrangement has been made.
+       </li>
+       <li>
+        <strong>
+         Material Breach:
+        </strong>
+        If there is a documented material breach of the Service Agreement on our part that substantially affects the project deliverables.
+       </li>
+       <li>
+        <strong>
+         Technical Impossibility:
+        </strong>
+        If it becomes technically impossible to complete the project as specified through no fault of the client.
+       </li>
+      </ul>
+      <h2>
+       4. Refund Process
+      </h2>
+      <ul>
+       <li>
+        All refund requests must be submitted in writing to contact@silvaautomation.com
+       </li>
+       <li>
+        Include detailed reasons for the refund request and supporting documentation
+       </li>
+       <li>
+        We will review and respond to refund requests within 10 business days
+       </li>
+       <li>
+        Approved refunds will be processed within 30 days using the original payment method
+       </li>
+      </ul>
+      <h2>
+       5. Time Limits for Refund Requests
+      </h2>
+      <p>
+       Refund requests must be submitted within 30 days of project completion or service delivery. Requests submitted after this period will not be considered unless there are extenuating circumstances that prevented timely submission, as determined by Silva Automation in its sole discretion.
+      </p>
+      <h2>
+       6. Refund Processing Time
+      </h2>
+      <p>
+       Once a refund is approved, processing times vary by payment method:
+      </p>
+      <ul>
+       <li>
+        Credit/Debit Cards: 5-10 business days
+       </li>
+       <li>
+        Bank Transfers: 10-15 business days
+       </li>
+       <li>
+        PayPal: 3-5 business days
+       </li>
+       <li>
+        Other payment methods: 10-15 business days
+       </li>
+      </ul>
+      <p>
+       Refunds will appear on your statement as a credit from Silva Automation. The time it takes for the refund to appear in your account depends on your financial institution.
+      </p>
+      <h2>
+       7. Non-Refundable Items
+      </h2>
+      <p>
+       The following are generally not eligible for refunds:
+      </p>
+      <ul>
+       <li>
+        Custom work that has been delivered and meets the agreed specifications
+       </li>
+       <li>
+        Third-party software licenses or tools purchased for your project
+       </li>
+       <li>
+        Time spent on consultation, planning, and project setup (beyond the initial consultation)
+       </li>
+       <li>
+        Change requests or scope modifications initiated by the client
+       </li>
+      </ul>
+      <h2>
+       8. Dispute Resolution
+      </h2>
+      <p>
+       If you disagree with our refund decision, you may request a review by providing additional documentation. As a final resort, disputes may be resolved through mediation or arbitration as outlined in our Terms and Conditions.
+      </p>
+     </div>
     </div>
-    
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
-    
-    <script src="//code.tidio.co/j7grbfnaaaz7csaaeby58imgyek804ik.js" async></script>
-    
-</body>
+   </div>
+  </main>
+  <footer class="bg-slate-900/50 border-t border-slate-800 text-slate-400">
+   <div class="container mx-auto px-6 py-12">
+    <div class="grid md:grid-cols-3 gap-8 text-center md:text-left">
+     <div class="space-y-4">
+      <a class="inline-block" href="#" id="home-footer-link">
+       <img alt="Silva Automation Logo" class="h-10 w-auto mx-auto md:mx-0" loading="lazy" src="assets/images/logo.png"/>
+      </a>
+      <p class="text-sm">
+       Automation that gives you your time (and sanity) back. For service pros who want to work less and live more.
+      </p>
+     </div>
+     <div class="space-y-4">
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">
+       Menu
+      </h4>
+      <nav class="flex flex-col space-y-2 text-sm">
+       <a class="hover:text-blue-400 transition-colors" href="#solution">
+        Solution
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="#process">
+        Process
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="#offer">
+        About
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="#pricing">
+        Pricing
+       </a>
+       <a class="hover:text-blue-400 transition-colors" href="#faq-contact">
+        Contact
+       </a>
+      </nav>
+     </div>
+     <div class="space-y-4">
+      <h4 class="font-bold text-white uppercase tracking-wider font-display">
+       Legal
+      </h4>
+      <nav class="flex flex-col space-y-2 text-sm">
+       <a class="legal-link hover:text-blue-400 transition-colors" data-page="terms-page" href="#terms">
+        Terms &amp; Conditions
+       </a>
+       <a class="legal-link hover:text-blue-400 transition-colors" data-page="privacy-page" href="#privacy">
+        Privacy Policy
+       </a>
+       <a class="legal-link hover:text-blue-400 transition-colors" data-page="cookie-page" href="#cookie">
+        Cookie Policy
+       </a>
+       <a class="legal-link hover:text-blue-400 transition-colors" data-page="refund-page" href="#refund">
+        Refund Policy
+       </a>
+      </nav>
+     </div>
+    </div>
+    <div class="mt-12 pt-8 border-t border-slate-800 text-center text-sm">
+     <p class="text-xs text-slate-500">
+      ©
+      <span id="current-year">
+      </span>
+      Silva Automation. All Rights Reserved.
+     </p>
+    </div>
+   </div>
+  </footer>
+  <div class="fixed bottom-0 left-0 right-0 z-[100] transform translate-y-full transition-transform duration-500 ease-out" id="cookie-banner">
+   <div class="flex flex-col md:flex-row items-center justify-between gap-4 p-4 bg-slate-900 border-t border-slate-800 shadow-lg">
+    <p class="text-sm text-center md:text-left text-gray-300">
+     This website uses cookies to ensure you get the best experience. By continuing, you agree to our
+     <a class="legal-link text-blue-400 hover:underline" data-page="privacy-page" href="#privacy">
+      Privacy Policy
+     </a>
+     .
+    </p>
+    <button class="flex-shrink-0 text-sm py-2 px-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-slate-900 bg-blue-600 text-white hover:bg-blue-700 transition-colors" id="accept-cookies">
+     Accept
+    </button>
+   </div>
+  </div>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js">
+  </script>
+  <script src="assets/js/main.js">
+  </script>
+  <script async="" src="//code.tidio.co/j7grbfnaaaz7csaaeby58imgyek804ik.js">
+  </script>
+ </body>
 </html>
