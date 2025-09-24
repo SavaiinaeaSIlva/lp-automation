@@ -1,23 +1,21 @@
-# apply_changes.py
+# fix_subheading.py
 import sys
 from bs4 import BeautifulSoup
 
-# --- DEFINE THE NEW STYLES ---
+# --- DEFINE THE CORRECT SUBHEADING ---
 
-# Style for the main, center card (Growth Package)
-# This class string adds `z-10` to ensure it's on top by default.
-main_card_classes = "p-6 rounded-xl bg-gradient-to-br from-blue-600 to-blue-700 flex flex-col relative h-full shadow-2xl hover:shadow-3xl hover:-translate-y-2 transition-all duration-300 transform scale-105 z-10"
+# The correct text for the subheading
+subheading_text = "One price. No subscriptions. No hidden fees. Just more time for you, and less stress every day."
 
-# Style for the two side cards (Essential & Enterprise)
-# This class string adds `scale-95` and the hover effects to bring it forward.
-side_card_classes = "bg-gradient-to-b from-slate-800 to-slate-900 p-6 rounded-xl flex flex-col border-2 border-blue-500 shadow-lg transition-all duration-300 h-full scale-95 hover:scale-100 hover:z-20"
+# The correct Tailwind classes to make it visible (light gray text)
+subheading_classes = "max-w-2xl mx-auto text-base text-gray-300 mb-4"
 
 
 # --- SCRIPT LOGIC ---
 
 file_path = 'index.html'
 
-print(f"🔄 Attempting to modify '{file_path}'...")
+print(f"🔄 Attempting to fix subheading in '{file_path}'...")
 
 try:
     # Read the original HTML file
@@ -30,36 +28,34 @@ try:
         print("❌ Error: Could not find the pricing section with id='pricing'.")
         sys.exit(1)
 
-    # Find the three direct div children of the grid container within the pricing section
-    cards = pricing_section.find('div', class_='grid').find_all('div', recursive=False)
-    
-    if len(cards) != 3:
-        print(f"❌ Error: Expected to find 3 pricing cards, but found {len(cards)}. Aborting.")
+    # Find the h2 heading within the pricing section
+    h2_tag = pricing_section.find('h2', string=lambda t: 'No-Nonsense' in t if t else False)
+    if not h2_tag:
+        print("❌ Error: Could not find the main 'No-Nonsense' heading.")
         sys.exit(1)
-        
-    print(f"✅ Found {len(cards)} pricing cards.")
 
-    # Loop through the cards and apply the new classes
-    for card in cards:
-        title_tag = card.find('h3')
-        if not title_tag:
-            continue
-        
-        title = title_tag.get_text(strip=True)
-        
-        if title == "Growth Package":
-            card['class'] = main_card_classes.split()
-            print("   - Updated 'Growth Package' card.")
-        elif title in ["Essential Package", "Enterprise Package"]:
-            card['class'] = side_card_classes.split()
-            print(f"   - Updated '{title}' card.")
+    # Find the paragraph that should be the subheading (the first <p> after the <h2>)
+    subheading_p = h2_tag.find_next_sibling('p')
+
+    if subheading_p:
+        # If the tag exists, update its class and text to be sure it's correct
+        subheading_p['class'] = subheading_classes.split()
+        subheading_p.string = subheading_text
+        print("✅ Found existing subheading tag and corrected it.")
+    else:
+        # If the tag was deleted, create a new one and insert it
+        new_subheading_p = soup.new_tag('p')
+        new_subheading_p['class'] = subheading_classes.split()
+        new_subheading_p.string = subheading_text
+        h2_tag.insert_after(new_subheading_p)
+        print("✅ Subheading tag was missing. A new one has been created and inserted.")
 
     # Write the modified content back to the HTML file
     with open(file_path, 'w', encoding='utf-8') as file:
         file.write(str(soup.prettify()))
 
     print(f"✅ Successfully saved changes to '{file_path}'.")
-    print("\nNext step: Don't forget to run your Tailwind build command!")
+    print("\nNext step: Remember to run your Tailwind build command!")
 
 except FileNotFoundError:
     print(f"❌ Error: '{file_path}' not found. Make sure this script is in the same folder as your HTML file.")
