@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Silva Automation</title>
+    <meta name="description" content="Actionable advice and insights on business automation for Hawaii's service professionals.">
+    <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link href="dist/output.css" rel="stylesheet"/>
+</head>
+<body class="antialiased bg-black text-gray-300">
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a aria-label="Silva Automation Home" href="index.html">
+            <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" src="assets/images/logo.png"/>
+        </a>
+        <div class="flex items-center">
+            <nav class="hidden md:flex items-center space-x-3 text-sm">
+                <a href="index.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Home</a>
+                <a href="about.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">About</a>
+                <a href="pricing.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Pricing</a>
+                <a href="blog.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Blog</a>
+                <a href="index.html#roi-calculator" class="nav-link bg-orange-600 hover:bg-orange-700 text-white transition-all duration-300 px-6 py-2 rounded-full shadow-md">ROI Calculator</a>
+            </nav>
+            <div class="md:hidden ml-4">
+                <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-lg z-40 p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
+    <button aria-label="Close mobile menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none" id="close-mobile-menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </button>
+    <nav class="flex flex-col space-y-8 mt-12 text-lg">
+        <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
+        <a href="about.html" class="nav-link text-gray-300 hover:text-white">About</a>
+        <a href="pricing.html" class="nav-link text-gray-300 hover:text-white">Pricing</a>
+        <a href="blog.html" class="nav-link text-gray-300 hover:text-white">Blog</a>
+        <a href="index.html#roi-calculator" class="nav-link text-gray-300 hover:text-white">ROI Calculator</a>
+    </nav>
+</div>
+
+<main>
+    <!-- Page Title Section -->
+    <section class="py-16 px-6 border-b border-white/10 relative">
+        <div class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
+                    Free Resources for Hawaii Business Owners
+                </div>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-6 text-white">
+                    Learn to Work <span class="text-orange-400">Smarter, Not Harder</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+                    Actionable insights, automation strategies, and business tips specifically for Hawaii service professionals who want to reclaim their time and grow their business.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <a href="hawaii-business-automation-guide.html" class="block group glass-card p-6 rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20">
+                    <div class="aspect-video bg-slate-800 rounded-lg mb-4"></div>
+                    <span class="inline-block bg-orange-500/10 text-orange-300 text-xs font-medium px-3 py-1 rounded-full mb-2">Business Automation</span>
+                    <h3 class="text-xl font-bold font-display text-white mb-2 group-hover:text-orange-400 transition-colors">Stop Paying the "Paradise Tax" on Your Time: A Guide to Hawaii Business Automation</h3>
+                    <p class="text-sm text-gray-400 mb-4">Tired of manual tasks? Discover how our n8n automation services can save your Hawaii service business time, reduce costly errors, and help you reclaim your focus.</p>
+                    <span class="font-semibold text-sm text-white group-hover:text-orange-400 transition-colors">Read More &rarr;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-black/60 backdrop-blur-sm border-t border-white/10">
+    <div class="container mx-auto px-6 py-8">
+        <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+                <a href="index.html" class="flex items-center">
+                    <img src="assets/images/logo.png" class="h-12 w-auto" alt="Silva Automation Logo" />
+                </a>
+                <p class="mt-4 text-sm text-gray-400 max-w-xs">Automating Hawaii's service businesses to save time and increase profit.</p>
+                <div class="mt-4 space-y-2">
+                    <a href="tel:+18083081107" class="text-white hover:text-gray-300 font-semibold block">(808) 308-1107</a>
+                    <p class="text-xs text-gray-500">Serving all of Hawaii • Based in Waipahu</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase">Navigate</h2>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><a href="legal/privacy.html" class="hover:text-white">Privacy Policy</a></li>
+                        <li><a href="legal/terms.html" class="hover:text-white">Terms & Conditions</a></li>
+                        <li><a href="legal/refund.html" class="hover:text-white">Refund Policy</a></li>
+                        <li><a href="legal/cookie.html" class="hover:text-white">Cookie Policy</a></li>
+                        <li><a href="legal/sla.html" class="hover:text-white">Service Level Agreement</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-slate-800 sm:mx-auto" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-400 sm:text-center">© 2025 <a href="index.html" class="hover:underline">Silva Automation</a>. All Rights Reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+
+    // Header behavior on scroll
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+        } else {
+            header.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+        }
+    });
+
+    // Active link highlighting
+    function setActiveLink() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === 'index.html' && href.includes('index.html'))) {
+                link.classList.add('bg-orange-500', 'text-white');
+                link.classList.remove('bg-white/15');
+            } else {
+                link.classList.remove('bg-orange-500', 'text-white');
+                link.classList.add('bg-white/15');
+            }
+        });
+    }
+
+    // Set active link on page load
+    setActiveLink();
+
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('translate-x-full');
+    });
+
+    closeMobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.add('translate-x-full');
+    });
+</script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t border-white/10 p-6 transform translate-y-full transition-transform duration-300 ease-in-out">
+        <div class="container mx-auto max-w-4xl">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div class="flex-1">
+                    <h3 class="text-white font-semibold mb-2">🍪 We use cookies</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                        By clicking "Accept All", you consent to our use of cookies. 
+                        <a href="legal/cookie.html" class="text-orange-400 hover:text-orange-300 underline">Learn more</a>
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                    <button id="cookie-accept-all" class="bg-orange-600 hover:bg-orange-700 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200">
+                        Accept All
+                    </button>
+                    <button id="cookie-accept-necessary" class="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-2 rounded-lg border border-white/30 hover:border-white/50 transition-colors duration-200">
+                        Necessary Only
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Banner Functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            const cookieBanner = document.getElementById("cookie-banner");
+            const acceptAllBtn = document.getElementById("cookie-accept-all");
+            const acceptNecessaryBtn = document.getElementById("cookie-accept-necessary");
+            
+            // Check if user has already made a choice
+            if (!localStorage.getItem("cookieConsent")) {
+                setTimeout(() => {
+                    cookieBanner.classList.remove("translate-y-full");
+                }, 1000); // Show after 1 second
+            }
+            
+            // Accept all cookies
+            acceptAllBtn.addEventListener("click", function() {
+                localStorage.setItem("cookieConsent", "all");
+                cookieBanner.classList.add("translate-y-full");
+                
+                // Enable analytics and other tracking here
+                console.log("All cookies accepted");
+            });
+            
+            // Accept necessary cookies only
+            acceptNecessaryBtn.addEventListener("click", function() {
+                localStorage.setItem("cookieConsent", "necessary");
+                cookieBanner.classList.add("translate-y-full");
+                
+                // Only enable essential cookies
+                console.log("Necessary cookies only");
+            });
+        });
+    </script>
+</body>
+</html>

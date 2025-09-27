@@ -5,11 +5,10 @@
 @tailwind utilities;
 
 :root {
-  --bg-primary: #020617;
+  --bg-primary: linear-gradient(135deg, #1f2937 0%, #000000 100%);
   --bg-secondary: #0f172a;
   --text-primary: #e2e8f0;
   --text-secondary: #94a3b8;
-  --brand-blue: #3b82f6;
   --brand-orange: #f97316;
 }
 html { 
@@ -17,7 +16,7 @@ html {
   scroll-padding-top: 80px; /* Adjust for fixed header height */
 }
 body {
-  background-color: var(--bg-primary);
+  background: var(--bg-primary);
   font-family: 'Inter', sans-serif; 
   color: var(--text-primary);
   min-height: 100vh;
@@ -65,32 +64,53 @@ section {
   background: #475569;
 }
 
-/* Custom glow effect for content boxes */
-.glow-box {
-  box-shadow: 
-    0 0 30px rgba(59, 130, 246, 0.3),
-    0 0 60px rgba(59, 130, 246, 0.15),
-    0 0 90px rgba(59, 130, 246, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.2);
+/* Unified glassmorphism effect for all containers */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
-/* Blue glow for pricing packages */
-.glow-box-blue {
-  box-shadow: 
-    0 0 30px rgba(59, 130, 246, 0.3),
-    0 0 60px rgba(59, 130, 246, 0.15),
-    0 0 90px rgba(59, 130, 246, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.2);
-}
-
-/* Orange glow for pricing packages */
-.glow-box-orange {
-  box-shadow: 
-    0 0 30px rgba(249, 115, 22, 0.3),
-    0 0 60px rgba(249, 115, 22, 0.15),
-    0 0 90px rgba(249, 115, 22, 0.05),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+/* Orange accent for highlighted elements */
+.glass-card-orange {
+  background: rgba(249, 115, 22, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(249, 115, 22, 0.2);
+  box-shadow:
+    0 8px 32px rgba(249, 115, 22, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
+
+/* Custom slider styling - orange knobs */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #f97316;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.slider::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #f97316;
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
