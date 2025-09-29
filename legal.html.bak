@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva Automation - Interactive Legal Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .nav-item[aria-current="page"] {
+            background-color: #ea580c; /* orange-600 */
+            color: #ffffff; /* white */
+        }
+        .nav-item[aria-current="page"] svg {
+            color: #ffffff;
+        }
+        .content-section:not(.active) {
+            display: none;
+        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1f2937; }
+        ::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #6b7280; }
+    </style>
+</head>
+<body class="h-full antialiased text-gray-300">
+    <div class="flex flex-col h-full">
+        <header class="bg-black border-b border-white/10 py-4">
+            <div class="container mx-auto px-6 flex items-center justify-between">
+                <div class="w-1/3">
+                    <a href="index.html" class="text-blue-500 hover:text-blue-400 font-semibold text-sm transition-colors">
+                        &larr; Back to main site
+                    </a>
+                </div>
+                <div class="w-1/3 flex justify-center">
+                    <a href="index.html" aria-label="Back to Silva Automation Home">
+                        <img src="https://placehold.co/200x60/000000/FFFFFF?text=Logo" alt="Silva Automation Logo" class="h-14 w-auto">
+                    </a>
+                </div>
+                <div class="w-1/3"></div>
+            </div>
+        </header>
+
+        <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+            <aside class="w-full md:w-72 flex-shrink-0 bg-black/80 backdrop-blur-sm border-b md:border-b-0 md:border-r border-white/10 p-4">
+                <div class="mb-4">
+                    <label for="search-input" class="sr-only">Search documents</label>
+                    <input type="search" id="search-input" placeholder="Search all documents..." class="w-full px-3 py-2 text-sm bg-white/5 border border-white/20 rounded-md text-white placeholder-gray-400 focus:ring-orange-500 focus:border-orange-500 transition">
+                </div>
+                <nav id="main-nav" class="space-y-1">
+                    <a href="#terms-and-conditions" class="nav-item group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:bg-white/10 hover:text-white transition" aria-current="page">
+                        <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8.28 13.5a.5.5 0 01-.707 0l-2-2a.5.5 0 01.707-.707L8 12.293l3.72-3.72a.5.5 0 11.707.707l-4 4a.5.5 0 01-.147.105z"></path></svg>
+                        Terms & Conditions
+                    </a>
+                    <a href="#privacy-policy" class="nav-item group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:bg-white/10 hover:text-white transition">
+                         <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5.066 11.954 11.954 0 0110 18.056a11.954 11.954 0 017.834-12.99 11.954 11.954 0 01-7.834-3.122zM10 5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V5.75A.75.75 0 0110 5zm0 8a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
+                        Privacy Policy
+                    </a>
+                     <a href="#refund-policy" class="nav-item group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:bg-white/10 hover:text-white transition">
+                        <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 5.25A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25v9.5A2.25 2.25 0 0116.75 17H3.25A2.25 2.25 0 011 14.75v-9.5zm1.5 0v9.5h15v-9.5a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75zM5.5 6a.5.5 0 000 1h9a.5.5 0 000-1h-9zM5 9.5a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9a.5.5 0 01-.5-.5zm0 2.5a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path></svg>
+                        Refund & Cancellation
+                    </a>
+                    <a href="#cookie-policy" class="nav-item group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:bg-white/10 hover:text-white transition">
+                        <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 3a7 7 0 100 14 7 7 0 000-14zM6 10a1 1 0 11-2 0 1 1 0 012 0zm5-1a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                        Cookie Policy
+                    </a>
+                </nav>
+            </aside>
+            
+            <main id="content-area" class="flex-1 overflow-y-auto p-6 md:p-8">
+                
+                <article id="terms-and-conditions" class="content-section active prose prose-invert max-w-none">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Terms and Conditions</h1>
+                    <p class="text-gray-400">Effective Date: September 29, 2025</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">This website, www.silvaautomation.com (the "Site"), and the services offered through it, are owned and operated by Silva Automation. By accessing or using our Site and services, you agree to be bound by these Terms and Conditions ("Terms").</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. Description of Services</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Silva Automation provides business-to-business automation services. The specific scope of work for each project will be outlined in a separate Service Agreement and a Project Proposal, which are incorporated into these Terms by reference.</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. Client Obligations</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">You agree to use our Site and services only for lawful purposes. You agree to provide accurate, complete, and timely information, materials, and feedback necessary for the performance of the services. Client acknowledges that failure to do so may result in a corresponding delay or extension of the project timeline, for which Silva Automation shall not be held responsible.</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Project Abandonment:</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">If the Client fails to provide necessary feedback, materials, or communication for a continuous period of 30 days without prior notice, Silva Automation reserves the right to pause the project. If the period of non-communication extends to 60 days, the project may be considered abandoned by the Client. In this event, the initial deposit will be forfeited, and a fee for all work completed to date will be due.</p>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Intellectual Property Rights</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Upon full and final payment by the Client, Silva Automation grants and assigns to the Client all right, title, and interest in and to the custom deliverables created specifically for the Client under the applicable Service Agreement ("Custom Work Product"). The Custom Work Product includes the final source code, databases, and documentation created for the project. For clarity, Silva Automation retains ownership of all of its pre-existing intellectual property, including but not limited to its proprietary tools, libraries, methodologies, know-how, and any code or materials not created specifically for the Client ("Pre-Existing IP"). Client is granted a non-exclusive, royalty-free, perpetual license to use any Pre-Existing IP solely to the extent it is embedded in the Custom Work Product.</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">4. Payments, Fees, and Hawaii General Excise Tax (GET)</h2>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Payment Structure:</h3>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li>All services are provided on a fixed-price basis as outlined in your Project Proposal.</li>
+                        <li>A <strong>50% deposit</strong> is due upon signing the Service Agreement before work begins.</li>
+                        <li>A <strong>50% final payment</strong> is due upon project completion and delivery of all agreed-upon deliverables.</li>
+                        <li>All prices are quoted in United States Dollars (USD).</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Hawaii General Excise Tax (GET):</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">As a business operating in Hawaii, we are required to collect Hawaii General Excise Tax (GET). The GET rate of 4.5% is passed through to the client and will be added as a separate line item to all invoices.</p>
+                     <h3 class="text-xl font-semibold text-white mt-6 mb-3">Payment Methods:</h3>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li>We accept payment via Bank transfer (ACH), Credit/Debit card (processing fees may apply), and Check (must clear before work commences).</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Late Payments:</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">Invoices not paid within 15 days of the due date will incur a late fee of 1.5% per month (18% annually) on the outstanding balance, to the extent permitted under Hawaii law for business-to-business transactions. We reserve the right to suspend work on projects with overdue invoices exceeding 30 days.</p>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">5. Post-Delivery Support & Maintenance</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">All packages include <strong>30 days of free technical support</strong> from the date of project completion. During this period, Silva Automation will address bugs and integration issues stemming from the original implementation.</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Support Exclusions:</h3>
+                    <p class="text-gray-300 leading-relaxed font-semibold mb-4">Support is strictly limited to the original workflow and systems as delivered. Silva Automation is not obligated to provide support, free or paid, for any issues arising from:</p>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li>Any modifications, additions, or tampering with the workflow configuration (including node configurations) by the Client or any third party.</li>
+                        <li>Changes to third-party applications, APIs, or platforms that break the original integration.</li>
+                        <li>Issues caused by Client-side errors, data input problems, or changes to connected accounts.</li>
+                        <li>New features not included in the original scope of work.</li>
+                    </ul>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">After the 30-Day Support Period:</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">Support beyond 30 days is available at our current hourly rate of <strong>$125/hour</strong> or through an optional monthly support retainer.</p>
+                    
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">5.1 Optional Monthly Support Retainer</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">For clients desiring ongoing support, Silva Automation offers a monthly retainer service. The specific services, hours, and fees for this retainer will be detailed in a separate Retainer Agreement.</p>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li><strong>Services:</strong> Retainer services may include proactive workflow monitoring, minor adjustments to existing workflows, management of connected data sources (e.g., Google Spreadsheets), and priority support.</li>
+                        <li><strong>Billing:</strong> The retainer fee is billed monthly in advance and is non-refundable.</li>
+                        <li><strong>Scope:</strong> The retainer does not cover the development of new features or major workflow overhauls, which will be quoted as separate projects.</li>
+                        <li><strong>Cancellation:</strong> The Retainer Agreement can be cancelled by either party with 30 days' written notice.</li>
+                    </ul>
+                    
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">5.5 Founding Client Program - Special Terms</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Silva Automation may offer a limited <strong>Founding Client Program</strong>. Terms for this program, including discounts and support periods, will be detailed in the applicable Service Agreement.</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">Any lifetime discount offered under this program is contingent upon the Client's account remaining in good standing. This discount shall terminate immediately upon the Client's material breach of these Terms, including but not limited to non-payment of any invoice.</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">6. Client Credentials and Access</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">To deliver services, Silva Automation may require access to Client's third-party accounts. Client agrees to provide necessary credentials and permissions in a timely manner and notify us immediately if credentials are changed or compromised.</p>
+                    <p class="text-gray-300 leading-relaxed mb-4">Silva Automation agrees to store all credentials securely, use them only for the agreed-upon project scope, and delete them upon project completion. Client agrees to indemnify, defend, and hold harmless Silva Automation from any and all claims, damages, and expenses arising from any unauthorized access or data breach resulting from the use of Client-provided credentials, unless such breach is a direct result of Silva Automation's gross negligence or willful misconduct. Silva Automation agrees to comply with Hawaii's data breach notification requirements under HRS 487N in the event of a security incident involving Client's personal information.</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">7. Confidentiality</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">"Confidential Information" means any non-public information disclosed by one party to the other, whether orally or in writing, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and the circumstances of disclosure. It does not include information that is (a) publicly known, (b) already in the receiving party's possession without a breach of any obligation, or (c) independently developed by the receiving party.</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">Both parties agree to hold each other's Confidential Information in strict confidence. This obligation of confidentiality shall survive the termination of this Agreement for a period of three (3) years.</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">8. Limitation of Liability</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">IN NO EVENT SHALL SILVA AUTOMATION’S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT, WHETHER IN CONTRACT, TORT, OR UNDER ANY OTHER THEORY OF LIABILITY, EXCEED THE TOTAL AMOUNT PAID BY CLIENT HEREUNDER IN THE 12 MONTHS PRECEDING THE INCIDENT. THIS LIMITATION WILL NOT APPLY TO LIABILITY RESULTING FROM SILVA AUTOMATION'S GROSS NEGLIGENCE, WILLFUL MISCONDUCT, FRAUD, OR DATA BREACHES CAUSED BY OUR FAILURE TO MAINTAIN REASONABLE SECURITY MEASURES. NOTHING IN THESE TERMS SHALL LIMIT A PARTY'S LIABILITY WHICH CANNOT BE LIMITED OR EXCLUDED BY APPLICABLE LAW, INCLUDING RIGHTS UNDER HAWAII'S UNFAIR AND DECEPTIVE ACTS OR PRACTICES (UDAP) LAWS (HRS CHAPTER 480).</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">9. Disclaimer of Warranties</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Except as expressly stated in a signed Service Agreement, the services and information on this Site are provided "as is" and "as available" without any warranties of any kind, either express or implied.</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">10. Reliance on Third-Party Services</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Client acknowledges that the services provided are dependent on the proper functioning of third-party platforms and services (e.g., Google, Zapier, CRMs). Silva Automation is not responsible for any service interruptions, data loss, security breaches, or failures caused by these third-party platforms. Any issues originating from a third-party service are outside the scope of our support and liability.</p>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">11. Indemnification</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">You agree to indemnify and hold harmless Silva Automation from and against any claims, damages, or expenses arising out of your use of our services, your violation of these Terms, or your violation of any third-party rights.</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">12. Governing Law and Dispute Resolution</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">These Terms shall be governed by the laws of the State of Hawaii. Any dispute, claim, or controversy arising out of or relating to these Terms shall be resolved as follows: The parties shall first attempt to negotiate a resolution in good faith for a period of 30 days. If unsuccessful, the dispute shall be resolved by mandatory, binding arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. The arbitration shall take place in Honolulu, Hawaii. The parties hereby waive their right to a jury trial and agree not to participate in any class action lawsuits. Judgment on the award rendered by the arbitrator(s) may be entered in any court having jurisdiction thereof.</p>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">13. Termination</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Either party may terminate a Service Agreement for cause upon 30 days' written notice if the other party materially breaches these Terms and fails to cure such breach within the notice period. Silva Automation may suspend services immediately for non-payment. Client's rights to terminate for convenience are outlined in the Refund & Cancellation Policy.</p>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">14. Force Majeure</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Neither party shall be liable for any failure or delay in performance due to events beyond their reasonable control, including but not limited to acts of God, natural disasters, war, government actions, terrorism, or widespread internet or power outages.</p>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">15. General Provisions</h2>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li><strong>Assignment:</strong> Neither party may assign its rights or obligations hereunder without the prior written consent of the other party.</li>
+                        <li><strong>Severability:</strong> If any provision of these Terms is held to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.</li>
+                        <li><strong>Entire Agreement:</strong> These Terms, together with any applicable Service Agreement and Project Proposal, constitute the entire agreement between the parties and supersede all prior agreements.</li>
+                        <li><strong>Modification:</strong> No modification of these Terms shall be effective unless in writing and signed by both parties.</li>
+                        <li><strong>Notices:</strong> All legal notices shall be in writing and sent to the addresses specified in the Service Agreement or as otherwise designated in writing by the parties.</li>
+                    </ul>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">16. Contact Information</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">For any questions, please contact us at contact@silvaautomation.com or (808) 308-1107.</p>
+                </article>
+
+                <article id="privacy-policy" class="content-section prose prose-invert max-w-none">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Privacy Policy</h1>
+                    <p class="text-gray-400">Effective Date: September 29, 2025</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">This Privacy Policy describes how Silva Automation ("we," "us," or "our") collects, uses, and discloses information from users of our website and services.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. Information We Collect</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">We collect information to provide our services, including personal information (name, email), project data, and website usage/technical data.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. How We Use Your Information</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">We use your information for service delivery, communication, business operations, and legal compliance. We will only use your information for marketing with your explicit consent.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Information Sharing</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">We do not sell your personal information. We may share information with trusted third-party service providers (e.g., payment processors), when required by law, or with your consent.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">4. Data Security & Retention</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">We implement appropriate security measures to protect your information and retain it only as long as necessary for business or legal purposes. In the event of a data breach involving personal information, we will comply with all notification requirements under Hawaii law (HRS 487N).</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">5. Your Rights</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">You may have rights regarding your personal information, including the right to access, correct, or delete your data. To exercise these rights, please contact us.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">6. Information of Children</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Our services are not intended for individuals under the age of 18. We do not knowingly collect personal information from children.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">7. Response to 'Do Not Track' Signals</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Our website does not currently respond to "Do Not Track" (DNT) signals. We may adapt our policy as standards evolve.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">8. Contact Information</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">If you have questions, please contact us at contact@silvaautomation.com.</p>
+                </article>
+
+                <article id="refund-policy" class="content-section prose prose-invert max-w-none">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Refund & Cancellation Policy</h1>
+                    <p class="text-gray-400">Effective Date: September 29, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. General Principles</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">As a service-based business, our work involves significant time and resources and cannot be "returned." The 50% deposit secures your project in our schedule and is used for initial project setup and resource allocation.</p>
+                    
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. Project Acceptance & Final Sale</h2>
+                    <div class="bg-orange-500/10 border-l-4 border-orange-500/50 p-6 rounded-r-lg mb-6 not-prose">
+                        <p class="text-white font-semibold mb-2">Project Completion & Acceptance:</p>
+                        <p class="text-gray-300 mb-4 text-sm">A project is considered "complete" upon the electronic delivery of the final workflow file(s) and any accompanying documentation as specified in the Project Proposal. The 7-day review period commences from the time of this delivery. If no material defects are reported within this period, the project is considered formally accepted, and the final 50% payment becomes due. If Client identifies material issues within the review period, Silva Automation will have a "cure period" of 15 business days to remedy the reported issues. <strong>Upon project acceptance and receipt of the final 50% payment, the sale is considered final and no refunds will be issued.</strong></p>
+                    </div>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Cancellation by Client (Prior to Delivery)</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">The Client may terminate this agreement at any point before the final delivery of the workflow by providing written notice. Upon such termination, the Client will be refunded fifty percent (50%) of the initial 50% deposit. The remaining portion of the deposit is retained by Silva Automation to cover administrative costs and work performed up to the point of cancellation.</p>
+
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">4. Refund Eligibility for Cause</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">A refund beyond the scope of Section 3 may be considered only if Silva Automation fails to correct a material defect within the 15-business-day cure period. A "material defect" is defined as a verifiable and reproducible failure of the delivered workflow to perform a core function as explicitly described and agreed upon in the Project Proposal; it does not include stylistic preferences or requests for features not originally specified. Refund requests must be submitted in writing. If approved, a partial or full refund will be considered based on the work completed. Approved refunds will be processed within 14 business days.</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Non-Refundable Costs:</h3>
+                    <p class="text-gray-300 leading-relaxed mb-6">Third-party subscriptions or licenses purchased on behalf of the client are never refundable.</p>
+                </article>
+
+                <article id="cookie-policy" class="content-section prose prose-invert max-w-none">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Cookie Policy</h1>
+                    <p class="text-gray-400">Effective Date: September 29, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. What Are Cookies?</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Cookies are small text files placed on your device when you visit a website to make it work efficiently and provide information to site owners.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. How We Use Cookies</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">We use essential cookies for website functionality and analytics cookies (like Google Analytics) to understand how visitors interact with our site. We do not use cookies for targeted advertising.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Your Choices</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">You can control cookies through your browser settings. Disabling essential cookies may affect the functionality of our website.</p>
+                </article>
+            </main>
+        </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mainNav = document.getElementById('main-nav');
+    const navItems = mainNav.querySelectorAll('.nav-item');
+    const contentSections = document.querySelectorAll('.content-section');
+    const searchInput = document.getElementById('search-input');
+    let originalContent = new Map();
+    contentSections.forEach(section => {
+        originalContent.set(section.id, section.innerHTML);
+    });
+    function setActiveSection(hash) {
+        const targetId = (hash && document.getElementById(hash.substring(1))) 
+            ? hash.substring(1) 
+            : 'terms-and-conditions';
+        const currentHash = '#' + targetId;
+        navItems.forEach(item => {
+            if (item.getAttribute('href') === currentHash) {
+                item.setAttribute('aria-current', 'page');
+            } else {
+                item.removeAttribute('aria-current');
+            }
+        });
+        contentSections.forEach(section => {
+            if (section.id === targetId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, currentHash);
+        }
+    }
+    mainNav.addEventListener('click', function(event) {
+        const target = event.target.closest('a.nav-item');
+        if (!target) return;
+        event.preventDefault();
+        const hash = target.getAttribute('href');
+        setActiveSection(hash);
+        document.getElementById('content-area').scrollTop = 0;
+    });
+    searchInput.addEventListener('input', function(event) {
+        const searchTerm = event.target.value.trim();
+        contentSections.forEach(section => {
+            let content = originalContent.get(section.id);
+            if (searchTerm) {
+                try {
+                    const escapedSearchTerm = searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                    const regex = new RegExp(`(${escapedSearchTerm})`, 'gi');
+                    content = content.replace(regex, '<mark class="bg-yellow-300 text-black px-1 rounded">$1</mark>');
+                } catch (e) { console.error("Search regex error:", e); }
+            }
+            section.innerHTML = content;
+        });
+    });
+    const initialHash = window.location.hash || '#terms-and-conditions';
+    setActiveSection(initialHash);
+});
+</script>
+</body>
+</html>
