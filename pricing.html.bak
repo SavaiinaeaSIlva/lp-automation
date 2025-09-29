@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing & Packages - Silva Automation</title>
+    <meta name="description" content="Clear, no-nonsense pricing for automation packages designed for Hawaii service businesses. Find the right plan to start saving time and money.">
+    <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+    <link href="dist/output.css" rel="stylesheet"/>
+</head>
+<body class="antialiased bg-black text-gray-300">
+
+<header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a aria-label="Silva Automation Home" href="index.html">
+            <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" src="https://placehold.co/200x60/000000/FFFFFF?text=Logo"/>
+        </a>
+        <div class="flex items-center">
+            <nav class="hidden md:flex items-center space-x-3 text-sm">
+                <a href="index.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Home</a>
+                <a href="about.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">About</a>
+                <a href="pricing.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Pricing</a>
+                <a href="blog.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Blog</a>
+                <a href="index.html#roi-calculator" class="nav-link bg-orange-600 hover:bg-orange-700 text-white transition-all duration-300 px-6 py-2 rounded-full shadow-md">ROI Calculator</a>
+            </nav>
+            <div class="md:hidden ml-4">
+                <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-lg z-40 p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
+    <button aria-label="Close mobile menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none" id="close-mobile-menu">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+    </button>
+    <nav class="flex flex-col space-y-8 mt-12 text-lg">
+        <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
+        <a href="about.html" class="nav-link text-gray-300 hover:text-white">About</a>
+        <a href="pricing.html" class="nav-link text-gray-300 hover:text-white">Pricing</a>
+        <a href="blog.html" class="nav-link text-gray-300 hover:text-white">Blog</a>
+        <a href="index.html#roi-calculator" class="nav-link text-gray-300 hover:text-white">ROI Calculator</a>
+    </nav>
+</div>
+
+<main>
+    <!-- Page Title Section -->
+    <section class="py-16 px-6 border-b border-white/10 relative bg-black">
+        <div class="container mx-auto text-center relative z-10">
+            <div class="max-w-4xl mx-auto">
+                <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
+                    Limited Time: 50% Off Founding Client Pricing
+                </div>
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-6 text-white">
+                    No-Nonsense Packages. <span class="text-orange-400">Real Results.</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+                    Transparent, one-time project pricing. Optional support plans available for ongoing peace of mind.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400">
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        One-Time Project Fees
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        30-Day Support Included
+                    </div>
+                    <div class="flex items-center">
+                        <svg class="h-5 w-5 text-green-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                        Optional Monthly Support
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20" id="pricing-cards">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <div class="inline-block bg-gradient-to-r from-orange-500/20 to-yellow-500/20 border border-orange-500/40 text-orange-300 px-6 py-3 rounded-xl shadow-lg text-sm font-bold animate-pulse">
+                    ⚡ Limited Founding Partner Spots: Get 50% OFF &amp; 1 Year FREE Support!
+                </div>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch" data-aos="fade-up">
+                <div class="p-8 flex flex-col rounded-2xl glass-card">
+                    <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4"><svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Essential</h3>
+                    <div class="mb-4"><p class="text-4xl font-display text-white relative inline-block">$950<span class="absolute top-1/2 -right-2 -translate-y-1/2 w-full h-0.5 bg-red-400 transform -rotate-6"></span></p><p class="text-2xl text-green-400 font-semibold mt-1">Founding Client: $475</p></div>
+                    <div class="mb-4 flex-grow text-sm text-gray-300 space-y-4"><p><strong>Ideal for:</strong> Capturing every lead from your website, instantly.</p><p><strong>Outcome:</strong> Never miss a potential job because you were on-site and couldn't reply fast enough.</p></div>
+                    <ul class="space-y-3 list-inside mb-8 text-sm text-gray-200"><li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Instant Lead Response System</li><li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Connects to your Email & Phone</li></ul>
+                    <a class="mt-auto w-full text-center text-base font-semibold bg-transparent border-2 border-slate-400 text-slate-300 py-3 px-4 rounded-lg transition-all duration-300 hover:bg-slate-400 hover:text-slate-950" href="https://calendly.com/silvaautomation/consultation" target="_blank">Choose Essential</a>
+                </div>
+                <div class="p-8 flex flex-col transform md:scale-105 rounded-2xl shadow-2xl glass-card-orange">
+                    <div class="relative"><div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4"><svg class="h-8 w-8 text-orange-300" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div><div class="absolute -top-3 -right-3"><div class="inline-block bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-bold shadow-md">Recommended</div></div></div>
+                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Growth</h3>
+                    <div class="mb-4"><p class="text-4xl font-display text-white relative inline-block">$2,950<span class="absolute top-1/2 -right-2 -translate-y-1/2 w-full h-0.5 bg-gray-400 transform -rotate-6"></span></p><p class="text-2xl text-orange-300 font-semibold mt-1">Founding Client: $1,475</p></div>
+                    <div class="mb-4 flex-grow text-sm text-gray-300 space-y-4"><p><strong>Ideal for:</strong> Eliminating phone tag and scheduling headaches.</p><p><strong>Outcome:</strong> Let clients book appointments themselves, based on your availability, so you can focus on the job.</p></div>
+                    <ul class="space-y-3 list-inside mb-8 text-sm text-gray-200"><li class="flex items-start"><svg class="w-5 h-5 text-orange-300 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><strong>Everything in Essential, plus:</strong></li><li class="flex items-start"><svg class="w-5 h-5 text-orange-300 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Automated Scheduling System</li></ul>
+                    <a class="mt-auto w-full text-center text-lg font-bold bg-orange-600 text-white py-4 px-6 rounded-xl transition-all duration-300 shadow-md hover:bg-orange-700 hover:-translate-y-1" href="https://calendly.com/silvaautomation/consultation" target="_blank">Start My Project</a>
+                </div>
+                <div class="p-8 flex flex-col rounded-2xl glass-card">
+                    <div class="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4"><svg class="h-8 w-8 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+                    <h3 class="font-display font-bold text-2xl mb-2 text-white">Enterprise</h3>
+                    <div class="mb-4"><p class="text-4xl font-display text-white relative inline-block">$3,950<span class="absolute top-1/2 -right-2 -translate-y-1/2 w-full h-0.5 bg-red-400 transform -rotate-6"></span></p><p class="text-2xl text-green-400 font-semibold mt-1">Founding Client: $1,975</p></div>
+                    <div class="mb-4 flex-grow text-sm text-gray-300 space-y-4"><p><strong>Ideal for:</strong> Building a complete, scalable system to run your entire operation.</p><p><strong>Outcome:</strong> Automate everything from the first lead to the final invoice, creating a professional and efficient business machine.</p></div>
+                    <ul class="space-y-3 list-inside mb-8 text-sm text-gray-200"><li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg><strong>Everything in Growth, plus:</strong></li><li class="flex items-start"><svg class="w-5 h-5 text-white mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Full End-to-End Automation</li></ul>
+                    <a class="mt-auto w-full text-center text-base font-semibold bg-transparent border-2 border-slate-400 text-slate-300 py-3 px-4 rounded-lg transition-all duration-300 hover:bg-slate-400 hover:text-slate-950" href="https://calendly.com/silvaautomation/consultation" target="_blank">Choose Enterprise</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Retainer Section -->
+    <section class="py-20 border-t border-white/10">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto rounded-2xl glass-card p-8 md:p-12 text-center" data-aos="fade-up">
+                <div class="w-16 h-16 rounded-xl bg-white/10 flex items-center justify-center mb-6 mx-auto">
+                    <svg class="h-9 w-9 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183m-4.991-2.691v4.992h4.992v-.001M2.985 19.644l3.181-3.182m0-4.991v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0011.667 0l3.181-3.183" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">Ongoing Support & Management</h2>
+                <p class="text-gray-300 mb-8 max-w-2xl mx-auto">For businesses that want continued peace of mind. Our optional monthly retainer ensures your automations are always running smoothly and optimized for performance.</p>
+                <div class="inline-block bg-black/50 border border-white/20 rounded-xl p-6 text-left max-w-lg mx-auto mb-8">
+                    <h4 class="font-semibold text-white mb-3">Retainer services can include:</h4>
+                    <ul class="space-y-2 text-sm text-gray-200">
+                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Proactive workflow monitoring and health checks.</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Minor tweaks and adjustments to existing workflows.</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Management of connected spreadsheets or databases.</li>
+                        <li class="flex items-start"><svg class="w-5 h-5 text-green-400 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>Priority support for any questions or issues.</li>
+                    </ul>
+                </div>
+                <div>
+                     <a class="w-full sm:w-auto inline-block text-center text-base font-semibold bg-orange-600 text-white py-3 px-8 rounded-lg transition-all duration-300 hover:bg-orange-700" href="https://calendly.com/silvaautomation/consultation" target="_blank">Discuss a Retainer Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="bg-black/60 backdrop-blur-sm border-t border-white/10">
+    <div class="container mx-auto px-6 py-8">
+        <div class="md:flex md:justify-between">
+            <div class="mb-6 md:mb-0">
+                <a href="index.html" class="flex items-center">
+                    <img src="https://placehold.co/200x60/000000/FFFFFF?text=Logo" class="h-12 w-auto" alt="Silva Automation Logo" />
+                </a>
+                <p class="mt-4 text-sm text-gray-400 max-w-xs">Automating Hawaii's service businesses to save time and increase profit.</p>
+                <div class="mt-4 space-y-2">
+                    <a href="tel:+18083081107" class="text-white hover:text-gray-300 font-semibold block">(808) 308-1107</a>
+                    <p class="text-xs text-gray-500">Serving all of Hawaii • Based in Waipahu</p>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase">Navigate</h2>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><a href="about.html" class="hover:text-white">About</a></li>
+                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                        <li><a href="blog.html" class="hover:text-white">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
+                    <ul class="text-gray-400 space-y-3">
+                        <li><a href="legal.html" class="hover:text-white">Legal Center</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-slate-800 sm:mx-auto" />
+        <div class="sm:flex sm:items-center sm:justify-between">
+            <span class="text-sm text-gray-400 sm:text-center">© 2025 <a href="index.html" class="hover:underline">Silva Automation</a>. All Rights Reserved.</span>
+        </div>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 800,
+        easing: 'ease-in-out',
+        once: true
+    });
+
+    // Header behavior on scroll
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 50) {
+            header.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+        } else {
+            header.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+        }
+    });
+
+    // Active link highlighting
+    function setActiveLink() {
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === currentPage || (currentPage === 'index.html' && href.includes('index.html'))) {
+                link.classList.add('bg-orange-500', 'text-white');
+                link.classList.remove('bg-white/15');
+            } else {
+                link.classList.remove('bg-orange-500', 'text-white');
+                link.classList.add('bg-white/15');
+            }
+        });
+    }
+
+    // Set active link on page load
+    setActiveLink();
+
+    // Mobile menu functionality
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('translate-x-full');
+    });
+
+    closeMobileMenu.addEventListener('click', function() {
+        mobileMenu.classList.add('translate-x-full');
+    });
+</script>
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t border-white/10 p-6 transform translate-y-full transition-transform duration-300 ease-in-out">
+        <div class="container mx-auto max-w-4xl">
+            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                <div class="flex-1">
+                    <h3 class="text-white font-semibold mb-2">🍪 We use cookies</h3>
+                    <p class="text-gray-300 text-sm leading-relaxed">
+                        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. 
+                        By clicking "Accept All", you consent to our use of cookies. 
+                        <a href="legal/cookie.html" class="text-orange-400 hover:text-orange-300 underline">Learn more</a>
+                    </p>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3 shrink-0">
+                    <button id="cookie-accept-all" class="bg-orange-600 hover:bg-orange-700 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200">
+                        Accept All
+                    </button>
+                    <button id="cookie-accept-necessary" class="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-2 rounded-lg border border-white/30 hover:border-white/50 transition-colors duration-200">
+                        Necessary Only
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Cookie Banner Functionality
+        document.addEventListener("DOMContentLoaded", function() {
+            const cookieBanner = document.getElementById("cookie-banner");
+            const acceptAllBtn = document.getElementById("cookie-accept-all");
+            const acceptNecessaryBtn = document.getElementById("cookie-accept-necessary");
+            
+            // Check if user has already made a choice
+            if (!localStorage.getItem("cookieConsent")) {
+                setTimeout(() => {
+                    cookieBanner.classList.remove("translate-y-full");
+                }, 1000); // Show after 1 second
+            }
+            
+            // Accept all cookies
+            acceptAllBtn.addEventListener("click", function() {
+                localStorage.setItem("cookieConsent", "all");
+                cookieBanner.classList.add("translate-y-full");
+                
+                // Enable analytics and other tracking here
+                console.log("All cookies accepted");
+            });
+            
+            // Accept necessary cookies only
+            acceptNecessaryBtn.addEventListener("click", function() {
+                localStorage.setItem("cookieConsent", "necessary");
+                cookieBanner.classList.add("translate-y-full");
+                
+                // Only enable essential cookies
+                console.log("Necessary cookies only");
+            });
+        });
+    </script>
+    <script>
+        // Consent-gated Google Analytics (GA4)
+        document.addEventListener('DOMContentLoaded', function() {
+            function loadGA() {
+                if (window.gtagLoaded) return;
+                window.gtagLoaded = true;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85';
+                document.head.appendChild(s);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-6T97Y5LX85');
+            }
+
+            if (localStorage.getItem('cookieConsent') === 'all') {
+                loadGA();
+            }
+
+            var acceptAllBtn = document.getElementById('cookie-accept-all');
+            if (acceptAllBtn) {
+                acceptAllBtn.addEventListener('click', function() {
+                    loadGA();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

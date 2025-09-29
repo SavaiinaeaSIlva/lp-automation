@@ -18,7 +18,7 @@
   <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
     <a aria-label="Silva Automation Home" href="index.html">
-     <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" src="assets/images/logo.png"/>
+     <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" src="https://placehold.co/200x60/000000/FFFFFF?text=Logo"/>
     </a>
     <div class="flex items-center">
      <nav class="hidden md:flex items-center space-x-3 text-sm">
@@ -242,7 +242,8 @@
     <div class="md:flex md:justify-between">
      <div class="mb-6 md:mb-0">
       <a class="flex items-center" href="index.html">
-       <img alt="Silva Automation Logo" class="h-12 w-auto" src="assets/images/logo.png"/>
+       <img alt="Silva Automation Logo" class="h-12 w-auto" src="https://placehold.co/200x60/000000/FFFFFF?text=Logo">
+       </img>
       </a>
       <p class="mt-4 text-sm text-gray-400 max-w-xs">
        Automating Hawaii's service businesses to save time and increase profit.
