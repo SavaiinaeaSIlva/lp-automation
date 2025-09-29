@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full bg-black">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva Automation - Interactive Legal Framework</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles for dark mode and active states */
+        .nav-item[aria-current="page"] {
+            background-color: #ea580c; /* orange-600 */
+            color: #ffffff; /* white */
+        }
+        .nav-item[aria-current="page"] svg {
+            color: #ffffff;
+        }
+        .content-section:not(.active) {
+            display: none;
+        }
+        /* Dark mode scrollbar for a better aesthetic */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1f2937; /* gray-800 */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4b5563; /* gray-600 */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #6b7280; /* gray-500 */
+        }
+    </style>
+</head>
+<body class="h-full antialiased text-gray-300">
+    <div class="flex flex-col h-full">
+        <header class="bg-black border-b border-white/10 py-4">
+    <div class="container mx-auto px-6 flex justify-center">
+        <a href="index.html" aria-label="Back to Silva Automation Home">
+            <img src="assets/images/logo.png" alt="Silva Automation Logo" class="h-14 w-auto">
+        </a>
+    </div>
+</header>
+
+        <div class="flex-1 flex flex-col md:flex-row overflow-hidden">
+            <aside class="w-full md:w-72 flex-shrink-0 bg-black/80 backdrop-blur-sm border-b md:border-b-0 md:border-r border-white/10 p-4">
+                <div class="mb-4">
+                    <label for="search-input" class="sr-only">Search documents</label>
+                    <input type="search" id="search-input" placeholder="Search all documents..." class="w-full px-3 py-2 text-sm bg-white/5 border border-white/20 rounded-md text-white placeholder-gray-400 focus:ring-orange-500 focus:border-orange-500 transition">
+                </div>
+                <nav id="main-nav" class="space-y-1">
+                    <a href="#terms-and-conditions" class="nav-item group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:bg-white/10 hover:text-white transition" aria-current="page">
+                        <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8.28 13.5a.5.5 0 01-.707 0l-2-2a.5.5 0 01.707-.707L8 12.293l3.72-3.72a.5.5 0 11.707.707l-4 4a.5.5 0 01-.147.105z"></path></svg>
+                        Terms & Conditions
+                    </a>
+                    <a href="#privacy-policy" class="nav-item group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:bg-white/10 hover:text-white transition">
+                         <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5.066 11.954 11.954 0 0110 18.056a11.954 11.954 0 017.834-12.99 11.954 11.954 0 01-7.834-3.122zM10 5a.75.75 0 01.75.75v5.5a.75.75 0 01-1.5 0V5.75A.75.75 0 0110 5zm0 8a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
+                        Privacy Policy
+                    </a>
+                     <a href="#refund-policy" class="nav-item group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:bg-white/10 hover:text-white transition">
+                        <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M1 5.25A2.25 2.25 0 013.25 3h13.5A2.25 2.25 0 0119 5.25v9.5A2.25 2.25 0 0116.75 17H3.25A2.25 2.25 0 011 14.75v-9.5zm1.5 0v9.5h15v-9.5a.75.75 0 00-.75-.75H3.25a.75.75 0 00-.75.75zM5.5 6a.5.5 0 000 1h9a.5.5 0 000-1h-9zM5 9.5a.5.5 0 01.5-.5h9a.5.5 0 010 1h-9a.5.5 0 01-.5-.5zm0 2.5a.5.5 0 01.5-.5h5a.5.5 0 010 1h-5a.5.5 0 01-.5-.5z" clip-rule="evenodd"></path></svg>
+                        Refund & Cancellation
+                    </a>
+                    <a href="#cookie-policy" class="nav-item group flex items-center px-3 py-2 text-sm font-medium rounded-md text-gray-300 hover:bg-white/10 hover:text-white transition">
+                        <svg class="mr-3 h-5 w-5 text-gray-400 group-hover:text-gray-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M10 3a7 7 0 100 14 7 7 0 000-14zM6 10a1 1 0 11-2 0 1 1 0 012 0zm5-1a1 1 0 11-2 0 1 1 0 012 0zm5 1a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+                        Cookie Policy
+                    </a>
+                    
+                </nav>
+            </aside>
+            
+            <main id="content-area" class="flex-1 overflow-y-auto p-6 md:p-8">
+                
+                <article id="terms-and-conditions" class="content-section active prose prose-invert max-w-none">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Terms and Conditions</h1>
+                    <p class="text-gray-400">Effective Date: September 3, 2025</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">This website, www.silvaautomation.com (the "Site"), and the services offered through it, are owned and operated by Silva Automation, a sole proprietorship organized under Hawaii law ("Silva Automation," "we," "us," or "our"). By accessing or using our Site and services, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree with any part of these Terms, you must not use our Site or services.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. Description of Services</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Silva Automation provides business-to-business automation services, including but not limited to workflow optimization, CRM setup, and automated marketing campaigns. The specific scope of work for each project will be outlined in a separate Service Agreement and a Project Proposal, which are incorporated into these Terms by reference.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. User Obligations</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">You agree to use our Site and services only for lawful purposes and in a manner that does not infringe upon the rights of others. You agree to provide accurate and complete information when using our contact forms or engaging our services. You are prohibited from:</p>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li>Using the Site in any way that could damage, disable, overburden, or impair the Site.</li>
+                        <li>Attempting to gain unauthorized access to any part of the Site or our systems.</li>
+                        <li>Using any automated means, such as robots, spiders, or scrapers, to access the Site without our express written permission.</li>
+                    </ul>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Intellectual Property</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">All content on the Site, including text, graphics, logos, images, and software, is the property of Silva Automation or its content suppliers and is protected by intellectual property laws. As per our Service Agreement, upon full and final payment, the client will own the custom work product created specifically for them. Silva Automation retains ownership of all underlying code, general tools, templates, and pre-existing intellectual property used to create the work product.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">4. Payments, Fees, and Hawaii General Excise Tax (GET)</h2>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li>All prices for services are quoted in United States Dollars (USD).</li>
+                        <li>Services are subject to a fixed price as detailed in the Project Proposal.</li>
+                        <li>You agree to pay all fees and charges associated with your use of the services.</li>
+                        <li>As a business operating in Hawaii, we are subject to the Hawaii General Excise Tax (GET). This is a tax on the gross income received by a business for the privilege of doing business in Hawaii. It is not a sales tax on the customer. We may visibly pass on the cost of the GET to you, as is a common practice in Hawaii, and this will be added to your invoices as required. The GET rate for services is typically 4%.</li>
+                    </ul>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">5. Limitation of Liability</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">To the fullest extent permitted by law, Silva Automation shall not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits or revenues, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses, resulting from your use of our services.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">6. Indemnification</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">You agree to indemnify and hold harmless Silva Automation, its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses, including reasonable attorney's fees, arising out of or in any way connected with your use of our services or your violation of these Terms.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">7. Termination</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">We may terminate or suspend your access to our services immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the services will cease immediately.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">8. Governing Law and Dispute Resolution</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">These Terms shall be governed by and construed in accordance with the laws of the State of Hawaii, without regard to its conflict of law principles. Any disputes arising under or in connection with these Terms shall be resolved through binding arbitration in accordance with the rules of the American Arbitration Association, conducted in Honolulu, Hawaii.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">9. Changes to Terms</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">We reserve the right to modify these Terms at any time. We will notify you of any changes by posting the new Terms on this page and updating the "Effective Date" at the top. Your continued use of our services after any such changes constitutes your acceptance of the new Terms.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">10. Contact Information</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">If you have any questions about these Terms, please contact us at:</p>
+                    <div class="bg-gray-800/50 p-6 rounded-lg not-prose">
+                        <p class="text-white font-semibold mb-2">Email:</p>
+                        <p class="text-orange-400 mb-4">contact@silvaautomation.com</p>
+                        <p class="text-white font-semibold mb-2">Phone:</p>
+                        <p class="text-orange-400 mb-4">(808) 308-1107</p>
+                        <p class="text-white font-semibold mb-2">Address:</p>
+                        <p class="text-gray-300">Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797</p>
+                    </div>
+                </article>
+
+                <article id="privacy-policy" class="content-section prose prose-invert max-w-none">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Privacy Policy</h1>
+                    <p class="text-gray-400">Effective Date: September 3, 2025</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">This Privacy Policy describes how Silva Automation ("we," "us," or "our") collects, uses, and discloses information from users of our website and services, located at www.silvaautomation.com. We are committed to protecting your privacy and complying with all applicable laws, including the data protection principles of the State of Hawaii.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. Information We Collect</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">We collect information to provide and improve our services and to communicate with you. The types of information we may collect include:</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Personal Information:</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">This includes data you voluntarily provide to us via contact forms, project inquiries, or scheduling software. This may include your name, company name, email address, phone number, and any other information you provide in your communications.</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Project and Service Data:</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">We collect and process data required to perform our automation services, which may include customer relationship management (CRM) data, marketing campaign data, and other business information necessary to complete a project. This data is handled with strict confidentiality.</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Usage and Technical Data:</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">When you visit our website, we automatically collect certain information about your device and your activity. This includes your IP address, browser type, device type, operating system, and data about your interaction with our site, such as pages viewed and time spent.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. How We Use Your Information</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">We use the collected information for the following purposes:</p>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li><strong>Service Delivery:</strong> To provide, maintain, and improve our automation services</li>
+                        <li><strong>Communication:</strong> To respond to your inquiries, send project updates, and provide customer support</li>
+                        <li><strong>Business Operations:</strong> To process payments, manage contracts, and conduct business analysis</li>
+                        <li><strong>Legal Compliance:</strong> To comply with applicable laws, regulations, and legal processes</li>
+                        <li><strong>Marketing:</strong> To send you information about our services (with your consent where required)</li>
+                    </ul>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Information Sharing and Disclosure</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">We do not sell, trade, or otherwise transfer your personal information to third parties except in the following circumstances:</p>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li><strong>Service Providers:</strong> We may share information with trusted third-party service providers who assist us in operating our website and conducting business (e.g., payment processors, hosting providers)</li>
+                        <li><strong>Legal Requirements:</strong> We may disclose information when required by law, court order, or government request</li>
+                        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, customer information may be transferred</li>
+                        <li><strong>Consent:</strong> With your explicit consent for specific purposes</li>
+                    </ul>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">4. Data Security</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">5. Data Retention</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, unless a longer retention period is required or permitted by law. Project-related data is typically retained for 7 years after project completion for business and legal purposes.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">6. Your Rights</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Depending on your location, you may have the following rights regarding your personal information:</p>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li><strong>Access:</strong> Request access to your personal information</li>
+                        <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
+                        <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal and contractual obligations)</li>
+                        <li><strong>Portability:</strong> Request a copy of your data in a structured format</li>
+                        <li><strong>Objection:</strong> Object to certain processing activities</li>
+                    </ul>
+                    <p class="text-gray-300 leading-relaxed mb-6">To exercise these rights, contact us at contact@silvaautomation.com.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">7. Third-Party Links</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these external sites. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">8. Changes to This Privacy Policy</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">We may update this Privacy Policy periodically. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Effective Date." We encourage you to review this Privacy Policy regularly.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">9. Contact Information</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">If you have questions or concerns about this Privacy Policy, please contact us at:</p>
+                    <div class="bg-gray-800/50 p-6 rounded-lg not-prose">
+                        <p class="text-white font-semibold mb-2">Email:</p>
+                        <p class="text-orange-400 mb-4">contact@silvaautomation.com</p>
+                        <p class="text-white font-semibold mb-2">Phone:</p>
+                        <p class="text-orange-400 mb-4">(808) 308-1107</p>
+                        <p class="text-white font-semibold mb-2">Address:</p>
+                        <p class="text-gray-300">Silva Automation, 94-207 Waipahu Street #323, Waipahu, HI 96797</p>
+                    </div>
+                </article>
+
+                <article id="refund-policy" class="content-section prose prose-invert max-w-none">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Refund & Cancellation Policy</h1>
+                    <p class="text-gray-400">Effective Date: September 3, 2025</p>
+                    <p class="text-gray-300 leading-relaxed mb-6">This Refund & Cancellation Policy outlines the conditions under which Silva Automation ("we," "us," or "our") provides refunds and allows for the cancellation of services. This policy is governed by Hawaii state law and incorporates fair business practices for service-based businesses.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. General Principles</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">As a service-based business, our work cannot be "returned" like a physical product. Therefore, refunds are considered only when there is a documented failure on our part to meet the agreed-upon project specifications as outlined in the Project Proposal and Service Agreement. All refund considerations will be evaluated in accordance with Hawaii business practices and consumer protection standards.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. Cancellation and Refund Schedule</h2>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Pre-Project Cancellation</h3>
+                    <div class="bg-orange-500/10 border-l-4 border-orange-500/50 p-6 rounded-r-lg mb-6 not-prose">
+                        <p class="text-white font-semibold mb-2">Cancellation Before Work Commences:</p>
+                        <p class="text-gray-300 mb-4 text-sm">If you wish to cancel a project before any work has started, you may do so by providing written notice. A full refund will be granted, minus a 15% administrative fee to cover initial consultation, proposal drafting, project planning, and administrative costs. This request must be submitted in writing within 15 days of the initial payment.</p>
+                    </div>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">During-Project Cancellation</h3>
+                    <div class="bg-orange-500/10 border-l-4 border-orange-500/50 p-6 rounded-r-lg mb-6 not-prose">
+                        <p class="text-white font-semibold mb-2">Cancellation During the Project:</p>
+                        <p class="text-gray-300 mb-4 text-sm">Once a project has started, cancellation is subject to the work completed at the time of the cancellation request. We will:</p>
+                        <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm">
+                            <li>Assess all work completed to date</li>
+                            <li>Retain all payments made for work completed up to that point</li>
+                            <li>Provide a detailed breakdown of completed work and associated costs</li>
+                            <li>Deliver any completed deliverables or work products</li>
+                            <li>Return any unused portions of payments for incomplete work phases</li>
+                        </ul>
+                    </div>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Refund Eligibility</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">Refunds may be considered in the following circumstances:</p>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li><strong>Non-delivery of Services:</strong> If we fail to deliver the agreed-upon services within the timeframe specified in the Project Proposal (plus any mutually agreed extensions), and no alternative arrangement has been made.</li>
+                        <li><strong>Material Breach:</strong> If there is a documented material breach of the Service Agreement on our part that substantially affects the project deliverables and cannot be reasonably remedied.</li>
+                        <li><strong>Technical Impossibility:</strong> If it becomes technically impossible to complete the project as specified through no fault of the client, and alternative solutions are not acceptable.</li>
+                        <li><strong>Failure to Meet Specifications:</strong> If delivered work materially fails to meet the agreed-upon specifications as documented in the Project Proposal, and we are unable to correct the deficiencies within a reasonable timeframe.</li>
+                    </ul>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">4. Refund Process</h2>
+                    <ul class="list-disc list-inside text-gray-300 mb-6 space-y-2">
+                        <li>All refund requests must be submitted in writing to contact@silvaautomation.com</li>
+                        <li>Include detailed reasons for the refund request</li>
+                        <li>Provide supporting documentation where applicable</li>
+                        <li>We will acknowledge receipt within 3 business days</li>
+                        <li>We will review and respond to refund requests within 10 business days</li>
+                        <li>If approved, refunds will be processed within 30 days using the original payment method</li>
+                        <li>If the original payment method is unavailable, alternative arrangements will be made</li>
+                    </ul>
+                </article>
+
+                <article id="cookie-policy" class="content-section prose prose-invert max-w-none">
+                    <h1 class="text-3xl md:text-4xl font-bold text-white mb-4">Cookie Policy</h1>
+                    <p class="text-gray-400">Effective Date: September 3, 2025</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">1. What Are Cookies?</h2>
+                    <p class="text-gray-300 leading-relaxed mb-6">Cookies are small text files that are placed on your device (computer, phone, or tablet) when you visit a website. They are widely used to make websites work more efficiently and to provide information to the site owners. Cookies can be "session" cookies, which are temporary and deleted when you close your browser, or "persistent" cookies, which remain on your device for a set period.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">2. How We Use Cookies</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">We use cookies for several purposes to enhance your experience and improve our services:</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Essential Cookies</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">These cookies are strictly necessary for the operation of our website. They enable core functions such as website navigation, access to secure areas, and basic site functionality. The website cannot function properly without these cookies.</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Analytics Cookies</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">We use third-party analytics services, such as Google Analytics, to collect information about how users interact with our website. This data helps us understand site traffic, measure the performance of our content, and identify areas for improvement. The information collected is aggregated and does not directly identify you.</p>
+                    <h2 class="text-2xl font-bold text-white mt-8 mb-4">3. Managing Your Cookie Preferences</h2>
+                    <p class="text-gray-300 leading-relaxed mb-4">You have several options for managing cookies:</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Browser Settings</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">Most web browsers allow you to control cookies through their settings preferences. You can typically block all cookies, allow only first-party cookies, or delete existing cookies.</p>
+                    <h3 class="text-xl font-semibold text-white mt-6 mb-3">Cookie Consent</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">When you first visit our website, you may see a cookie consent banner allowing you to accept or decline non-essential cookies.</p>
+                </article>
+
+                
+
+            </main>
+        </div>
+    </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const mainNav = document.getElementById('main-nav');
+    const navItems = mainNav.querySelectorAll('.nav-item');
+    const contentSections = document.querySelectorAll('.content-section');
+    const searchInput = document.getElementById('search-input');
+
+    // Store original content to revert search highlighting
+    let originalContent = new Map();
+    contentSections.forEach(section => {
+        originalContent.set(section.id, section.innerHTML);
+    });
+
+    function setActiveSection(hash) {
+        // Fallback to default if hash is invalid or empty
+        const targetId = (hash && document.getElementById(hash.substring(1))) 
+            ? hash.substring(1) 
+            : 'terms-and-conditions';
+        
+        const currentHash = '#' + targetId;
+
+        navItems.forEach(item => {
+            if (item.getAttribute('href') === currentHash) {
+                item.setAttribute('aria-current', 'page');
+            } else {
+                item.removeAttribute('aria-current');
+            }
+        });
+
+        contentSections.forEach(section => {
+            if (section.id === targetId) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+        
+        // Update URL without jumping
+        if (window.history.replaceState) {
+            window.history.replaceState(null, null, currentHash);
+        }
+    }
+
+    // Handle clicks on navigation links
+    mainNav.addEventListener('click', function(event) {
+        const target = event.target.closest('a.nav-item');
+        if (!target) return;
+        
+        event.preventDefault();
+        const hash = target.getAttribute('href');
+        setActiveSection(hash);
+        // Scroll to top of content area on new section select
+        document.getElementById('content-area').scrollTop = 0;
+    });
+
+    // Handle search input
+    searchInput.addEventListener('input', function(event) {
+        const searchTerm = event.target.value.trim();
+        
+        contentSections.forEach(section => {
+            // Get the pristine, original content
+            let content = originalContent.get(section.id);
+            
+            if (searchTerm) {
+                try {
+                    // Escape special regex characters to prevent errors
+                    const escapedSearchTerm = searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                    const regex = new RegExp(`(${escapedSearchTerm})`, 'gi');
+                    content = content.replace(regex, '<mark class="bg-yellow-300 text-black px-1 rounded">$1</mark>');
+                } catch (e) {
+                    console.error("Search regex error:", e);
+                    // In case of error, just use original content
+                }
+            }
+            section.innerHTML = content;
+        });
+    });
+
+    // Set the initial section based on the URL hash on page load
+    const initialHash = window.location.hash || '#terms-and-conditions';
+    setActiveSection(initialHash);
+});
+</script>
+</body>
+</html>

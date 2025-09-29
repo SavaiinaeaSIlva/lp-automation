@@ -1,67 +1,35 @@
-Silva Automation Website
+# Silva Automation Website - README
 
-1. Project Overview
-This repository contains the source code for the official website of Silva Automation, a business automation service based in Waipahu, Hawaii.
+### 1\. Project Overview
 
-The website is a professional, responsive single-page landing site designed to attract service-based business clients, explain the services offered, and capture leads through a contact form and a Calendly consultation booking link.
+This repository contains the source code for the official website of Silva Automation, a business automation service based in Waipahu, Hawaii. The project is a multi-page professional website designed to attract service-based business clients, explain the services offered, and provide a comprehensive, interactive legal framework.
 
-2. Design Philosophy
-The site is built with a "dark mode," modern aesthetic that emphasizes professionalism and clarity. The goal is to convey high-tech solutions in a simple, approachable way, focusing on performance, clean typography, and a smooth user experience.
+### 2\. Key Features
 
-3. Key Features
-The website's functionality is primarily controlled by assets/js/main.js and includes:
+  * **Multi-Page Structure:** A full-featured site including Home, About, Pricing, and Blog pages.
+  * **Interactive Legal Center:** All legal documents (Terms, Privacy, Refund, Cookie Policy) have been consolidated into a single `legal.html` file. This page functions like a mini single-page application (SPA) with sidebar navigation to switch between policies instantly and a live search feature to scan all documents.
+  * **Fully Responsive Design:** Styled with Tailwind CSS for a seamless experience on mobile, tablet, and desktop devices.
+  * **Standardized Page Layouts:** All pages share a consistent header, footer, and hero/title banner structure for a professional and cohesive user experience.
+  * **Consent-Gated Analytics:** Google Analytics (GA4) loads only after the user consents by clicking "Accept All" on the cookie banner.
 
-Fully Responsive Design: Tailwind CSS utility-first styling across mobile, tablet, and desktop.
+### 3\. Technologies Used
 
-Animate On Scroll (AOS): Subtle animations on scroll for a polished feel.
+| Technology | Purpose |
+| :--- | :--- |
+| **HTML5** | Core structure and content. |
+| **Tailwind CSS** | Utility-first CSS for rapid UI development. |
+| **Vanilla JS (ES6)** | All interactive features, including the mobile menu, cookie banner, and the legal center's navigation and search functionality. |
+| **AOS Library** | Subtle scroll-triggered animations for a polished feel. |
+| **Node.js / npm** | Managing development dependencies and build scripts for Tailwind CSS. |
 
-Smooth Navigation: Fixed header with active-link highlighting and mobile flyout menu.
+### 4\. File Structure
 
-Consent-Gated Analytics: GA4 loads only after "Accept All" cookies (or if already accepted).
+The project follows a standard structure for static websites. The `legal/` directory is now obsolete and can be deleted.
 
-Cookie Consent Banner: Stores the user choice in localStorage and respects it.
-
-Legal Pages: Dedicated pages for Privacy, Terms, Refund, Cookie, and SLA.
-
-Lead Capture: Contact form and direct Calendly CTA.
-
-4. Technologies Used
-Technology
-
-Purpose
-
-HTML5
-
-Core structure and content.
-
-Tailwind CSS
-
-Utility-first CSS for rapid UI development.
-
-Vanilla JS (ES6)
-
-All interactive features, keeping it lightweight.
-
-AOS Library
-
-Scroll-triggered animations.
-
-Formspree
-
-Backend for the contact form.
-
-Node.js / npm
-
-Managing dev dependencies and build scripts.
-
-5. File Structure
-The project follows a standard structure for static websites.
-
+```
 /
 |-- assets/
-|   |-- images/         # All static images (logo, hero, etc.)
-|   |-- js/
-|       |-- main.js     # Main JavaScript file for all site functionality
+|   |-- images/         # All static images (logo.png, pic1.png, etc.)
 |
 |-- dist/
 |   |-- output.css      # FINAL, compiled CSS file (do not edit directly)
@@ -69,65 +37,42 @@ The project follows a standard structure for static websites.
 |-- src/
 |   |-- input.css       # SOURCE CSS file for Tailwind styles (edit this one)
 |
-|-- index.html          # The main HTML file for the website
+|-- index.html          # Main homepage
+|-- about.html          # About Us page
+|-- pricing.html        # Pricing page
+|-- blog.html           # Blog listing/preview page
+|-- hawaii-business-automation-guide.html # Individual blog post
+|-- legal.html          # New single-page interactive legal center
+|
 |-- tailwind.config.js  # Config file for Tailwind CSS
 |-- package.json        # Lists project dependencies and scripts
-|-- readme.md           # This file
+|-- README.md           # This file
+```
 
-6. Setup and Development
+### 5\. Setup and Development
+
 To run this project locally, you will need to have Node.js and npm installed.
 
-Step 1: Install Dependencies
-Navigate to the project's root directory in your terminal and run this command to install the necessary development tools (like tailwindcss):
+**Step 1: Install Dependencies**
+Navigate to the project's root directory in your terminal and run:
+`npm install`
 
-npm install
+**Step 2: Run the Build Process**
+For continuous development (watches for changes and rebuilds CSS automatically):
+`npm run watch`
 
-Step 2: Run the Build Process
-This project uses Tailwind CSS to compile styles.
+For a one-time build for deployment:
+`npm run build`
 
-For continuous development (watches src/input.css and rebuilds dist/output.css on save):
+### 6\. Deployment
 
-npm run watch
+This is a static website. After running the final `npm run build`, upload all relevant files and folders (everything except `node_modules`, `src`, `package.json`, etc.) to any static hosting provider like Netlify, Vercel, or GitHub Pages.
 
-For a one-off build (no watcher):
+### 7\. Updates Log
 
-npm run build
-
-Important: If you add new Tailwind classes to your index.html (e.g., bg-red-500, p-8), you must have this build process running. Otherwise, the styles for those new classes will not be generated, and they will not appear on your website.
-
-6.1 Blog Images
-Place blog images in assets/images/ and reference them in pages.
-
-Naming convention suggestion for previews:
-
-- assets/images/pic1.png
-- assets/images/pic2.png
-- assets/images/pic3.png
-
-Example usage in HTML:
-
-<img src="assets/images/pic1.png" alt="Blog post image" />
-
-7. Deployment
-This is a static website, making deployment simple.
-
-Ensure you have run the final build command (npm run build) to generate the latest dist/output.css.
-
-Upload the entire project folder (or all files except node_modules, src, package.json, etc.) to any static hosting provider.
-
-Recommended Providers:
-
-Netlify
-
-Vercel
-
-GitHub Pages
-
-Cloudflare Pages
-
-8. Contact
-Owner: Savaiinaea Silva
-
-Email: contact@silvaautomation.com
-
-Website: www.silvaautomation.com
+  * **2025-09-29:** Performed a comprehensive content update on all legal policies to add stronger protective clauses (Disclaimer of Warranties, No Guarantee of Results, etc.).
+  * **2025-09-29:** Consolidated all individual legal documents into a single interactive `legal.html` page with sidebar navigation and live search. The old `legal/` directory is now obsolete.
+  * **2025-09-29:** Updated footers across the site to link to the new `legal.html` page.
+  * **2025-09-29:** Enhanced `legal.html` header with an explicit, top-left "Back to main site" link for better usability.
+  * **2025-09-29:** Added a feature image to the blog post page (`hawaii-business-automation-guide.html`) and standardized its hero section to match other pages.
+  * **2025-09-29:** Removed the Service Level Agreement (SLA) from the public-facing legal documents.
