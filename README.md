@@ -11,23 +11,19 @@ The site is built with a "dark mode," modern aesthetic that emphasizes professio
 3. Key Features
 The website's functionality is primarily controlled by assets/js/main.js and includes:
 
-Fully Responsive Design: Adapts seamlessly to all screen sizes, from mobile phones to desktop monitors, using Tailwind CSS's utility-first approach.
+Fully Responsive Design: Tailwind CSS utility-first styling across mobile, tablet, and desktop.
 
-Animate On Scroll (AOS): Subtle, professional animations trigger as the user scrolls, enhancing visual engagement without being distracting.
+Animate On Scroll (AOS): Subtle animations on scroll for a polished feel.
 
-Smooth Scrolling Navigation: Clicking on navigation links glides the user to the corresponding section of the page for a fluid experience.
+Smooth Navigation: Fixed header with active-link highlighting and mobile flyout menu.
 
-"Single-Page App" for Legal Docs: Legal pages (Terms, Privacy, etc.) load instantly within the main view without a full page refresh, providing a fast and seamless UX.
+Consent-Gated Analytics: GA4 loads only after "Accept All" cookies (or if already accepted).
 
-Dynamic "Sticky" Header: The header remains visible at the top of the viewport, providing easy navigation access at all times.
+Cookie Consent Banner: Stores the user choice in localStorage and respects it.
 
-Mobile Flyout Menu: A clean, off-canvas menu for mobile users.
+Legal Pages: Dedicated pages for Privacy, Terms, Refund, Cookie, and SLA.
 
-Cookie Consent Banner: A non-intrusive banner to inform users about cookie usage, with its accepted state stored in local storage to prevent it from reappearing.
-
-Automated Copyright Year: The copyright year in the footer is automatically updated by JavaScript.
-
-Formspree Integration: The contact form is securely handled by Formspree, eliminating the need for a custom backend.
+Lead Capture: Contact form and direct Calendly CTA.
 
 4. Technologies Used
 Technology
@@ -87,16 +83,30 @@ Navigate to the project's root directory in your terminal and run this command t
 npm install
 
 Step 2: Run the Build Process
-This project uses Tailwind CSS to compile styles. To watch for changes in your HTML and CSS files and automatically rebuild the dist/output.css file, run:
+This project uses Tailwind CSS to compile styles.
+
+For continuous development (watches src/input.css and rebuilds dist/output.css on save):
+
+npm run watch
+
+For a one-off build (no watcher):
 
 npm run build
 
-This command starts a process that continuously watches for any saved changes and keeps your stylesheet up-to-date.
-
 Important: If you add new Tailwind classes to your index.html (e.g., bg-red-500, p-8), you must have this build process running. Otherwise, the styles for those new classes will not be generated, and they will not appear on your website.
 
-Step 3: View the Website
-Simply open the index.html file in your web browser. Using a live-server extension in your code editor is highly recommended for the best development experience.
+6.1 Blog Images
+Place blog images in assets/images/ and reference them in pages.
+
+Naming convention suggestion for previews:
+
+- assets/images/pic1.png
+- assets/images/pic2.png
+- assets/images/pic3.png
+
+Example usage in HTML:
+
+<img src="assets/images/pic1.png" alt="Blog post image" />
 
 7. Deployment
 This is a static website, making deployment simple.

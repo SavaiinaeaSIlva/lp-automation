@@ -50,8 +50,7 @@
 
 <main>
     <!-- Page Title Section -->
-    <section class="py-16 px-6 border-b border-white/10 relative">
-        <div class="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5"></div>
+    <section class="py-16 px-6 border-b border-white/10 relative bg-black">
         <div class="container mx-auto text-center relative z-10">
             <div class="max-w-4xl mx-auto">
                 <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
@@ -310,6 +309,36 @@
                 // Only enable essential cookies
                 console.log('Necessary cookies only');
             });
+        });
+    </script>
+    <script>
+        // Consent-gated Google Analytics (GA4)
+        document.addEventListener('DOMContentLoaded', function() {
+            function loadGA() {
+                if (window.gtagLoaded) return;
+                window.gtagLoaded = true;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85';
+                document.head.appendChild(s);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-6T97Y5LX85');
+            }
+
+            if (localStorage.getItem('cookieConsent') === 'all') {
+                loadGA();
+            }
+
+            var acceptAllBtn = document.getElementById('cookie-accept-all');
+            if (acceptAllBtn) {
+                acceptAllBtn.addEventListener('click', function() {
+                    loadGA();
+                });
+            }
         });
     </script>
 </body>

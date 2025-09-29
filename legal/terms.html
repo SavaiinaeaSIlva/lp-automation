@@ -241,5 +241,35 @@
             });
         });
     </script>
+    <script>
+        // Consent-gated Google Analytics (GA4)
+        document.addEventListener('DOMContentLoaded', function() {
+            function loadGA() {
+                if (window.gtagLoaded) return;
+                window.gtagLoaded = true;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85';
+                document.head.appendChild(s);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-6T97Y5LX85');
+            }
+
+            if (localStorage.getItem('cookieConsent') === 'all') {
+                loadGA();
+            }
+
+            var acceptAllBtn = document.getElementById('cookie-accept-all');
+            if (acceptAllBtn) {
+                acceptAllBtn.addEventListener('click', function() {
+                    loadGA();
+                });
+            }
+        });
+    </script>
 </body>
 </html>

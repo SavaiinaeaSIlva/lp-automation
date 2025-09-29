@@ -20,13 +20,6 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="dist/output.css" rel="stylesheet"/>
 </head>
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-6T97Y5LX85');
- </script>
 <body class="antialiased bg-black text-gray-300">
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
@@ -105,11 +98,15 @@
                     <div class="flex flex-col items-center gap-y-2">
                         <img class="h-6 w-auto" src="https://cdn.simpleicons.org/quickbooks/FFFFFF" alt="QuickBooks Logo">
                         <span class="text-xs text-gray-500">QuickBooks</span>
-</div>
-</div>
-</div>
-</div>
-</section>
+                    </div>
+                    <div class="flex flex-col items-center gap-y-2">
+                        <img class="h-6 w-auto" src="https://cdn.simpleicons.org/nextcloud/FFFFFF" alt="Nextcloud Logo">
+                        <span class="text-xs text-gray-500">Nextcloud</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Problem Section -->
     <section class="py-16" id="problem">
@@ -666,6 +663,38 @@
                 // Only enable essential cookies
                 console.log('Necessary cookies only');
             });
+        });
+    </script>
+    <script>
+        // Consent-gated Google Analytics (GA4)
+        document.addEventListener('DOMContentLoaded', function() {
+            function loadGA() {
+                if (window.gtagLoaded) return;
+                window.gtagLoaded = true;
+                var s = document.createElement('script');
+                s.async = true;
+                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85';
+                document.head.appendChild(s);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                window.gtag = gtag;
+                gtag('js', new Date());
+                gtag('config', 'G-6T97Y5LX85');
+            }
+
+            // If consent already granted, load GA immediately
+            if (localStorage.getItem('cookieConsent') === 'all') {
+                loadGA();
+            }
+
+            // Load GA when user accepts all cookies
+            var acceptAllBtn = document.getElementById('cookie-accept-all');
+            if (acceptAllBtn) {
+                acceptAllBtn.addEventListener('click', function() {
+                    loadGA();
+                });
+            }
         });
     </script>
 </body>
