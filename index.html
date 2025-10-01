@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="scroll-smooth h-full" lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -7,7 +7,7 @@
 <meta content="#000000" name="theme-color"/>
 <meta content="dark" name="color-scheme"/>
 <meta content="I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back." name="description"/>
-<meta content="Silva Automation - No BS. Real Pros. Real Solutions." property="og:title"/>
+<meta content="Silva Automation - Business Process Automation Saves You Money." property="og:title"/>
 <meta content="Tired of missing calls and working late? I build simple automation systems for service pros so you can focus on growing your business." property="og:description"/>
     <meta content="https://www.silvaautomation.com/assets/images/bd.png" property="og:image"/>
 <meta content="https://www.silvaautomation.com/" property="og:url"/>
@@ -20,12 +20,12 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="dist/output.css" rel="stylesheet"/>
 </head>
-<body class="antialiased bg-black text-gray-300">
+<body class="bg-gradient-to-b from-zinc-950 to-black bg-gradient-to-b from-zinc-950 to-black antialiased bg-black text-gray-300 bg-fixed">
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
 <div class="container mx-auto px-6 py-4 flex justify-between items-center">
         <a aria-label="Silva Automation Home" href="index.html">
-            <img alt="Silva Automation Logo" class="h-14 md:h-16 w-auto" src="assets/images/logo.png"/>
+            <img alt="Silva Automation Logo" class="h-12 md:h-14 w-auto" src="assets/images/logo.png"/>
         </a>
         <div class="flex items-center">
             <nav class="hidden md:flex items-center space-x-3 text-sm">
@@ -56,23 +56,37 @@
 </nav>
 </div>
 <main>
-    <section class="relative py-24 px-6 text-center" id="hero" style="background-image: url('assets/images/bd.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
-<div class="absolute inset-0" style="background: linear-gradient(135deg, #1f2937 0%, #000000 100%); opacity: 0.8;"></div>
-<div class="absolute inset-0 bg-black/30"></div>
-        <div class="container mx-auto relative z-10 flex items-center justify-center min-h-[60vh]" data-aos="fade-up">
-            <div class="max-w-4xl mx-auto">
-                <div class="inline-block bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full mb-6">
-                    🏝️ Hawaii-Based • 30-Day Support • Optional Retainers
-                </div>
-                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-4 text-white">Automation for <span class="text-white">Service Pros.</span></h1>
-                <p class="text-lg md:text-xl font-medium mb-4 text-gray-200 max-w-3xl mx-auto">Your Local Partner in <span class="text-gray-300">Automation</span></p>
-                <p class="text-base md:text-lg font-medium mb-6 text-gray-300 max-w-4xl mx-auto">We're a Hawaii-based business dedicated to helping other local service companies thrive by eliminating the "paradise tax" on their time.</p>
-                <p class="text-sm text-gray-400 mb-8">✓ Free consultation • ✓ No obligation • ✓ 30-day support included</p>
-                <a class="inline-block text-xl font-bold text-white bg-orange-600 py-5 px-12 rounded-xl transition-all duration-300 shadow-md hover:bg-orange-700 hover:-translate-y-1" href="https://calendly.com/silvaautomation/consultation" target="_blank">Start My Project</a>
-            </div>
-</div>
-    </section>
+<section class="relative h-screen px-6 text-center overflow-hidden flex flex-col justify-center items-center" id="hero">
+    <div class="absolute inset-0 bg-black/50"></div>
+        <div class="absolute inset-0 bg-cover bg-center saturate-150 brightness-110" style="background-image: url('assets/images/bd.png');"></div>
+        <div class="absolute inset-0 bg-white/10"></div>
+    </div>
 
+    <div class="container mx-auto relative z-10">
+       <div class="max-w-4xl mx-auto bg-black/40 backdrop-blur-md p-10 rounded-2xl border border-white/10">
+            <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
+                Automate Your Hawaii Business
+            </div>
+            
+            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-6 text-white">
+                Business Process <span class="text-orange-400">Automation</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-10">
+                For Hawaii businesses, every dollar counts. My custom automation systems reduce costly errors and wasted hours, putting money directly back into your pocket.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <a href="index.html#contact" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg">
+                    Schedule a Free Consultation
+                </a>
+                <a href="index.html#services" class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg border border-white/20">
+                    See My Services
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
     <!-- Tech Stack Section -->
     <section class="py-16" id="tech-stack">
 <div class="container mx-auto px-6" data-aos="fade-up">
@@ -489,7 +503,7 @@
     
     </main>
 
-<footer class="bg-black/60 backdrop-blur-sm border-t border-white/10">
+<footer class="bg-zinc-900 border-t border-zinc-800">
     <div class="container mx-auto px-6 py-8">
         <div class="md:flex md:justify-between">
             <div class="mb-6 md:mb-0">
@@ -697,6 +711,7 @@
             }
         });
     </script>
-<script src="//code.tidio.co/lzqrmnv0dmxjzjtah0zyvzplmzxb3qes.js" async></script>
+
+    <script src="//code.tidio.co/lzqrmnv0dmxjzjtah0zyvzplmzxb3qes.js" async></script>
 </body>
 </html>
