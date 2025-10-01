@@ -20,7 +20,7 @@
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
 <link href="dist/output.css" rel="stylesheet"/>
 </head>
-<body class="bg-gradient-to-b from-zinc-950 to-black bg-gradient-to-b from-zinc-950 to-black antialiased bg-black text-gray-300 bg-fixed">
+<body class="bg-gradient-to-b from-zinc-950 to-black antialiased bg-black text-gray-300 bg-fixed">
 
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
 <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -31,7 +31,7 @@
             <nav class="hidden md:flex items-center space-x-3 text-sm">
                 <a href="index.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Home</a>
                 <a href="about.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">About</a>
-                <a href="pricing.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Pricing</a>
+                <a href="packages.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Packages & Pricing</a>
                 <a href="blog.html" class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md">Blog</a>
                 <a href="index.html#roi-calculator" class="nav-link bg-orange-600 hover:bg-orange-700 text-white transition-all duration-300 px-6 py-2 rounded-full shadow-md">ROI Calculator</a>
 </nav>
@@ -50,18 +50,19 @@
 <nav class="flex flex-col space-y-8 mt-12 text-lg">
         <a href="index.html" class="nav-link text-gray-300 hover:text-white">Home</a>
         <a href="about.html" class="nav-link text-gray-300 hover:text-white">About</a>
-        <a href="pricing.html" class="nav-link text-gray-300 hover:text-white">Pricing</a>
+        <a href="packages.html" class="nav-link text-gray-300 hover:text-white">Packages & Pricing</a>
         <a href="blog.html" class="nav-link text-gray-300 hover:text-white">Blog</a>
         <a href="index.html#roi-calculator" class="nav-link text-gray-300 hover:text-white">ROI Calculator</a>
 </nav>
 </div>
 <main>
 <section class="relative h-screen px-6 text-center overflow-hidden flex flex-col justify-center items-center" id="hero">
-    <div class="absolute inset-0 bg-black/50"></div>
-        <div class="absolute inset-0 bg-cover bg-center saturate-150 brightness-110" style="background-image: url('assets/images/bd.png');"></div>
-        <div class="absolute inset-0 bg-white/10"></div>
-    </div>
-
+    <video autoplay loop muted playsinline class="absolute z-0 w-full h-full object-cover">
+        <source src="assets/videos/hero-backdrop.webm" type="video/webm">
+        <source src="assets/videos/hero-backdrop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0 bg-black/70 z-0"></div>
     <div class="container mx-auto relative z-10">
        <div class="max-w-4xl mx-auto bg-black/40 backdrop-blur-md p-10 rounded-2xl border border-white/10">
             <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
@@ -80,7 +81,7 @@
                 <a href="index.html#contact" class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg">
                     Schedule a Free Consultation
                 </a>
-                <a href="index.html#services" class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg border border-white/20">
+                <a href="packages.html" class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg border border-white/20">
                     See My Services
                 </a>
             </div>
@@ -492,7 +493,7 @@
                             <p class="text-gray-300 text-sm">Most automations are built and running within 7-14 days. No months of waiting.</p>
 </div>
 <div>
-                            <h4 class="text-lg font-bold text-white mb-2">30-Day Support</h4>
+                            <h4 class="text-lg font-bold text-white mb-2">30-Day Post-Launch Support</h4>
                             <p class="text-gray-300 text-sm">Full support for 30 days after launch. I make sure everything works perfectly for your business.</p>
 </div>
 </div>
@@ -521,7 +522,7 @@
                     <h2 class="mb-6 text-sm font-semibold text-white uppercase">Navigate</h2>
                     <ul class="text-gray-400 space-y-3">
                         <li><a href="about.html" class="hover:text-white">About</a></li>
-                        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+                        <li><a href="packages.html" class="hover:text-white">Packages & Pricing</a></li>
                         <li><a href="blog.html" class="hover:text-white">Blog</a></li>
 </ul>
 </div>
@@ -565,19 +566,23 @@
         const navLinks = document.querySelectorAll('.nav-link');
         
         navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            if (href === currentPage || (currentPage === 'index.html' && href.includes('index.html'))) {
-                link.classList.add('bg-orange-500', 'text-white');
-                link.classList.remove('bg-white/15');
+            const href = link.getAttribute('href').split('#')[0]; // Ignore anchor links
+            const linkPage = href.split('/').pop() || 'index.html';
+
+            if (linkPage === currentPage) {
+                // Exclude the ROI calculator from this logic
+                if (!link.getAttribute('href').includes('#')) {
+                    link.classList.add('!bg-orange-600', '!text-white');
+                    link.classList.remove('bg-white/15');
+                }
             } else {
-                link.classList.remove('bg-orange-500', 'text-white');
-                link.classList.add('bg-white/15');
+                 if (!link.getAttribute('href').includes('#')) {
+                    link.classList.remove('!bg-orange-600', '!text-white');
+                    link.classList.add('bg-white/15');
+                }
             }
         });
     }
-
-    // Set active link on page load
-    setActiveLink();
 
     // Mobile menu functionality
     const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -601,6 +606,7 @@
     const annualValue = document.getElementById('annual-value');
 
     function updateCalculator() {
+        if (!hoursSlider) return; // Guard clause
         const hours = parseInt(hoursSlider.value);
         const rate = parseInt(rateSlider.value);
         const monthly = (hours * rate * 4.33).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
@@ -617,18 +623,56 @@
         rateSlider.addEventListener('input', updateCalculator);
         updateCalculator(); // Initial call
     }
-
-    // Form submission
-    const form = document.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            // Add your form submission logic here
-            alert('Thank you for your interest! We\'ll be in touch soon.');
+    
+    // Cookie Consent Banner
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptAllBtn = document.getElementById('cookie-accept-all');
+    const acceptNecessaryBtn = document.getElementById('cookie-accept-necessary');
+    
+    if (cookieBanner && !localStorage.getItem('cookieConsent')) {
+        setTimeout(() => {
+            cookieBanner.classList.remove('translate-y-full');
+        }, 1000);
+    }
+    
+    if (acceptAllBtn) {
+        acceptAllBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'all');
+            cookieBanner.classList.add('translate-y-full');
+            loadGA(); // Load analytics on consent
         });
     }
+
+    if (acceptNecessaryBtn) {
+        acceptNecessaryBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'necessary');
+            cookieBanner.classList.add('translate-y-full');
+        });
+    }
+
+    // Consent-gated Google Analytics (GA4)
+    function loadGA() {
+        if (window.gtagLoaded) return;
+        window.gtagLoaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85';
+        document.head.appendChild(s);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){ dataLayer.push(arguments); }
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-6T97Y5LX85');
+    }
+
+    if (localStorage.getItem('cookieConsent') === 'all') {
+        loadGA();
+    }
+    
+    // Run on page load
+    setActiveLink();
   </script>
-    <!-- Cookie Consent Banner -->
     <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t border-white/10 p-6 transform translate-y-full transition-transform duration-300 ease-in-out">
         <div class="container mx-auto max-w-4xl">
             <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
@@ -651,67 +695,6 @@
             </div>
         </div>
     </div>
-
-    <script>
-        // Cookie Banner Functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const cookieBanner = document.getElementById('cookie-banner');
-            const acceptAllBtn = document.getElementById('cookie-accept-all');
-            const acceptNecessaryBtn = document.getElementById('cookie-accept-necessary');
-            
-            // Check if user has already made a choice
-            if (!localStorage.getItem('cookieConsent')) {
-                setTimeout(() => {
-                    cookieBanner.classList.remove('translate-y-full');
-                }, 1000); // Show after 1 second
-            }
-            
-            // Accept all cookies
-            acceptAllBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'all');
-                cookieBanner.classList.add('translate-y-full');
-            });
-            
-            // Accept necessary cookies only
-            acceptNecessaryBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'necessary');
-                cookieBanner.classList.add('translate-y-full');
-            });
-        });
-    </script>
-    <script>
-        // Consent-gated Google Analytics (GA4)
-        document.addEventListener('DOMContentLoaded', function() {
-            function loadGA() {
-                if (window.gtagLoaded) return;
-                window.gtagLoaded = true;
-                var s = document.createElement('script');
-                s.async = true;
-                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85';
-                document.head.appendChild(s);
-
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){ dataLayer.push(arguments); }
-                window.gtag = gtag;
-                gtag('js', new Date());
-                gtag('config', 'G-6T97Y5LX85');
-            }
-
-            // If consent already granted, load GA immediately
-            if (localStorage.getItem('cookieConsent') === 'all') {
-                loadGA();
-            }
-
-            // Load GA when user accepts all cookies
-            var acceptAllBtn = document.getElementById('cookie-accept-all');
-            if (acceptAllBtn) {
-                acceptAllBtn.addEventListener('click', function() {
-                    loadGA();
-                });
-            }
-        });
-    </script>
-
     <script src="//code.tidio.co/lzqrmnv0dmxjzjtah0zyvzplmzxb3qes.js" async></script>
 </body>
 </html>
