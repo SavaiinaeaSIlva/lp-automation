@@ -418,26 +418,47 @@
                     <div class="glass-card p-8 rounded-2xl">
                         <h3 class="text-xl font-bold text-white mb-4 text-center">Get Your Free Consultation</h3>
                         <form action="https://formspree.io/f/xkgqzdqe" class="space-y-6" method="POST">
-                            <div>
-                                <label class="block text-white font-semibold mb-2">Your Name</label>
-                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" placeholder="John Smith" type="text" />
-                            </div>
-                            <div>
-                                <label class="block text-white font-semibold mb-2">Email Address</label>
-                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" placeholder="john@example.com" type="email" />
-                            </div>
-                            <div>
-                                <label class="block text-white font-semibold mb-2">Phone Number</label>
-                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" placeholder="(808) 123-4567" type="tel" />
-                            </div>
-                            <div>
-                                <label class="block text-white font-semibold mb-2">What's your biggest admin challenge?</label>
-                                <textarea class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" placeholder="Tell me about the admin tasks that are eating up your time..." rows="4"></textarea>
-                            </div>
-                            <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" type="submit">
-                                Book My Free Consultation
-                            </button>
-                        </form>
+    <div>
+        <label class="block text-white font-semibold mb-2" for="user-name">Your Name</label>
+        <input 
+            class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" 
+            placeholder="John Smith" 
+            type="text"
+            name="name"          id="user-name"       required             />
+    </div>
+    <div>
+        <label class="block text-white font-semibold mb-2" for="user-email">Email Address</label>
+        <input 
+            class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" 
+            placeholder="john@example.com" 
+            type="email"
+            name="email"         id="user-email"
+            required
+        />
+    </div>
+    <div>
+        <label class="block text-white font-semibold mb-2" for="user-phone">Phone Number</label>
+        <input 
+            class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" 
+            placeholder="(808) 123-4567" 
+            type="tel"
+            name="phone"         id="user-phone"
+        />
+    </div>
+    <div>
+        <label class="block text-white font-semibold mb-2" for="user-challenge">What's your biggest admin challenge?</label>
+        <textarea 
+            class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" 
+            placeholder="Tell me about the admin tasks that are eating up your time..." 
+            rows="4"
+            name="admin_challenge" id="user-challenge"
+            required
+        ></textarea>
+    </div>
+    <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" type="submit">
+        Book My Free Consultation
+    </button>
+</form>
                     </div>
                     <div class="glass-card p-8 rounded-2xl">
                         <h3 class="text-xl font-bold text-white mb-6">My Promise to You</h3>
