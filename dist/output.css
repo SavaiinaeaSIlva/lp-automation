@@ -1488,6 +1488,10 @@ video {
   margin-left: 1rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .mr-3 {
   margin-right: 0.75rem;
 }
@@ -1543,6 +1547,10 @@ video {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .grid {
   display: grid;
 }
@@ -1559,12 +1567,12 @@ video {
   height: 0.25rem;
 }
 
-.h-12 {
-  height: 3rem;
+.h-10 {
+  height: 2.5rem;
 }
 
-.h-14 {
-  height: 3.5rem;
+.h-12 {
+  height: 3rem;
 }
 
 .h-16 {
@@ -1573,6 +1581,10 @@ video {
 
 .h-2 {
   height: 0.5rem;
+}
+
+.h-4 {
+  height: 1rem;
 }
 
 .h-48 {
@@ -1613,6 +1625,10 @@ video {
 
 .w-24 {
   width: 6rem;
+}
+
+.w-4 {
+  width: 1rem;
 }
 
 .w-48 {
@@ -1790,12 +1806,6 @@ video {
   row-gap: 0.5rem;
 }
 
-.space-x-3 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-
 .space-y-1 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1842,6 +1852,10 @@ video {
 
 .scroll-smooth {
   scroll-behavior: smooth;
+}
+
+.whitespace-nowrap {
+  white-space: nowrap;
 }
 
 .rounded {
@@ -1941,18 +1955,9 @@ video {
   border-color: rgb(39 39 42 / var(--tw-border-opacity, 1));
 }
 
-.\!bg-orange-600 {
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(234 88 12 / var(--tw-bg-opacity, 1)) !important;
-}
-
 .bg-black {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
-}
-
-.bg-black\/40 {
-  background-color: rgb(0 0 0 / 0.4);
 }
 
 .bg-black\/70 {
@@ -2084,10 +2089,6 @@ video {
      object-fit: cover;
 }
 
-.p-10 {
-  padding: 2.5rem;
-}
-
 .p-3 {
   padding: 0.75rem;
 }
@@ -2164,9 +2165,18 @@ video {
   padding-bottom: 1rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.pl-12 {
+  padding-left: 3rem;
 }
 
 .pl-6 {
@@ -2247,11 +2257,6 @@ video {
 
 .tracking-wider {
   letter-spacing: 0.05em;
-}
-
-.\!text-white {
-  --tw-text-opacity: 1 !important;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1)) !important;
 }
 
 .text-black {
@@ -2444,11 +2449,19 @@ video {
   --brand-orange: #f97316;
 }
 
+/* src/input.css */
+
+/* ... other code above ... */
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
   /* Adjust for fixed header height */
+  font-size: 13px;
+  /* <--- ADD THIS LINE TO ZOOM OUT THE SITE */
 }
+
+/* ... other code below ... */
 
 body {
   background: var(--bg-primary);
@@ -2467,8 +2480,8 @@ section {
   position: relative;
 }
 
-.font-display {
-  font-family: 'IBM Plex Mono', monospace;
+h1, h2, h3, .font-display {
+  font-family: 'Orbitron', sans-serif;
 }
 
 .prose {
@@ -2545,19 +2558,33 @@ section {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Custom Dark Scrollbar */
 
-body::-webkit-scrollbar {
-  display: none;
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
+::-webkit-scrollbar-track {
+  background: #1f2937;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b5563;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
 
 body {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: #4b5563 #1f2937;
+  /* For Firefox */
+}
+
+.prose p {
+  font-size: 15px;
 }
 
 .hover\:-translate-y-2:hover {
@@ -2587,8 +2614,9 @@ body {
   background-color: rgb(255 255 255 / 0.2);
 }
 
-.hover\:bg-white\/25:hover {
-  background-color: rgb(255 255 255 / 0.25);
+.hover\:text-blue-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(147 197 253 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-blue-400:hover {
@@ -2735,8 +2763,8 @@ body {
     aspect-ratio: auto;
   }
 
-  .md\:h-14 {
-    height: 3.5rem;
+  .md\:h-12 {
+    height: 3rem;
   }
 
   .md\:w-72 {
@@ -2794,6 +2822,11 @@ body {
     line-height: 2.5rem;
   }
 
+  .md\:text-5xl {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
   .md\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
@@ -2815,6 +2848,11 @@ body {
 
   .lg\:text-5xl {
     font-size: 3rem;
+    line-height: 1;
+  }
+
+  .lg\:text-6xl {
+    font-size: 3.75rem;
     line-height: 1;
   }
 }

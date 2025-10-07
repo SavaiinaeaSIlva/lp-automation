@@ -2,51 +2,43 @@
 <html class="scroll-smooth h-full" lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Silva Automation - Real Solutions for Real Service Pros.</title>
-    <meta content="#000000" name="theme-color" />
-    <meta content="dark" name="color-scheme" />
-    <meta content="I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back." name="description" />
-    <meta content="Silva Automation - Business Process Automation Saves You Money." property="og:title" />
-    <meta content="Tired of missing calls and working late? I build simple automation systems for service pros so you can focus on growing your business." property="og:description" />
-    <meta content="https://www.silvaautomation.com/assets/images/bd.png" property="og:image" />
-    <meta content="https://www.silvaautomation.com/" property="og:url" />
-    <meta content="website" property="og:type" />
-    <meta content="summary_large_image" name="twitter:card" />
-    <link href="assets/images/favicon.png" rel="icon" type="image/png" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <meta name="description" content="I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back." />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="dist/output.css" rel="stylesheet" />
 </head>
 <body class="bg-gradient-to-b from-zinc-950 to-black antialiased bg-black text-gray-300 bg-fixed">
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a aria-label="Silva Automation Home" href="index.html">
-                <img alt="Silva Automation Logo" class="h-12 md:h-14 w-auto" src="assets/images/logo.png" />
-            </a>
-            <div class="flex items-center">
-                <nav class="hidden md:flex items-center space-x-3 text-sm">
-                    <a class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md" href="index.html">Home</a>
-                    <a class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md" href="about.html">About</a>
-                    <a class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md" href="packages.html">Packages &amp; Pricing</a>
-                    <a class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md" href="blog.html">Blog</a>
-                    <a class="nav-link bg-orange-600 hover:bg-orange-700 text-white transition-all duration-300 px-6 py-2 rounded-full shadow-md" href="index.html#roi-calculator">ROI Calculator</a>
-                </nav>
-                <div class="md:hidden ml-4">
-                    <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    </button>
-                </div>
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a aria-label="Silva Automation Home" href="index.html">
+            <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto" src="assets/images/logo.png" />
+        </a>
+        <div class="flex items-center grow">
+            <nav class="hidden md:flex items-center justify-between w-full text-sm pl-12">
+                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="index.html">Home</a>
+                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="about.html">About</a>
+                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="packages.html">Packages &amp; Pricing</a>
+                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="blog.html">Blog</a>
+                <a class="nav-link text-orange-400 hover:text-orange-300 transition-colors duration-200 text-sm font-bold" href="index.html#roi-calculator">ROI Calculator</a>
+            </nav>
+            <div class="md:hidden ml-4">
+                <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
             </div>
         </div>
-    </header>
+    </div>
+</header>
     <div class="fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-lg z-40 p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
         <button aria-label="Close mobile menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none" id="close-mobile-menu">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
         </button>
-        <nav class="flex flex-col space-y-8 mt-12 text-lg">
+        <nav class="hidden md:flex items-center justify-between w-full text-sm pl-12">
             <a class="nav-link text-gray-300 hover:text-white" href="index.html">Home</a>
             <a class="nav-link text-gray-300 hover:text-white" href="about.html">About</a>
             <a class="nav-link text-gray-300 hover:text-white" href="packages.html">Packages &amp; Pricing</a>
@@ -63,11 +55,11 @@
             </video>
             <div class="absolute inset-0 bg-black/70 z-0"></div>
             <div class="container mx-auto relative z-10">
-                <div class="max-w-4xl mx-auto bg-black/40 backdrop-blur-md p-10 rounded-2xl border border-white/10">
+                <div class="max-w-4xl mx-auto flex flex-col items-center">
                     <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
                         Automate Your Hawaii Business
                     </div>
-                    <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold font-display leading-tight mb-6 text-white">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6 text-white whitespace-nowrap">
                         Business Process <span class="text-orange-400">Automation</span>
                     </h1>
                     <p class="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-10">
@@ -309,7 +301,7 @@
                         <p class="text-gray-300 mb-6">
                             We'll spend 30 minutes diving deep into your business to identify the single biggest time-waster that's eating up your day.
                         </p>
-                        <div class="glass-card p-6 text-center flex-1">
+                        <div class="glass-card p-6 text-center grow">
                             <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                                     <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -335,7 +327,7 @@
                         <p class="text-gray-300 mb-6">
                             While you focus on your business, I get to work building the perfect automation that puts your admin tasks on autopilot.
                         </p>
-                        <div class="glass-card p-6 text-center flex-1">
+                        <div class="glass-card p-6 text-center grow">
                             <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                                     <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0 3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -362,7 +354,7 @@
                         <p class="text-gray-300 mb-6">
                             I hand you the keys with a simple video guide. You immediately start saving time, and I provide 30 days of full support to make sure everything runs perfectly.
                         </p>
-                        <div class="glass-card p-6 text-center flex-1">
+                        <div class="glass-card p-6 text-center grow">
                             <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                                 <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
                                     <path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
@@ -391,7 +383,7 @@
                     </h2>
                     <p class="text-gray-300">Actionable advice and automation strategies to help you work smarter, not harder.</p>
                 </div>
-                <div class="max-w-4xl mx-auto">
+                <div class="max-w-4xl mx-auto flex flex-col items-center">
                     <!-- Featured Blog Post -->
                     <a class="block group glass-card rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20 overflow-hidden" href="blog3.html">
                         <div class="grid md:grid-cols-2">
@@ -523,6 +515,92 @@
             }
         });
 
+        // Active link highlighting for "floating" links
+        function setActiveLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').split('#')[0];
+                const linkPage = href.split('/').pop() || 'index.html';
+
+                // Skip the ROI Calculator, which has its own style
+                if (link.getAttribute('href').includes('#roi-calculator')) {
+                    return;
+                }
+
+                if (linkPage === currentPage) {
+                    // Apply active styles: orange, bold text
+                    link.classList.add('text-orange-400', 'font-bold');
+                    link.classList.remove('text-gray-200', 'font-medium');
+                } else {
+                    // Apply inactive styles
+                    link.classList.remove('text-orange-400', 'font-bold');
+                    link.classList.add('text-gray-200', 'font-medium');
+                }
+            });
+        }
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Run functions on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setActiveLink();
+            
+            // ROI Calculator functionality (runs only if elements exist)
+            const hoursSlider = document.getElementById('hours-slider');
+            const rateSlider = document.getElementById('rate-slider');
+            if(hoursSlider && rateSlider) {
+                const hoursValue = document.getElementById('hours-value');
+                const rateValue = document.getElementById('rate-value');
+                const monthlyValue = document.getElementById('monthly-value');
+                const annualValue = document.getElementById('annual-value');
+
+                function updateCalculator() {
+                    const hours = parseInt(hoursSlider.value);
+                    const rate = parseInt(rateSlider.value);
+                    const monthly = (hours * rate * 4.33).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+                    const annual = (hours * rate * 52).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+                    hoursValue.textContent = hours + ' hours';
+                    rateValue.textContent = '$' + rate + '/hr';
+                    monthlyValue.textContent = '$' + monthly;
+                    annualValue.textContent = '$' + annual;
+                }
+                hoursSlider.addEventListener('input', updateCalculator);
+                rateSlider.addEventListener('input', updateCalculator);
+                updateCalculator();
+            }
+        });
+    </script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Header behavior on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+            }
+        });
+
         // Active link highlighting
         function setActiveLink() {
             const currentPage = window.location.pathname.split('/').pop() || 'index.html';
@@ -535,12 +613,12 @@
                 if (linkPage === currentPage) {
                     // Exclude the ROI calculator from this logic
                     if (!link.getAttribute('href').includes('#')) {
-                        link.classList.add('!bg-orange-600', '!text-white');
+                        link.classList.add('text-orange-400', 'font-bold');
                         link.classList.remove('bg-white/15');
                     }
                 } else {
                     if (!link.getAttribute('href').includes('#')) {
-                        link.classList.remove('!bg-orange-600', '!text-white');
+                        link.classList.remove('text-orange-400', 'font-bold');
                         link.classList.add('bg-white/15');
                     }
                 }

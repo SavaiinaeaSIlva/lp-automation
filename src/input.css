@@ -11,10 +11,19 @@
   --text-secondary: #94a3b8;
   --brand-orange: #f97316;
 }
+/* src/input.css */
+
+/* ... other code above ... */
+
 html { 
   scroll-behavior: smooth; 
   scroll-padding-top: 80px; /* Adjust for fixed header height */
+  font-size: 13px; /* <--- ADD THIS LINE TO ZOOM OUT THE SITE */
 }
+
+/* ... other code below ... */
+
+
 body {
   background: var(--bg-primary);
   font-family: 'Inter', sans-serif; 
@@ -29,8 +38,8 @@ section {
   width: 100%;
   position: relative;
 }
-.font-display { 
-  font-family: 'IBM Plex Mono', monospace; 
+h1, h2, h3, .font-display {
+  font-family: 'Orbitron', sans-serif;
 }
 .prose { 
   color: var(--text-secondary); 
@@ -99,13 +108,26 @@ section {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
-body::-webkit-scrollbar {
-  display: none;
+/* Custom Dark Scrollbar */
+::-webkit-scrollbar { 
+    width: 8px; 
+}
+::-webkit-scrollbar-track { 
+    background: #1f2937; 
+}
+::-webkit-scrollbar-thumb { 
+    background: #4b5563; 
+    border-radius: 4px; 
+}
+::-webkit-scrollbar-thumb:hover { 
+    background: #6b7280; 
+}
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #4b5563 #1f2937; /* For Firefox */
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
-body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+
+.prose p {
+  font-size: 15px;
 }

@@ -2,43 +2,28 @@
 <html class="scroll-smooth h-full" lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Airline Automation Savings | Lessons for Hawaii Businesses</title>
-    <meta content="Discover how the same automation principles that save airlines millions can be applied to your Hawaii service business to cut costs, improve efficiency, and reclaim your time." name="description" />
-    <link href="assets/images/favicon.png" rel="icon" type="image/png" />
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <meta name="description" content="Discover how the same automation principles that save airlines millions can be applied to your Hawaii service business to cut costs, improve efficiency, and reclaim your time." />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link href="dist/output.css" rel="stylesheet" />
 </head>
 <body class="bg-gradient-to-b from-zinc-950 to-black antialiased bg-black text-gray-300 bg-fixed">
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a aria-label="Silva Automation Home" href="index.html">
-                <img alt="Silva Automation Logo" class="h-12 md:h-14 w-auto" src="assets/images/logo.png" />
-            </a>
-            <div class="flex items-center">
-                <nav class="hidden md:flex items-center space-x-3 text-sm">
-                    <a class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md" href="index.html">Home</a>
-                    <a class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md" href="about.html">About</a>
-                    <a class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md" href="packages.html">Packages &amp; Pricing</a>
-                    <a class="nav-link bg-white/15 backdrop-blur-md text-white hover:bg-white/25 transition-all duration-300 px-4 py-2 rounded-full border border-white/30 hover:border-white/50 shadow-md" href="blog.html">Blog</a>
-                    <a class="nav-link bg-orange-600 hover:bg-orange-700 text-white transition-all duration-300 px-6 py-2 rounded-full shadow-md" href="index.html#roi-calculator">ROI Calculator</a>
-                </nav>
-                <div class="md:hidden ml-4">
-                    <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </div>
+    <header class="py-6 px-6 container mx-auto">
+        <a href="index.html" class="text-blue-400 hover:text-blue-300 font-semibold text-sm transition-colors inline-flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" /></svg>
+            Back to main site
+        </a>
     </header>
     <div class="fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-lg z-40 p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
         <button aria-label="Close mobile menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none" id="close-mobile-menu">
             <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
         </button>
-        <nav class="flex flex-col space-y-8 mt-12 text-lg">
+        <nav class="hidden md:flex items-center justify-between w-full text-sm pl-12">
             <a class="nav-link text-gray-300 hover:text-white" href="index.html">Home</a>
             <a class="nav-link text-gray-300 hover:text-white" href="about.html">About</a>
             <a class="nav-link text-gray-300 hover:text-white" href="packages.html">Packages &amp; Pricing</a>
@@ -47,7 +32,8 @@
         </nav>
     </div>
     <main>
-        <section class="py-32 px-6 border-b border-white/10 relative bg-black bg-hero-pattern">
+        <section class="py-32 px-6 border-b border-white/10 relative  " bg-hero-pattern bg-black>
+    
             <div class="container mx-auto text-center relative z-10">
                 <div class="max-w-4xl mx-auto">
                     <div class="inline-block bg-blue-500/10 text-blue-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
@@ -143,110 +129,8 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS for animations
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Add a shadow to the header on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
-            } else {
-                header.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
-            }
-        });
-
-        // --- Active Link Highlighting (New & Improved) ---
-        function setActiveLink() {
-            // Get the filename of the current page, e.g., "about.html"
-            const currentPageFile = window.location.pathname.split('/').pop() || 'index.html';
-
-            // Select links in both desktop and mobile nav bars
-            const navLinks = document.querySelectorAll('nav .nav-link');
-
-            navLinks.forEach(link => {
-                const linkHref = link.getAttribute('href');
-
-                // Skip anchor links (like ROI Calculator) for active state logic
-                if (linkHref.includes('#')) {
-                    // Ensure anchor links are never styled as active on page load
-                    link.classList.remove('bg-orange-500', 'text-white');
-                    link.classList.add('bg-white/15');
-                    return; // Go to the next link
-                }
-
-                // Check if the link's href is the same as the current page's filename
-                if (linkHref === currentPageFile) {
-                    // Apply active styles
-                    link.classList.add('bg-orange-500', 'text-white');
-                    link.classList.remove('bg-white/15', 'hover:bg-white/25');
-                } else {
-                    // Ensure non-active links have the default styles
-                    link.classList.remove('bg-orange-500', 'text-white');
-                    link.classList.add('bg-white/15', 'hover:bg-white/25');
-                }
-            });
-        }
-
-        // --- Mobile Menu Functionality ---
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMobileMenu = document.getElementById('close-mobile-menu');
-
-        if (mobileMenuButton) {
-            mobileMenuButton.addEventListener('click', () => {
-                if (mobileMenu) mobileMenu.classList.remove('translate-x-full');
-            });
-        }
-        if (closeMobileMenu) {
-            closeMobileMenu.addEventListener('click', () => {
-                if (mobileMenu) mobileMenu.classList.add('translate-x-full');
-            });
-        }
-
-        // --- Run functions after the page content has loaded ---
-        document.addEventListener('DOMContentLoaded', function() {
-            setActiveLink();
-
-            // ROI Calculator logic (runs only if the elements are on the page)
-            const hoursSlider = document.getElementById('hours-slider');
-            const rateSlider = document.getElementById('rate-slider');
-
-            if (hoursSlider && rateSlider) {
-                const hoursValue = document.getElementById('hours-value');
-                const rateValue = document.getElementById('rate-value');
-                const monthlyValue = document.getElementById('monthly-value');
-                const annualValue = document.getElementById('annual-value');
-
-                function updateCalculator() {
-                    const hours = parseInt(hoursSlider.value);
-                    const rate = parseInt(rateSlider.value);
-                    const monthly = (hours * rate * 4.33).toLocaleString('en-US', {
-                        minimumFractionDigits: 0,
-                        maximumFractionDigits: 0
-                    });
-                    const annual = (hours * rate * 52).toLocaleString('en-US', {
-                        minimumFractionDigits: 0,
-                        maximumFractionDigits: 0
-                    });
-
-                    hoursValue.textContent = hours + ' hours';
-                    rateValue.textContent = '$' + rate + '/hr';
-                    monthlyValue.textContent = '$' + monthly;
-                    annualValue.textContent = '$' + annual;
-                }
-
-                hoursSlider.addEventListener('input', updateCalculator);
-                rateSlider.addEventListener('input', updateCalculator);
-                updateCalculator(); // Initial call to set values
-            }
-        });
-    </script>
+    
+    
+    
 </body>
 </html>
