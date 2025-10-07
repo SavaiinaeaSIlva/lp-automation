@@ -14,304 +14,716 @@
 </head>
 <body class="bg-gradient-to-b from-zinc-950 to-black antialiased bg-black text-gray-300 bg-fixed">
     <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
-            <a class="flex items-center space-x-2 text-white" href="/">
-                <svg class="h-8 w-8 text-orange-500" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"></path>
-                </svg>
-                <span class="text-xl font-bold font-display tracking-wider">Silva Automation</span>
-            </a>
-            <nav class="hidden md:flex space-x-8">
-                <a class="text-gray-300 hover:text-orange-400 transition duration-150" href="#hero">Home</a>
-                <a class="text-gray-300 hover:text-orange-400 transition duration-150" href="#process">How It Works</a>
-                <a class="text-gray-300 hover:text-orange-400 transition duration-150" href="#services">Services</a>
-                <a class="text-gray-300 hover:text-orange-400 transition duration-150" href="#contact">Contact</a>
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a aria-label="Silva Automation Home" href="index.html">
+            <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto" src="assets/images/logo.png" />
+        </a>
+        <div class="flex items-center grow">
+            <nav class="hidden md:flex items-center justify-between w-full text-sm pl-12">
+                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="index.html">Home</a>
+                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="about.html">About</a>
+                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="packages.html">Packages &amp; Pricing</a>
+                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="blog.html">Blog</a>
+                <a class="nav-link text-orange-400 hover:text-orange-300 transition-colors duration-200 text-sm font-bold" href="index.html#roi-calculator">ROI Calculator</a>
             </nav>
-            <a class="hidden md:block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-200" href="#contact">
-                Get Started
-            </a>
-            <button class="md:hidden text-white" id="menu-button" aria-label="Open menu">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                </svg>
-            </button>
+            <div class="md:hidden ml-4">
+                <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                </button>
+            </div>
         </div>
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden bg-zinc-900/90 backdrop-blur-md absolute top-full left-0 right-0 py-4 shadow-lg" id="mobile-menu">
-            <nav class="flex flex-col space-y-2 px-4">
-                <a class="block text-gray-300 hover:text-orange-400 transition duration-150 py-2" href="#hero">Home</a>
-                <a class="block text-gray-300 hover:text-orange-400 transition duration-150 py-2" href="#process">How It Works</a>
-                <a class="block text-gray-300 hover:text-orange-400 transition duration-150 py-2" href="#services">Services</a>
-                <a class="block text-gray-300 hover:text-orange-400 transition duration-150 py-2" href="#contact">Contact</a>
-                <a class="block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-2 px-4 rounded-lg text-center mt-2" href="#contact">
-                    Get Started
-                </a>
-            </nav>
-        </div>
-    </header>
-
+    </div>
+</header>
+    <div class="fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-lg z-40 p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
+        <button aria-label="Close mobile menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none" id="close-mobile-menu">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        </button>
+        <nav class="hidden md:flex items-center justify-between w-full text-sm pl-12">
+            <a class="nav-link text-gray-300 hover:text-white" href="index.html">Home</a>
+            <a class="nav-link text-gray-300 hover:text-white" href="about.html">About</a>
+            <a class="nav-link text-gray-300 hover:text-white" href="packages.html">Packages &amp; Pricing</a>
+            <a class="nav-link text-gray-300 hover:text-white" href="blog.html">Blog</a>
+            <a class="nav-link text-gray-300 hover:text-white" href="index.html#roi-calculator">ROI Calculator</a>
+        </nav>
+    </div>
     <main>
-        <!-- Hero Section -->
-        <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-hero-pattern" id="hero">
-            <div class="absolute inset-0 bg-black/70"></div>
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="max-w-4xl mx-auto text-center">
-                    <span class="text-xs sm:text-sm font-medium tracking-widest uppercase text-orange-400 bg-orange-900/30 px-3 py-1 rounded-full border border-orange-700/50 mb-4 inline-block" data-aos="fade-down" data-aos-delay="100">Stop Working Nights & Weekends</span>
-                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold font-display tracking-tighter text-white mb-6" data-aos="fade-up" data-aos-delay="200">
-                        Automation Built For <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">Service Professionals.</span>
+        <section class="relative h-screen px-6 text-center overflow-hidden flex flex-col justify-center items-center" id="hero">
+            <video autoplay="" class="absolute z-0 w-full h-full object-cover" loop="" muted="" playsinline="">
+                <source src="assets/videos/hero-backdrop.webm" type="video/webm" />
+                <source src="assets/videos/hero-backdrop.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+            <div class="absolute inset-0 bg-black/70 z-0"></div>
+            <div class="container mx-auto relative z-10">
+                <div class="max-w-4xl mx-auto flex flex-col items-center">
+                    <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
+                        Automate Your Hawaii Business
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6 text-white whitespace-nowrap">
+                        Business Process <span class="text-orange-400">Automation</span>
                     </h1>
-                    <p class="text-lg text-gray-400 max-w-2xl mx-auto mb-10" data-aos="fade-up" data-aos-delay="300">
-                        I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can **win more jobs and get your evenings back.**
+                    <p class="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-10">
+                        For Hawaii businesses, every dollar counts. My custom automation systems reduce costly errors and wasted hours, putting money directly back into your pocket.
                     </p>
-                    <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="400">
-                        <a class="bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg shadow-orange-500/30 transition-all duration-300 transform hover:scale-[1.02]" href="#contact">
-                            Book Your Free Consultation
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+                            Schedule a Free Consultation
                         </a>
-                        <a class="bg-white/10 hover:bg-white/20 text-white font-medium py-3 px-8 rounded-full border border-white/20 transition-all duration-300" href="#process">
-                            See How It Works
+                        <a class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg border border-white/20" href="packages.html">
+                            See My Services
                         </a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Logos/Trust Bar Section -->
-        <section class="py-12 bg-zinc-950/70 border-b border-white/5">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h3 class="text-center text-sm font-semibold uppercase tracking-widest text-gray-500 mb-8" data-aos="fade-up">Trusted by Service Professionals</h3>
-                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                    <!-- Placeholder Logos for demonstration -->
-                    <svg class="h-6 sm:h-8 w-auto text-gray-600 hover:text-orange-500 transition duration-300" role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-aos="zoom-in" data-aos-delay="100"><title>House Repair Icon</title><path d="M12 2L1 12h3v8h6v-6h4v6h6v-8h3L12 2zm0 14c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" fill="currentColor"></path></svg>
-                    <svg class="h-6 sm:h-8 w-auto text-gray-600 hover:text-orange-500 transition duration-300" role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-aos="zoom-in" data-aos-delay="200"><title>Plumbing Icon</title><path d="M18 7h-2V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v3H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-6 12c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm2-9H10V4h4v6z" fill="currentColor"></path></svg>
-                    <svg class="h-6 sm:h-8 w-auto text-gray-600 hover:text-orange-500 transition duration-300" role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-aos="zoom-in" data-aos-delay="300"><title>Electrical Icon</title><path d="M13 1.01L6 15h5v8l7-14h-5z" fill="currentColor"></path></svg>
-                    <svg class="h-6 sm:h-8 w-auto text-gray-600 hover:text-orange-500 transition duration-300" role="img" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" data-aos="zoom-in" data-aos-delay="400"><title>HVAC Icon</title><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.8h-2c-1.1 0-2-.9-2-2V8.2c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v7.6c0 1.1-.9 2-2 2zm6 0h-2c-1.1 0-2-.9-2-2V8.2c0-1.1.9-2 2-2h2c1.1 0 2 .9 2 2v7.6c0 1.1-.9 2-2 2z" fill="currentColor"></path></svg>
-                </div>
-            </div>
-        </section>
-
-        <!-- Problem / Process Section -->
-        <section class="py-20 md:py-28" id="process">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mb-4" data-aos="fade-up">The Problem: Lost Time, Lost Revenue.</h2>
-                    <p class="text-gray-400 text-lg" data-aos="fade-up" data-aos-delay="100">The average service business loses 10+ hours a week on essential but time-consuming admin work. It doesn't have to be this way.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Step 1 -->
-                    <div class="glass-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
-                        <div class="bg-orange-600/20 text-orange-400 inline-flex items-center justify-center w-12 h-12 rounded-full mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        <!-- Tech Stack Section -->
+        <section class="py-16" id="tech-stack">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <div class="text-center max-w-4xl mx-auto mb-12">
+                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-8">Integrating With The Tools You Already Use</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
+                        <div class="flex flex-col items-center gap-y-2">
+                            <img alt="n8n Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/n8n/FFFFFF" />
+                            <span class="text-xs text-gray-500">n8n</span>
                         </div>
-                        <h3 class="text-xl font-semibold text-white mb-3 font-display">Time Drain: Admin Tasks</h3>
-                        <p class="text-gray-400">Scheduling, follow-ups, invoicing, and missed calls—these tasks steal your focus and cut into your profit margins.</p>
-                    </div>
-                    <!-- Step 2 -->
-                    <div class="glass-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
-                        <div class="bg-orange-600/20 text-orange-400 inline-flex items-center justify-center w-12 h-12 rounded-full mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        <div class="flex flex-col items-center gap-y-2">
+                            <img alt="Google Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/google/FFFFFF" />
+                            <span class="text-xs text-gray-500">Google</span>
                         </div>
-                        <h3 class="text-xl font-semibold text-white mb-3 font-display">The Solution: Automation</h3>
-                        <p class="text-gray-400">We design custom, simple systems using tools you already know (like Zapier, HubSpot, etc.) to handle the grind automatically.</p>
-                    </div>
-                    <!-- Step 3 -->
-                    <div class="glass-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
-                        <div class="bg-orange-600/20 text-orange-400 inline-flex items-center justify-center w-12 h-12 rounded-full mb-4">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 12l2 2 4-4m5.618-4.618a8.955 8.955 0 011.057 1.255M6.262 18.261A10.021 10.021 0 013 12.5a9.006 9.006 0 01.996-4.496M12 21a9 9 0 005.618-1.956M6.382 5.738A9.006 9.006 0 003 12.5c0 4.673 3.655 8.497 8.242 8.956M12 3v18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        <div class="flex flex-col items-center gap-y-2">
+                            <img alt="Slack Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/slack/FFFFFF" />
+                            <span class="text-xs text-gray-500">Slack</span>
                         </div>
-                        <h3 class="text-xl font-semibold text-white mb-3 font-display">The Result: More Free Time</h3>
-                        <p class="text-gray-400">Save 10+ hours weekly, convert more leads, and stop trading your evenings and weekends for paperwork.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Services/Features Section -->
-        <section class="py-20 md:py-28 bg-zinc-900/50" id="services">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mb-4" data-aos="fade-up">Services Designed to Recapture Your Time.</h2>
-                    <p class="text-gray-400 text-lg" data-aos="fade-up" data-aos-delay="100">From initial contact to final payment, we automate the repetitive parts of your business.</p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Feature 1: Missed Call/Lead Capture -->
-                    <div class="flex items-start space-x-6 p-6 glass-card-orange rounded-xl" data-aos="fade-right">
-                        <div class="flex-shrink-0 bg-orange-600 text-white p-3 rounded-full">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5zm6 4h6m-6 4h6m-6 4h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+                        <div class="flex flex-col items-center gap-y-2">
+                            <img alt="Zapier Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/zapier/FFFFFF" />
+                            <span class="text-xs text-gray-500">Zapier</span>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white mb-2 font-display">Automated Lead Capture & Follow-Up</h3>
-                            <p class="text-gray-300">Convert missed calls, website form fills, and social media DMs into qualified leads automatically. We ensure no lead is ever left cold or forgotten.</p>
+                        <div class="flex flex-col items-center gap-y-2">
+                            <img alt="QuickBooks Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/quickbooks/FFFFFF" />
+                            <span class="text-xs text-gray-500">QuickBooks</span>
                         </div>
-                    </div>
-
-                    <!-- Feature 2: Scheduling -->
-                    <div class="flex items-start space-x-6 p-6 glass-card rounded-xl" data-aos="fade-left">
-                        <div class="flex-shrink-0 bg-orange-600 text-white p-3 rounded-full">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white mb-2 font-display">Self-Serve Booking & Scheduling</h3>
-                            <p class="text-gray-300">Clients book their own appointments based on your real-time availability. Automatically send confirmations and reminders, eliminating back-and-forth emails.</p>
-                        </div>
-                    </div>
-
-                    <!-- Feature 3: Technician/Team Tasking -->
-                    <div class="flex items-start space-x-6 p-6 glass-card rounded-xl" data-aos="fade-right" data-aos-delay="100">
-                        <div class="flex-shrink-0 bg-orange-600 text-white p-3 rounded-full">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2m-9 0v-2a1 1 0 011-1h4a1 1 0 011 1v2m-6 0h6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white mb-2 font-display">Automated Job Dispatch & Updates</h3>
-                            <p class="text-gray-300">Once a job is confirmed, automatically notify the assigned technician, update the CRM, and send the customer a status confirmation.</p>
-                        </div>
-                    </div>
-
-                    <!-- Feature 4: Invoicing/Payment Reminders -->
-                    <div class="flex items-start space-x-6 p-6 glass-card rounded-xl" data-aos="fade-left" data-aos-delay="100">
-                        <div class="flex-shrink-0 bg-orange-600 text-white p-3 rounded-full">
-                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 9V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4m4 0h6m-6 0h-2m2 0V5m0 4v4m0 4v2m0-6V9m10 8h-2c-1.1 0-2-.9-2-2v-3a2 2 0 00-2-2H9a2 2 0 00-2 2v3c0 1.1.9 2 2 2h2m4 0V9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-semibold text-white mb-2 font-display">Smart Invoicing & Payment Reminders</h3>
-                            <p class="text-gray-300">Automatically trigger invoices upon job completion and send friendly, escalating reminders to cut down on late payments and chase time.</p>
+                        <div class="flex flex-col items-center gap-y-2">
+                            <img alt="Nextcloud Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/nextcloud/FFFFFF" />
+                            <span class="text-xs text-gray-500">Nextcloud</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Call to Action / Contact Section -->
-        <section class="py-20 md:py-28 border-t border-white/5" id="contact">
-            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="max-w-4xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 glass-card rounded-2xl p-6 md:p-12">
-                    <!-- Left Side: Text and CTA -->
-                    <div class="lg:pr-8">
-                        <h2 class="text-3xl sm:text-4xl font-bold font-display text-white mb-4" data-aos="fade-right">Ready to Reclaim Your Time?</h2>
-                        <p class="text-gray-400 text-lg mb-6" data-aos="fade-right" data-aos-delay="100">
-                            Book a free 30-minute consultation. We'll diagnose your biggest time-drains and show you exactly how automation can fix them.
+        <!-- Problem Section -->
+        <section class="py-16" id="problem">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <div class="text-center max-w-4xl mx-auto mb-12">
+                    <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-4">
+                        The Reality
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">
+                        You're Drowning in <span class="text-orange-400">Admin Chaos</span>
+                    </h2>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
+                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Missing Calls</h3>
+                        </div>
+                        <p class="text-gray-300">Potential customers hang up while you're on another job. Every missed call is lost revenue.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
+                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Manual Follow-ups</h3>
+                        </div>
+                        <p class="text-gray-300">You're spending evenings chasing down leads instead of relaxing with family.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
+                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Scheduling Nightmares</h3>
+                        </div>
+                        <p class="text-gray-300">Back-and-forth texts to coordinate appointments. It's 2024 - this should be automatic.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
+                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Lost Revenue</h3>
+                        </div>
+                        <p class="text-gray-300">Every hour spent on admin is an hour not spent growing your business or serving customers.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
+                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">Burnout</h3>
+                        </div>
+                        <p class="text-gray-300">You're working harder, not smarter. The admin work never ends, and neither do your stress levels.</p>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl">
+                        <div class="flex items-center mb-4">
+                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
+                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-bold text-white">No Time to Scale</h3>
+                        </div>
+                        <p class="text-gray-300">You're stuck in the day-to-day operations instead of focusing on growth and expansion.</p>
+                    </div>
+                </div>
+                <div class="glass-card p-8 rounded-2xl border border-slate-700/50">
+                    <p class="text-orange-300 text-center font-medium"><strong>The good news?</strong> This isn't a personal failure—it's a system failure. And that's fixable.</p>
+                </div>
+            </div>
+        </section>
+        <!-- ROI Calculator Section -->
+        <section class="py-16" id="roi-calculator">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="text-center mb-8">
+                            <div class="inline-block bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full mb-4">
+                                ROI Calculator
+                            </div>
+                            <h2 class="text-2xl md:text-3xl font-bold font-display mb-4 text-white">
+                                See Your <span class="text-white">Time Savings</span>
+                            </h2>
+                            <p class="text-gray-300 mb-8">Calculate how much time and money you could save with automation.</p>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <label class="block text-white font-semibold mb-2">Admin Hours Saved Per Week</label>
+                                <input class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider" id="hours-slider" max="40" min="5" type="range" value="20" />
+                                <div class="flex justify-between text-sm text-gray-400 mt-1">
+                                    <span>5 hours</span>
+                                    <span class="text-orange-400 font-semibold" id="hours-value">20 hours</span>
+                                    <span>40 hours</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-white font-semibold mb-2">Your Hourly Rate</label>
+                                <input class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider" id="rate-slider" max="200" min="25" type="range" value="75" />
+                                <div class="flex justify-between text-sm text-gray-400 mt-1">
+                                    <span>$25/hr</span>
+                                    <span class="text-orange-400 font-semibold" id="rate-value">$75/hr</span>
+                                    <span>$200/hr</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-8 p-6 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-xl border border-orange-500/30">
+                            <div class="text-center">
+                                <p class="text-gray-200 text-sm mb-2">Monthly Value of Your Time</p>
+                                <p class="text-3xl font-bold text-white" id="monthly-value">$6,000</p>
+                                <p class="text-gray-200 text-sm mt-2">Annual Value: <span class="text-white font-semibold" id="annual-value">$72,000</span></p>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-slate-900/40 backdrop-blur-sm rounded-xl border border-slate-700/50">
+                            <p class="text-gray-200 text-sm text-center">Most service pros save 15-25 hours per week with proper automation.</p>
+                        </div>
+                    </div>
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-2xl font-bold font-display mb-6 text-white">How to Use This Calculator</h3>
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">1</div>
+                                    <div>
+                                        <h4 class="text-white font-semibold mb-1">Admin Hours Saved Per Week</h4>
+                                        <p class="text-gray-400 text-sm">Think about how many hours you spend on calls, follow-ups, scheduling, and admin tasks each week.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">2</div>
+                                    <div>
+                                        <h4 class="text-white font-semibold mb-1">Your Hourly Rate</h4>
+                                        <p class="text-gray-400 text-sm">What's your time worth? Include the value of your expertise, not just what you charge customers.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">3</div>
+                                    <div>
+                                        <h4 class="text-white font-semibold mb-1">See Your Savings</h4>
+                                        <p class="text-gray-400 text-sm">The calculator shows you exactly how much time and money you could reclaim with automation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glass-card p-6 rounded-2xl">
+                            <h4 class="text-lg font-bold text-white mb-3">Ready to Make It Happen?</h4>
+                            <p class="text-gray-300 text-sm mb-4">Let's turn those potential savings into reality. Book a free consultation to discuss your automation strategy.</p>
+                            <a class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" href="https://calendly.com/silvaautomation/consultation" target="_blank">
+                                Book Free Consultation
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Process Section -->
+        <section class="py-16" id="process">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <div class="text-center max-w-4xl mx-auto mb-12">
+                    <div class="inline-block bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full mb-4">
+                        Simple Process
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold font-display mb-4 text-white">
+                        3 Simple <span class="text-white">Steps</span>
+                    </h2>
+                </div>
+                <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                    <div class="text-center flex flex-col">
+                        <div class="flex justify-center mb-6">
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">
+                                1
+                            </div>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-white mb-4">
+                            Discovery Call
+                        </h3>
+                        <p class="text-gray-300 mb-6">
+                            We'll spend 30 minutes diving deep into your business to identify the single biggest time-waster that's eating up your day.
                         </p>
-                        <ul class="space-y-3 text-gray-300 mb-8">
-                            <li class="flex items-start space-x-3" data-aos="fade-right" data-aos-delay="200">
-                                <svg class="w-5 h-5 text-orange-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                                <span>No-obligation diagnosis of your workflows.</span>
-                            </li>
-                            <li class="flex items-start space-x-3" data-aos="fade-right" data-aos-delay="300">
-                                <svg class="w-5 h-5 text-orange-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                                <span>Custom plan to save you 10+ hours a week.</span>
-                            </li>
-                            <li class="flex items-start space-x-3" data-aos="fade-right" data-aos-delay="400">
-                                <svg class="w-5 h-5 text-orange-400 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M5 13l4 4L19 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                                <span>Practical steps you can implement today.</span>
-                            </li>
-                        </ul>
+                        <div class="glass-card p-6 text-center grow">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
+                            </div>
+                            <h4 class="text-lg font-bold text-white mb-2">
+                                30 Minutes
+                            </h4>
+                            <p class="text-gray-200 text-sm">
+                                That's all it takes to find your solution
+                            </p>
+                        </div>
                     </div>
-
-                    <!-- Right Side: Contact Form (FIXED) -->
-                    <div data-aos="fade-left">
-                        <h3 class="text-2xl font-semibold text-white mb-4">Book Your Free Consult</h3>
-                        <!-- Form action URL is correctly set and fields include the necessary 'name' attributes -->
-                        <form action="https://formspree.io/f/xkgqzdqe" class="space-y-6" method="POST">
-                            <!-- Input 1: Name (FIXED: Includes name="name") -->
-                            <div>
-                                <label class="block text-white font-semibold mb-2 text-sm" for="user-name">Your Name</label>
-                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" id="user-name" name="name" placeholder="John Smith" type="text" required />
+                    <div class="text-center flex flex-col">
+                        <div class="flex justify-center mb-6">
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">
+                                2
                             </div>
-                            <!-- Input 2: Email (FIXED: Includes name="_replyto" for Formspree reply functionality) -->
-                            <div>
-                                <label class="block text-white font-semibold mb-2 text-sm" for="user-email">Email Address</label>
-                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" id="user-email" name="_replyto" placeholder="john@example.com" type="email" required />
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-white mb-4">
+                            I Build Your System
+                        </h3>
+                        <p class="text-gray-300 mb-6">
+                            While you focus on your business, I get to work building the perfect automation that puts your admin tasks on autopilot.
+                        </p>
+                        <div class="glass-card p-6 text-center grow">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0 3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
                             </div>
-                            <!-- Input 3: Phone (FIXED: Includes name="phone") -->
-                            <div>
-                                <label class="block text-white font-semibold mb-2 text-sm" for="user-phone">Phone Number (Optional)</label>
-                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" id="user-phone" name="phone" placeholder="(808) 123-4567" type="tel" />
+                            <h4 class="text-lg font-bold text-white mb-2">
+                                7-14 Days
+                            </h4>
+                            <p class="text-gray-200 text-sm">
+                                From concept to working automation
+                            </p>
+                        </div>
+                    </div>
+                    <div class="text-center flex flex-col">
+                        <div class="flex justify-center mb-6">
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">
+                                3
                             </div>
-                            <!-- Input 4: Challenge (FIXED: Includes name="challenge") -->
-                            <div>
-                                <label class="block text-white font-semibold mb-2 text-sm" for="user-challenge">What's your biggest admin challenge?</label>
-                                <textarea class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" id="user-challenge" name="challenge" placeholder="Tell me about the admin tasks that are eating up your time..." rows="4" required></textarea>
+                        </div>
+                        <h3 class="text-xl font-display font-bold text-white mb-4">
+                            Go Live &amp; Save Time
+                        </h3>
+                        <p class="text-gray-300 mb-6">
+                            I hand you the keys with a simple video guide. You immediately start saving time, and I provide 30 days of full support to make sure everything runs perfectly.
+                        </p>
+                        <div class="glass-card p-6 text-center grow">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
+                                    <path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+                                </svg>
                             </div>
-                            <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-[1.005]" type="submit">
+                            <h4 class="text-lg font-bold text-white mb-2">
+                                Instant Results
+                            </h4>
+                            <p class="text-gray-200 text-sm">
+                                Start saving time from day one
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Latest from Blog Section -->
+        <section class="py-16" id="blog-preview">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <div class="text-center max-w-4xl mx-auto mb-12">
+                    <div class="inline-block bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full mb-4">
+                        Latest from the Blog
+                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold font-display mb-4 text-white">
+                        Insights for <span class="text-white">Service Pros</span>
+                    </h2>
+                    <p class="text-gray-300">Actionable advice and automation strategies to help you work smarter, not harder.</p>
+                </div>
+                <div class="max-w-4xl mx-auto flex flex-col items-center">
+                    <!-- Featured Blog Post -->
+                    <a class="block group glass-card rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20 overflow-hidden" href="blog3.html">
+                        <div class="grid md:grid-cols-2">
+                            <div class="md:col-span-1">
+                                <img alt="An airplane flying over clouds" class="aspect-video md:aspect-auto h-full w-full object-cover" src="assets/images/blog3.png" />
+                            </div>
+                            <div class="md:col-span-1 p-8 flex flex-col justify-center">
+                                <div>
+                                    <span class="inline-block bg-blue-500/10 text-blue-300 text-xs font-medium px-3 py-1 rounded-full mb-4">Business Strategy</span>
+                                    <h3 class="text-xl font-bold font-display text-white mb-3 group-hover:text-orange-400 transition-colors">An Airline Saved Millions with Automation. Here’s How Your Business Can Too.</h3>
+                                    <p class="text-sm text-gray-400 mb-6 line-clamp-3">You may have seen the recent news: a major airline is saving millions of dollars through business automation. Your first thought might be, "What does a massive airline have to do with my contracting business, law firm, or healthcare practice here in Hawaii?"</p>
+                                    <div class="flex items-center justify-between mt-auto">
+                                        <span class="font-semibold text-sm text-white group-hover:text-orange-400 transition-colors">Read More →</span>
+                                        <span class="text-xs text-gray-500">6 min read</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="text-center mt-12">
+                    <a class="inline-block bg-white hover:bg-gray-200 text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-md" href="blog.html">
+                        View All Posts
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="py-16" id="contact">
+            <div class="container mx-auto px-6" data-aos="fade-up">
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold text-white mb-4 text-center">Get Your Free Consultation</h3>
+                        <form action="https://formspree.io/f/xyznjyjj" class="space-y-6" method="POST">
+                            <div>
+                                <label class="block text-white font-semibold mb-2">Your Name</label>
+                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" placeholder="John Smith" type="text" />
+                            </div>
+                            <div>
+                                <label class="block text-white font-semibold mb-2">Email Address</label>
+                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" placeholder="john@example.com" type="email" />
+                            </div>
+                            <div>
+                                <label class="block text-white font-semibold mb-2">Phone Number</label>
+                                <input class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" placeholder="(808) 123-4567" type="tel" />
+                            </div>
+                            <div>
+                                <label class="block text-white font-semibold mb-2">What's your biggest admin challenge?</label>
+                                <textarea class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" placeholder="Tell me about the admin tasks that are eating up your time..." rows="4"></textarea>
+                            </div>
+                            <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" type="submit">
                                 Book My Free Consultation
                             </button>
                         </form>
+                    </div>
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-xl font-bold text-white mb-6">My Promise to You</h3>
+                        <div class="space-y-6">
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-2">No Technical Jargon</h4>
+                                <p class="text-gray-300 text-sm">I explain everything in plain English. You'll understand exactly what I'm building and why.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-2">Quick Implementation</h4>
+                                <p class="text-gray-300 text-sm">Most automations are built and running within 7-14 days. No months of waiting.</p>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-white mb-2">30-Day Post-Launch Support</h4>
+                                <p class="text-gray-300 text-sm">Full support for 30 days after launch. I make sure everything works perfectly for your business.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Footer -->
-    <footer class="py-12 border-t border-white/5 bg-zinc-950/70">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Column 1: Logo and Summary -->
-                <div>
-                    <a class="flex items-center space-x-2 text-white mb-4" href="/">
-                        <svg class="h-6 w-6 text-orange-500" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"></path>
-                        </svg>
-                        <span class="text-lg font-bold font-display tracking-wider">Silva Automation</span>
+    <footer class="bg-zinc-900 border-t border-zinc-800">
+        <div class="container mx-auto px-6 py-8">
+            <div class="md:flex md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a class="flex items-center" href="index.html">
+                        <img alt="Silva Automation Logo" class="h-12 w-auto" src="assets/images/logo.png" />
                     </a>
-                    <p class="text-sm text-gray-400">Building simple, powerful automation systems so service professionals can focus on their craft, not paperwork.</p>
+                    <p class="mt-4 text-sm text-gray-400 max-w-xs">Automating Hawaii's service businesses to save time and increase profit.</p>
+                    <div class="mt-4 space-y-2">
+                        <a class="text-white hover:text-gray-300 font-semibold block" href="tel:+18083081107">(808) 308-1107</a>
+                        <p class="text-xs text-gray-500">Serving all of Hawaii • Based in Waipahu</p>
+                    </div>
                 </div>
-
-                <!-- Column 2: Quick Links -->
-                <div>
-                    <h4 class="text-white font-semibold mb-4 border-b border-orange-500/50 pb-2">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a class="text-gray-400 hover:text-orange-400 transition duration-150 text-sm" href="#process">How It Works</a></li>
-                        <li><a class="text-gray-400 hover:text-orange-400 transition duration-150 text-sm" href="#services">Our Services</a></li>
-                        <li><a class="text-gray-400 hover:text-orange-400 transition duration-150 text-sm" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 3: Legal -->
-                <div>
-                    <h4 class="text-white font-semibold mb-4 border-b border-orange-500/50 pb-2">Legal</h4>
-                    <ul class="space-y-2">
-                        <!-- Links confirmed to point to your existing legal.html file -->
-                        <li><a class="text-gray-400 hover:text-orange-400 transition duration-150 text-sm" href="legal.html#privacy-policy">Privacy Policy</a></li>
-                        <li><a class="text-gray-400 hover:text-orange-400 transition duration-150 text-sm" href="legal.html#terms-of-service">Terms of Service</a></li>
-                        <li><a class="text-gray-400 hover:text-orange-400 transition duration-150 text-sm" href="legal.html#cookie-policy">Cookie Policy</a></li>
-                    </ul>
-                </div>
-
-                <!-- Column 4: Contact -->
-                <div>
-                    <h4 class="text-white font-semibold mb-4 border-b border-orange-500/50 pb-2">Get In Touch</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li class="flex items-center space-x-2">
-                            <svg class="w-4 h-4 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                            <a class="text-gray-400 hover:text-orange-400 transition duration-150" href="mailto:info@silvaautomation.com">info@silvaautomation.com</a>
-                        </li>
-                        <li class="flex items-center space-x-2">
-                            <svg class="w-4 h-4 text-orange-400 flex-shrink-0" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 5a2 2 0 012-2h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                            <span class="text-gray-400">Remote - Serving All Time Zones</span>
-                        </li>
-                    </ul>
+                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Navigate</h2>
+                        <ul class="text-gray-400 space-y-3">
+                            <li><a class="hover:text-white" href="about.html">About</a></li>
+                            <li><a class="hover:text-white" href="packages.html">Packages &amp; Pricing</a></li>
+                            <li><a class="hover:text-white" href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
+                        <ul class="text-gray-400 space-y-3">
+                            <li><a class="hover:text-white" href="legal.html">Legal Center</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <!-- Copyright and Social Icons -->
-            <div class="mt-10 pt-8 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center text-sm text-gray-500">
-                <p>&copy; 2024 Silva Automation. All rights reserved.</p>
-                <div class="flex space-x-4 mt-4 sm:mt-0">
-                    <a class="text-gray-500 hover:text-orange-400 transition duration-150" href="#" aria-label="LinkedIn">
-                        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764s1.75.79 1.75 1.764c0 .974-.784 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.366-4-3.264-4 0v5.604h-3v-11h3v1.765c1.397-2.782 7-2.569 7 2.404v6.831z" fill="currentColor"></path></svg>
-                    </a>
-                    <a class="text-gray-500 hover:text-orange-400 transition duration-150" href="#" aria-label="Twitter">
-                        <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.799-1.574 2.16-2.717-.951.579-2.007.95-3.127 1.173-.895-.95-2.174-1.547-3.593-1.547-2.71 0-4.918 2.208-4.918 4.918 0 .385.044.755.127 1.11C7.49 8.24 4.195 6.45 1.95 3.73a4.836 4.836 0 00-.665 2.46c0 1.708.871 3.21 2.191 4.085-.807-.026-1.564-.247-2.227-.616v.062c0 2.386 1.696 4.378 3.945 4.846-.414.112-.85.17-1.297.17-.318 0-.623-.03-1.127-.107.632 1.956 2.453 3.385 4.604 3.425-1.683 1.321-3.804 2.108-6.155 2.108-.401 0-.796-.023-1.185-.069 2.186 1.398 4.792 2.21 7.585 2.21 9.1 0 14.075-7.525 14.075-14.075 0-.214-.005-.427-.013-.639.967-.699 1.808-1.574 2.474-2.585z" fill="currentColor"></path></svg>
-                    </a>
-                </div>
+            <hr class="my-6 border-slate-800 sm:mx-auto" />
+            <div class="sm:flex sm:items-center sm:justify-between">
+                <span class="text-sm text-gray-400 sm:text-center">© 2025 <a class="hover:underline" href="index.html">Silva Automation</a>. All Rights Reserved.</span>
             </div>
         </div>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
 
-    <!-- Cookie Banner -->
-    <div class="fixed bottom-0 left-0 right-0 p-4 bg-zinc-900/95 backdrop-blur-md shadow-2xl border-t border-white/10 z-50 transition-transform duration-300 transform translate-y-0" id="cookie-banner">
+        // Header behavior on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+            }
+        });
+
+        // Active link highlighting for "floating" links
+        function setActiveLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').split('#')[0];
+                const linkPage = href.split('/').pop() || 'index.html';
+
+                // Skip the ROI Calculator, which has its own style
+                if (link.getAttribute('href').includes('#roi-calculator')) {
+                    return;
+                }
+
+                if (linkPage === currentPage) {
+                    // Apply active styles: orange, bold text
+                    link.classList.add('text-orange-400', 'font-bold');
+                    link.classList.remove('text-gray-200', 'font-medium');
+                } else {
+                    // Apply inactive styles
+                    link.classList.remove('text-orange-400', 'font-bold');
+                    link.classList.add('text-gray-200', 'font-medium');
+                }
+            });
+        }
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // Run functions on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setActiveLink();
+            
+            // ROI Calculator functionality (runs only if elements exist)
+            const hoursSlider = document.getElementById('hours-slider');
+            const rateSlider = document.getElementById('rate-slider');
+            if(hoursSlider && rateSlider) {
+                const hoursValue = document.getElementById('hours-value');
+                const rateValue = document.getElementById('rate-value');
+                const monthlyValue = document.getElementById('monthly-value');
+                const annualValue = document.getElementById('annual-value');
+
+                function updateCalculator() {
+                    const hours = parseInt(hoursSlider.value);
+                    const rate = parseInt(rateSlider.value);
+                    const monthly = (hours * rate * 4.33).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+                    const annual = (hours * rate * 52).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+                    hoursValue.textContent = hours + ' hours';
+                    rateValue.textContent = '$' + rate + '/hr';
+                    monthlyValue.textContent = '$' + monthly;
+                    annualValue.textContent = '$' + annual;
+                }
+                hoursSlider.addEventListener('input', updateCalculator);
+                rateSlider.addEventListener('input', updateCalculator);
+                updateCalculator();
+            }
+        });
+    </script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Header behavior on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+            } else {
+                header.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
+            }
+        });
+
+        // Active link highlighting
+        function setActiveLink() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href').split('#')[0]; // Ignore anchor links
+                const linkPage = href.split('/').pop() || 'index.html';
+
+                if (linkPage === currentPage) {
+                    // Exclude the ROI calculator from this logic
+                    if (!link.getAttribute('href').includes('#')) {
+                        link.classList.add('text-orange-400', 'font-bold');
+                        link.classList.remove('bg-white/15');
+                    }
+                } else {
+                    if (!link.getAttribute('href').includes('#')) {
+                        link.classList.remove('text-orange-400', 'font-bold');
+                        link.classList.add('bg-white/15');
+                    }
+                }
+            });
+        }
+
+        // Mobile menu functionality
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMobileMenu = document.getElementById('close-mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function() {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        closeMobileMenu.addEventListener('click', function() {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        // ROI Calculator functionality
+        const hoursSlider = document.getElementById('hours-slider');
+        const rateSlider = document.getElementById('rate-slider');
+        const hoursValue = document.getElementById('hours-value');
+        const rateValue = document.getElementById('rate-value');
+        const monthlyValue = document.getElementById('monthly-value');
+        const annualValue = document.getElementById('annual-value');
+
+        function updateCalculator() {
+            if (!hoursSlider) return; // Guard clause
+            const hours = parseInt(hoursSlider.value);
+            const rate = parseInt(rateSlider.value);
+            const monthly = (hours * rate * 4.33).toLocaleString('en-US', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+            const annual = (hours * rate * 52).toLocaleString('en-US', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            });
+
+            hoursValue.textContent = hours + ' hours';
+            rateValue.textContent = '$' + rate + '/hr';
+            monthlyValue.textContent = '$' + monthly;
+            annualValue.textContent = '$' + annual;
+        }
+
+        if (hoursSlider) {
+            hoursSlider.addEventListener('input', updateCalculator);
+            rateSlider.addEventListener('input', updateCalculator);
+            updateCalculator(); // Initial call
+        }
+
+        // Cookie Consent Banner
+        const cookieBanner = document.getElementById('cookie-banner');
+        const acceptAllBtn = document.getElementById('cookie-accept-all');
+        const acceptNecessaryBtn = document.getElementById('cookie-accept-necessary');
+
+        if (cookieBanner && !localStorage.getItem('cookieConsent')) {
+            setTimeout(() => {
+                cookieBanner.classList.remove('translate-y-full');
+            }, 1000);
+        }
+
+        if (acceptAllBtn) {
+            acceptAllBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'all');
+                cookieBanner.classList.add('translate-y-full');
+                loadGA(); // Load analytics on consent
+            });
+        }
+
+        if (acceptNecessaryBtn) {
+            acceptNecessaryBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'necessary');
+                cookieBanner.classList.add('translate-y-full');
+            });
+        }
+
+        // Consent-gated Google Analytics (GA4)
+        function loadGA() {
+            if (window.gtagLoaded) return;
+            window.gtagLoaded = true;
+            var s = document.createElement('script');
+            s.async = true;
+            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85';
+            document.head.appendChild(s);
+
+            window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            window.gtag = gtag;
+            gtag('js', new Date());
+            gtag('config', 'G-6T97Y5LX85');
+        }
+
+        if (localStorage.getItem('cookieConsent') === 'all') {
+            loadGA();
+        }
+
+        // Run on page load
+        setActiveLink();
+    </script>
+    <div class="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t border-white/10 p-6 transform translate-y-full transition-transform duration-300 ease-in-out" id="cookie-banner">
         <div class="container mx-auto max-w-4xl">
             <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div class="flex-1">
@@ -333,64 +745,6 @@
             </div>
         </div>
     </div>
-    <script async="" src="//code.tidio.co/lzqrmnv0dmxjzjtah0zyvz34g9gcvkuz.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // AOS Initialization
-        AOS.init({
-            duration: 800,
-            once: true,
-        });
-
-        // Header Scroll Effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('bg-zinc-900/90', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-white/10');
-            } else {
-                header.classList.remove('bg-zinc-900/90', 'backdrop-blur-md', 'shadow-lg', 'border-b', 'border-white/10');
-            }
-        });
-
-        // Mobile Menu Toggle
-        const menuButton = document.getElementById('menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        menuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-        
-        // Close Mobile Menu on Link Click
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
-
-
-        // Cookie Banner Logic
-        const cookieBanner = document.getElementById('cookie-banner');
-        const acceptAllButton = document.getElementById('cookie-accept-all');
-        const acceptNecessaryButton = document.getElementById('cookie-accept-necessary');
-        const COOKIE_KEY = 'silva_cookie_consent';
-
-        // Function to set cookie and hide banner
-        const setCookieConsent = (type) => {
-            localStorage.setItem(COOKIE_KEY, type);
-            cookieBanner.classList.add('translate-y-full');
-            setTimeout(() => {
-                cookieBanner.style.display = 'none';
-            }, 300);
-        };
-
-        // Check for existing consent on load
-        if (localStorage.getItem(COOKIE_KEY)) {
-            cookieBanner.style.display = 'none';
-        }
-
-        // Event listeners for buttons
-        acceptAllButton.addEventListener('click', () => setCookieConsent('all'));
-        acceptNecessaryButton.addEventListener('click', () => setCookieConsent('necessary'));
-
-    </script>
+    <script async="" src="//code.tidio.co/lzqrmnv0dmxjzjtah0zyvzplmzxb3qes.js"></script>
 </body>
 </html>
