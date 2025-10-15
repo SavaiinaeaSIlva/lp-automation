@@ -1,10 +1,6 @@
 # Silva Automation Website
 
 This is the official front-end code for the Silva Automation business website. It's a modern, single-page responsive website designed to showcase automation services, generate leads, and provide key business information for clients in Hawaii.
-
-![Silva Automation Website Screenshot](assets/images/screenshot.png)
-*(**Note:** You'll need to take a screenshot of your site and save it as `screenshot.png` inside your `assets/images` folder for the image above to work.)*
-
 ---
 
 ## Features
