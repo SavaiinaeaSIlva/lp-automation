@@ -1,771 +1,714 @@
 <!DOCTYPE html>
-<html class="scroll-smooth h-full" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silva Automation - Real Solutions for Real Service Pros.</title>
-    <meta name="description" content="I build simple, automated systems that handle your missed calls, follow-ups, and scheduling, so you can win more jobs and get your evenings back." />
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link href="dist/output.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silva Automation - Automation for Hawaii Service Businesses</title>
+    <meta name="description" content="Custom automation systems for Hawaii service businesses. Win back your time and scale your operations.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Exo+2:wght@700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-gradient-to-b from-zinc-950 to-black antialiased bg-black text-gray-300 bg-fixed">
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out" id="header">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <a aria-label="Silva Automation Home" href="index.html">
-            <img alt="Silva Automation Logo" class="h-10 md:h-12 w-auto" src="assets/images/logo.png" />
-        </a>
-        <div class="flex items-center grow">
-            <nav class="hidden md:flex items-center justify-between w-full text-sm pl-12">
-                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="index.html">Home</a>
-                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="about.html">About</a>
-                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="packages.html">Packages &amp; Pricing</a>
-                <a class="nav-link text-gray-200 hover:text-white transition-colors duration-200 text-sm font-medium" href="blog.html">Blog</a>
-                <a class="nav-link text-orange-400 hover:text-orange-300 transition-colors duration-200 text-sm font-bold" href="index.html#roi-calculator">ROI Calculator</a>
-            </nav>
-            <div class="md:hidden ml-4">
-                <button aria-controls="mobile-menu" aria-expanded="false" aria-label="Open mobile menu" class="text-white focus:outline-none bg-white/10 backdrop-blur-md px-3 py-2 rounded-full border border-white/20" id="mobile-menu-button">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-                </button>
-            </div>
-        </div>
-    </div>
-</header>
-    <div class="fixed top-0 right-0 h-full w-72 bg-black/95 backdrop-blur-lg z-40 p-8 transform translate-x-full transition-transform duration-300 ease-in-out md:hidden" id="mobile-menu">
-        <button aria-label="Close mobile menu" class="absolute top-6 right-6 text-gray-400 hover:text-white focus:outline-none" id="close-mobile-menu">
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
-        </button>
-        <nav class="hidden md:flex items-center justify-between w-full text-sm pl-12">
-            <a class="nav-link text-gray-300 hover:text-white" href="index.html">Home</a>
-            <a class="nav-link text-gray-300 hover:text-white" href="about.html">About</a>
-            <a class="nav-link text-gray-300 hover:text-white" href="packages.html">Packages &amp; Pricing</a>
-            <a class="nav-link text-gray-300 hover:text-white" href="blog.html">Blog</a>
-            <a class="nav-link text-gray-300 hover:text-white" href="index.html#roi-calculator">ROI Calculator</a>
-        </nav>
-    </div>
-    <main>
-        <section class="relative h-screen px-6 text-center overflow-hidden flex flex-col justify-center items-center" id="hero">
-            <video autoplay="" class="absolute z-0 w-full h-full object-cover" loop="" muted="" playsinline="">
-                <source src="assets/videos/hero-backdrop.webm" type="video/webm" />
-                <source src="assets/videos/hero-backdrop.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-            </video>
-            <div class="absolute inset-0 bg-black/70 z-0"></div>
-            <div class="container mx-auto relative z-10">
-                <div class="max-w-4xl mx-auto flex flex-col items-center">
-                    <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-6">
-                        Automate Your Hawaii Business
-                    </div>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold font-display leading-tight mb-6 text-white whitespace-nowrap">
-                        Business Process <span class="text-orange-400">Automation</span>
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-100 max-w-3xl mx-auto mb-10">
-                        For Hawaii businesses, every dollar counts. My custom automation systems reduce costly errors and wasted hours, putting money directly back into your pocket.
-                    </p>
-                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                        <a class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg" href="https://calendly.com/silvaautomation/consultation" target="_blank">
-                            Schedule a Free Consultation
-                        </a>
-                        <a class="inline-block bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg border border-white/20" href="packages.html">
-                            See My Services
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Tech Stack Section -->
-        <section class="py-16" id="tech-stack">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="text-center max-w-4xl mx-auto mb-12">
-                    <h3 class="text-sm font-semibold text-gray-400 tracking-wider uppercase mb-8">Integrating With The Tools You Already Use</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center justify-items-center">
-                        <div class="flex flex-col items-center gap-y-2">
-                            <img alt="n8n Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/n8n/FFFFFF" />
-                            <span class="text-xs text-gray-500">n8n</span>
-                        </div>
-                        <div class="flex flex-col items-center gap-y-2">
-                            <img alt="Google Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/google/FFFFFF" />
-                            <span class="text-xs text-gray-500">Google</span>
-                        </div>
-                        <div class="flex flex-col items-center gap-y-2">
-                            <img alt="Slack Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/slack/FFFFFF" />
-                            <span class="text-xs text-gray-500">Slack</span>
-                        </div>
-                        <div class="flex flex-col items-center gap-y-2">
-                            <img alt="Zapier Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/zapier/FFFFFF" />
-                            <span class="text-xs text-gray-500">Zapier</span>
-                        </div>
-                        <div class="flex flex-col items-center gap-y-2">
-                            <img alt="QuickBooks Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/quickbooks/FFFFFF" />
-                            <span class="text-xs text-gray-500">QuickBooks</span>
-                        </div>
-                        <div class="flex flex-col items-center gap-y-2">
-                            <img alt="Nextcloud Logo" class="h-6 w-auto" src="https://cdn.simpleicons.org/nextcloud/FFFFFF" />
-                            <span class="text-xs text-gray-500">Nextcloud</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Problem Section -->
-        <section class="py-16" id="problem">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="text-center max-w-4xl mx-auto mb-12">
-                    <div class="inline-block bg-orange-500/10 text-orange-400 text-sm font-medium px-4 py-2 rounded-full mb-4">
-                        The Reality
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-bold font-display mb-4 text-white">
-                        You're Drowning in <span class="text-orange-400">Admin Chaos</span>
-                    </h2>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
-                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-white">Missing Calls</h3>
-                        </div>
-                        <p class="text-gray-300">Potential customers hang up while you're on another job. Every missed call is lost revenue.</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
-                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-white">Manual Follow-ups</h3>
-                        </div>
-                        <p class="text-gray-300">You're spending evenings chasing down leads instead of relaxing with family.</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
-                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-white">Scheduling Nightmares</h3>
-                        </div>
-                        <p class="text-gray-300">Back-and-forth texts to coordinate appointments. It's 2024 - this should be automatic.</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
-                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-white">Lost Revenue</h3>
-                        </div>
-                        <p class="text-gray-300">Every hour spent on admin is an hour not spent growing your business or serving customers.</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
-                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-white">Burnout</h3>
-                        </div>
-                        <p class="text-gray-300">You're working harder, not smarter. The admin work never ends, and neither do your stress levels.</p>
-                    </div>
-                    <div class="glass-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="bg-orange-500/20 p-3 rounded-full mr-4">
-                                <svg class="h-6 w-6 text-orange-400" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h3 class="text-lg font-bold text-white">No Time to Scale</h3>
-                        </div>
-                        <p class="text-gray-300">You're stuck in the day-to-day operations instead of focusing on growth and expansion.</p>
-                    </div>
-                </div>
-                <div class="glass-card p-8 rounded-2xl border border-slate-700/50">
-                    <p class="text-orange-300 text-center font-medium"><strong>The good news?</strong> This isn't a personal failure—it's a system failure. And that's fixable.</p>
-                </div>
-            </div>
-        </section>
-        <!-- ROI Calculator Section -->
-        <section class="py-16" id="roi-calculator">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="glass-card p-8 rounded-2xl">
-                        <div class="text-center mb-8">
-                            <div class="inline-block bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full mb-4">
-                                ROI Calculator
-                            </div>
-                            <h2 class="text-2xl md:text-3xl font-bold font-display mb-4 text-white">
-                                See Your <span class="text-white">Time Savings</span>
-                            </h2>
-                            <p class="text-gray-300 mb-8">Calculate how much time and money you could save with automation.</p>
-                        </div>
-                        <div class="space-y-6">
-                            <div>
-                                <label class="block text-white font-semibold mb-2">Admin Hours Saved Per Week</label>
-                                <input class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider" id="hours-slider" max="40" min="5" type="range" value="20" />
-                                <div class="flex justify-between text-sm text-gray-400 mt-1">
-                                    <span>5 hours</span>
-                                    <span class="text-orange-400 font-semibold" id="hours-value">20 hours</span>
-                                    <span>40 hours</span>
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-white font-semibold mb-2">Your Hourly Rate</label>
-                                <input class="w-full h-2 bg-gray-700 rounded-lg appearance-none cursor-pointer slider" id="rate-slider" max="200" min="25" type="range" value="75" />
-                                <div class="flex justify-between text-sm text-gray-400 mt-1">
-                                    <span>$25/hr</span>
-                                    <span class="text-orange-400 font-semibold" id="rate-value">$75/hr</span>
-                                    <span>$200/hr</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8 p-6 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-xl border border-orange-500/30">
-                            <div class="text-center">
-                                <p class="text-gray-200 text-sm mb-2">Monthly Value of Your Time</p>
-                                <p class="text-3xl font-bold text-white" id="monthly-value">$6,000</p>
-                                <p class="text-gray-200 text-sm mt-2">Annual Value: <span class="text-white font-semibold" id="annual-value">$72,000</span></p>
-                            </div>
-                        </div>
-                        <div class="mt-6 p-4 bg-slate-900/40 backdrop-blur-sm rounded-xl border border-slate-700/50">
-                            <p class="text-gray-200 text-sm text-center">Most service pros save 15-25 hours per week with proper automation.</p>
-                        </div>
-                    </div>
-                    <div class="space-y-8">
-                        <div>
-                            <h3 class="text-2xl font-bold font-display mb-6 text-white">How to Use This Calculator</h3>
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">1</div>
-                                    <div>
-                                        <h4 class="text-white font-semibold mb-1">Admin Hours Saved Per Week</h4>
-                                        <p class="text-gray-400 text-sm">Think about how many hours you spend on calls, follow-ups, scheduling, and admin tasks each week.</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">2</div>
-                                    <div>
-                                        <h4 class="text-white font-semibold mb-1">Your Hourly Rate</h4>
-                                        <p class="text-gray-400 text-sm">What's your time worth? Include the value of your expertise, not just what you charge customers.</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="bg-orange-500 text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold mr-4 flex-shrink-0">3</div>
-                                    <div>
-                                        <h4 class="text-white font-semibold mb-1">See Your Savings</h4>
-                                        <p class="text-gray-400 text-sm">The calculator shows you exactly how much time and money you could reclaim with automation.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="glass-card p-6 rounded-2xl">
-                            <h4 class="text-lg font-bold text-white mb-3">Ready to Make It Happen?</h4>
-                            <p class="text-gray-300 text-sm mb-4">Let's turn those potential savings into reality. Book a free consultation to discuss your automation strategy.</p>
-                            <a class="inline-block bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" href="https://calendly.com/silvaautomation/consultation" target="_blank">
-                                Book Free Consultation
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Process Section -->
-        <section class="py-16" id="process">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="text-center max-w-4xl mx-auto mb-12">
-                    <div class="inline-block bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full mb-4">
-                        Simple Process
-                    </div>
-                    <h2 class="text-2xl md:text-3xl font-bold font-display mb-4 text-white">
-                        3 Simple <span class="text-white">Steps</span>
-                    </h2>
-                </div>
-                <div class="grid lg:grid-cols-3 gap-8 items-stretch">
-                    <div class="text-center flex flex-col">
-                        <div class="flex justify-center mb-6">
-                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">
-                                1
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-display font-bold text-white mb-4">
-                            Discovery Call
-                        </h3>
-                        <p class="text-gray-300 mb-6">
-                            We'll spend 30 minutes diving deep into your business to identify the single biggest time-waster that's eating up your day.
-                        </p>
-                        <div class="glass-card p-6 text-center grow">
-                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h4 class="text-lg font-bold text-white mb-2">
-                                30 Minutes
-                            </h4>
-                            <p class="text-gray-200 text-sm">
-                                That's all it takes to find your solution
-                            </p>
-                        </div>
-                    </div>
-                    <div class="text-center flex flex-col">
-                        <div class="flex justify-center mb-6">
-                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">
-                                2
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-display font-bold text-white mb-4">
-                            I Build Your System
-                        </h3>
-                        <p class="text-gray-300 mb-6">
-                            While you focus on your business, I get to work building the perfect automation that puts your admin tasks on autopilot.
-                        </p>
-                        <div class="glass-card p-6 text-center grow">
-                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0 3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                    <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h4 class="text-lg font-bold text-white mb-2">
-                                7-14 Days
-                            </h4>
-                            <p class="text-gray-200 text-sm">
-                                From concept to working automation
-                            </p>
-                        </div>
-                    </div>
-                    <div class="text-center flex flex-col">
-                        <div class="flex justify-center mb-6">
-                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold">
-                                3
-                            </div>
-                        </div>
-                        <h3 class="text-xl font-display font-bold text-white mb-4">
-                            Go Live &amp; Save Time
-                        </h3>
-                        <p class="text-gray-300 mb-6">
-                            I hand you the keys with a simple video guide. You immediately start saving time, and I provide 30 days of full support to make sure everything runs perfectly.
-                        </p>
-                        <div class="glass-card p-6 text-center grow">
-                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <svg class="h-8 w-8" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-                                    <path d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
-                                </svg>
-                            </div>
-                            <h4 class="text-lg font-bold text-white mb-2">
-                                Instant Results
-                            </h4>
-                            <p class="text-gray-200 text-sm">
-                                Start saving time from day one
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Latest from Blog Section -->
-        <section class="py-16" id="blog-preview">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="text-center max-w-4xl mx-auto mb-12">
-                    <div class="inline-block bg-white/10 text-white text-sm font-medium px-4 py-2 rounded-full mb-4">
-                        Latest from the Blog
-                    </div>
-                    <h2 class="text-2xl md:text-3xl font-bold font-display mb-4 text-white">
-                        Insights for <span class="text-white">Service Pros</span>
-                    </h2>
-                    <p class="text-gray-300">Actionable advice and automation strategies to help you work smarter, not harder.</p>
-                </div>
-                <div class="max-w-4xl mx-auto flex flex-col items-center">
-                    <!-- Featured Blog Post -->
-                    <a class="block group glass-card rounded-2xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20 overflow-hidden" href="blog3.html">
-                        <div class="grid md:grid-cols-2">
-                            <div class="md:col-span-1">
-                                <img alt="An airplane flying over clouds" class="aspect-video md:aspect-auto h-full w-full object-cover" src="assets/images/blog3.png" />
-                            </div>
-                            <div class="md:col-span-1 p-8 flex flex-col justify-center">
-                                <div>
-                                    <span class="inline-block bg-blue-500/10 text-blue-300 text-xs font-medium px-3 py-1 rounded-full mb-4">Business Strategy</span>
-                                    <h3 class="text-xl font-bold font-display text-white mb-3 group-hover:text-orange-400 transition-colors">An Airline Saved Millions with Automation. Here’s How Your Business Can Too.</h3>
-                                    <p class="text-sm text-gray-400 mb-6 line-clamp-3">You may have seen the recent news: a major airline is saving millions of dollars through business automation. Your first thought might be, "What does a massive airline have to do with my contracting business, law firm, or healthcare practice here in Hawaii?"</p>
-                                    <div class="flex items-center justify-between mt-auto">
-                                        <span class="font-semibold text-sm text-white group-hover:text-orange-400 transition-colors">Read More →</span>
-                                        <span class="text-xs text-gray-500">6 min read</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="text-center mt-12">
-                    <a class="inline-block bg-white hover:bg-gray-200 text-black font-semibold py-3 px-8 rounded-lg transition-all duration-300 shadow-md" href="blog.html">
-                        View All Posts
-                    </a>
-                </div>
-            </div>
-        </section>
-        <!-- Contact Section -->
-        <section class="py-16" id="contact">
-            <div class="container mx-auto px-6" data-aos="fade-up">
-                <div class="grid lg:grid-cols-2 gap-12 items-start">
-                    <div class="glass-card p-8 rounded-2xl">
-                        <h3 class="text-xl font-bold text-white mb-4 text-center">Get Your Free Consultation</h3>
-                        <form action="https://formspree.io/f/xkgqzdqe" class="space-y-6" method="POST">
-    <div>
-        <label class="block text-white font-semibold mb-2" for="user-name">Your Name</label>
-        <input 
-            class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" 
-            placeholder="John Smith" 
-            type="text"
-            name="name"          id="user-name"       required             />
-    </div>
-    <div>
-        <label class="block text-white font-semibold mb-2" for="user-email">Email Address</label>
-        <input 
-            class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" 
-            placeholder="john@example.com" 
-            type="email"
-            name="email"         id="user-email"
-            required
-        />
-    </div>
-    <div>
-        <label class="block text-white font-semibold mb-2" for="user-phone">Phone Number</label>
-        <input 
-            class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" 
-            placeholder="(808) 123-4567" 
-            type="tel"
-            name="phone"         id="user-phone"
-        />
-    </div>
-    <div>
-        <label class="block text-white font-semibold mb-2" for="user-challenge">What's your biggest admin challenge?</label>
-        <textarea 
-            class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400" 
-            placeholder="Tell me about the admin tasks that are eating up your time..." 
-            rows="4"
-            name="admin_challenge" id="user-challenge"
-            required
-        ></textarea>
-    </div>
-    <button class="w-full bg-orange-600 hover:bg-orange-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300" type="submit">
-        Submit	
-    </button>
-</form>
-                    </div>
-                    <div class="glass-card p-8 rounded-2xl">
-                        <h3 class="text-xl font-bold text-white mb-6">My Promise to You</h3>
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="text-lg font-bold text-white mb-2">No Technical Jargon</h4>
-                                <p class="text-gray-300 text-sm">I explain everything in plain English. You'll understand exactly what I'm building and why.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-bold text-white mb-2">Quick Implementation</h4>
-                                <p class="text-gray-300 text-sm">Most automations are built and running within 7-14 days. No months of waiting.</p>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-bold text-white mb-2">30-Day Post-Launch Support</h4>
-                                <p class="text-gray-300 text-sm">Full support for 30 days after launch. I make sure everything works perfectly for your business.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-zinc-900 border-t border-zinc-800">
-        <div class="container mx-auto px-6 py-8">
-            <div class="md:flex md:justify-between">
-                <div class="mb-6 md:mb-0">
-                    <a class="flex items-center" href="index.html">
-                        <img alt="Silva Automation Logo" class="h-12 w-auto" src="assets/images/logo.png" />
-                    </a>
-                    <p class="mt-4 text-sm text-gray-400 max-w-xs">Automating Hawaii's service businesses to save time and increase profit.</p>
-                    <div class="mt-4 space-y-2">
-                        <a class="text-white hover:text-gray-300 font-semibold block" href="tel:+1808-223-5888">808-223-5888</a>
-                        <p class="text-xs text-gray-500">Serving all of Hawaii • Based in Waipahu</p>
-                    </div>
-                </div>
-                <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Navigate</h2>
-                        <ul class="text-gray-400 space-y-3">
-                            <li><a class="hover:text-white" href="about.html">About</a></li>
-                            <li><a class="hover:text-white" href="packages.html">Packages &amp; Pricing</a></li>
-                            <li><a class="hover:text-white" href="blog.html">Blog</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="mb-6 text-sm font-semibold text-white uppercase">Legal</h2>
-                        <ul class="text-gray-400 space-y-3">
-                            <li><a class="hover:text-white" href="legal.html">Legal Center</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <hr class="my-6 border-slate-800 sm:mx-auto" />
-            <div class="sm:flex sm:items-center sm:justify-between">
-                <span class="text-sm text-gray-400 sm:text-center">© 2025 <a class="hover:underline" href="index.html">Silva Automation</a>. All Rights Reserved.</span>
-            </div>
-        </div>
-    </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
+<body>
 
-        // Header behavior on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
-            } else {
-                header.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
-            }
-        });
+    <div class="main-wrapper">
+        <header class="left-panel">
+            <a href="#" class="logo">
+              <img src="assets/images/logo.png" alt="Silva Automation Logo">
+            </a>
+            <div class="left-panel-content">
+                <h1>Business Process<br>Automation</h1>
+                <p>Put your business on autopilot.</p>
+                <nav class="side-nav">
+                    <a href="#process" class="active">What We Do</a>
+                    <a href="#roi-calculator">ROI Calculator</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+            </div>
+        </header>
 
-        // Active link highlighting for "floating" links
-        function setActiveLink() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            navLinks.forEach(link => {
-                const href = link.getAttribute('href').split('#')[0];
-                const linkPage = href.split('/').pop() || 'index.html';
-
-                // Skip the ROI Calculator, which has its own style
-                if (link.getAttribute('href').includes('#roi-calculator')) {
-                    return;
-                }
-
-                if (linkPage === currentPage) {
-                    // Apply active styles: orange, bold text
-                    link.classList.add('text-orange-400', 'font-bold');
-                    link.classList.remove('text-gray-200', 'font-medium');
-                } else {
-                    // Apply inactive styles
-                    link.classList.remove('text-orange-400', 'font-bold');
-                    link.classList.add('text-gray-200', 'font-medium');
-                }
-            });
-        }
-
-        // Mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMobileMenu = document.getElementById('close-mobile-menu');
-
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.remove('translate-x-full');
-        });
-
-        closeMobileMenu.addEventListener('click', function() {
-            mobileMenu.classList.add('translate-x-full');
-        });
-
-        // Run functions on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            setActiveLink();
+        <main class="right-panel">
             
-            // ROI Calculator functionality (runs only if elements exist)
-            const hoursSlider = document.getElementById('hours-slider');
-            const rateSlider = document.getElementById('rate-slider');
-            if(hoursSlider && rateSlider) {
-                const hoursValue = document.getElementById('hours-value');
-                const rateValue = document.getElementById('rate-value');
-                const monthlyValue = document.getElementById('monthly-value');
-                const annualValue = document.getElementById('annual-value');
-
-                function updateCalculator() {
-                    const hours = parseInt(hoursSlider.value);
-                    const rate = parseInt(rateSlider.value);
-                    const monthly = (hours * rate * 4.33).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-                    const annual = (hours * rate * 52).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
-                    hoursValue.textContent = hours + ' hours';
-                    rateValue.textContent = '$' + rate + '/hr';
-                    monthlyValue.textContent = '$' + monthly;
-                    annualValue.textContent = '$' + annual;
-                }
-                hoursSlider.addEventListener('input', updateCalculator);
-                rateSlider.addEventListener('input', updateCalculator);
-                updateCalculator();
-            }
-        });
-    </script>
-    <script>
-        // Initialize AOS
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true
-        });
-
-        // Header behavior on scroll
-        window.addEventListener('scroll', function() {
-            const header = document.getElementById('header');
-            if (window.scrollY > 50) {
-                header.classList.add('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
-            } else {
-                header.classList.remove('bg-black/80', 'backdrop-blur-md', 'shadow-lg');
-            }
-        });
-
-        // Active link highlighting
-        function setActiveLink() {
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const navLinks = document.querySelectorAll('.nav-link');
-
-            navLinks.forEach(link => {
-                const href = link.getAttribute('href').split('#')[0]; // Ignore anchor links
-                const linkPage = href.split('/').pop() || 'index.html';
-
-                if (linkPage === currentPage) {
-                    // Exclude the ROI calculator from this logic
-                    if (!link.getAttribute('href').includes('#')) {
-                        link.classList.add('text-orange-400', 'font-bold');
-                        link.classList.remove('bg-white/15');
-                    }
-                } else {
-                    if (!link.getAttribute('href').includes('#')) {
-                        link.classList.remove('text-orange-400', 'font-bold');
-                        link.classList.add('bg-white/15');
-                    }
-                }
-            });
-        }
-
-        // Mobile menu functionality
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const closeMobileMenu = document.getElementById('close-mobile-menu');
-
-        mobileMenuButton.addEventListener('click', function() {
-            mobileMenu.classList.remove('translate-x-full');
-        });
-
-        closeMobileMenu.addEventListener('click', function() {
-            mobileMenu.classList.add('translate-x-full');
-        });
-
-        // ROI Calculator functionality
-        const hoursSlider = document.getElementById('hours-slider');
-        const rateSlider = document.getElementById('rate-slider');
-        const hoursValue = document.getElementById('hours-value');
-        const rateValue = document.getElementById('rate-value');
-        const monthlyValue = document.getElementById('monthly-value');
-        const annualValue = document.getElementById('annual-value');
-
-        function updateCalculator() {
-            if (!hoursSlider) return; // Guard clause
-            const hours = parseInt(hoursSlider.value);
-            const rate = parseInt(rateSlider.value);
-            const monthly = (hours * rate * 4.33).toLocaleString('en-US', {
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0
-            });
-            const annual = (hours * rate * 52).toLocaleString('en-US', {
-                minimumFractionDigits: 0,
-                maximumFractionDigits: 0
-            });
-
-            hoursValue.textContent = hours + ' hours';
-            rateValue.textContent = '$' + rate + '/hr';
-            monthlyValue.textContent = '$' + monthly;
-            annualValue.textContent = '$' + annual;
-        }
-
-        if (hoursSlider) {
-            hoursSlider.addEventListener('input', updateCalculator);
-            rateSlider.addEventListener('input', updateCalculator);
-            updateCalculator(); // Initial call
-        }
-
-        // Cookie Consent Banner
-        const cookieBanner = document.getElementById('cookie-banner');
-        const acceptAllBtn = document.getElementById('cookie-accept-all');
-        const acceptNecessaryBtn = document.getElementById('cookie-accept-necessary');
-
-        if (cookieBanner && !localStorage.getItem('cookieConsent')) {
-            setTimeout(() => {
-                cookieBanner.classList.remove('translate-y-full');
-            }, 1000);
-        }
-
-        if (acceptAllBtn) {
-            acceptAllBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'all');
-                cookieBanner.classList.add('translate-y-full');
-                loadGA(); // Load analytics on consent
-            });
-        }
-
-        if (acceptNecessaryBtn) {
-            acceptNecessaryBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'necessary');
-                cookieBanner.classList.add('translate-y-full');
-            });
-        }
-
-        // Consent-gated Google Analytics (GA4)
-        function loadGA() {
-            if (window.gtagLoaded) return;
-            window.gtagLoaded = true;
-            var s = document.createElement('script');
-            s.async = true;
-            s.src = 'https://www.googletagmanager.com/gtag/js?id=G-6T97Y5LX85';
-            document.head.appendChild(s);
-
-            window.dataLayer = window.dataLayer || [];
-
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            window.gtag = gtag;
-            gtag('js', new Date());
-            gtag('config', 'G-6T97Y5LX85');
-        }
-
-        if (localStorage.getItem('cookieConsent') === 'all') {
-            loadGA();
-        }
-
-        // Run on page load
-        setActiveLink();
-    </script>
-    <div class="fixed bottom-0 left-0 right-0 z-50 bg-black/95 backdrop-blur-md border-t border-white/10 p-6 transform translate-y-full transition-transform duration-300 ease-in-out" id="cookie-banner">
-        <div class="container mx-auto max-w-4xl">
-            <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-                <div class="flex-1">
-                    <h3 class="text-white font-semibold mb-2">🍪 We use cookies</h3>
-                    <p class="text-gray-300 text-sm leading-relaxed">
-                        We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic.
-                        By clicking "Accept All", you consent to our use of cookies.
-                        <a class="text-orange-400 hover:text-orange-300 underline" href="legal.html#cookie-policy">Learn more</a>
-                    </p>
+            <section id="process">
+                <span class="section-label">WHAT WE DO</span>
+                <div class="container">
+                    <h2>Your Business, Streamlined.</h2>
+                    <p class="section-intro">We eliminate repetitive, manual tasks by designing and building custom automation systems. Our process is simple, transparent, and built for long-term success.</p>
+                    <div class="process-grid">
+                        <div class="content-box">
+                            <img src="assets/icons/discover.png" alt="Discover & Plan Icon" class="process-icon">
+                            <h3>1. Discover & Plan</h3>
+                            <p>We start with a deep dive into your current workflows to identify the biggest bottlenecks and opportunities for automation.</p>
+                        </div>
+                        <div class="content-box">
+                            <img src="assets/icons/build.png" alt="Build & Integrate Icon" class="process-icon">
+                            <h3>2. Build & Integrate</h3>
+                            <p>Our team builds your custom workflows, connecting the apps you already use to create a seamless, automated system.</p>
+                        </div>
+                        <div class="content-box">
+                            <img src="assets/icons/deliver.png" alt="Deliver & Support Icon" class="process-icon">
+                            <h3>3. Deliver & Support</h3>
+                            <p>We deliver a fully-tested system and provide hands-on training to ensure a smooth transition for you and your team.</p>
+                        </div>
+                    </div>
+                    <div class="logo-grid-container">
+                        <h4>Works With Your Favorite Tools:</h4>
+                        <div class="logo-grid">
+                            <img src="assets/images/googlecalendar.svg" alt="Google Calendar Logo">
+                            <img src="assets/images/quickbooks.svg" alt="QuickBooks Logo">
+                            <img src="assets/images/slack.svg" alt="Slack Logo">
+                            <img src="assets/images/twilio.svg" alt="Twilio Logo">
+                            <img src="assets/images/n8n.svg" alt="N8n Logo">
+                            <img src="assets/images/hubspot.svg" alt="HubSpot Logo">
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-col sm:flex-row gap-3 shrink-0">
-                    <button class="bg-orange-600 hover:bg-orange-700 text-white font-medium px-6 py-2 rounded-lg transition-colors duration-200" id="cookie-accept-all">
-                        Accept All
-                    </button>
-                    <button class="bg-white/10 hover:bg-white/20 text-white font-medium px-6 py-2 rounded-lg border border-white/30 hover:border-white/50 transition-colors duration-200" id="cookie-accept-necessary">
-                        Necessary Only
-                    </button>
+            </section>
+            <section id="roi-calculator">
+                <span class="section-label">ROI CALCULATOR</span>
+                <div class="container">
+                    <h2>Calculate Your Potential Savings</h2>
+                    <p class="section-intro">See how much time and money you could reclaim by automating repetitive tasks. Adjust the sliders to match your business.</p>
+                    <div class="calculator-wrapper">
+                        <div class="calculator-inputs">
+                            <div class="form-group">
+                                <label for="team-size">How many team members handle admin tasks?</label>
+                                <div class="slider-container">
+                                    <input type="range" id="team-size" min="1" max="50" value="3">
+                                    <span class="slider-value" id="team-size-value">3</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hours-wasted">Hours wasted per week, per person?</label>
+                                <div class="slider-container">
+                                    <input type="range" id="hours-wasted" min="1" max="20" value="5">
+                                    <span class="slider-value" id="hours-wasted-value">5</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="hourly-wage">Average team member hourly wage ($)</label>
+                                <div class="slider-container">
+                                    <input type="range" id="hourly-wage" min="15" max="100" value="25">
+                                    <span class="slider-value" id="hourly-wage-value">$25</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="calculator-results content-box">
+                            <h3>Potential Annual Savings</h3>
+                            <div class="annual-savings" id="annual-savings-result">$19,500</div>
+                            <div class="savings-breakdown">
+                                <p><strong>Weekly Savings:</strong> <span id="weekly-savings-result">$375</span></p>
+                                <p><strong>Monthly Savings:</strong> <span id="monthly-savings-result">$1,625</span></p>
+                                <p><strong>Hours Saved Per Year:</strong> <span id="hours-saved-result">780</span></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+            </section>
+
+            <section id="cta">
+                <div class="container">
+                    <h2>Founding Client Offer</h2>
+                    <p class="section-intro">To launch Silva Automation, I'm looking for three foundational partners to build amazing success stories with. Your success is my top priority.</p>
+                    <ul class="offer-list">
+                        <li>A massive 50% discount on your entire foundational project.</li>
+                        <li>1 Full Year of complimentary premium support and maintenance.</li>
+                    </ul>
+                     <p><strong>There are only 3 partnership spots available. Let's build something great together.</strong></p>
+                    <a href="https://calendly.com/silvaautomation/consultation" target="_blank" class="button button-cta">Become a Founding Partner</a>
+                </div>
+            </section>
+
+            <section id="about">
+                <span class="section-label">ABOUT THE OWNER</span>
+                <div class="container about-container">
+                    <img src="assets/images/about.png" alt="Savaiinaea Silva, Founder of Silva Automation" class="about-photo">
+                    <div class="about-text content-box">
+                        <h2>A Local Partner Who Understands the Grind</h2>
+                        <p>Aloha, I’m Savaiinaea “Naea” Silva. Before I ever automated a workflow, I was running a service business right here in Hawaii. I know the burnout. I remember the long days and late nights, feeling like I was spending more time on paperwork and scheduling than on the actual work I was passionate about.</p>
+                        <p>I knew there had to be a better way. That’s why I started Silva Automation. My mission is to help fellow Hawaii business owners win back their most valuable asset: their time. I build custom systems that handle the busywork, so you can get back to focusing on your craft, serving your clients, and being present with your family.</p>
+                    </div>
+                </div>
+            </section>
+
+<section id="contact">
+    <span class="section-label">CONTACT</span>
+    <div class="container" style="max-width: 800px;">
+        <div class="content-box">
+            <h2>Get In Touch</h2>
+            <p>Ready to become a Founding Partner or have another question? Fill out the form below.</p>
+            <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjkajgva" method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="button">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+<section id="faq">
+    <span class="section-label">FAQ</span>
+    <div class="container">
+        <div class="content-box">
+            <h2>Frequently Asked Questions</h2>
+            <h4 class="faq-subheader">The Value & The Results</h4>
+            <details>
+                <summary>What kind of businesses do you work with?</summary>
+                <p>We specialize in helping Hawaii-based service businesses (e.g., junk removal, landscaping, cleaning services, contractors). If you're feeling buried in administrative work, we can build a system for you.</p>
+            </details>
+            <details>
+                <summary>What problems do you solve?</summary>
+                <p>We solve the feeling of being overwhelmed and trapped by your own business. If you're spending nights and weekends on admin tasks, losing track of new leads, or feel like you can't step away without things falling apart, we build the systems that run those tasks for you, automatically.</p>
+            </details>
+            <details>
+                <summary>What results can I realistically expect?</summary>
+                <p>Our clients experience four key results: Freedom (more time), Scalability (growth without more hiring), Professionalism (five-star client experiences), and Peace of Mind (your business runs 24/7).</p>
+            </details>
+
+            <h4 class="faq-subheader">The Process & The Partnership</h4>
+            <details>
+                <summary>What's the process from start to finish?</summary>
+                <p>Most projects are designed, built, and delivered within 7-14 days. After our initial call, we map out your exact needs, build the custom system, then deliver the finished product and train you and your team.</p>
+            </details>
+             <details>
+                <summary>What does the training and handover look like?</summary>
+                <p>This is our local advantage. If your business is on Oahu or any of the neighbor islands, we come to you. We provide in-person, hands-on training for you and your key staff to ensure everyone is confident using the new system.</p>
+            </details>
+            <details>
+                <summary>Is this a monthly subscription?</summary>
+                <p>No. Our automation packages are a one-time investment. Once we build your system, you own it outright.</p>
+            </details>
+             <details>
+                <summary>What isn't included in my project?</summary>
+                <p>Our service is focused on building your automation system. We are not Virtual Assistants (VAs)—the systems run themselves, but we don't perform the daily tasks for you. The project fee also does not include the separate subscription costs for any software you use (like your CRM, etc.).</p>
+            </details>
+
+            <h4 class="faq-subheader">Support & Technical Questions</h4>
+            <details>
+                <summary>What tools do you use?</summary>
+                <p>We primarily use powerful, flexible platforms like n8n. This allows us to create robust automations that can be self-hosted, which keeps your long-term costs low and gives you full ownership of your data.</p>
+            </details>
+            <details>
+                <summary>What support is included with a standard project?</summary>
+                <p>Every project includes a 90-day support window to fix any bugs or issues that arise with the original system we built for you.</p>
+            </details>
+            <details>
+                <summary>What does "1 Year of Premium Support" include?</summary>
+                <p>Our Founding Clients receive an all-inclusive support package for a full year: bug fixes, troubleshooting, up to one hour of tweaks per month, and on-call access for when you need help.</p>
+            </details>
+        </div>
+    </div>
+</section>       
+
+            <footer>
+                <div class="container">
+                    <p>&copy; 2025 Silva Automation. All Rights Reserved.</p>
+                    <p>Based in Waipahu, Hawaii | <a href="tel:+18082235888">(808) 223-5888</a></p>
+                    <div class="legal-links">
+                        <a href="#" data-modal-target="#terms-modal">Terms & Conditions</a>
+                        <span>•</span>
+                        <a href="#" data-modal-target="#privacy-modal">Privacy Policy</a>
+                        <span>•</span>
+                        <a href="#" data-modal-target="#refund-modal">Refund Policy</a>
+                         <span>•</span>
+                        <a href="#" data-modal-target="#cookie-modal">Cookie Policy</a>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <div class="modal-overlay" id="legal-modal-overlay"></div>
+
+    <div class="modal" id="terms-modal">
+        <button class="close-button">&times;</button>
+        <div class="modal-content">
+            <h1>Terms and Conditions</h1>
+            <p><strong>Effective Date: October 7, 2025</strong></p>
+            <p>This website, www.silvaautomation.com (the "Site"), and the services offered through it, are owned and operated by Silva Automation. By accessing or using our Site and services, you agree to be bound by these Terms and Conditions ("Terms").</p>
+            <h2>1. Description of Services</h2>
+            <p>Silva Automation provides business-to-business automation services, including workflow development, system integration, and process optimization. The specific scope of work for each project will be outlined in a separate Service Agreement and Project Proposal, which are incorporated into these Terms by reference.</p>
+            <h2>2. Client Obligations</h2>
+            <p>You agree to use our Site and services only for lawful purposes and in compliance with all applicable federal, state, and local laws. You agree to provide accurate, complete, and timely information, materials, and feedback necessary for the performance of the services. Client acknowledges that failure to do so may result in project delays or timeline extensions, for which Silva Automation shall not be held responsible.</p>
+            <h3>Project Abandonment:</h3>
+            <p>If the Client fails to provide necessary feedback, materials, or communication for a continuous period of 30 days without prior notice, Silva Automation reserves the right to pause the project. If non-communication extends to 60 days, the project may be considered abandoned. In this event, the initial deposit will be forfeited, and all work completed to date will be billed at our standard hourly rate.</p>
+            <h2>3. Intellectual Property Rights</h2>
+            <p>Upon full and final payment by the Client, Silva Automation grants and assigns to the Client all right, title, and interest in the custom deliverables created specifically for the Client under the applicable Service Agreement ("Custom Work Product"). The Custom Work Product includes the final source code, workflow configurations, databases, and project documentation.</p>
+            <p>Silva Automation retains ownership of all pre-existing intellectual property, including but not limited to proprietary tools, libraries, frameworks, methodologies, templates, know-how, and any code or materials not created specifically for the Client ("Pre-Existing IP"). Client is granted a non-exclusive, royalty-free, perpetual license to use any Pre-Existing IP solely to the extent it is embedded in or necessary for the operation of the Custom Work Product.</p>
+            <h2>4. Payments, Fees, and Hawaii General Excise Tax (GET)</h2>
+            <h3>Payment Structure:</h3>
+            <ul>
+                <li>All services are provided on a fixed-price basis as outlined in your Project Proposal</li>
+                <li>A 50% deposit is due upon signing the Service Agreement before work begins</li>
+                <li>A 50% final payment is due upon project completion and delivery of all agreed-upon deliverables</li>
+                <li>All prices are quoted in United States Dollars (USD)</li>
+            </ul>
+            <h3>Hawaii General Excise Tax (GET):</h3>
+            <p>As a business operating in Hawaii, we are required to collect Hawaii General Excise Tax (GET) at a rate of 4.5%. This will be added as a separate line item to all invoices.</p>
+            <h3>Payment Methods:</h3>
+            <p>We accept payment via bank transfer (ACH), credit/debit card (processing fees may apply), and check (must clear before work commences).</p>
+            <h3>Late Payments:</h3>
+            <p>Invoices not paid within 15 days of the due date will incur a late fee of 1.5% per month (18% annually) on the outstanding balance, to the extent permitted under Hawaii law. We reserve the right to suspend work on projects with overdue invoices exceeding 30 days and may pursue collection through legal channels if necessary.</p>
+            <h2>5. Post-Delivery Support & Maintenance</h2>
+            <p>All packages include 30 days of free technical support from the date of project completion. During this period, Silva Automation will address bugs and integration issues stemming from the original implementation as delivered.</p>
+            <h3>Support Exclusions:</h3>
+            <p>Support is strictly limited to the original workflow and systems as delivered. Silva Automation is not obligated to provide support, free or paid, for any issues arising from:</p>
+            <ul>
+                <li>Any modifications, additions, or tampering with the workflow configuration by the Client or any third party</li>
+                <li>Changes to third-party applications, APIs, or platforms that affect the original integration</li>
+                <li>Issues caused by Client-side errors, data input problems, or changes to connected accounts</li>
+                <li>New features or functionality not included in the original scope of work</li>
+                <li>Normal platform updates or deprecations by third-party service providers</li>
+            </ul>
+            <h3>After the 30-Day Support Period:</h3>
+            <p>Support beyond 30 days is available at our current hourly rate of $125/hour (plus GET) or through an optional monthly support retainer.</p>
+            <h3>5.1 Optional Monthly Support Retainer</h3>
+            <p>For clients desiring ongoing support, Silva Automation offers a monthly retainer service. The specific services, hours, and fees will be detailed in a separate Retainer Agreement.</p>
+            <ul>
+                <li>Services: May include proactive workflow monitoring, minor adjustments to existing workflows, data source management, priority support, and consultation on workflow optimization</li>
+                <li>Billing: The retainer fee is billed monthly in advance and is non-refundable for unused hours</li>
+                <li>Scope: The retainer does not cover development of new features, major workflow overhauls, or integration with new platforms, which will be quoted as separate projects</li>
+                <li>Cancellation: Can be cancelled by either party with 30 days' written notice</li>
+            </ul>
+            <h3>5.2 Founding Client Program - Special Terms</h3>
+            <p>Silva Automation may offer a limited Founding Client Program with special pricing and extended support terms. Terms for this program will be detailed in the applicable Service Agreement. Any lifetime discount offered is contingent upon the Client's account remaining in good standing and shall terminate immediately upon material breach of these Terms, including non-payment of any invoice.</p>
+            <h2>6. Client Credentials and Access</h2>
+            <p>To deliver services, Silva Automation may require access to Client's third-party accounts and systems. Client agrees to provide necessary credentials and permissions in a timely manner and notify us immediately if credentials are changed or compromised.</p>
+            <p>Silva Automation agrees to store all credentials securely using industry-standard encryption, use them only for the agreed-upon project scope, and delete them upon project completion unless ongoing support is contracted.</p>
+            <p>Client agrees to indemnify, defend, and hold harmless Silva Automation from any and all claims, damages, and expenses arising from unauthorized access or data breach resulting from the use of Client-provided credentials, unless such breach is a direct result of Silva Automation's gross negligence or willful misconduct. Silva Automation agrees to comply with Hawaii's data breach notification requirements under HRS §487N in the event of a security incident involving Client's information.</p>
+            <h2>7. Confidentiality</h2>
+            <p>"Confidential Information" means any non-public information disclosed by one party to the other, whether orally or in writing, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and circumstances of disclosure. Confidential Information does not include information that is: (a) publicly known through no breach of this Agreement, (b) already in the receiving party's possession without breach of any obligation, (c) independently developed by the receiving party, or (d) rightfully received from a third party without restriction.</p>
+            <p>Both parties agree to hold each other's Confidential Information in strict confidence, use it only for purposes of performing this Agreement, and not disclose it to third parties without prior written consent. This obligation of confidentiality shall survive the termination of this Agreement for a period of three (3) years.</p>
+            <h2>8. Limitation of Liability</h2>
+            <p><strong>IN NO EVENT SHALL SILVA AUTOMATION'S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT, WHETHER IN CONTRACT, TORT, OR UNDER ANY OTHER THEORY OF LIABILITY, EXCEED THE TOTAL AMOUNT PAID BY CLIENT HEREUNDER IN THE 12 MONTHS PRECEDING THE INCIDENT.</strong></p>
+            <p><strong>IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF BUSINESS OPPORTUNITIES, OR BUSINESS INTERRUPTION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</strong></p>
+            <p>These limitations will not apply to liability resulting from Silva Automation's gross negligence, willful misconduct, fraud, or data breaches caused by our failure to maintain reasonable security measures. Nothing in these Terms shall limit a party's liability which cannot be limited or excluded by applicable law, including rights under Hawaii's Unfair and Deceptive Acts or Practices (UDAP) laws (HRS Chapter 480).</p>
+            <h2>9. Disclaimer of Warranties</h2>
+            <p>Except as expressly stated in a signed Service Agreement, the services and information on this Site are provided "AS IS" and "AS AVAILABLE" without any warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+            <p>Silva Automation does not warrant that the services will be uninterrupted, error-free, or completely secure, or that defects will be corrected. We do not warrant or make any representations regarding the use or results of the services in terms of their correctness, accuracy, reliability, or otherwise.</p>
+            <h2>10. Reliance on Third-Party Services</h2>
+            <p>Client acknowledges that the services provided are dependent on the proper functioning of third-party platforms and services (e.g., Make.com, Zapier, Google Workspace, CRMs, APIs). Silva Automation is not responsible for any service interruptions, data loss, security breaches, functionality changes, price increases, terms of service modifications, or failures caused by these third-party platforms.</p>
+            <p>Any issues originating from a third-party service, including API deprecations, feature removals, or platform shutdowns, are outside the scope of our support and liability. Client is responsible for maintaining appropriate subscriptions and licenses for all third-party services used in conjunction with our deliverables.</p>
+            <h2>11. Indemnification</h2>
+            <p>Client agrees to indemnify, defend, and hold harmless Silva Automation, its officers, directors, employees, and agents from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of: (a) Client's use of our services, (b) Client's violation of these Terms, (c) Client's violation of any third-party rights, including intellectual property rights or privacy rights, or (d) any content or data provided by Client.</p>
+            <p>Silva Automation agrees to indemnify Client against claims that the Custom Work Product infringes any third-party intellectual property rights, provided Client promptly notifies Silva Automation of such claim and cooperates in the defense.</p>
+            <h2>12. Governing Law and Dispute Resolution</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of Hawaii, without regard to its conflict of laws provisions.</p>
+            <p>Any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination, enforcement, interpretation, or validity thereof shall be resolved as follows:</p>
+            <ul>
+                <li><strong>Negotiation:</strong> The parties shall first attempt to negotiate a resolution in good faith for a period of 30 days.</li>
+                <li><strong>Mediation:</strong> If negotiation fails, the parties agree to participate in mediation administered by a mutually agreed-upon mediator in Honolulu, Hawaii.</li>
+                <li><strong>Arbitration:</strong> If mediation is unsuccessful, the dispute shall be resolved by mandatory, binding arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. The arbitration shall take place in Honolulu, Hawaii, and judgment on the award may be entered in any court having jurisdiction.</li>
+            </ul>
+            <p>The parties hereby waive their right to a jury trial and agree not to participate in any class action lawsuits. Each party shall bear its own costs and attorneys' fees unless the arbitrator determines otherwise.</p>
+            <h2>13. Termination</h2>
+            <p>Either party may terminate a Service Agreement for cause upon 30 days' written notice if the other party materially breaches these Terms and fails to cure such breach within the notice period.</p>
+            <p>Silva Automation may suspend services immediately for non-payment exceeding 15 days or for Client's breach of confidentiality obligations. Upon termination, Client shall immediately pay for all work completed to date based on the percentage of project completion or hourly rates, whichever is applicable.</p>
+            <p>Client's rights to terminate for convenience are outlined in the Refund & Cancellation Policy. Upon termination, all licenses granted to Client shall terminate except for the Custom Work Product for which full payment has been received.</p>
+            <h2>14. Force Majeure</h2>
+            <p>Neither party shall be liable for any failure or delay in performance due to events beyond their reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, government actions, labor disputes, widespread internet or power outages, pandemics, or failures of third-party hosting or service providers. The affected party shall notify the other party promptly and use reasonable efforts to mitigate the impact. If the force majeure event continues for more than 60 days, either party may terminate the affected Service Agreement.</p>
+            <h2>15. General Provisions</h2>
+            <ul>
+                <li><strong>Assignment:</strong> Neither party may assign its rights or obligations hereunder without the prior written consent of the other party, except that Silva Automation may assign to an affiliated entity or in connection with a merger, acquisition, or sale of substantially all assets.</li>
+                <li><strong>Severability:</strong> If any provision of these Terms is held to be invalid, illegal, or unenforceable, the remaining provisions shall remain in full force and effect, and the invalid provision shall be modified to the minimum extent necessary to make it valid and enforceable.</li>
+                <li><strong>Entire Agreement:</strong> These Terms, together with any applicable Service Agreement and Project Proposal, constitute the entire agreement between the parties and supersede all prior or contemporaneous agreements, understandings, and communications, whether written or oral.</li>
+                <li><strong>Modification:</strong> No modification of these Terms shall be effective unless in writing and signed by both parties. Silva Automation reserves the right to update these Terms on the website with 30 days' notice for prospective agreements.</li>
+                <li><strong>Waiver:</strong> No waiver of any provision of these Terms shall be deemed or shall constitute a waiver of any other provision, nor shall any waiver constitute a continuing waiver.</li>
+                <li><strong>Notices:</strong> All legal notices shall be in writing and sent to the addresses specified in the Service Agreement or to contact@silvaautomation.com for Silva Automation. Notices shall be deemed given when delivered personally, sent by confirmed email, or three days after being sent by certified mail.</li>
+                <li><strong>Independent Contractors:</strong> The parties are independent contractors. Nothing in these Terms creates a partnership, joint venture, agency, or employment relationship.</li>
+            </ul>
+            <h2>16. Contact Information</h2>
+            <p>For any questions regarding these Terms, please contact us at:</p>
+            <ul>
+                <li>Email: contact@silvaautomation.com</li>
+                <li>Phone: 808-223-5888</li>
+                <li>Mail: Silva Automation, Honolulu, Hawaii</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="privacy-modal">
+        <button class="close-button">&times;</button>
+        <div class="modal-content">
+            <h1>Privacy Policy</h1>
+            <p><strong>Effective Date: October 7, 2025</strong></p>
+            <p>Silva Automation ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, www.silvaautomation.com (the "Site"), and use our services.</p>
+            <h2>1. Information We Collect</h2>
+            <p>We may collect information about you in various ways. The information we may collect includes:</p>
+            <h3>Personal Data:</h3>
+            <p>Personally identifiable information such as your name, company name, email address, telephone number, billing address, and payment information that you voluntarily provide when you fill out a contact form, request a quote, sign a Service Agreement, or otherwise communicate with us.</p>
+            <h3>Derivative Data:</h3>
+            <p>Information our servers automatically collect when you access the Site, including your IP address, browser type, operating system, access times, pages viewed, referring website, and device information. This information is collected via Google Analytics to help us understand how visitors use our Site.</p>
+            <h3>Client Project Data:</h3>
+            <p>To perform our automation services, we may require temporary access to your business systems and data, which may include confidential information about your operations, customers, finances, and proprietary processes. This data is handled with strict confidentiality as outlined in our Terms and Conditions and is accessed only to the extent necessary to perform the contracted services.</p>
+            <h3>Communications Data:</h3>
+            <p>Records of your communications with us, including emails, chat transcripts from our Tidio live chat, phone conversations, and support tickets.</p>
+            <h3>Third-Party Credentials:</h3>
+            <p>Login credentials and API keys for third-party services that you provide to us for the purpose of implementing automation solutions. These are stored securely and used only as authorized.</p>
+            <h2>2. Use of Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Respond to your inquiries and provide the services you have requested</li>
+                <li>Create and manage your account and Service Agreements</li>
+                <li>Process payments and fulfill our contractual obligations</li>
+                <li>Provide technical support and customer service</li>
+                <li>Send you project updates, invoices, and service-related communications</li>
+                <li>Improve our services, website functionality, and user experience</li>
+                <li>Monitor and analyze usage patterns and trends</li>
+                <li>Detect, prevent, and address technical issues or security threats</li>
+                <li>Comply with legal and regulatory requirements</li>
+                <li>Send you marketing communications about our services (with your consent, and you may opt out at any time)</li>
+            </ul>
+            <h2>3. Legal Basis for Processing (for applicable jurisdictions)</h2>
+            <p>We process your personal information based on:</p>
+            <ul>
+                <li><strong>Contract Performance:</strong> Processing necessary to fulfill our Service Agreement with you</li>
+                <li><strong>Legitimate Interests:</strong> Improving our services, marketing, and business operations</li>
+                <li><strong>Legal Obligations:</strong> Complying with applicable laws and regulations</li>
+                <li><strong>Consent:</strong> Where you have provided explicit consent for specific processing activities</li>
+            </ul>
+            <h2>4. Disclosure of Your Information</h2>
+            <p>We do not sell, trade, or rent your personal information to third parties. We may share information in the following circumstances:</p>
+            <h3>Service Providers:</h3>
+            <p>We may share your information with trusted third-party service providers who perform services on our behalf, including:</p>
+            <ul>
+                <li>Google Analytics (website analytics)</li>
+                <li>Tidio (live chat support)</li>
+                <li>Payment processors (for handling transactions)</li>
+                <li>Email service providers (for communications)</li>
+                <li>Cloud hosting providers (for data storage)</li>
+            </ul>
+            <p>These third parties are contractually obligated to protect your information and use it only for the purposes we specify.</p>
+            <h3>Legal Requirements:</h3>
+            <p>We may disclose your information if required to do so by law or in response to valid requests by public authorities (e.g., subpoenas, court orders, or legal process), or to protect the rights, property, and safety of Silva Automation, our clients, or others.</p>
+            <h3>Business Transfers:</h3>
+            <p>In the event of a merger, acquisition, reorganization, or sale of assets, your information may be transferred to the successor entity, and you will be notified via email and/or prominent notice on our Site.</p>
+            <h3>With Your Consent:</h3>
+            <p>We may share your information with third parties when we have your explicit consent to do so.</p>
+            <h2>5. Data Security and Retention</h2>
+            <p>We implement administrative, technical, and physical security measures designed to protect your personal information, including:</p>
+            <ul>
+                <li>Encryption of data in transit and at rest</li>
+                <li>Secure credential storage using industry-standard encryption</li>
+                <li>Limited access to personal information on a need-to-know basis</li>
+                <li>Regular security assessments and updates</li>
+                <li>Secure disposal of information when no longer needed</li>
+            </ul>
+            <p>Despite our efforts, no security measures are completely impenetrable, and we cannot guarantee absolute security.</p>
+            <p><strong>Data Retention:</strong> We retain your personal information only for as long as necessary to fulfill the purposes outlined in this Privacy Policy, comply with legal obligations, resolve disputes, and enforce our agreements. Client project data is typically retained for the duration of the project plus three years, unless otherwise specified in a Service Agreement. You may request earlier deletion of your data, subject to our legal and contractual obligations.</p>
+            <p><strong>Data Breach Notification:</strong> In the event of a data breach that compromises your personal information, we will comply with all notification requirements under Hawaii law (HRS §487N) and notify affected individuals without unreasonable delay.</p>
+            <h2>6. Your Rights Regarding Your Information</h2>
+            <p>Depending on your jurisdiction, you may have the following rights:</p>
+            <ul>
+                <li><strong>Access:</strong> Request access to the personal information we hold about you</li>
+                <li><strong>Correction:</strong> Request correction of inaccurate or incomplete personal information</li>
+                <li><strong>Deletion:</strong> Request deletion of your personal information (subject to legal retention requirements)</li>
+                <li><strong>Restriction:</strong> Request restriction of processing in certain circumstances</li>
+                <li><strong>Data Portability:</strong> Request a copy of your personal information in a structured, machine-readable format</li>
+                <li><strong>Objection:</strong> Object to processing of your personal information for certain purposes</li>
+                <li><strong>Withdraw Consent:</strong> Withdraw consent for processing where we rely on consent as the legal basis</li>
+            </ul>
+            <p>To exercise any of these rights, please contact us using the information provided below. We will respond to your request within 30 days. We may require verification of your identity before processing your request.</p>
+            <p><strong>Marketing Opt-Out:</strong> You may opt out of receiving marketing communications from us at any time by clicking the "unsubscribe" link in our emails or contacting us directly. Please note that you cannot opt out of service-related communications (e.g., project updates, invoices).</p>
+            <h2>7. Third-Party Websites and Services</h2>
+            <p>Our Site may contain links to third-party websites and services. We are not responsible for the privacy practices or content of these third parties. We encourage you to review the privacy policies of any third-party sites you visit.</p>
+            <h2>8. Cookies and Tracking Technologies</h2>
+            <p>Please refer to our Cookie Policy for detailed information about how we use cookies and similar tracking technologies.</p>
+            <h2>9. Do Not Track Signals</h2>
+            <p>Our Site does not currently respond to "Do Not Track" signals from browsers. However, you can manage your cookie preferences through our cookie consent banner and your browser settings.</p>
+            <h2>10. International Data Transfers</h2>
+            <p>Your information may be transferred to and processed in locations outside your state, province, country, or other governmental jurisdiction where data protection laws may differ. By using our services, you consent to the transfer of your information to the United States and other locations where we operate.</p>
+            <h2>11. Children's Privacy</h2>
+            <p>Our services are intended for business use and are not directed to individuals under the age of 18. We do not knowingly collect personal information from children. If we become aware that we have collected personal information from a child under 18, we will take steps to delete such information promptly.</p>
+            <h2>12. California Privacy Rights</h2>
+            <p>If you are a California resident, you may have additional rights under the California Consumer Privacy Act (CCPA). Please contact us for more information about exercising these rights.</p>
+            <h2>13. Changes to This Privacy Policy</h2>
+            <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will notify you of any material changes by posting the new Privacy Policy on this page and updating the "Effective Date." Your continued use of our services after such changes constitutes acceptance of the updated Privacy Policy.</p>
+            <h2>14. Contact Us</h2>
+            <p>If you have questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:</p>
+            <p><strong>Silva Automation</strong></p>
+            <ul>
+                <li>Email: contact@silvaautomation.com</li>
+                <li>Phone: 808-223-5888</li>
+                <li>Mail: Honolulu, Hawaii</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal" id="refund-modal">
+        <button class="close-button">&times;</button>
+        <div class="modal-content">
+            <h1>Refund & Cancellation Policy</h1>
+            <p><strong>Effective Date: October 7, 2025</strong></p>
+            <h2>1. General Principles</h2>
+            <p>As a service-based business, our work involves significant time, expertise, and resources that cannot be "returned" like physical products. The 50% deposit secures your project in our schedule and covers initial project setup, discovery, planning, and resource allocation. This policy outlines the circumstances under which refunds may be issued.</p>
+            <h2>2. Project Completion & Acceptance</h2>
+            <h3>Project Delivery:</h3>
+            <p>A project is considered "complete" and ready for review upon electronic delivery of:</p>
+            <ul>
+                <li>Final workflow file(s) and configurations</li>
+                <li>Comprehensive documentation</li>
+                <li>Access credentials (if applicable)</li>
+                <li>Any other deliverables specified in the Project Proposal</li>
+            </ul>
+            <h3>Review Period:</h3>
+            <p>Client has 7 calendar days from delivery to review the project and report any material defects. The review period commences from the timestamp of the delivery email.</p>
+            <h3>Material Defects Defined:</h3>
+            <p>A "material defect" is a verifiable, reproducible failure of the delivered workflow to perform a core function as explicitly described and agreed upon in the Project Proposal. Material defects do NOT include:</p>
+            <ul>
+                <li>Stylistic preferences or subjective design choices</li>
+                <li>Requests for features not originally specified in the Project Proposal</li>
+                <li>Issues caused by changes to third-party platforms</li>
+                <li>Performance expectations not explicitly documented</li>
+                <li>Minor cosmetic issues that don't impact functionality</li>
+            </ul>
+            <h3>Acceptance:</h3>
+            <p>If no material defects are reported within the 7-day review period, the project is considered formally accepted, and the final 50% payment becomes immediately due. Late payment terms apply as outlined in the Terms and Conditions.</p>
+            <h3>Cure Period:</h3>
+            <p>If Client identifies and reports material defects within the 7-day review period, Silva Automation will have 15 business days from receipt of the defect report to remedy the issues. If Silva Automation successfully resolves the material defects within this cure period, the project will be considered accepted upon delivery of the corrected version.</p>
+            <h3>Final Sale:</h3>
+            <p>Upon project acceptance (either by passage of the review period or successful cure of defects) and receipt of the final 50% payment, the sale is considered final and no refunds will be issued except as specified in Section 4 below.</p>
+            <h2>3. Cancellation by Client (Prior to Delivery)</h2>
+            <p>Client may terminate the Service Agreement at any point before final delivery of the project by providing written notice to contact@silvaautomation.com.</p>
+            <h3>Refund Terms:</h3>
+            <ul>
+                <li>Client will receive a refund of 25% of the total project value (equivalent to 50% of the deposit)</li>
+                <li>Silva Automation retains 25% of the total project value (the remaining 50% of the deposit) to cover administrative costs, project setup, planning time, and work performed to the point of cancellation</li>
+                <li>Refunds will be processed within 14 business days of receiving written cancellation notice</li>
+                <li>Any third-party costs already incurred (licenses, subscriptions, paid tools) are non-refundable and will be deducted from any refund due</li>
+            </ul>
+            <p><strong>Example:</strong> For a $10,000 project with a $5,000 deposit: Client receives $2,500 refund upon cancellation; Silva Automation retains $2,500 of the deposit.</p>
+            <h2>4. Refund Eligibility for Cause (Post-Delivery)</h2>
+            <p>A refund may be considered after delivery only in the following circumstances:</p>
+            <h3>Uncured Material Defects:</h3>
+            <p>If Silva Automation fails to correct a verified material defect within the 15-business-day cure period after proper notification, Client may be eligible for a partial refund. The refund amount will be determined based on:</p>
+            <ul>
+                <li>Severity and scope of the defect</li>
+                <li>Percentage of project functionality affected</li>
+                <li>Amount of work successfully completed</li>
+                <li>Efforts made to resolve the issue</li>
+            </ul>
+            <p>Refund amounts typically range from 10% to 50% of the final payment, depending on the circumstances. Full refunds post-delivery are rare and reserved for complete failure to deliver usable functionality.</p>
+            <h3>Request Process:</h3>
+            <ul>
+                <li>Submit a detailed written refund request to contact@silvaautomation.com</li>
+                <li>Include specific documentation of the material defect(s)</li>
+                <li>Provide evidence that the defect was reported within the 7-day review period</li>
+                <li>Demonstrate that Silva Automation failed to cure within the 15-day cure period</li>
+            </ul>
+            <h3>Review Timeline:</h3>
+            <p>Silva Automation will review and respond to refund requests within 10 business days. If approved, refunds will be processed within 14 business days of approval.</p>
+            <h2>5. Non-Refundable Costs</h2>
+            <p>The following are never refundable under any circumstances:</p>
+            <ul>
+                <li>Third-party software licenses or subscriptions purchased on behalf of the Client</li>
+                <li>Third-party service fees (Make.com, Zapier, API costs, etc.)</li>
+                <li>Payment processing fees</li>
+                <li>Domain registration or hosting fees</li>
+                <li>External consultant or contractor costs</li>
+                <li>Training materials or sessions already delivered</li>
+            </ul>
+            <p>These costs will be itemized separately in your Project Proposal and will be deducted from any eligible refund.</p>
+            <h2>6. Project Abandonment by Client</h2>
+            <p>As outlined in the Terms and Conditions:</p>
+            <ul>
+                <li><strong>30-day pause:</strong> If Client fails to provide necessary feedback, materials, or communication for 30 continuous days without prior notice, Silva Automation reserves the right to pause the project</li>
+                <li><strong>60-day abandonment:</strong> If non-communication extends to 60 days, the project may be considered abandoned</li>
+            </ul>
+            <p>Upon abandonment: The initial deposit is forfeited in full, and all work completed to date will be billed at our standard hourly rate of $125/hour (plus GET), which may exceed the remaining project balance. Client will receive a final invoice for work completed. No refunds will be issued for abandoned projects.</p>
+            <h2>7. Refund Method</h2>
+            <p>All approved refunds will be issued using the original payment method when possible. If the original payment method is no longer available, an alternative method will be arranged (ACH transfer or check). Refunds are issued in USD and exclude any currency conversion fees or international transfer fees.</p>
+            <h2>8. Disputes</h2>
+            <p>If Client disputes our refund determination, the matter shall be resolved according to the Dispute Resolution provisions in our Terms and Conditions, including good faith negotiation, mediation, and binding arbitration if necessary.</p>
+            <h2>9. Exceptions and Special Circumstances</h2>
+            <p>Silva Automation reserves the right to make exceptions to this policy in extraordinary circumstances, including but not limited to:</p>
+            <ul>
+                <li>Documented medical emergencies</li>
+                <li>Natural disasters or force majeure events</li>
+                <li>Errors or misrepresentations by Silva Automation</li>
+                <li>Mutual agreement to modify terms</li>
+            </ul>
+            <p>Any such exceptions must be approved in writing by Silva Automation management.</p>
+            <h2>10. Contact Information</h2>
+            <p>For cancellation requests or questions about this policy, please contact:</p>
+            <p><strong>Silva Automation</strong></p>
+            <ul>
+                <li>Email: contact@silvaautomation.com</li>
+                <li>Phone: 808-223-5888</li>
+            </ul>
+            <p>All cancellation requests must be submitted in writing via email to be considered valid.</p>
+        </div>
+    </div>
+    
+    <div class="modal" id="cookie-modal">
+        <button class="close-button">&times;</button>
+        <div class="modal-content">
+            <h1>Cookie Policy</h1>
+            <p><strong>Effective Date: October 7, 2025</strong></p>
+            <p>This Cookie Policy explains how Silva Automation ("we," "us," or "our") uses cookies and similar technologies when you visit our website, www.silvaautomation.com (the "Site").</p>
+            <h2>1. What Are Cookies?</h2>
+            <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and provide information to website owners. Cookies contain data about your browsing activity and preferences.</p>
+            <h3>Similar Technologies:</h3>
+            <p>In addition to cookies, we may use other technologies such as:</p>
+            <ul>
+                <li><strong>Web beacons (pixels):</strong> Small graphic images used to track user behavior</li>
+                <li><strong>Local storage:</strong> Data stored in your browser to remember preferences</li>
+                <li><strong>Session storage:</strong> Temporary data that expires when you close your browser</li>
+            </ul>
+            <h2>2. Types of Cookies We Use</h2>
+            <p>We use the following categories of cookies on our Site:</p>
+            <h3>Strictly Necessary Cookies</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Essential for the Site to function properly and enable you to navigate and use its features</li>
+                <li><strong>Examples:</strong> Cookie consent preferences, session management, security</li>
+                <li><strong>Duration:</strong> Session or persistent (up to 12 months)</li>
+                <li><strong>Can be disabled:</strong> No – these are required for basic Site functionality</li>
+                <li><strong>Specific cookies:</strong> <code>cookie-consent</code>: Stores your cookie consent choices (12 months), <code>session-id</code>: Maintains your browsing session (session)</li>
+            </ul>
+            <h3>Performance and Analytics Cookies</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Collect information about how visitors use our Site to help us improve performance and user experience</li>
+                <li><strong>Examples:</strong> Google Analytics tracking</li>
+                <li><strong>Data collected:</strong> Pages visited, time spent on Site, traffic sources, device type, general location (city/state level)</li>
+                <li><strong>Duration:</strong> Up to 24 months</li>
+                <li><strong>Can be disabled:</strong> Yes – only placed if you accept optional cookies</li>
+                <li><strong>Specific cookies:</strong> <code>_ga</code>: Google Analytics identifier (24 months), <code>_gid</code>: Google Analytics session identifier (24 hours), <code>_gat</code>: Google Analytics request rate limiting (1 minute)</li>
+            </ul>
+            <h3>Functionality Cookies</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Remember your preferences and provide enhanced, personalized features</li>
+                <li><strong>Examples:</strong> Tidio live chat widget preferences, language settings</li>
+                <li><strong>Data collected:</strong> Chat history, name (if provided), support preferences</li>
+                <li><strong>Duration:</strong> Up to 12 months</li>
+                <li><strong>Can be disabled:</strong> Yes – only placed if you accept optional cookies</li>
+                <li><strong>Specific cookies:</strong> <code>tidio_state</code>: Remembers chat widget state and preferences (12 months), <code>tidio_history</code>: Stores chat conversation history (30 days)</li>
+            </ul>
+            <p>We do not use advertising or targeting cookies on our Site.</p>
+            <h2>3. Third-Party Cookies</h2>
+            <p>Some cookies are placed by third-party services that appear on our pages:</p>
+            <h3>Google Analytics (Google LLC)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Website analytics and performance measurement</li>
+                <li><strong>Data collected:</strong> Anonymous usage statistics, device information, general geographic location</li>
+                <li><strong>Privacy Policy:</strong> https://policies.google.com/privacy</li>
+                <li><strong>Opt-out:</strong> https://tools.google.com/dlpage/gaoptout</li>
+            </ul>
+            <h3>Tidio Live Chat (Tidio LLC)</h3>
+            <ul>
+                <li><strong>Purpose:</strong> Customer support and communication</li>
+                <li><strong>Data collected:</strong> Chat messages, name (if provided), browsing context</li>
+                <li><strong>Privacy Policy:</strong> https://www.tidio.com/privacy-policy/</li>
+            </ul>
+            <p>These third parties may use cookies in accordance with their own privacy policies. We do not control these cookies and recommend reviewing their policies directly.</p>
+            <h2>4. Your Cookie Choices</h2>
+            <p>When you first visit our Site, you will see a cookie consent banner at the bottom of the page with two options:</p>
+            <h3>Accept All Cookies:</h3>
+            <p>This places all cookies on your device, including:</p>
+            <ul>
+                <li>Strictly necessary cookies</li>
+                <li>Performance and analytics cookies (Google Analytics)</li>
+                <li>Functionality cookies (Tidio live chat)</li>
+            </ul>
+            <h3>Accept Necessary Cookies Only:</h3>
+            <p>This places only essential cookies required for the Site to function. Optional cookies will not be placed, which means:</p>
+            <ul>
+                <li>No analytics tracking (we won't know how you use our Site)</li>
+                <li>Limited chat functionality (you can still chat, but preferences won't be saved)</li>
+                <li>You'll see the consent banner again on future visits</li>
+            </ul>
+            <h3>Changing Your Mind:</h3>
+            <p>You can change your cookie preferences at any time by:</p>
+            <ul>
+                <li>Clearing your browser cookies (this will reset your choice)</li>
+                <li>Using the cookie preference link in our website footer</li>
+                <li>Adjusting your browser settings (see below)</li>
+            </ul>
+            <h2>5. Browser Controls</h2>
+            <p>Most web browsers allow you to control cookies through their settings. You can:</p>
+            <ul>
+                <li>Block all cookies: Prevent any cookies from being placed</li>
+                <li>Delete cookies: Remove cookies already on your device</li>
+                <li>Block third-party cookies: Allow only first-party cookies from sites you visit directly</li>
+            </ul>
+            <p>How to manage cookies in common browsers:</p>
+            <ul>
+                <li><strong>Chrome:</strong> Settings > Privacy and security > Cookies and other site data</li>
+                <li><strong>Firefox:</strong> Settings > Privacy & Security > Cookies and Site Data</li>
+                <li><strong>Safari:</strong> Preferences > Privacy > Cookies and website data</li>
+                <li><strong>Edge:</strong> Settings > Cookies and site permissions > Cookies and site data</li>
+            </ul>
+            <p><strong>Important:</strong> Blocking or deleting cookies may impact your experience on our Site and limit functionality. Some features may not work properly without cookies enabled.</p>
+            <p>For more detailed information about cookies and how to manage them, visit: www.allaboutcookies.org</p>
+            <h2>6. Do Not Track Signals</h2>
+            <p>Some browsers offer a "Do Not Track" (DNT) signal. Our Site does not currently respond to DNT signals. However, you can control cookie placement through our consent banner and browser settings as described above.</p>
+            <h2>7. Mobile Devices</h2>
+            <p>On mobile devices, you can control tracking through your device settings:</p>
+            <ul>
+                <li><strong>iOS:</strong> Settings > Privacy > Tracking (toggle "Allow Apps to Request to Track")</li>
+                <li><strong>Android:</strong> Settings > Google > Ads (opt out of personalized ads)</li>
+            </ul>
+            <h2>8. Cookie Lifespan</h2>
+            <ul>
+                <li><strong>Session Cookies:</strong> Deleted automatically when you close your browser</li>
+                <li><strong>Persistent Cookies:</strong> Remain on your device for a set period or until manually deleted:
+                    <ul>
+                        <li>Cookie consent: 12 months</li>
+                        <li>Google Analytics: Up to 24 months</li>
+                        <li>Tidio chat: 12 months</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>9. Updates to This Cookie Policy</h2>
+            <p>We may update this Cookie Policy from time to time to reflect changes in our practices, technology, or legal requirements. We will notify you of any material changes by:</p>
+            <ul>
+                <li>Updating the "Effective Date" at the top of this policy</li>
+                <li>Posting a notice on our homepage for 30 days</li>
+                <li>Requesting renewed consent through our cookie banner if the changes affect cookie usage</li>
+            </ul>
+            <p>Your continued use of our Site after such changes constitutes acceptance of the updated Cookie Policy.</p>
+            <h2>10. Data Protection and Privacy</h2>
+            <p>The information collected through cookies is processed in accordance with our Privacy Policy. We use appropriate security measures to protect cookie data from unauthorized access or disclosure.</p>
+            <p>Cookie data may be processed in the United States where our servers are located. By using our Site, you consent to this transfer and processing.</p>
+            <h2>11. Contact Us</h2>
+            <p>If you have questions, concerns, or requests regarding our use of cookies, please contact us at:</p>
+            <p><strong>Silva Automation</strong></p>
+            <ul>
+                <li>Email: contact@silvaautomation.com</li>
+                <li>Phone: 808-223-5888</li>
+                <li>Mail: Honolulu, Hawaii</li>
+            </ul>
+            <p>For specific questions about third-party cookies, please contact the respective third-party provider directly using the privacy policy links provided in Section 3.</p>
+        </div>
+    </div>
+    
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-banner-content">
+            <p>We use cookies to improve your experience. By using our site, you agree to our <a href="#" data-modal-target="#privacy-modal">Privacy Policy</a>.</p>
+            <div class="buttons">
+                <button class="button-decline" id="cookie-decline">Decline</button>
+                <button class="button-accept" id="cookie-accept">Accept</button>
             </div>
         </div>
     </div>
-    <script async="" src="//code.tidio.co/lzqrmnv0dmxjzjtah0zyvzplmzxb3qes.js"></script>
+
+    <script src="script.js?v=1.7"></script>
 </body>
 </html>

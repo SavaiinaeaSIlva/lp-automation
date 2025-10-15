@@ -1,23 +1,89 @@
-Silva Automation Website - README1. Project OverviewThis repository contains the source code for the official website of Silva Automation, a business automation service based in Waipahu, Hawaii. The project is a multi-page professional website designed to attract service-based business clients, explain the services offered, and provide a comprehensive, interactive legal framework.2. Key FeaturesDynamic Homepage: A full-screen, looping video background on the hero section for a modern, high-impact first impression.Multi-Page Structure: A full-featured site including Home, About, Packages & Pricing, Blog, and a consolidated Legal page.Interactive Legal Center: All legal documents (Terms, Privacy, Refund, Cookie Policy) are consolidated into a single legal.html file. This page functions like a mini single-page application (SPA) with sidebar navigation and a live search feature.Fully Responsive Design: Styled with Tailwind CSS for a seamless experience on mobile, tablet, and desktop devices.Consistent UI/UX: All pages share a consistent header, footer, hero patterns, and a custom-styled (hidden) scrollbar for a polished and cohesive user experience.Standardized Interactive Logic: A single, intelligent JavaScript runs across the site to handle navigation highlighting, animations, and component logic, ensuring consistent behavior.Consent-Gated Analytics: Google Analytics (GA4) loads only after the user consents by clicking "Accept All" on the cookie banner.3. Technologies UsedTechnologyPurposeHTML5Core structure and content, including the use of the <video> tag for the hero background.Tailwind CSSUtility-first CSS for rapid UI development and custom background patterns.Vanilla JSAll interactive features, including the mobile menu, cookie banner, and the legal center's navigation.AOS LibrarySubtle scroll-triggered animations for a polished feel.Node.js / npmManaging development dependencies and build scripts for Tailwind CSS.4. File StructureThe project follows a standard structure for static websites./
-|-- assets/
-|   |-- images/         # All static images (logo.png, etc.)
-|   |-- videos/         # Background video files (hero-background.mp4, etc.)
-|
-|-- dist/
-|   |-- output.css      # FINAL, compiled CSS file (do not edit directly)
-|
-|-- src/
-|   |-- input.css       # SOURCE CSS file for Tailwind styles (edit this one)
-|
-|-- index.html          # Main homepage
-|-- about.html          # About Us page
-|-- packages.html       # Combined packages and pricing page
-|-- blog.html           # Blog listing page
-|-- blog1.html          # Individual blog post
-|-- blog2.html          # Individual blog post
-|-- legal.html          # Single-page interactive legal center
-|
-|-- tailwind.config.js  # Config file for Tailwind CSS
-|-- package.json        # Lists project dependencies and scripts
-|-- README.md           # This file
-5. Setup and DevelopmentTo run this project locally, you will need to have Node.js and npm installed.Step 1: Install DependenciesNavigate to the project's root directory in your terminal and run:npm installStep 2: Run the Build ProcessFor continuous development (watches for changes and rebuilds CSS automatically):npm run watchFor a one-time build for deployment:npm run build6. DeploymentThis is a static website. After running the final npm run build, upload all relevant files and folders (everything except node_modules, src, package.json, etc.) to any static hosting provider like Netlify, Vercel, or GitHub Pages.7. Updates Log2025-10-01: Performed a final consistency audit. Aligned promises on the homepage with features listed on the packages page. Updated a dead link on the homepage and removed the downsell offer from the packages page for a cleaner presentation.2025-10-01: Replaced the static hero image on index.html with a full-screen, looping video background for a more dynamic and professional first impression.2025-10-01: Standardized all interactive JavaScript across the site into a single, intelligent script, fixing navigation highlighting bugs and eliminating console errors.2025-10-01: Implemented a custom-styled (hidden) browser scrollbar via src/input.css to enhance the site's modern, immersive feel.2025-10-01: Added a consistent, subtle dot-grid background pattern (bg-hero-pattern) to the hero sections of all internal pages for a cohesive design language.2025-09-30: Consolidated the Services and Pricing pages into a single, comprehensive packages.html page to streamline the user journey.2025-09-29: Consolidated all individual legal documents into a single interactive legal.html page with sidebar navigation and live search. The old legal/ directory is now obsolete.
+# Silva Automation Website
+
+This is the official front-end code for the Silva Automation business website. It's a modern, single-page responsive website designed to showcase automation services, generate leads, and provide key business information for clients in Hawaii.
+
+![Silva Automation Website Screenshot](assets/images/screenshot.png)
+*(**Note:** You'll need to take a screenshot of your site and save it as `screenshot.png` inside your `assets/images` folder for the image above to work.)*
+
+---
+
+## Features
+
+-   🎨 **Modern Design:** A responsive split-screen layout with a dark, "glassmorphism" theme.
+-   📱 **Fully Responsive:** Adapts cleanly for optimal viewing on desktop, tablet, and mobile devices.
+-   🧮 **Interactive ROI Calculator:** Allows potential clients to calculate their potential savings by using your services.
+-   ❓ **Dynamic FAQ Accordion:** A clean, interactive FAQ section to answer common questions.
+-   📜 **Pop-up Modals:** Displays legal documents (Terms, Privacy Policy, etc.) in clean, scrollable pop-ups.
+-   🍪 **Functional Cookie Consent Banner:** A simple banner to handle user consent, with choices remembered in local storage.
+
+---
+
+## Tech Stack
+
+-   **HTML5:** For the core structure and content.
+-   **CSS3:** For all styling, animations, and layout. It heavily uses modern features like:
+    -   Flexbox & Grid for layout
+    -   CSS Variables for easy theme management
+    -   Keyframe Animations for the CTA button
+    -   Backdrop Filter for the "glass" effect
+-   **Vanilla JavaScript:** For all interactivity, including:
+    -   IntersectionObserver for active navigation link highlighting on scroll.
+    -   DOM manipulation for the ROI calculator and modals.
+
+---
+
+## File Structure
+
+```
+
+.
+├── assets
+│   ├── icons
+│   │   ├── discover.png
+│   │   ├── build.png
+│   │   └── deliver.png
+│   └── images
+│       └── background.jpg
+│       └── ... (your other images)
+├── index.html          (Main page content)
+├── style.css           (All styles)
+└── script.js           (All interactivity)
+└── README.md           (This file)
+
+````
+
+---
+
+## How to Use
+
+No complex setup is needed. This is a static website.
+
+1.  Clone or download the repository.
+2.  Open the `index.html` file in any modern web browser.
+
+---
+
+## Customization
+
+Key parts of the website can be easily customized:
+
+### Content
+All text content, including headlines, paragraphs, and FAQ entries, can be edited directly in `index.html`.
+
+### Styling
+Key design elements like **colors and fonts** can be changed by editing the CSS variables in the `:root` section at the top of the `style.css` file.
+
+```css
+:root {
+    --primary-color: #343a40; 
+    --accent-blue: #0d6efd;   /* Change this for nav links */
+    --cta-orange: #fd7e14;   /* Change this for the main button */
+    /* ... etc. */
+}
+````
+
+### Background Image
+
+To change the background image of the left panel, replace the `background.jpg` file in the `assets/images` folder. You can also change the file path in the `.left-panel` rule in `style.css`.
+
+
