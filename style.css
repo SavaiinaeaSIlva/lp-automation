@@ -187,7 +187,21 @@ section {
 .contact-form label { display: block; margin-bottom: 0.5rem; font-weight: 700; color: white; }
 .contact-form input, .contact-form textarea { width: 100%; padding: 12px; background-color: var(--primary-color-hover); border: 1px solid #6c757d; border-radius: 4px; color: white; font-family: var(--body-font); font-size: 1rem; }
 .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent-blue); }
-.contact-form button { margin-top: 1rem; width: 100%; }
+.contact-form button { margin-top: 1rem; /* default: not forced full width on desktop */ display: inline-block; padding: 12px 24px; min-width: 140px; }
+
+/* Prevent flex children from overflowing their container */
+.contact-form .form-group { min-width: 0; }
+
+/* Ensure inputs/textarea use border-box sizing for predictable widths */
+.contact-form input, .contact-form textarea { box-sizing: border-box; line-height: 1.4; }
+
+/* Align form-row children vertically */
+.contact-form .form-row { align-items: flex-start; }
+
+/* Make the button full-width on small screens for easier tapping */
+@media (max-width: 767px) {
+    .contact-form button { width: 100%; }
+}
 
 /* --- FAQ Accordion --- */
 .faq-subheader { text-align: left; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; color: #6c757d; margin-top: 2rem; margin-bottom: 0.5rem; }

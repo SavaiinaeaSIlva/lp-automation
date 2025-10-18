@@ -16,13 +16,13 @@
 
     <div class="main-wrapper">
         <header class="left-panel">
-            <a href="#" class="logo">
-              <img src="assets/images/logo.png" alt="Silva Automation Logo">
-            </a>
+                        <a href="/" class="logo" aria-label="Go to homepage">
+                            <img src="assets/images/logo.png" alt="Silva Automation Logo">
+                        </a>
             <div class="left-panel-content">
                 <h1>Business Process<br>Automation</h1>
                 <p>Put your business on autopilot.</p>
-                <nav class="side-nav">
+                <nav class="side-nav" aria-label="Main navigation">
                     <a href="#process" class="active">What We Do</a>
                     <a href="#roi-calculator">ROI Calculator</a>
                     <a href="#about">About</a>
@@ -41,17 +41,17 @@
                     <p class="section-intro">We eliminate repetitive, manual tasks by designing and building custom automation systems. Our process is simple, transparent, and built for long-term success.</p>
                     <div class="process-grid">
                         <div class="content-box">
-                            <img src="assets/icons/discover.png" alt="Discover & Plan Icon" class="process-icon">
+                            <img src="assets/icons/discover.png" alt="Discover and Plan" class="process-icon">
                             <h3>1. Discover & Plan</h3>
                             <p>We start with a deep dive into your current workflows to identify the biggest bottlenecks and opportunities for automation.</p>
                         </div>
                         <div class="content-box">
-                            <img src="assets/icons/build.png" alt="Build & Integrate Icon" class="process-icon">
+                            <img src="assets/icons/build.png" alt="Build and Integrate" class="process-icon">
                             <h3>2. Build & Integrate</h3>
                             <p>Our team builds your custom workflows, connecting the apps you already use to create a seamless, automated system.</p>
                         </div>
                         <div class="content-box">
-                            <img src="assets/icons/deliver.png" alt="Deliver & Support Icon" class="process-icon">
+                            <img src="assets/icons/deliver.png" alt="Deliver and Support" class="process-icon">
                             <h3>3. Deliver & Support</h3>
                             <p>We deliver a fully-tested system and provide hands-on training to ensure a smooth transition for you and your team.</p>
                         </div>
@@ -59,12 +59,12 @@
                     <div class="logo-grid-container">
                         <h4>Works With Your Favorite Tools:</h4>
                         <div class="logo-grid">
-                            <img src="assets/images/googlecalendar.svg" alt="Google Calendar Logo">
-                            <img src="assets/images/quickbooks.svg" alt="QuickBooks Logo">
-                            <img src="assets/images/slack.svg" alt="Slack Logo">
-                            <img src="assets/images/twilio.svg" alt="Twilio Logo">
-                            <img src="assets/images/n8n.svg" alt="N8n Logo">
-                            <img src="assets/images/hubspot.svg" alt="HubSpot Logo">
+                            <img src="assets/images/googlecalendar.svg" alt="Google Calendar">
+                            <img src="assets/images/quickbooks.svg" alt="QuickBooks">
+                            <img src="assets/images/slack.svg" alt="Slack">
+                            <img src="assets/images/twilio.svg" alt="Twilio">
+                            <img src="assets/images/n8n.svg" alt="n8n">
+                            <img src="assets/images/hubspot.svg" alt="HubSpot">
                         </div>
                     </div>
                 </div>
@@ -223,13 +223,13 @@
                     <p>&copy; 2025 Silva Automation. All Rights Reserved.</p>
                     <p>Based in Waipahu, Hawaii | <a href="tel:+18082235888">(808) 223-5888</a></p>
                     <div class="legal-links">
-                        <a href="#" data-modal-target="#terms-modal">Terms & Conditions</a>
+                        <a href="#" data-modal-target="#terms-modal" role="button" tabindex="0">Terms & Conditions</a>
                         <span>•</span>
-                        <a href="#" data-modal-target="#privacy-modal">Privacy Policy</a>
+                        <a href="#" data-modal-target="#privacy-modal" role="button" tabindex="0">Privacy Policy</a>
                         <span>•</span>
-                        <a href="#" data-modal-target="#refund-modal">Refund Policy</a>
+                        <a href="#" data-modal-target="#refund-modal" role="button" tabindex="0">Refund Policy</a>
                          <span>•</span>
-                        <a href="#" data-modal-target="#cookie-modal">Cookie Policy</a>
+                        <a href="#" data-modal-target="#cookie-modal" role="button" tabindex="0">Cookie Policy</a>
                     </div>
                 </div>
             </footer>
@@ -239,7 +239,7 @@
     <div class="modal-overlay" id="legal-modal-overlay"></div>
 
     <div class="modal" id="terms-modal">
-        <button class="close-button">&times;</button>
+    <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
             <h1>Terms and Conditions</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
@@ -346,7 +346,7 @@
     </div>
 
     <div class="modal" id="privacy-modal">
-        <button class="close-button">&times;</button>
+    <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
             <h1>Privacy Policy</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
@@ -454,7 +454,7 @@
     </div>
 
     <div class="modal" id="refund-modal">
-        <button class="close-button">&times;</button>
+    <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
             <h1>Refund & Cancellation Policy</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
@@ -703,8 +703,8 @@
         <div class="cookie-banner-content">
             <p>We use cookies to improve your experience. By using our site, you agree to our <a href="#" data-modal-target="#privacy-modal">Privacy Policy</a>.</p>
             <div class="buttons">
-                <button class="button-decline" id="cookie-decline">Decline</button>
-                <button class="button-accept" id="cookie-accept">Accept</button>
+            <button class="button-decline" id="cookie-decline" type="button">Decline</button>
+            <button class="button-accept" id="cookie-accept" type="button">Accept</button>
             </div>
         </div>
     </div>
