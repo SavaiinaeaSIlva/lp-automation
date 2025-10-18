@@ -141,4 +141,42 @@ document.addEventListener('DOMContentLoaded', () => {
         acceptCookiesBtn.addEventListener('click', () => hideCookieBanner('accepted'));
         declineCookiesBtn.addEventListener('click', () => hideCookieBanner('declined'));
     }
+
+    // --- CONTACT FORM: Client-side submit to Formspree with redirect fallback ---
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            // only intercept if action points to formspree
+            const action = contactForm.getAttribute('action') || '';
+            if (!action.includes('formspree.io')) return; // allow normal submit
+
+            e.preventDefault();
+
+            const formData = new FormData(contactForm);
+
+            try {
+                const res = await fetch(action, {
+                    method: 'POST',
+                    headers: {
+                        'Accept': 'application/json'
+                    },
+                    body: formData
+                });
+
+                if (res.ok) {
+                    // client-side redirect to confirmation (works regardless of Formspree plan)
+                    window.location.href = '/form_confirmation.html';
+                    return;
+                }
+
+                // if Formspree returns validation errors, parse and fallback to normal submission
+                const data = await res.json().catch(() => null);
+                console.error('Formspree error response', data);
+                contactForm.submit();
+            } catch (err) {
+                console.error('Form submit failed, falling back to native submit', err);
+                contactForm.submit();
+            }
+        });
+    }
 });
