@@ -219,6 +219,10 @@ footer p { margin: 0.5rem 0; }
 .cookie-banner { display: none; position: fixed; bottom: 0; left: 0; width: 100%; background-color: var(--primary-color); color: white; padding: 20px; box-shadow: 0 -2px 10px rgba(0,0,0,0.2); z-index: 1002; align-items: center; text-align: center; }
 .cookie-banner.active { display: flex; animation: slideUp 0.5s ease-out forwards; }
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
+
+/* When the cookie banner is visible, add bottom padding to the right panel
+    so fixed-height layouts don't have the banner cover interactive elements */
+.right-panel.cookie-banner-active { padding-bottom: 120px; }
 @media (max-width: 1024px) {
     html, body { height: auto; overflow: auto; }
     .main-wrapper { flex-direction: column; height: auto; }

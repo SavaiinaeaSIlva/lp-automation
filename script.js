@@ -128,10 +128,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         setTimeout(() => {
             cookieBanner.classList.add('active');
+            // ensure the right panel has extra bottom padding while the banner is visible
+            if (rightPanel) rightPanel.classList.add('cookie-banner-active');
         }, 1500);
 
         const hideCookieBanner = (consent) => {
             cookieBanner.classList.remove('active');
+            if (rightPanel) rightPanel.classList.remove('cookie-banner-active');
             localStorage.setItem('cookieConsent', consent);
         };
 
