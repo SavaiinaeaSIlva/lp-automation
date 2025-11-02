@@ -145,6 +145,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- CONTACT FORM: Client-side submit to Formspree with redirect fallback ---
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
+        
+        const WEBHOOK_URL = 'https://n8n.silvaautomation.com/webhook-test/c260128d-c7ed-4638-9666-bb92f1975823';
+
+        const postToWebhook = async (data) => {
+            try {
+                await fetch(WEBHOOK_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(Object.fromEntries(data))
+                });
+                console.log('Form data successfully posted to webhook.');
+            } catch (err) {
+                console.error('Failed to post to webhook:', err);
+            }
+        };
+
         contactForm.addEventListener('submit', async (e) => {
             // only intercept if action points to formspree
             const action = contactForm.getAttribute('action') || '';
@@ -164,6 +182,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 if (res.ok) {
+                    // Send data to webhook asynchronously and without waiting
+                    postToWebhook(formData); 
+                    
                     // client-side redirect to confirmation (works regardless of Formspree plan)
                     window.location.href = '/form_confirmation.html';
                     return;
