@@ -149,13 +149,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const WEBHOOK_URL = 'https://n8n.silvaautomation.com/webhook-test/c260128d-c7ed-4638-9666-bb92f1975823';
 
         const postToWebhook = async (data) => {
+            // Convert FormData to a standard object for JSON
+            const dataObject = {};
+            data.forEach((value, key) => {
+                dataObject[key] = value;
+            });
+            
             try {
                 await fetch(WEBHOOK_URL, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify(Object.fromEntries(data))
+                    body: JSON.stringify(dataObject) // Use the converted object
                 });
                 console.log('Form data successfully posted to webhook.');
             } catch (err) {
@@ -183,6 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 if (res.ok) {
                     // Send data to webhook asynchronously and without waiting
+                    // We don't wait for this to finish, so the redirect is fast.
                     postToWebhook(formData); 
                     
                     // client-side redirect to confirmation (works regardless of Formspree plan)
