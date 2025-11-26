@@ -18,34 +18,59 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 body { font-family: var(--body-font); color: var(--text-dark); line-height: 1.6; }
 
-/* --- SIDE-BY-SIDE LAYOUT --- */
-html, body { height: 100%; overflow: hidden; }
-.main-wrapper { display: flex; height: 100vh; }
-.left-panel {
-    width: 35%;
-    height: 100vh;
+/* --- HEADER & HERO --- */
+.top-header {
+    background-color: var(--bg-light);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
-    color: white;
+    z-index: 100;
+}
+.top-header .container {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    position: relative;
+}
+.main-nav {
+    display: flex;
+    gap: 1.5rem;
+}
+.main-nav a {
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--text-dark);
+    transition: color 0.2s ease;
+}
+.main-nav a:hover {
+    color: var(--primary-color);
+}
+#hero {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("assets/background.jpg");
     background-size: cover;
     background-position: center;
-    padding: 40px;
+    padding: 6rem 0;
+    text-align: center;
+    color: white;
 }
-.right-panel {
-    width: 65%;
-    height: 100vh;
-    overflow-y: auto;
-    scroll-behavior: smooth;
-    background-color: #f8f9fa;
-    color: #333;
+#hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+#hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    color: #ffffff;
+}
+#hero .button-cta {
+    font-size: 1.2rem;
+    padding: 18px 36px;
 }
 
+
 /* --- GENERAL STYLES & COMPONENTS --- */
-.container { width: 90%; max-width: 960px; margin: 0 auto; }
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
 h1,
 h2,
 h3,
@@ -74,42 +99,11 @@ p {
     margin-bottom: 1rem;
     color: #555;
 }
-.left-panel p {
-    font-size: 1.15rem;
-    max-width: 500px;
-    color: #ffffff;
-}
 a {
     color: var(--accent-blue);
     text-decoration: none;
 }
-.left-panel a {
-    color: white;
-}
-.logo {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-}
 .logo img { height: 40px; width: auto; }
-.left-panel-content {
-    width: 100%;
-    text-align: left;
-}
-.side-nav { 
-    margin-top: 2rem; 
-    display: flex; 
-    flex-direction: column;    /* Stack links vertically */
-    align-items: flex-start; /* Align them to the left */
-    gap: 1rem;          
-}
-.side-nav a { font-family: var(--heading-font); font-weight: 700; transition: all 0.2s ease; padding: 8px; border-left: 3px solid transparent; }
-.side-nav a:hover { opacity: 0.8; }
-.side-nav a.active {
-    color: var(--accent-blue); 
-    opacity: 1;
-    border-left: 3px solid var(--accent-blue);
-}
 .button { display: inline-block; padding: 14px 28px; border-radius: 50px; font-family: var(--heading-font); font-weight: 700; transition: all 0.2s ease; border: 2px solid var(--primary-color); text-align: center; cursor: pointer; background-color: var(--primary-color); color: #ffffff; }
 .button:hover { background-color: var(--primary-color-hover); border-color: var(--primary-color-hover); }
 .button-cta {
@@ -133,14 +127,15 @@ a {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-/* --- SECTION STYLES (for Right Panel) --- */
+/* --- SECTION STYLES --- */
 section { 
-    padding: 140px 40px; 
-    border-bottom: 1px solid #495057; 
+    padding: 5rem 2rem;
+    border-bottom: 1px solid var(--border-color);
     position: relative; 
 }
-.right-panel section:first-child { padding-top: 60px; }
-.right-panel section:last-of-type { border-bottom: none; }
+section:last-of-type {
+    border-bottom: none;
+}
 .section-intro { text-align: center; max-width: 700px; margin: 0 auto 1rem auto; }
 .section-label {
     position: absolute;
@@ -328,20 +323,15 @@ footer p { margin: 0.5rem 0; }
 
 /* When the cookie banner is visible, add bottom padding to the right panel
     so fixed-height layouts don't have the banner cover interactive elements */
-.right-panel.cookie-banner-active { padding-bottom: 120px; }
+body.cookie-banner-active { padding-bottom: 120px; }
 @media (max-width: 1024px) {
-    html, body { height: auto; overflow: auto; }
-    .main-wrapper { flex-direction: column; height: auto; }
-    .left-panel { position: static; padding: 60px 20px; align-items: center; text-align: center; }
-    .left-panel, .right-panel { width: 100%; height: auto; }
-    .right-panel { overflow-y: visible; }
-    .logo { position: static; margin-bottom: 2rem; }
     .about-container { flex-direction: column; text-align: center; }
     .about-text h2 { text-align: center; }
-    section { padding: 80px 20px; }
-    .section-label { left: 20px; }
+    section { padding: 4rem 1rem; }
 }
+
 @media (max-width: 767px) {
-    h1 { font-size: 2.2rem; }
+    #hero h1 { font-size: 2.5rem; }
     h2 { font-size: 1.8rem; }
+    .main-nav { display: none; } /* Basic mobile nav hiding, can be improved with a hamburger menu */
 }
