@@ -8,7 +8,7 @@
     --bg-soft-gray: #f8f9fa;
     --accent-yellow: #17a2b8;
     --accent-blue: #0d6efd;
-    --cta-orange: #007bff;
+    --cta-bg: #007bff;
     --text-dark: #212529;
     --text-light: #555;
     --border-color: #dee2e6;
@@ -30,7 +30,9 @@ html, body { height: 100%; overflow: hidden; }
     display: flex;
     align-items: center;
     position: relative;
-    background-color: #212529;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("assets/background.jpg");
+    background-size: cover;
+    background-position: center;
     padding: 40px;
 }
 .right-panel {
@@ -111,8 +113,8 @@ a {
 .button { display: inline-block; padding: 14px 28px; border-radius: 50px; font-family: var(--heading-font); font-weight: 700; transition: all 0.2s ease; border: 2px solid var(--primary-color); text-align: center; cursor: pointer; background-color: var(--primary-color); color: #ffffff; }
 .button:hover { background-color: var(--primary-color-hover); border-color: var(--primary-color-hover); }
 .button-cta {
-    background-color: var(--cta-orange);
-    border-color: var(--cta-orange);
+    background-color: var(--cta-bg);
+    border-color: var(--cta-bg);
     color: white;
     margin-top: 1rem;
     padding: 16px 32px;
@@ -191,17 +193,35 @@ section {
 
 /* --- Call to Action (CTA) Section --- */
 #cta {
-    background-color: #ffffff;
-    text-align: center;
+	background-image: linear-gradient(45deg, var(--primary-color), var(--accent-blue));
+	text-align: center;
 }
+
+#cta h2, #cta p {
+	color: #ffffff;
+}
+
 .offer-box {
-    background-color: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    padding: 2.5rem;
-    max-width: 600px;
-    margin: 2rem auto 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 8px;
+	padding: 2.5rem;
+	max-width: 600px;
+	margin: 2rem auto 0 auto;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+	backdrop-filter: blur(10px);
+}
+
+#cta .button-cta {
+	background-color: #ffffff;
+	color: var(--primary-color);
+	border-color: #ffffff;
+}
+
+#cta .button-cta:hover {
+	background-color: #f0f0f0;
+	border-color: #f0f0f0;
+	color: var(--primary-color-hover);
 }
 .offer-list { list-style: none; padding: 0; margin: 1.5rem auto; text-align: left; }
 .offer-list li {
