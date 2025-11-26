@@ -1,11 +1,3 @@
-
-This is the official front-end code for the Silva Automation business website. It's a modern, single-page responsive website designed to showcase automation services, generate leads, and provide key business information for clients in Hawaii.
-<<<<<<< HEAD
-
-=======
->>>>>>> d085075e141a27ab69d4d787553e6150a1479bd1
----
-
 ## Features
 
 -   🎨 **Modern Design:** A responsive split-screen layout with a dark, "glassmorphism" theme.
