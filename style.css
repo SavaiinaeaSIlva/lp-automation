@@ -197,7 +197,7 @@ section {
 	text-align: center;
 }
 
-#cta h2, #cta p {
+#cta h2, #cta p, #cta .offer-list li, #cta .offer-list strong {
 	color: #ffffff;
 }
 
