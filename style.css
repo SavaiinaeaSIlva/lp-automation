@@ -2,16 +2,18 @@
 
 /* --- VARIABLES & GLOBAL RESETS --- */
 :root {
-    --primary-color: #007bff;
-    --primary-color-hover: #0056b3;
+    --primary-color: #063a7a; /* darker navy */
+    --primary-color-hover: #052e64;
     --bg-light: #ffffff;
-    --bg-soft-gray: #f8f9fa;
-    --accent-yellow: #17a2b8;
-    --accent-blue: #0d6efd;
-    --cta-bg: #007bff;
-    --text-dark: #212529;
-    --text-light: #555;
-    --border-color: #dee2e6;
+    --bg-soft-gray: #f6f7fb; /* subtle off-white for sections */
+    --section-alt-bg: #fbfdff; /* very light contrast for alternating sections */
+    --accent-yellow: #ffd700; /* bright gold accent */
+    --accent-blue: #17a2b8; /* teal accent */
+    --accent-orange: #ff7a59; /* warm orange for emphasis */
+    --cta-bg: linear-gradient(45deg, #ff7a59, #ffb86b);
+    --text-dark: #1f2937;
+    --text-light: #6c757d;
+    --border-color: #e6e9ee;
     --heading-font: 'Poppins', sans-serif;
     --body-font: 'Roboto', sans-serif;
 }
@@ -20,12 +22,13 @@ body { font-family: var(--body-font); color: var(--text-dark); line-height: 1.6;
 
 /* --- HEADER & HERO --- */
 .top-header {
-    background-color: var(--bg-light);
+    background-color: transparent;
     padding: 1rem 0;
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
+    border-bottom: none;
+    position: fixed;
     top: 0;
     z-index: 100;
+    width: 100%;
 }
 .top-header .container {
     display: flex;
@@ -39,21 +42,29 @@ body { font-family: var(--body-font); color: var(--text-dark); line-height: 1.6;
 .main-nav a {
     font-family: var(--heading-font);
     font-weight: 700;
-    color: var(--text-dark);
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
     transition: color 0.2s ease;
 }
 .main-nav a:hover {
-    color: var(--primary-color);
+    color: var(--accent-yellow);
 }
 #hero {
     background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("assets/background.jpg");
     background-size: cover;
     background-position: center;
-    padding: 6rem 0;
+    min-height: 100vh; /* fill the viewport on first load */
+    display: flex;
+    align-items: center; /* center content vertically */
+    justify-content: center;
+    padding: 0; /* container will handle spacing */
     text-align: center;
     color: white;
     animation: fadeIn 1.5s ease-in-out;
+    margin-top: 0;
 }
+
+#hero .container { padding: 6rem 0; }
 
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -140,10 +151,11 @@ a {
 
 /* --- SECTION STYLES --- */
 section { 
-    padding: 5rem 2rem;
+    padding: 6rem 2rem;
     border-bottom: 1px solid var(--border-color);
     position: relative; 
 }
+section + section { margin-top: 1.5rem; }
 section:last-of-type {
     border-bottom: none;
 }
@@ -160,6 +172,20 @@ section:last-of-type {
     text-transform: uppercase;
 }
 
+/* Alternating section backgrounds for better visual separation */
+section:nth-of-type(odd) {
+    background-color: var(--bg-light);
+}
+section:nth-of-type(even) {
+    background-color: var(--section-alt-bg);
+}
+
+/* Ensure any previously targeted section IDs still look correct but inherit new palette */
+#process, #about, #faq, #cta {
+    /* keep any custom layout but prefer palette variables for colors */
+    background-color: transparent;
+}
+
 /* --- Process Section --- */
 #process {
     background-color: var(--bg-soft-gray);
@@ -169,12 +195,40 @@ section:last-of-type {
     flex-direction: column;
     gap: 2rem;
     margin-bottom: 4rem;
-    max-width: 700px;
+    max-width: 1100px;
     margin-left: auto;
     margin-right: auto;
+    align-items: stretch;
 }
-.process-grid .content-box { text-align: center; }
-.process-icon { height: 50px; margin-bottom: 1rem; }
+ .process-grid .content-box { text-align: center; flex: 1; }
+ .process-icon {
+    display: block;
+    width: 72px;
+    height: 72px;
+    padding: 12px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    box-shadow: 0 6px 14px rgba(6,58,122,0.12);
+    object-fit: contain;
+    margin: 0 auto 1rem auto;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+ .process-icon:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(6,58,122,0.14);
+}
+
+/* On wider screens, show the three process steps side-by-side */
+@media (min-width: 768px) {
+    .process-grid {
+        flex-direction: row;
+        gap: 2.5rem;
+    }
+    .process-grid .content-box {
+        max-width: 33%;
+        min-width: 220px;
+    }
+}
 .logo-grid-container { margin-top: 4rem; }
 
 /* --- Integrations Logos --- */
@@ -200,8 +254,8 @@ section:last-of-type {
 
 /* --- Call to Action (CTA) Section --- */
 #cta {
-	background-image: linear-gradient(45deg, var(--primary-color), var(--accent-blue));
-	text-align: center;
+    background-image: linear-gradient(45deg, var(--primary-color), var(--accent-blue));
+    text-align: center;
 }
 
 #cta h2, #cta p, #cta .offer-list li, #cta .offer-list strong {
@@ -218,6 +272,30 @@ section:last-of-type {
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 	backdrop-filter: blur(10px);
 }
+
+#cta .offer-box h3 { color: #ffffff; }
+
+/* Back-to-top button */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(6,58,122,0.18);
+    cursor: pointer;
+    z-index: 1100;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+}
+.back-to-top:active { transform: scale(0.96); }
+.back-to-top.hidden { opacity: 0; pointer-events: none; transform: translateY(8px); }
+.back-to-top svg { width: 20px; height: 20px; }
 
 #cta .button-cta {
 	background-color: #ffffff;
@@ -248,74 +326,26 @@ section:last-of-type {
 .about-photo { width: 200px; height: 200px; border-radius: 50%; object-fit: cover; object-position: top; border: 4px solid var(--primary-color); flex-shrink: 0; }
 .about-text { flex: 1; }
 
-/* --- FAQ SECTION REFACTORED (Less Bulky) --- */
-#faq {
-    background-color: #ffffff;
-    padding-top: 80px;
-    padding-bottom: 80px;
-}
-.faq-compact-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    text-align: center;
-}
-.faq-compact-wrapper h2 { margin-bottom: 2rem; }
-#faq details {
-    border-bottom: 1px solid var(--border-color);
-    padding: 0.8rem 0;
-}
-#faq details:first-of-type {
-    border-top: 1px solid var(--border-color);
-}
-#faq summary {
-    font-family: var(--heading-font);
-    font-weight: 700;
-    cursor: pointer;
-    list-style: none;
-    position: relative;
-    padding-right: 1.5rem;
-    text-align: left;
-    font-size: 1.1rem;
-    color: var(--text-dark);
-}
-#faq summary:hover {
-    color: var(--primary-color);
-}
-#faq summary::-webkit-details-marker {
-    display: none;
-}
-#faq summary::after {
-    content: '+';
-    position: absolute;
-    right: 0;
-    font-size: 1.2rem;
-    transition: transform 0.2s ease;
-    color: #6c757d;
-}
-#faq details[open] summary::after {
-    transform: rotate(45deg);
-}
-#faq details p {
-    padding-top: 0.8rem;
-    margin: 0;
-    text-align: left;
-    font-size: 0.95rem;
-    color: var(--text-light);
-}
+/* FAQ moved to modal — inline FAQ styles removed. */
 
 
 /* --- FOOTER --- */
 footer {
-    padding: 40px 0;
+    padding: 48px 0;
     text-align: center;
-    color: #6c757d;
-    font-size: 0.9rem;
-    background-color: var(--bg-soft-gray);
-    border-top: 1px solid var(--border-color);
+    color: #ffffff;
+    font-size: 0.95rem;
+    background-color: var(--primary-color);
+    border-top: 4px solid rgba(255,255,255,0.08);
 }
 footer p { margin: 0.5rem 0; }
-.legal-links a { color: #6c757d; transition: color 0.2s; margin: 0 5px; }
-.legal-links a:hover { color: white; }
+.legal-links a { color: rgba(255,255,255,0.9); transition: color 0.15s; margin: 0 8px; }
+.legal-links a:hover { color: var(--accent-yellow); }
+
+/* Slightly lift footer content for readability on small screens */
+@media (max-width: 767px) {
+    footer { padding: 36px 0; }
+}
 
 /* --- MODAL, COOKIE BANNER, & RESPONSIVE STYLES --- */
 .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); z-index: 1000; }
