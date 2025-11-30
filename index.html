@@ -23,7 +23,7 @@
                 <a href="#process">Our Process</a>
                 <a href="#cta">Get a Free System</a>
                 <a href="#about">About Us</a>
-                <a href="#faq">FAQ</a>
+                <a href="#" data-modal-target="#faq-modal" role="button">FAQ</a>
             </nav>
         </div>
     </header>
@@ -102,36 +102,7 @@
             </div>
         </section>
 
-        <!-- FAQ: Tailored to Contractors -->
-        <section id="faq">
-            <span class="section-label">FAQ</span>
-            <div class="container">
-                <div class="faq-compact-wrapper">
-                    <h2>Frequently Asked Questions</h2>
-
-                    <details>
-                        <summary>Is this system complicated to use?</summary>
-                        <p>Not at all. We design our systems to be operated entirely from your smartphone. You'll receive simple text notifications for new leads and updates, while the automation runs seamlessly in the background.</p>
-                    </details>
-                    <details>
-                        <summary>Is this service a good fit for a solo operation?</summary>
-                        <p>Absolutely. Our systems are particularly effective for solo contractors, acting as a virtual assistant to ensure you never miss a lead, even when you're on a job.</p>
-                    </details>
-                    <details>
-                        <summary>Can the system be customized for specific needs, like rain delays?</summary>
-                        <p>Yes. We can build custom features, such as a "Rain Delay" function that automatically notifies and reschedules all of your appointments for the day with a single tap.</p>
-                    </details>
-                    <details>
-                        <summary>How is this different from lead generation services like Angi?</summary>
-                        <p>Unlike platforms that sell the same lead to multiple contractors, our systems are designed to capture and convert the exclusive leads you generate through your own marketing and referrals.</p>
-                    </details>
-                    <details>
-                        <summary>What is your pricing model?</summary>
-                        <p>We build and implement custom systems for a one-time project fee. You own the solution outright, with no recurring monthly fees required to maintain your data or system access.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
+        <!-- FAQ moved to modal; section removed to declutter page -->
 
         <!-- FOOTER -->
         <footer>
@@ -139,7 +110,11 @@
                 <p>&copy; 2025 Silva Automation. All Rights Reserved.</p>
                 <p>Based in Waipahu, Hawaii | <a href="tel:+18082235888">(808) 223-5888</a></p>
                 <div class="legal-links">
+                    <a href="#" data-modal-target="#faq-modal" role="button" tabindex="0">FAQ</a>
+                    <span>•</span>
                     <a href="#" data-modal-target="#privacy-modal" role="button" tabindex="0">Privacy Policy</a>
+                    <span>•</span>
+                    <a href="#" data-modal-target="#refund-modal" role="button" tabindex="0">Refund Policy</a>
                     <span>•</span>
                     <a href="#" data-modal-target="#cookie-modal" role="button" tabindex="0">Cookie Policy</a>
                 </div>
@@ -155,122 +130,95 @@
         <div class="modal-content">
             <h1>Terms and Conditions</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
-            <p>Please contact us for a full copy of our Terms & Conditions.</p>
-        </div>
-    </div>
-
-    <!-- FULL PRIVACY POLICY -->
-    <div class="modal" id="privacy-modal">
-    <button class="close-button" type="button" aria-label="Close modal">&times;</button>
-        <div class="modal-content">
-            <h1>Privacy Policy</h1>
-            <p><strong>Effective Date: October 7, 2025</strong></p>
-            <p>Silva Automation ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, www.silvaautomation.com (the "Site"), and use our services.</p>
-            <h2>1. Information We Collect</h2>
-            <p>We may collect information about you in various ways. The information we may collect includes:</p>
-            <h3>Personal Data:</h3>
-            <p>Personally identifiable information such as your name, company name, email address, telephone number, billing address, and payment information that you voluntarily provide when you fill out a contact form, request a quote, sign a Service Agreement, or otherwise communicate with us.</p>
-            <h3>Derivative Data:</h3>
-       <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Silva Automation - Systems for Hawaii Contractors</title>
-    <meta name="description" content="Custom automation systems for Hawaii contractors and tradesmen. Never miss a bid while you're on the job site.">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Exo+2:wght@700&display=swap" rel="stylesheet">
-    
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <div class="main-wrapper">
-        <header class="left-panel">
-            <a href="/" class="logo" aria-label="Go to homepage">
-                <img src="assets/images/logo.png" alt="Silva Automation Logo">
-            </a>
-            <div class="left-panel-content">
-                <!-- HERO: Focused specifically on the "Missed Call" pain point for Contractors -->
-                <h1>Stop Losing Jobs<br>To Missed Calls.</h1>
-                <p>Automated booking and follow-up systems for Hawaii Contractors. You handle the tools, we handle the phone tag.</p>
-                <nav class="side-nav" aria-label="Main navigation">
-                    <a href="#process" class="active">How It Works</a>
-                    <a href="#cta">Free "Text-Back" Build</a>
-                    <a href="#about">About</a>
-                    <a href="#faq">FAQ</a>
-                </nav>
-            </div>
-        </section>
-
-        <section id="about">
-            <span class="section-label">ABOUT US</span>
-            <div class="container about-container">
-                <img src="assets/images/about.png" alt="Savaiinaea Silva, Founder of Silva Automation" class="about-photo">
-                <div class="about-text content-box">
-                    <h2>Built by a Contractor, for Contractors.</h2>
-                    <p>Aloha, I’m Savaiinaea “Naea” Silva. I understand the challenge of managing a business while also being the one doing the work. Juggling jobs, suppliers, and customer calls is a heavy lift.</p>
-                    <p>I founded Silva Automation to empower Hawaii's contractors with the technology they need to thrive. We build robust, reliable systems that serve as a digital project manager, handling administrative tasks so you can focus on your craft.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ: Tailored to Contractors -->
-        <section id="faq">
-            <span class="section-label">FAQ</span>
-            <div class="container">
-                <div class="faq-compact-wrapper">
-                    <h2>Frequently Asked Questions</h2>
-                    
-                    <details>
-                        <summary>Is this system complicated to use?</summary>
-                        <p>Not at all. We design our systems to be operated entirely from your smartphone. You'll receive simple text notifications for new leads and updates, while the automation runs seamlessly in the background.</p>
-                    </details>
-                    <details>
-                        <summary>Is this service a good fit for a solo operation?</summary>
-                        <p>Absolutely. Our systems are particularly effective for solo contractors, acting as a virtual assistant to ensure you never miss a lead, even when you're on a job.</p>
-                    </details>
-                    <details>
-                        <summary>Can the system be customized for specific needs, like rain delays?</summary>
-                        <p>Yes. We can build custom features, such as a "Rain Delay" function that automatically notifies and reschedules all of your appointments for the day with a single tap.</p>
-                    </details>
-                    <details>
-                        <summary>How is this different from lead generation services like Angi?</summary>
-                        <p>Unlike platforms that sell the same lead to multiple contractors, our systems are designed to capture and convert the exclusive leads you generate through your own marketing and referrals.</p>
-                    </details>
-                    <details>
-                        <summary>What is your pricing model?</summary>
-                        <p>We build and implement custom systems for a one-time project fee. You own the solution outright, with no recurring monthly fees required to maintain your data or system access.</p>
-                    </details>
-                </div>
-            </div>
-        </section>
-
-        <!-- FOOTER -->
-        <footer>
-            <div class="container">
-                <p>&copy; 2025 Silva Automation. All Rights Reserved.</p>
-                <p>Based in Waipahu, Hawaii | <a href="tel:+18082235888">(808) 223-5888</a></p>
-                <div class="legal-links">
-                    <a href="#" data-modal-target="#privacy-modal" role="button" tabindex="0">Privacy Policy</a>
-                    <span>•</span>
-                    <a href="#" data-modal-target="#cookie-modal" role="button" tabindex="0">Cookie Policy</a>
-                </div>
-            </div>
-        </footer>
-    </main>
-
-    <!-- MODALS -->
-    <div class="modal-overlay" id="legal-modal-overlay"></div>
-
-    <div class="modal" id="terms-modal">
-        <button class="close-button" type="button" aria-label="Close modal">&times;</button>
-        <div class="modal-content">
-            <h1>Terms and Conditions</h1>
-            <p><strong>Effective Date: October 7, 2025</strong></p>
-            <p>Please contact us for a full copy of our Terms & Conditions.</p>
+            <p>This website, www.silvaautomation.com (the "Site"), and the services offered through it, are owned and operated by Silva Automation. By accessing or using our Site and services, you agree to be bound by these Terms and Conditions ("Terms").</p>
+            <h2>1. Description of Services</h2>
+            <p>Silva Automation provides business-to-business automation services, including workflow development, system integration, and process optimization. The specific scope of work for each project will be outlined in a separate Service Agreement and Project Proposal, which are incorporated into these Terms by reference.</p>
+            <h2>2. Client Obligations</h2>
+            <p>You agree to use our Site and services only for lawful purposes and in compliance with all applicable federal, state, and local laws. You agree to provide accurate, complete, and timely information, materials, and feedback necessary for the performance of the services. Client acknowledges that failure to do so may result in project delays or timeline extensions, for which Silva Automation shall not be held responsible.</p>
+            <p><strong>Project Abandonment:</strong> If the Client fails to provide necessary feedback, materials, or communication for a continuous period of 30 days without prior notice, Silva Automation reserves the right to pause the project. If non-communication extends to 60 days, the project may be considered abandoned. In this event, the initial deposit will be forfeited, and all work completed to date will be billed at our standard hourly rate.</p>
+            <h2>3. Intellectual Property Rights</h2>
+            <p>Upon full and final payment by the Client, Silva Automation grants and assigns to the Client all right, title, and interest in the custom deliverables created specifically for the Client under the applicable Service Agreement ("Custom Work Product"). The Custom Work Product includes the final source code, workflow configurations, databases, and project documentation.</p>
+            <p>Silva Automation retains ownership of all pre-existing intellectual property, including but not limited to proprietary tools, libraries, frameworks, methodologies, templates, know-how, and any code or materials not created specifically for the Client ("Pre-Existing IP"). Client is granted a non-exclusive, royalty-free, perpetual license to use any Pre-Existing IP solely to the extent it is embedded in or necessary for the operation of the Custom Work Product.</p>
+            <h2>4. Payments, Fees, and Hawaii General Excise Tax (GET)</h2>
+            <p><strong>Payment Structure:</strong></p>
+            <ul>
+                <li>All services are provided on a fixed-price basis as outlined in your Project Proposal</li>
+                <li>A 50% deposit is due upon signing the Service Agreement before work begins</li>
+                <li>A 50% final payment is due upon project completion and delivery of all agreed-upon deliverables</li>
+                <li>All prices are quoted in United States Dollars (USD)</li>
+            </ul>
+            <p><strong>Hawaii General Excise Tax (GET):</strong> As a business operating in Hawaii, we are required to collect Hawaii General Excise Tax (GET) at a rate of 4.5%. This will be added as a separate line item to all invoices.</p>
+            <p><strong>Payment Methods:</strong> We accept payment via bank transfer (ACH), credit/debit card (processing fees may apply), and check (must clear before work commences).</p>
+            <p><strong>Late Payments:</strong> Invoices not paid within 15 days of the due date will incur a late fee of 1.5% per month (18% annually) on the outstanding balance, to the extent permitted under Hawaii law. We reserve the right to suspend work on projects with overdue invoices exceeding 30 days and may pursue collection through legal channels if necessary.</p>
+            <h2>5. Post-Delivery Support & Maintenance</h2>
+            <p>All packages include 30 days of free technical support from the date of project completion. During this period, Silva Automation will address bugs and integration issues stemming from the original implementation as delivered.</p>
+            <p><strong>Support Exclusions:</strong> Support is strictly limited to the original workflow and systems as delivered. Silva Automation is not obligated to provide support, free or paid, for any issues arising from:</p>
+            <ul>
+                <li>Any modifications, additions, or tampering with the workflow configuration by the Client or any third party</li>
+                <li>Changes to third-party applications, APIs, or platforms that affect the original integration</li>
+                <li>Issues caused by Client-side errors, data input problems, or changes to connected accounts</li>
+                <li>New features or functionality not included in the original scope of work</li>
+                <li>Normal platform updates or deprecations by third-party service providers</li>
+            </ul>
+            <p>After the 30-Day Support Period: Support beyond 30 days is available at our current hourly rate of $125/hour (plus GET) or through an optional monthly support retainer.</p>
+            <h2>5.1 Optional Monthly Support Retainer</h2>
+            <p>For clients desiring ongoing support, Silva Automation offers a monthly retainer service. The specific services, hours, and fees will be detailed in a separate Retainer Agreement.</p>
+            <p><strong>Services:</strong> May include proactive workflow monitoring, minor adjustments to existing workflows, data source management, priority support, and consultation on workflow optimization</p>
+            <p><strong>Billing:</strong> The retainer fee is billed monthly in advance and is non-refundable for unused hours</p>
+            <p><strong>Scope:</strong> The retainer does not cover development of new features, major workflow overhauls, or integration with new platforms, which will be quoted as separate projects</p>
+            <p><strong>Cancellation:</strong> Can be cancelled by either party with 30 days' written notice</p>
+            <h2>5.2 Founding Client Program - Special Terms</h2>
+            <p>Silva Automation may offer a limited Founding Client Program with special pricing and extended support terms. Terms for this program will be detailed in the applicable Service Agreement. Any lifetime discount offered is contingent upon the Client's account remaining in good standing and shall terminate immediately upon material breach of these Terms, including non-payment of any invoice.</p>
+            <h2>6. Client Credentials and Access</h2>
+            <p>To deliver services, Silva Automation may require access to Client's third-party accounts and systems. Client agrees to provide necessary credentials and permissions in a timely manner and notify us immediately if credentials are changed or compromised.</p>
+            <p>Silva Automation agrees to store all credentials securely using industry-standard encryption, use them only for the agreed-upon project scope, and delete them upon project completion unless ongoing support is contracted.</p>
+            <p>Client agrees to indemnify, defend, and hold harmless Silva Automation from any and all claims, damages, and expenses arising from unauthorized access or data breach resulting from the use of Client-provided credentials, unless such breach is a direct result of Silva Automation's gross negligence or willful misconduct. Silva Automation agrees to comply with Hawaii's data breach notification requirements under HRS §487N in the event of a security incident involving Client's information.</p>
+            <h2>7. Confidentiality</h2>
+            <p>"Confidential Information" means any non-public information disclosed by one party to the other, whether orally or in writing, that is designated as confidential or that reasonably should be understood to be confidential given the nature of the information and circumstances of disclosure. Confidential Information does not include information that is: (a) publicly known through no breach of this Agreement, (b) already in the receiving party's possession without breach of any obligation, (c) independently developed by the receiving party, or (d) rightfully received from a third party without restriction.</p>
+            <p>Both parties agree to hold each other's Confidential Information in strict confidence, use it only for purposes of performing this Agreement, and not disclose it to third parties without prior written consent. This obligation of confidentiality shall survive the termination of this Agreement for a period of three (3) years.</p>
+            <h2>8. Limitation of Liability</h2>
+            <p><strong>IN NO EVENT SHALL SILVA AUTOMATION'S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT, WHETHER IN CONTRACT, TORT, OR UNDER ANY OTHER THEORY OF LIABILITY, EXCEED THE TOTAL AMOUNT PAID BY CLIENT HEREUNDER IN THE 12 MONTHS PRECEDING THE INCIDENT.</strong></p>
+            <p><strong>IN NO EVENT SHALL EITHER PARTY BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF BUSINESS OPPORTUNITIES, OR BUSINESS INTERRUPTION, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</strong></p>
+            <p>These limitations will not apply to liability resulting from Silva Automation's gross negligence, willful misconduct, fraud, or data breaches caused by our failure to maintain reasonable security measures. Nothing in these Terms shall limit a party's liability which cannot be limited or excluded by applicable law, including rights under Hawaii's Unfair and Deceptive Acts or Practices (UDAP) laws (HRS Chapter 480).</p>
+            <h2>9. Disclaimer of Warranties</h2>
+            <p>Except as expressly stated in a signed Service Agreement, the services and information on this Site are provided "AS IS" and "AS AVAILABLE" without any warranties of any kind, either express or implied, including but not limited to implied warranties of merchantability, fitness for a particular purpose, or non-infringement.</p>
+            <p>Silva Automation does not warrant that the services will be uninterrupted, error-free, or completely secure, or that defects will be corrected. We do not warrant or make any representations regarding the use or results of the services in terms of their correctness, accuracy, reliability, or otherwise.</p>
+            <h2>10. Reliance on Third-Party Services</h2>
+            <p>Client acknowledges that the services provided are dependent on the proper functioning of third-party platforms and services (e.g., Make.com, Zapier, Google Workspace, CRMs, APIs). Silva Automation is not responsible for any service interruptions, data loss, security breaches, functionality changes, price increases, terms of service modifications, or failures caused by these third-party platforms.</p>
+            <p>Any issues originating from a third-party service, including API deprecations, feature removals, or platform shutdowns, are outside the scope of our support and liability. Client is responsible for maintaining appropriate subscriptions and licenses for all third-party services used in conjunction with our deliverables.</p>
+            <h2>11. Indemnification</h2>
+            <p>Client agrees to indemnify, defend, and hold harmless Silva Automation, its officers, directors, employees, and agents from and against any and all claims, damages, losses, liabilities, costs, and expenses (including reasonable attorneys' fees) arising out of: (a) Client's use of our services, (b) Client's violation of these Terms, (c) Client's violation of any third-party rights, including intellectual property rights or privacy rights, or (d) any content or data provided by Client.</p>
+            <p>Silva Automation agrees to indemnify Client against claims that the Custom Work Product infringes any third-party intellectual property rights, provided Client promptly notifies Silva Automation of such claim and cooperates in the defense.</p>
+            <h2>12. Governing Law and Dispute Resolution</h2>
+            <p>These Terms shall be governed by and construed in accordance with the laws of the State of Hawaii, without regard to its conflict of laws provisions.</p>
+            <p>Any dispute, claim, or controversy arising out of or relating to these Terms or the breach, termination, enforcement, interpretation, or validity thereof shall be resolved as follows:</p>
+            <ul>
+                <li><strong>Negotiation:</strong> The parties shall first attempt to negotiate a resolution in good faith for a period of 30 days</li>
+                <li><strong>Mediation:</strong> If negotiation fails, the parties agree to participate in mediation administered by a mutually agreed-upon mediator in Honolulu, Hawaii</li>
+                <li><strong>Arbitration:</strong> If mediation is unsuccessful, the dispute shall be resolved by mandatory, binding arbitration administered by the American Arbitration Association (AAA) under its Commercial Arbitration Rules. The arbitration shall take place in Honolulu, Hawaii, and judgment on the award may be entered in any court having jurisdiction</li>
+            </ul>
+            <p>The parties hereby waive their right to a jury trial and agree not to participate in any class action lawsuits. Each party shall bear its own costs and attorneys' fees unless the arbitrator determines otherwise.</p>
+            <h2>13. Termination</h2>
+            <p>Either party may terminate a Service Agreement for cause upon 30 days' written notice if the other party materially breaches these Terms and fails to cure such breach within the notice period.</p>
+            <p>Silva Automation may suspend services immediately for non-payment exceeding 15 days or for Client's breach of confidentiality obligations. Upon termination, Client shall immediately pay for all work completed to date based on the percentage of project completion or hourly rates, whichever is applicable.</p>
+            <p>Client's rights to terminate for convenience are outlined in the Refund & Cancellation Policy. Upon termination, all licenses granted to Client shall terminate except for the Custom Work Product for which full payment has been received.</p>
+            <h2>14. Force Majeure</h2>
+            <p>Neither party shall be liable for any failure or delay in performance due to events beyond their reasonable control, including but not limited to acts of God, natural disasters, war, terrorism, government actions, labor disputes, widespread internet or power outages, pandemics, or failures of third-party hosting or service providers. The affected party shall notify the other party promptly and use reasonable efforts to mitigate the impact. If the force majeure event continues for more than 60 days, either party may terminate the affected Service Agreement.</p>
+            <h2>15. General Provisions</h2>
+            <p><strong>Assignment:</strong> Neither party may assign its rights or obligations hereunder without the prior written consent of the other party, except that Silva Automation may assign to an affiliated entity or in connection with a merger, acquisition, or sale of substantially all assets.</p>
+            <p><strong>Severability:</strong> If any provision of these Terms is held to be invalid, illegal, or unenforceable, the remaining provisions shall remain in full force and effect, and the invalid provision shall be modified to the minimum extent necessary to make it valid and enforceable.</p>
+            <p><strong>Entire Agreement:</strong> These Terms, together with any applicable Service Agreement and Project Proposal, constitute the entire agreement between the parties and supersede all prior or contemporaneous agreements, understandings, and communications, whether written or oral.</p>
+            <p><strong>Modification:</strong> No modification of these Terms shall be effective unless in writing and signed by both parties. Silva Automation reserves the right to update these Terms on the website with 30 days' notice for prospective agreements.</p>
+            <p><strong>Waiver:</strong> No waiver of any provision of these Terms shall be deemed or shall constitute a waiver of any other provision, nor shall any waiver constitute a continuing waiver.</p>
+            <p><strong>Notices:</strong> All legal notices shall be in writing and sent to the addresses specified in the Service Agreement or to contact@silvaautomation.com for Silva Automation. Notices shall be deemed given when delivered personally, sent by confirmed email, or three days after being sent by certified mail.</p>
+            <p><strong>Independent Contractors:</strong> The parties are independent contractors. Nothing in these Terms creates a partnership, joint venture, agency, or employment relationship.</p>
+            <h2>16. Contact Information</h2>
+            <p>For any questions regarding these Terms, please contact us at:</p>
+            <ul>
+                <li>Email: contact@silvaautomation.com</li>
+                <li>Phone: (808) 223-5888</li>
+                <li>Mail: Silva Automation, Honolulu, Hawaii</li>
+            </ul>
         </div>
     </div>
 
@@ -383,45 +331,279 @@
         </div>
     </div>
 
+    <!-- REFUND & CANCELLATION POLICY -->
     <div class="modal" id="refund-modal">
-    <button class="close-button" type="button" aria-label="Close modal">&times;</button>
+        <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
             <h1>Refund & Cancellation Policy</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
-            <p>Please contact us for our full Refund Policy.</p>
+            <h2>1. General Principles</h2>
+            <p>As a service-based business, our work involves significant time, expertise, and resources that cannot be "returned" like physical products. The 50% deposit secures your project in our schedule and covers initial project setup, discovery, planning, and resource allocation. This policy outlines the circumstances under which refunds may be issued.</p>
+            <h2>2. Project Completion & Acceptance</h2>
+            <p><strong>Project Delivery:</strong> A project is considered "complete" and ready for review upon electronic delivery of:</p>
+            <ul>
+                <li>Final workflow file(s) and configurations</li>
+                <li>Comprehensive documentation</li>
+                <li>Access credentials (if applicable)</li>
+                <li>Any other deliverables specified in the Project Proposal</li>
+            </ul>
+            <p><strong>Review Period:</strong> Client has 7 calendar days from delivery to review the project and report any material defects. The review period commences from the timestamp of the delivery email.</p>
+            <p><strong>Material Defects Defined:</strong> A "material defect" is a verifiable, reproducible failure of the delivered workflow to perform a core function as explicitly described and agreed upon in the Project Proposal. Material defects DO NOT include:</p>
+            <ul>
+                <li>Stylistic preferences or subjective design choices</li>
+                <li>Requests for features not originally specified in the Project Proposal</li>
+                <li>Issues caused by changes to third-party platforms</li>
+                <li>Performance expectations not explicitly documented</li>
+                <li>Minor cosmetic issues that don't impact functionality</li>
+            </ul>
+            <p><strong>Acceptance:</strong> If no material defects are reported within the 7-day review period, the project is considered formally accepted, and the final 50% payment becomes immediately due. Late payment terms apply as outlined in the Terms and Conditions.</p>
+            <p><strong>Cure Period:</strong> If Client identifies and reports material defects within the 7-day review period, Silva Automation will have 15 business days from receipt of the defect report to remedy the issues. If Silva Automation successfully resolves the material defects within this cure period, the project will be considered accepted upon delivery of the corrected version.</p>
+            <p><strong>Final Sale:</strong> Upon project acceptance (either by passage of the review period or successful cure of defects) and receipt of the final 50% payment, the sale is considered final and no refunds will be issued except as specified in Section 4 below.</p>
+            <h2>3. Cancellation by Client (Prior to Delivery)</h2>
+            <p>Client may terminate the Service Agreement at any point before final delivery of the project by providing written notice to contact@silvaautomation.com.</p>
+            <p><strong>Refund Terms:</strong></p>
+            <ul>
+                <li>Client will receive a refund of 25% of the total project value (equivalent to 50% of the deposit)</li>
+                <li>Silva Automation retains 25% of the total project value (the remaining 50% of the deposit) to cover administrative costs, project setup, planning time, and work performed to the point of cancellation</li>
+                <li>Refunds will be processed within 14 business days of receiving written cancellation notice</li>
+                <li>Any third-party costs already incurred (licenses, subscriptions, paid tools) are non-refundable and will be deducted from any refund due</li>
+            </ul>
+            <p><strong>Example:</strong> For a $10,000 project with a $5,000 deposit:</p>
+            <ul>
+                <li>Client receives $2,500 refund upon cancellation</li>
+                <li>Silva Automation retains $2,500 of the deposit</li>
+            </ul>
+            <h2>4. Refund Eligibility for Cause (Post-Delivery)</h2>
+            <p>A refund may be considered after delivery only in the following circumstances:</p>
+            <p><strong>Uncured Material Defects:</strong> If Silva Automation fails to correct a verified material defect within the 15-business-day cure period after proper notification, Client may be eligible for a partial refund. The refund amount will be determined based on:</p>
+            <ul>
+                <li>Severity and scope of the defect</li>
+                <li>Percentage of project functionality affected</li>
+                <li>Amount of work successfully completed</li>
+                <li>Efforts made to resolve the issue</li>
+            </ul>
+            <p>Refund amounts typically range from 10% to 50% of the final payment, depending on the circumstances. Full refunds post-delivery are rare and reserved for complete failure to deliver usable functionality.</p>
+            <p><strong>Request Process:</strong></p>
+            <ul>
+                <li>Submit a detailed written refund request to contact@silvaautomation.com</li>
+                <li>Include specific documentation of the material defect(s)</li>
+                <li>Provide evidence that the defect was reported within the 7-day review period</li>
+                <li>Demonstrate that Silva Automation failed to cure within the 15-day cure period</li>
+            </ul>
+            <p><strong>Review Timeline:</strong> Silva Automation will review and respond to refund requests within 10 business days. If approved, refunds will be processed within 14 business days of approval.</p>
+            <h2>5. Non-Refundable Costs</h2>
+            <p>The following are never refundable under any circumstances:</p>
+            <ul>
+                <li>Third-party software licenses or subscriptions purchased on behalf of the Client</li>
+                <li>Third-party service fees (Make.com, Zapier, API costs, etc.)</li>
+                <li>Payment processing fees</li>
+                <li>Domain registration or hosting fees</li>
+                <li>External consultant or contractor costs</li>
+                <li>Training materials or sessions already delivered</li>
+            </ul>
+            <p>These costs will be itemized separately in your Project Proposal and will be deducted from any eligible refund.</p>
+            <h2>6. Project Abandonment by Client</h2>
+            <p>As outlined in the Terms and Conditions:</p>
+            <ul>
+                <li><strong>30-day pause:</strong> If Client fails to provide necessary feedback, materials, or communication for 30 continuous days without prior notice, Silva Automation reserves the right to pause the project</li>
+                <li><strong>60-day abandonment:</strong> If non-communication extends to 60 days, the project may be considered abandoned</li>
+                <li><strong>Upon abandonment:</strong> The initial deposit is forfeited in full, and all work completed to date will be billed at our standard hourly rate of $125/hour (plus GET), which may exceed the remaining project balance</li>
+            </ul>
+            <p>Client will receive a final invoice for work completed. No refunds will be issued for abandoned projects.</p>
+            <h2>7. Refund Method</h2>
+            <p>All approved refunds will be issued using the original payment method when possible. If the original payment method is no longer available, an alternative method will be arranged (ACH transfer or check). Refunds are issued in USD and exclude any currency conversion fees or international transfer fees.</p>
+            <h2>8. Disputes</h2>
+            <p>If Client disputes our refund determination, the matter shall be resolved according to the Dispute Resolution provisions in our Terms and Conditions, including good faith negotiation, mediation, and binding arbitration if necessary.</p>
+            <h2>9. Exceptions and Special Circumstances</h2>
+            <p>Silva Automation reserves the right to make exceptions to this policy in extraordinary circumstances, including but not limited to:</p>
+            <ul>
+                <li>Documented medical emergencies</li>
+                <li>Natural disasters or force majeure events</li>
+                <li>Errors or misrepresentations by Silva Automation</li>
+                <li>Mutual agreement to modify terms</li>
+            </ul>
+            <p>Any such exceptions must be approved in writing by Silva Automation management.</p>
+            <h2>10. Contact Information</h2>
+            <p>For cancellation requests or questions about this policy, please contact:</p>
+            <p><strong>Silva Automation</strong></p>
+            <ul>
+                <li>Email: contact@silvaautomation.com</li>
+                <li>Phone: (808) 223-5888</li>
+            </ul>
+            <p>All cancellation requests must be submitted in writing via email to be considered valid.</p>
         </div>
     </div>
     
-    <!-- FULL COOKIE POLICY -->
+    
     <div class="modal" id="cookie-modal">
         <button class="close-button">&times;</button>
         <div class="modal-content">
             <h1>Cookie Policy</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
-            <p>This Cookie Policy explains how Silva Automation ("we," "us," or "our") uses cookies and similar technologies when you visit our website (the "Site").</p>
-
-            <h2>What Are Cookies?</h2>
-            <p>Cookies are small text files placed on your device to store data that can be recalled by a web server in the domain that placed the cookie. We use cookies and similar technologies for storing and honoring your preferences and settings, enabling you to sign in, combating fraud, analyzing our products' performance, and fulfilling other legitimate purposes.</p>
-
-            <h2>How We Use Cookies</h2>
-            <p>Our Site uses cookies to:</p>
+            <p>This Cookie Policy explains how Silva Automation ("we," "us," or "our") uses cookies and similar technologies when you visit our website, www.silvaautomation.com (the "Site").</p>
+            <h2>1. What Are Cookies?</h2>
+            <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently and provide information to website owners. Cookies contain data about your browsing activity and preferences.</p>
+            <p><strong>Similar Technologies:</strong> In addition to cookies, we may use other technologies such as:</p>
             <ul>
-                <li><strong>Ensure basic functionality:</strong> Some cookies are essential for the operation of our Site.</li>
-                <li><strong>Analyze performance:</strong> We use cookies to understand how our visitors use the Site, so we can measure and improve performance.</li>
-                <li><strong>Store your preferences:</strong> Cookies are used to remember your settings and preferences, such as your cookie consent choices.</li>
+                <li><strong>Web beacons (pixels):</strong> Small graphic images used to track user behavior</li>
+                <li><strong>Local storage:</strong> Data stored in your browser to remember preferences</li>
+                <li><strong>Session storage:</strong> Temporary data that expires when you close your browser</li>
             </ul>
+            <h2>2. Types of Cookies We Use</h2>
+            <p>We use the following categories of cookies on our Site:</p>
+            <p><strong>Strictly Necessary Cookies</strong></p>
+            <ul>
+                <li><strong>Purpose:</strong> Essential for the Site to function properly and enable you to navigate and use its features</li>
+                <li><strong>Examples:</strong> Cookie consent preferences, session management, security</li>
+                <li><strong>Duration:</strong> Session or persistent (up to 12 months)</li>
+                <li><strong>Can be disabled:</strong> No – these are required for basic Site functionality</li>
+                <li><strong>Specific cookies:</strong> <code>cookie-consent</code>: Stores your cookie consent choices (12 months), <code>session-id</code>: Maintains your browsing session (session)</li>
+            </ul>
+            <p><strong>Performance and Analytics Cookies</strong></p>
+            <ul>
+                <li><strong>Purpose:</strong> Collect information about how visitors use our Site to help us improve performance and user experience</li>
+                <li><strong>Examples:</strong> Google Analytics tracking</li>
+                <li><strong>Data collected:</strong> Pages visited, time spent on Site, traffic sources, device type, general location (city/state level)</li>
+                <li><strong>Duration:</strong> Up to 24 months</li>
+                <li><strong>Can be disabled:</strong> Yes – only placed if you accept optional cookies</li>
+                <li><strong>Specific cookies:</strong> <code>_ga</code>: Google Analytics identifier (24 months), <code>_gid</code>: Google Analytics session identifier (24 hours), <code>_gat</code>: Google Analytics request rate limiting (1 minute)</li>
+            </ul>
+            <p><strong>Functionality Cookies</strong></p>
+            <ul>
+                <li><strong>Purpose:</strong> Remember your preferences and provide enhanced, personalized features</li>
+                <li><strong>Examples:</strong> Tidio live chat widget preferences, language settings</li>
+                <li><strong>Data collected:</strong> Chat history, name (if provided), support preferences</li>
+                <li><strong>Duration:</strong> Up to 12 months</li>
+                <li><strong>Can be disabled:</strong> Yes – only placed if you accept optional cookies</li>
+                <li><strong>Specific cookies:</strong> <code>tidio_state</code>: Remembers chat widget state and preferences (12 months), <code>tidio_history</code>: Stores chat conversation history (30 days)</li>
+            </ul>
+            <p>We do not use advertising or targeting cookies on our Site.</p>
+            <h2>3. Third-Party Cookies</h2>
+            <p>Some cookies are placed by third-party services that appear on our pages:</p>
+            <p><strong>Google Analytics (Google LLC)</strong></p>
+            <ul>
+                <li><strong>Purpose:</strong> Website analytics and performance measurement</li>
+                <li><strong>Data collected:</strong> Anonymous usage statistics, device information, general geographic location</li>
+                <li><strong>Privacy Policy:</strong> https://policies.google.com/privacy</li>
+                <li><strong>Opt-out:</strong> https://tools.google.com/dlpage/gaoptout</li>
+            </ul>
+            <p><strong>Tidio Live Chat (Tidio LLC)</strong></p>
+            <ul>
+                <li><strong>Purpose:</strong> Customer support and communication</li>
+                <li><strong>Data collected:</strong> Chat messages, name (if provided), browsing context</li>
+                <li><strong>Privacy Policy:</strong> https://www.tidio.com/privacy-policy/</li>
+            </ul>
+            <p>These third parties may use cookies in accordance with their own privacy policies. We do not control these cookies and recommend reviewing their policies directly.</p>
+            <h2>4. Your Cookie Choices</h2>
+            <p>When you first visit our Site, you will see a cookie consent banner at the bottom of the page with two options:</p>
+            <p><strong>Accept All Cookies:</strong> This places all cookies on your device, including:</p>
+            <ul>
+                <li>Strictly necessary cookies</li>
+                <li>Performance and analytics cookies (Google Analytics)</li>
+                <li>Functionality cookies (Tidio live chat)</li>
+            </ul>
+            <p><strong>Accept Necessary Cookies Only:</strong> This places only essential cookies required for the Site to function. Optional cookies will not be placed, which means:</p>
+            <ul>
+                <li>No analytics tracking (we won't know how you use our Site)</li>
+                <li>Limited chat functionality (you can still chat, but preferences won't be saved)</li>
+                <li>You'll see the consent banner again on future visits</li>
+            </ul>
+            <p><strong>Changing Your Mind:</strong> You can change your cookie preferences at any time by:</p>
+            <ul>
+                <li>Clearing your browser cookies (this will reset your choice)</li>
+                <li>Using the cookie preference link in our website footer</li>
+                <li>Adjusting your browser settings (see below)</li>
+            </ul>
+            <h2>5. Browser Controls</h2>
+            <p>Most web browsers allow you to control cookies through their settings. You can:</p>
+            <ul>
+                <li>Block all cookies: Prevent any cookies from being placed</li>
+                <li>Delete cookies: Remove cookies already on your device</li>
+                <li>Block third-party cookies: Allow only first-party cookies from sites you visit directly</li>
+            </ul>
+            <p>How to manage cookies in common browsers:</p>
+            <ul>
+                <li><strong>Chrome:</strong> Settings > Privacy and security > Cookies and other site data</li>
+                <li><strong>Firefox:</strong> Settings > Privacy & Security > Cookies and Site Data</li>
+                <li><strong>Safari:</strong> Preferences > Privacy > Cookies and website data</li>
+                <li><strong>Edge:</strong> Settings > Cookies and site permissions > Cookies and site data</li>
+            </ul>
+            <p><strong>Important:</strong> Blocking or deleting cookies may impact your experience on our Site and limit functionality. Some features may not work properly without cookies enabled.</p>
+            <p>For more detailed information about cookies and how to manage them, visit: www.allaboutcookies.org</p>
+            <h2>6. Do Not Track Signals</h2>
+            <p>Some browsers offer a "Do Not Track" (DNT) signal. Our Site does not currently respond to DNT signals. However, you can control cookie placement through our consent banner and browser settings as described above.</p>
+            <h2>7. Mobile Devices</h2>
+            <p>On mobile devices, you can control tracking through your device settings:</p>
+            <ul>
+                <li><strong>iOS:</strong> Settings > Privacy > Tracking (toggle "Allow Apps to Request to Track")</li>
+                <li><strong>Android:</strong> Settings > Google > Ads (opt out of personalized ads)</li>
+            </ul>
+            <h2>8. Cookie Lifespan</h2>
+            <ul>
+                <li><strong>Session Cookies:</strong> Deleted automatically when you close your browser</li>
+                <li><strong>Persistent Cookies:</strong> Remain on your device for a set period or until manually deleted:
+                    <ul>
+                        <li>Cookie consent: 12 months</li>
+                        <li>Google Analytics: Up to 24 months</li>
+                        <li>Tidio chat: 12 months</li>
+                    </ul>
+                </li>
+            </ul>
+            <h2>9. Updates to This Cookie Policy</h2>
+            <p>We may update this Cookie Policy from time to time to reflect changes in our practices, technology, or legal requirements. We will notify you of any material changes by:</p>
+            <ul>
+                <li>Updating the "Effective Date" at the top of this policy</li>
+                <li>Posting a notice on our homepage for 30 days</li>
+                <li>Requesting renewed consent through our cookie banner if the changes affect cookie usage</li>
+            </ul>
+            <p>Your continued use of our Site after such changes constitutes acceptance of the updated Cookie Policy.</p>
+            <h2>10. Data Protection and Privacy</h2>
+            <p>The information collected through cookies is processed in accordance with our Privacy Policy. We use appropriate security measures to protect cookie data from unauthorized access or disclosure.</p>
+            <p>Cookie data may be processed in the United States where our servers are located. By using our Site, you consent to this transfer and processing.</p>
+            <h2>11. Contact Us</h2>
+            <p>If you have questions, concerns, or requests regarding our use of cookies, please contact us at:</p>
+            <p><strong>Silva Automation</strong></p>
+            <ul>
+                <li>Email: contact@silvaautomation.com</li>
+                <li>Phone: (808) 223-5888</li>
+                <li>Mail: Honolulu, Hawaii</li>
+            </ul>
+            <p>For specific questions about third-party cookies, please contact the respective third-party provider directly using the privacy policy links provided in Section 3.</p>
+        </div>
+    </div>
+    
+    <!-- FAQ MODAL (moved from inline section) -->
+    <div class="modal" id="faq-modal">
+        <button class="close-button" type="button" aria-label="Close modal">&times;</button>
+        <div class="modal-content">
+            <h1>Frequently Asked Questions</h1>
 
-            <h2>Your Choices</h2>
-            <p>You have a variety of tools to control the data collected by cookies and similar technologies. For example, you can use controls in your internet browser to limit how the websites you visit are able to use cookies and to withdraw your consent by clearing or blocking cookies.</p>
-
-            <h2>Contact Us</h2>
-            <p>If you have any questions about our use of cookies, please contact us at contact@silvaautomation.com.</p>
+            <details>
+                <summary>Is this system complicated to use?</summary>
+                <p>Not at all. We design our systems to be operated entirely from your smartphone. You'll receive simple text notifications for new leads and updates, while the automation runs seamlessly in the background.</p>
+            </details>
+            <details>
+                <summary>Is this service a good fit for a solo operation?</summary>
+                <p>Absolutely. Our systems are particularly effective for solo contractors, acting as a virtual assistant to ensure you never miss a lead, even when you're on a job.</p>
+            </details>
+            <details>
+                <summary>Can the system be customized for specific needs, like rain delays?</summary>
+                <p>Yes. We can build custom features, such as a "Rain Delay" function that automatically notifies and reschedules all of your appointments for the day with a single tap.</p>
+            </details>
+            <details>
+                <summary>How is this different from lead generation services like Angi?</summary>
+                <p>Unlike platforms that sell the same lead to multiple contractors, our systems are designed to capture and convert the exclusive leads you generate through your own marketing and referrals.</p>
+            </details>
+            <details>
+                <summary>What is your pricing model?</summary>
+                <p>We build and implement custom systems for a one-time project fee. You own the solution outright, with no recurring monthly fees required to maintain your data or system access.</p>
+            </details>
         </div>
     </div>
     
     <div class="cookie-banner" id="cookie-banner">
         <div class="cookie-banner-content">
-            <p>We use cookies to improve your experience. By using our site, you agree to our <a href="#" data-modal-target="#privacy-modal">Privacy Policy</a>.</p>
+            <p>We use cookies to improve your experience. Review our <a href="#" data-modal-target="#privacy-modal">Privacy Policy</a> and <a href="#" data-modal-target="#cookie-modal">Cookie Policy</a>.</p>
             <div class="buttons">
             <button class="button-decline" id="cookie-decline" type="button">Decline</button>
             <button class="button-accept" id="cookie-accept" type="button">Accept</button>
@@ -430,6 +612,11 @@
     </div>
 
     <script src="script.js?v=1.9"></script>
+    <button id="back-to-top" class="back-to-top hidden" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 6l-6 6h4v6h4v-6h4l-6-6z" fill="currentColor"/>
+        </svg>
+    </button>
     </div>
 </body>
 </html>
