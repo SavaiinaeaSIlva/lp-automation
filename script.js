@@ -207,4 +207,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // --- BACK TO TOP BUTTON ---
+    const backToTopBtn = document.getElementById('back-to-top');
+    const toggleBackToTop = () => {
+        if (!backToTopBtn) return;
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.remove('hidden');
+        } else {
+            backToTopBtn.classList.add('hidden');
+        }
+    };
+
+    window.addEventListener('scroll', toggleBackToTop);
+    // initial check
+    toggleBackToTop();
+
+    if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    }
 });
