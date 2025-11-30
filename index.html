@@ -112,6 +112,8 @@
                 <div class="legal-links">
                     <a href="#" data-modal-target="#faq-modal" role="button" tabindex="0">FAQ</a>
                     <span>•</span>
+                    <a href="#" data-modal-target="#terms-modal" role="button" tabindex="0">Terms &amp; Conditions</a>
+                    <span>•</span>
                     <a href="#" data-modal-target="#privacy-modal" role="button" tabindex="0">Privacy Policy</a>
                     <span>•</span>
                     <a href="#" data-modal-target="#refund-modal" role="button" tabindex="0">Refund Policy</a>
@@ -125,10 +127,10 @@
     <!-- MODALS -->
     <div class="modal-overlay" id="legal-modal-overlay"></div>
 
-    <div class="modal" id="terms-modal">
+    <div class="modal" id="terms-modal" role="dialog" aria-modal="true" aria-labelledby="terms-modal-title">
         <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
-            <h1>Terms and Conditions</h1>
+            <h1 id="terms-modal-title">Terms and Conditions</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
             <p>This website, www.silvaautomation.com (the "Site"), and the services offered through it, are owned and operated by Silva Automation. By accessing or using our Site and services, you agree to be bound by these Terms and Conditions ("Terms").</p>
             <h2>1. Description of Services</h2>
@@ -223,10 +225,10 @@
     </div>
 
     <!-- FULL PRIVACY POLICY -->
-    <div class="modal" id="privacy-modal">
+    <div class="modal" id="privacy-modal" role="dialog" aria-modal="true" aria-labelledby="privacy-modal-title">
     <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
-            <h1>Privacy Policy</h1>
+            <h1 id="privacy-modal-title">Privacy Policy</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
             <p>Silva Automation ("we," "us," or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website, www.silvaautomation.com (the "Site"), and use our services.</p>
             <h2>1. Information We Collect</h2>
@@ -332,10 +334,10 @@
     </div>
 
     <!-- REFUND & CANCELLATION POLICY -->
-    <div class="modal" id="refund-modal">
+    <div class="modal" id="refund-modal" role="dialog" aria-modal="true" aria-labelledby="refund-modal-title">
         <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
-            <h1>Refund & Cancellation Policy</h1>
+            <h1 id="refund-modal-title">Refund & Cancellation Policy</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
             <h2>1. General Principles</h2>
             <p>As a service-based business, our work involves significant time, expertise, and resources that cannot be "returned" like physical products. The 50% deposit secures your project in our schedule and covers initial project setup, discovery, planning, and resource allocation. This policy outlines the circumstances under which refunds may be issued.</p>
@@ -435,10 +437,10 @@
     </div>
     
     
-    <div class="modal" id="cookie-modal">
-        <button class="close-button">&times;</button>
+    <div class="modal" id="cookie-modal" role="dialog" aria-modal="true" aria-labelledby="cookie-modal-title">
+        <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
-            <h1>Cookie Policy</h1>
+            <h1 id="cookie-modal-title">Cookie Policy</h1>
             <p><strong>Effective Date: October 7, 2025</strong></p>
             <p>This Cookie Policy explains how Silva Automation ("we," "us," or "our") uses cookies and similar technologies when you visit our website, www.silvaautomation.com (the "Site").</p>
             <h2>1. What Are Cookies?</h2>
@@ -573,10 +575,10 @@
     </div>
     
     <!-- FAQ MODAL (moved from inline section) -->
-    <div class="modal" id="faq-modal">
+    <div class="modal" id="faq-modal" role="dialog" aria-modal="true" aria-labelledby="faq-modal-title">
         <button class="close-button" type="button" aria-label="Close modal">&times;</button>
         <div class="modal-content">
-            <h1>Frequently Asked Questions</h1>
+            <h1 id="faq-modal-title">Frequently Asked Questions</h1>
 
             <details>
                 <summary>Is this system complicated to use?</summary>

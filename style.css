@@ -338,7 +338,7 @@ footer {
     background-color: var(--primary-color);
     border-top: 4px solid rgba(255,255,255,0.08);
 }
-footer p { margin: 0.5rem 0; }
+footer p { margin: 0.5rem 0; color: #ffffff; }
 .legal-links a { color: rgba(255,255,255,0.9); transition: color 0.15s; margin: 0 8px; }
 .legal-links a:hover { color: var(--accent-yellow); }
 
