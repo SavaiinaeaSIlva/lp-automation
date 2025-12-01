@@ -2,13 +2,13 @@
 
 /* --- VARIABLES & GLOBAL RESETS --- */
 :root {
-    --primary-color: #063a7a; /* darker navy */
-    --primary-color-hover: #052e64;
+    --primary-color: #3C4142; /* solid dark gray */
+    --primary-color-hover: #2e3233;
     --bg-light: #ffffff;
     --bg-soft-gray: #f6f7fb; /* subtle off-white for sections */
     --section-alt-bg: #fbfdff; /* very light contrast for alternating sections */
     --accent-yellow: #ffd700; /* bright gold accent */
-    --accent-blue: #17a2b8; /* teal accent */
+    --accent-blue: #3C4142; /* solid dark gray accent */
     --accent-orange: #ff7a59; /* warm orange for emphasis */
     --cta-bg: linear-gradient(45deg, #ff7a59, #ffb86b);
     --text-dark: #1f2937;
@@ -34,10 +34,13 @@ body { font-family: var(--body-font); color: var(--text-dark); line-height: 1.6;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 95%;
+    max-width: 1400px;
+    padding: 0 2.5rem;
 }
 .main-nav {
     display: flex;
-    gap: 1.5rem;
+    gap: 2.5rem;
 }
 .main-nav a {
     font-family: var(--heading-font);
@@ -50,7 +53,7 @@ body { font-family: var(--body-font); color: var(--text-dark); line-height: 1.6;
     color: var(--accent-yellow);
 }
 #hero {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("assets/background.jpg");
+    background: linear-gradient(135deg, #000000 0%, #3C4142 100%);
     background-size: cover;
     background-position: center;
     min-height: 100vh; /* fill the viewport on first load */
@@ -78,6 +81,7 @@ body { font-family: var(--body-font); color: var(--text-dark); line-height: 1.6;
 #hero h1 {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
+    color: #ffffff;
 }
 #hero p {
     font-size: 1.25rem;
@@ -86,8 +90,20 @@ body { font-family: var(--body-font); color: var(--text-dark); line-height: 1.6;
     color: #ffffff;
 }
 #hero .button-cta {
-    font-size: 1.2rem;
-    padding: 18px 36px;
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border-color: #ffffff;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.3rem;
+    padding: 22px 45px;
+}
+
+#hero .button-cta:hover {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4), 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -124,6 +140,7 @@ p {
 a {
     color: var(--accent-blue);
     text-decoration: none;
+    font-weight: 600; /* increased weight for better contrast */
 }
 .logo img { height: 40px; width: auto; }
 .button { display: inline-block; padding: 14px 28px; border-radius: 50px; font-family: var(--heading-font); font-weight: 700; transition: all 0.2s ease; border: 2px solid var(--primary-color); text-align: center; cursor: pointer; background-color: var(--primary-color); color: #ffffff; }
@@ -133,13 +150,19 @@ a {
     border-color: var(--cta-bg);
     color: white;
     margin-top: 1rem;
-    padding: 16px 32px;
-    font-size: 1.1rem;
+    padding: 20px 40px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(255, 122, 89, 0.4), 0 4px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: all 0.3s ease;
 }
 
 .button-cta:hover {
-    background-color: var(--primary-color-hover);
-    border-color: var(--primary-color-hover);
+    background-color: var(--cta-bg);
+    border-color: var(--cta-bg);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 122, 89, 0.5), 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 .content-box {
     background-color: #ffffff;
@@ -208,14 +231,14 @@ section:nth-of-type(even) {
     padding: 12px;
     border-radius: 50%;
     background-color: var(--primary-color);
-    box-shadow: 0 6px 14px rgba(6,58,122,0.12);
+    box-shadow: 0 6px 14px rgba(60,65,66,0.12);
     object-fit: contain;
     margin: 0 auto 1rem auto;
     transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
  .process-icon:hover {
     transform: translateY(-4px);
-    box-shadow: 0 10px 20px rgba(6,58,122,0.14);
+    box-shadow: 0 10px 20px rgba(60,65,66,0.14);
 }
 
 /* On wider screens, show the three process steps side-by-side */
@@ -254,12 +277,13 @@ section:nth-of-type(even) {
 
 /* --- Call to Action (CTA) Section --- */
 #cta {
-    background-image: linear-gradient(45deg, var(--primary-color), var(--accent-blue));
+    background-color: var(--primary-color);
     text-align: center;
 }
 
 #cta h2, #cta p, #cta .offer-list li, #cta .offer-list strong {
 	color: #ffffff;
+	text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* added shadow for better contrast */
 }
 
 .offer-box {
@@ -273,7 +297,10 @@ section:nth-of-type(even) {
 	backdrop-filter: blur(10px);
 }
 
-#cta .offer-box h3 { color: #ffffff; }
+#cta .offer-box h3 { 
+	color: #ffffff; 
+	text-shadow: 0 1px 2px rgba(0,0,0,0.3); /* added shadow for better contrast */
+}
 
 /* Back-to-top button */
 .back-to-top {
@@ -288,7 +315,7 @@ section:nth-of-type(even) {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 6px 18px rgba(6,58,122,0.18);
+    box-shadow: 0 6px 18px rgba(60,65,66,0.18);
     cursor: pointer;
     z-index: 1100;
     transition: transform 0.18s ease, opacity 0.18s ease;
@@ -301,12 +328,17 @@ section:nth-of-type(even) {
 	background-color: #ffffff;
 	color: var(--primary-color);
 	border-color: #ffffff;
+	box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3), 0 4px 10px rgba(0, 0, 0, 0.2);
+	font-size: 1.3rem;
+	padding: 22px 45px;
 }
 
 #cta .button-cta:hover {
-	background-color: #f0f0f0;
-	border-color: #f0f0f0;
-	color: var(--primary-color-hover);
+	background-color: #ffffff;
+	border-color: #ffffff;
+	color: var(--primary-color);
+	transform: translateY(-3px);
+	box-shadow: 0 12px 30px rgba(255, 255, 255, 0.4), 0 6px 15px rgba(0, 0, 0, 0.3);
 }
 .offer-list { list-style: none; padding: 0; margin: 1.5rem auto; text-align: left; }
 .offer-list li {
@@ -316,7 +348,7 @@ section:nth-of-type(even) {
     padding-bottom: 1rem;
 }
 .offer-list li:last-child { border-bottom: none; }
-.offer-list strong { color: var(--primary-color); font-size: 1.1rem; }
+.offer-list strong { color: #ffffff; font-size: 1.1rem; font-weight: 700; }
 
 /* --- About Section --- */
 #about {
