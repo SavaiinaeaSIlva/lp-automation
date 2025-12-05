@@ -1,0 +1,26 @@
+<!-- Header Component -->
+<header class="sticky top-0 w-full z-50 bg-black-bg/80 backdrop-blur-md border-b border-black-accent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-link-color rounded-md" aria-label="Silva Automation - Return to home">
+                <img src="assets/images/logo.png" alt="Silva Automation Logo" class="h-8 w-auto" onerror="this.style.display='none'" width="120" height="32">
+            </a>
+
+            <!-- Desktop Navigation -->
+            <div id="desktop-nav" class="hidden md:flex items-center space-x-6"></div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden flex items-center">
+                <button id="mobile-menu-btn" class="text-subtle-text hover:text-light-text focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-link-color p-2 rounded-md" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-black-bg/95 backdrop-blur-md border-t border-black-accent w-full shadow-xl z-50">
+        <div id="mobile-nav" class="px-4 pt-2 pb-6 space-y-1"></div>
+    </div>
+</header>
