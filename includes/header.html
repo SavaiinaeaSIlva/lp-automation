@@ -1,0 +1,42 @@
+<header>
+  <div class="container">
+    <a href="index.html" class="logo-link">
+      <img src="assets/images/logo.png" alt="Silva Automation" class="logo" width="180" height="48" decoding="async">
+    </a>
+    <nav aria-label="Primary navigation">
+      <a href="index.html#what-it-is">What It Is</a>
+      <a href="index.html#why-host">Why Host Yourself</a>
+      <a href="index.html#use-cases">What I Automate</a>
+      <a href="contact.html#how-we-work">How We Work</a>
+      <a href="index.html#pricing">Pricing</a>
+      <a href="contact.html#faq">FAQ</a>
+      <a href="legal.html#terms">Legal</a>
+    </nav>
+    <div class="header-actions">
+      <a href="contact.html" class="btn btn-primary">Get Started</a>
+      <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle navigation menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+  <div class="mobile-overlay" onclick="toggleMenu()"></div>
+  <div class="mobile-content">
+    <div class="mobile-header">
+      <a href="index.html" class="logo-link">
+        <img src="assets/images/logo.png" alt="Silva Automation" class="logo" width="180" height="48" decoding="async">
+      </a>
+      <button class="menu-btn" type="button" data-menu-toggle aria-expanded="false" aria-controls="mobileMenu" aria-label="Close navigation menu">✕</button>
+    </div>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="index.html#what-it-is" onclick="toggleMenu()">What It Is</a>
+      <a href="index.html#why-host" onclick="toggleMenu()">Why Host Yourself</a>
+      <a href="index.html#use-cases" onclick="toggleMenu()">What I Automate</a>
+      <a href="contact.html#how-we-work" onclick="toggleMenu()">How We Work</a>
+      <a href="index.html#pricing" onclick="toggleMenu()">Pricing</a>
+      <a href="contact.html#faq" onclick="toggleMenu()">FAQ</a>
+      <a href="legal.html#terms" onclick="toggleMenu()">Legal</a>
+      <a href="contact.html" onclick="toggleMenu()">Contact Us</a>
+    </nav>
+  </div>
+</div>

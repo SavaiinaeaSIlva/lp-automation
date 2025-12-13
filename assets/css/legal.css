@@ -1,0 +1,14 @@
+/* Minimal legal page styles to supplement styles.css */
+.legal-content { display: flex; gap: 2rem; padding: 3rem 0; }
+.legal-nav { width: 260px; background: #fff; border: 1px solid var(--border); padding: 1rem; border-radius: 8px; }
+.legal-nav h3 { margin-top: 0; }
+.legal-nav ul { padding-left: 1rem; }
+.legal-nav a { display: block; padding: 0.25rem 0; color: var(--text); }
+.section { max-width: 800px; }
+.effective-date { color: var(--text-light); font-size: 0.9rem; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .legal-content { flex-direction: column; }
+  .legal-nav { width: 100%; }
+}
